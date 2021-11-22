@@ -1,0 +1,8 @@
+{
+  "env": "https://www.google.com",
+  "executionOn" : "local",
+  "platform": {
+    "platformType" : "Web",
+    "Browser" : "chrome"
+  }
+}
