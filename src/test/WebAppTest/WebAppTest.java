@@ -1,9 +1,10 @@
 package WebAppTest;
 
+import Init.Base;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class WebAppTest {
+public class WebAppTest extends Base {
 
 
 
