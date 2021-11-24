@@ -1,0 +1,18 @@
+{
+"search_box" : {
+  "platform" : "web",
+  "element_type" : "button",
+  "locator_type" : "xpath",
+  "locator_value" : "//*[contains(.,'Login')]"
+},
+
+  "gmail_link" : {
+    "platform" : "web",
+    "element_type" : "button",
+    "locator_type" : "xpath",
+    "locator_value" : "//*[contains(.,'Login')]"
+  }
+
+
+
+}
