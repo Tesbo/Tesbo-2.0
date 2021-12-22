@@ -1,0 +1,22 @@
+{
+"email" : {
+  "platform" : "web",
+  "element_type" : "text_box",
+  "locator_type" : "xpath",
+  "locator_value" : [
+  "//input[@name='email']"
+],
+  "objectGenerate" : "generate"
+},
+
+  "password" : {
+    "platform" : "web",
+    "element_type" : "password",
+    "locator_type" : "xpath",
+    "locator_value" : ["//input[@name='pwd']"],
+    "objectGenerate" : "generate"
+  }
+
+
+
+}

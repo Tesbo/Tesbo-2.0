@@ -1,8 +1,8 @@
 {
-  "env": "https://www.google.com",
+  "env": "http://report.tesbo.io/loginPage",
   "executionOn" : "local",
   "platform": {
-    "platformType" : "Web",
-    "Browser" : "chrome"
+    "platformType" : "web",
+    "browser" : "chrome"
   }
 }
