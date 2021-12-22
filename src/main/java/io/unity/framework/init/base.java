@@ -1,6 +1,5 @@
-package Init;
+package io.unity.framework.init;
 
-import common.JsonFileReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.autoweb.Browser;
 import org.openqa.selenium.WebDriver;
@@ -11,15 +10,19 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeTest;
 
-public class Base {
+import io.unity.framework.readers.json_file_reader;
+
+public class base {
 
     String env = "";
     String platformType = "";
     String browserName = "";
     public Browser browser;
 
-    WebDriver driver;
-    JsonFileReader config = new JsonFileReader();
+    public WebDriver driver;
+    json_file_reader config = new json_file_reader();
+
+
     @BeforeTest
     public void init() {
 
@@ -31,7 +34,7 @@ public class Base {
         System.out.println("Platform Type : " + platformType);
         if (platformType.equalsIgnoreCase("web")) {
             setupBrowser(browserName);
-            browser.openURL(env);
+            browser.open_url(env);
         } else if (platformType.equalsIgnoreCase("mobile")) {
 
         } else if (platformType.equalsIgnoreCase("web")) {
@@ -64,8 +67,6 @@ public class Base {
         browser = new Browser(driver);
         return driver;
     }
-
-
 
 
 }

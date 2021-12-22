@@ -1,5 +1,5 @@
 {
-  "env": "https://www.google.com",
+  "env": "http://report.tesbo.io/loginPage",
   "executionOn" : "local",
   "platform": {
     "platformType" : "web",
