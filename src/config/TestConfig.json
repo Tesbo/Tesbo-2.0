@@ -1,8 +1,12 @@
 {
   "env": "http://report.tesbo.io/loginPage",
-  "executionOn" : "local",
+  "execution_on": "local",
   "platform": {
-    "platformType" : "web",
-    "browser" : "chrome"
+    "platformType": "web",
+    "browser": "chrome"
+  },
+  "visual_test": {
+    "mode": "learn",
+    "assert": "soft"
   }
 }
