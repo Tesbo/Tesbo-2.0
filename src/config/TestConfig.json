@@ -6,7 +6,7 @@
     "browser": "chrome"
   },
   "visual_test": {
-    "mode": "learn",
+    "mode": "compare",
     "assert": "soft"
   }
 }
