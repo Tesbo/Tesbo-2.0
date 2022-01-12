@@ -53,7 +53,7 @@
         <dependency>
             <groupId>unity</groupId>
             <artifactId>image-comparision</artifactId>
-            <version>0.0.11</version>
+            <version>0.0.12</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->

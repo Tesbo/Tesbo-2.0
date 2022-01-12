@@ -1,4 +1,4 @@
-package io.unity.object_repository.Web.login;
+package web.object_repository.login_page;
 
 import io.unity.framework.readers.locator_reader;
 import io.unity.autoweb.Element;

@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import io.unity.framework.readers.json_file_reader;
@@ -37,7 +38,7 @@ public class base {
             browser.open_url(env);
         } else if (platformType.equalsIgnoreCase("mobile")) {
 
-        } else if (platformType.equalsIgnoreCase("web")) {
+        } else if (platformType.equalsIgnoreCase("API")) {
 
         } else {
             System.out.println("Platform type you entered is not supported");
@@ -68,5 +69,9 @@ public class base {
         return driver;
     }
 
+    @AfterTest
+    public void tear_down() {
+        driver.quit();
+    }
 
 }

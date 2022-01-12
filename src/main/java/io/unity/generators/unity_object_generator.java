@@ -1,4 +1,4 @@
-package io.unity.framework.generators;
+package io.unity.generators;
 
 import io.unity.object_generator;
 
