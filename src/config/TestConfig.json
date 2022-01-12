@@ -1,5 +1,5 @@
 {
-  "env": "http://report.tesbo.io/loginPage",
+  "env": "https://app-lab.responser.com/login",
   "execution_on": "local",
   "platform": {
     "platformType": "web",

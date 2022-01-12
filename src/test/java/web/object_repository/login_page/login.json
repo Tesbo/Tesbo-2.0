@@ -15,6 +15,13 @@
     "locator_type" : "xpath",
     "locator_value" : ["//input[@name='pwd']"],
     "objectGenerate" : "generate"
+  },
+  "edsda" : {
+    "platform" : "web",
+    "element_type" : "button",
+    "locator_type" : "xpath",
+    "locator_value" : ["//input[@name='pwd']"],
+    "objectGenerate" : "generate"
   }
 
 
