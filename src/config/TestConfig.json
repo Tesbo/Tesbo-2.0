@@ -1,9 +1,13 @@
 {
-  "env": "https://app-lab.responser.com/login",
-  "execution_on": "local",
+  "env": "https://www.google.com/",
+  "execution_on": "grid",
+  "grid_url" : "http://199.241.136.175:4444/wd/hub",
   "platform": {
     "platformType": "web",
-    "browser": "chrome"
+    "browser": "chrome",
+    "capabilities" : {
+
+    }
   },
   "visual_test": {
     "mode": "learn",

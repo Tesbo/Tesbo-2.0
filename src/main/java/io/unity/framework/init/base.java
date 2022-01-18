@@ -2,22 +2,31 @@ package io.unity.framework.init;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.autoweb.Browser;
+import org.json.JSONObject;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import io.unity.framework.readers.json_file_reader;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Iterator;
+
 public class base {
 
     String env = "";
     String platformType = "";
     String browserName = "";
+    String execution_on = "";
     public Browser browser;
 
     public WebDriver driver;
@@ -29,13 +38,25 @@ public class base {
 
         env = config.getEnv();
         platformType = config.getPlatformType();
-        browserName = config.getBrowser();
+
+        execution_on = config.get_execution_on();
 
         System.out.println("Env : " + env);
         System.out.println("Platform Type : " + platformType);
+
+
         if (platformType.equalsIgnoreCase("web")) {
-            setupBrowser(browserName);
+
+            if (execution_on.equalsIgnoreCase("local")) {
+                setup_browser();
+            }
+            if (execution_on.equalsIgnoreCase("grid")) {
+                setup_browser_for_grid();
+            }
+            browser = new Browser(driver);
             browser.open_url(env);
+
+
         } else if (platformType.equalsIgnoreCase("mobile")) {
 
         } else if (platformType.equalsIgnoreCase("API")) {
@@ -47,8 +68,9 @@ public class base {
     }
 
 
-    public WebDriver setupBrowser(String browserName) {
+    public WebDriver setup_browser() {
 
+        browserName = config.getBrowser();
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -65,7 +87,29 @@ public class base {
             WebDriverManager.safaridriver().setup();
             driver = new SafariDriver();
         }
-        browser = new Browser(driver);
+
+
+        return driver;
+    }
+
+    public WebDriver setup_browser_for_grid() {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        JSONObject object = config.get_capabilities();
+        Iterator<String> keys = object.keys();
+        capabilities.setBrowserName(config.getBrowser());
+        while (keys.hasNext()) {
+            String key = keys.next();
+            capabilities.setCapability(key, object.get(key));
+        }
+        try {
+
+            driver = new RemoteWebDriver(new URL(config.get_grid_url()), capabilities);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+
         return driver;
     }
 
