@@ -1,6 +1,4 @@
-package io.unity.generators;
-
-import io.unity.object_generator;
+package generators;
 
 public class unity_object_generator {
 

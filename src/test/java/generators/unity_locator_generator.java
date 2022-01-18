@@ -1,4 +1,4 @@
-package io.unity.generators;
+package generators;
 
 import io.unity.EntryPoint;
 
