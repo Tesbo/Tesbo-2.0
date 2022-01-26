@@ -34,7 +34,7 @@ public class base {
 
 
     @BeforeTest
-    public void init() {
+    public WebDriver init() {
 
         env = config.getEnv();
         platformType = config.getPlatformType();
@@ -64,7 +64,7 @@ public class base {
         } else {
             System.out.println("Platform type you entered is not supported");
         }
-
+        return driver;
     }
 
 
@@ -115,7 +115,9 @@ public class base {
 
     @AfterTest
     public void tear_down() {
+
         driver.quit();
+
     }
 
 }
