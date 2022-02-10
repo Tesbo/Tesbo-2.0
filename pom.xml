@@ -6,7 +6,7 @@
 
     <groupId>io.unity</groupId>
     <artifactId>framework</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
 
 
     <distributionManagement>
@@ -17,7 +17,13 @@
         </repository>
     </distributionManagement>
 
-
+    <repositories>
+        <repository>
+            <id>my-repo1</id>
+            <name>your custom repo</name>
+            <url>https://download.testmanframework.com:80/artifactory/</url>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>
@@ -40,32 +46,35 @@
             <version>4.0.0</version>
         </dependency>
 
+
         <dependency>
             <groupId>unity</groupId>
             <artifactId>autoweb-core</artifactId>
-            <version>0.0.5.1</version>
+            <version>0.0.5.12</version>
         </dependency>
 
 
+<!--
         <dependency>
             <groupId>unity</groupId>
             <artifactId>locator-generator</artifactId>
             <version>0.0.5</version>
         </dependency>
+-->
 
 
-
+<!--
         <dependency>
             <groupId>unity</groupId>
             <artifactId>object_repository_generator</artifactId>
-            <version>0.0.9</version>
-        </dependency>
+            <version>1.0.5</version>
+        </dependency>-->
 
-        <dependency>
+  <!--      <dependency>
             <groupId>unity</groupId>
             <artifactId>image-comparision</artifactId>
             <version>0.0.12</version>
-        </dependency>
+        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
@@ -94,7 +103,6 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>3.21.0</version>
-
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>

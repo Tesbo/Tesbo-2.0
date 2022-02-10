@@ -1,7 +1,7 @@
 {
-  "env": "https://www.google.com/",
+  "env": "http://demo.automationtesting.in/Register.html",
   "execution_on": "local",
-  "grid_url" : "http://199.241.136.175:4444/wd/hub",
+  "grid_url" : "",
   "platform": {
     "platformType": "web",
     "browser": "chrome",

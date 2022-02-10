@@ -4,7 +4,6 @@ import io.unity.framework.init.Session;
 import io.unity.framework.init.base;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import web.object_repository.login_page.search_page_steps;
 
 public class google_test extends base {
     
@@ -14,7 +13,7 @@ public class google_test extends base {
     public void search_page()
     {
 
-        search_page_steps search_page_step = new search_page_steps(driver);
+     /*   search_page_steps search_page_step = new search_page_steps(driver);
 
 
         search_page_step.enter_text_at_search_text_box("viral patel");
@@ -25,6 +24,6 @@ public class google_test extends base {
         search_page_steps second_page = new search_page_steps(second_driver);
         second_page.enter_text_at_search_text_box("Ankit patel");
         new_session.close_session(second_driver);
-
+*/
     }
 }
