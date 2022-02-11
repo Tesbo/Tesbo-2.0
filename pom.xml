@@ -4,24 +4,29 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.unity</groupId>
-    <artifactId>framework</artifactId>
+    <groupId>TestMan</groupId>
+    <artifactId>framework-core</artifactId>
     <version>0.0.3</version>
 
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub QAbleHQ Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/qablehq/unity-framework</url>
+            <id>central</id>
+            <name>4c832183db03-releases</name>
+            <url>https://download.testmanframework.com/artifactory/TestMan</url>
         </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>4c832183db03-snapshots</name>
+            <url>https://download.testmanframework.com/artifactory/TestMan</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>my-repo1</id>
             <name>your custom repo</name>
-            <url>https://download.testmanframework.com:80/artifactory/</url>
+            <url>https://download.testmanframework.com/artifactory/TestMan</url>
         </repository>
     </repositories>
     <build>
@@ -48,11 +53,15 @@
 
 
         <dependency>
-            <groupId>unity</groupId>
-            <artifactId>autoweb-core</artifactId>
-            <version>0.0.5.12</version>
+            <groupId>TestMan</groupId>
+            <artifactId>auto-core</artifactId>
+            <version>1.0.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>TestMan</groupId>
+            <artifactId>Method-Generator</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
 <!--
         <dependency>
