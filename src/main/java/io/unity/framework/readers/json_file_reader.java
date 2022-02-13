@@ -23,35 +23,63 @@ public class json_file_reader {
         return testConfig;
     }
 
-    public String getEnv() {
+    public String getRunConfig() {
         JSONObject object = getTestConfig();
-        return object.getString("env");
+        return object.getString("run");
     }
 
-    public String getExecutionOn() {
+    public JSONObject getConfigObject(String configName) {
+        JSONObject object = getTestConfig();
+        return (JSONObject) ((JSONObject) object.get("config")).get(configName);
+
+    }
+
+    public String getPlatform(String configName) {
+
+        return getConfigObject(configName).getString("platform");
+
+    }
+
+
+    public String getEnv(String configName) {
+        return getConfigObject(configName).getString("env");
+    }
+
+
+    public boolean isGrid(String configName) {
+        return (boolean) getConfigObject(configName).get("isGrid");
+    }
+
+    public String getBrowser(String configName) {
+        return getConfigObject(configName).getString("browser");
+    }
+
+
+    public JSONObject get_capabilities(String configName) {
+
+        return getConfigObject(configName).getJSONObject("capabilities");
+    }
+
+
+    public String get_grid_url(String configName) {
+        JSONObject object = getTestConfig();
+        return getConfigObject(configName).getString("gridURL");
+    }
+    public String get_appium_url(String configName) {
+        JSONObject object = getTestConfig();
+        return getConfigObject(configName).getString("appiumURL");
+    }
+   /* public String getExecutionOn() {
         JSONObject object = getTestConfig();
         return object.getString("executionOn");
-    }
+    }*/
+
+/*
 
 
-    public String getPlatformType() {
-        JSONObject object = getTestConfig();
-        JSONObject platform = (JSONObject) object.get("platform");
-        return platform.getString("platformType");
-    }
 
 
-    public String getBrowser() {
-        JSONObject object = getTestConfig();
-        JSONObject platform = (JSONObject) object.get("platform");
-        return platform.getString("browser");
-    }
 
-    public String get_execution_on() {
-        JSONObject object = getTestConfig();
-        return object.getString("execution_on");
-
-    }
 
     public String get_grid_url() {
         JSONObject object = getTestConfig();
@@ -67,5 +95,5 @@ public class json_file_reader {
         return platform.getJSONObject("capabilities");
 
 
-    }
+    }*/
 }
