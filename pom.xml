@@ -28,6 +28,12 @@
             <name>your custom repo</name>
             <url>https://download.testmanframework.com/artifactory/TestMan</url>
         </repository>
+
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
     </repositories>
     <build>
         <plugins>
@@ -50,12 +56,16 @@
             <artifactId>selenium-java</artifactId>
             <version>4.0.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>v8.0.0-beta2</version>
+        </dependency>
 
         <dependency>
             <groupId>TestMan</groupId>
             <artifactId>auto-core</artifactId>
-            <version>1.0.1</version>
+            <version>2.0.0</version>
         </dependency>
         <dependency>
             <groupId>TestMan</groupId>
@@ -63,27 +73,27 @@
             <version>1.0.0</version>
         </dependency>
 
-<!--
-        <dependency>
-            <groupId>unity</groupId>
-            <artifactId>locator-generator</artifactId>
-            <version>0.0.5</version>
-        </dependency>
--->
+        <!--
+                <dependency>
+                    <groupId>unity</groupId>
+                    <artifactId>locator-generator</artifactId>
+                    <version>0.0.5</version>
+                </dependency>
+        -->
 
 
-<!--
-        <dependency>
-            <groupId>unity</groupId>
-            <artifactId>object_repository_generator</artifactId>
-            <version>1.0.5</version>
-        </dependency>-->
+        <!--
+                <dependency>
+                    <groupId>unity</groupId>
+                    <artifactId>object_repository_generator</artifactId>
+                    <version>1.0.5</version>
+                </dependency>-->
 
-  <!--      <dependency>
-            <groupId>unity</groupId>
-            <artifactId>image-comparision</artifactId>
-            <version>0.0.12</version>
-        </dependency>-->
+        <!--      <dependency>
+                  <groupId>unity</groupId>
+                  <artifactId>image-comparision</artifactId>
+                  <version>0.0.12</version>
+              </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
@@ -121,5 +131,5 @@
         </dependency>
 
     </dependencies>
-    
+
 </project>
