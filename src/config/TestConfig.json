@@ -1,16 +1,54 @@
 {
-  "env": "https://www.google.com/",
-  "execution_on": "grid",
-  "grid_url" : "http://199.241.136.175:4444/wd/hub",
-  "platform": {
-    "platformType": "web",
-    "browser": "chrome",
-    "capabilities" : {
+  "run": "abcd",
+  "config": {
+    "chromeConfig": {
+      "platform": "web",
+      "browser": "chrome",
+      "capabilities": {},
+      "env": "https://app-lab.responser.com/login",
+      "isGrid": false,
+      "gridURL": "http://208.87.133.122:4444/wd/hub",
+      "viewPort": "",
+      "testNGsuite": [
+        "smoke.xml","sanity.xml"
+      ]
+    },
+    "smokeConfig": {
+      "platform": "web",
+      "browser": "chrome",
+      "capabilities": {},
+      "env": "",
+      "isGrid": "",
+      "gridURL": "",
+      "viewPort": "",
+      "suite": [
+        "smoke.xml"
+      ]
+    },
+    "abcd": {
+      "platform": "android",
+      "capabilities": {
+        "platformName": "android",
+        "appium:app": "/Users/viralpatel/Viral/QAbleAutomation/src/test/java/suites/FLappv1.41.0(421).apk",
+        "appium:deviceName": "emulator-5554",
+        "appium:platformVersion": "12.0",
+        "appium:automationName": "UiAutomator2",
+        "appium:adbExecTimeout": 30000
+      },
+      "suite": [],
+      "appiumURL": "http://0.0.0.0:4723/wd/hub"
+    },
+    "iOS": {
+      "platform": "iOS",
+      "capabilities": {
+        "platformName": "iOS",
+        "app": "/Users/viralpatel/Downloads/Upwork/App/FreelancersDM-iphonesimulator-iOS14-1.38.0.14.app",
+        "deviceName": "iPhone 13",
+        "platformVersion": "15.2",
+        "automationName": "XCUITest"
+      },
 
+      "appiumURL": "http://0.0.0.0:4723/wd/hub"
     }
-  },
-  "visual_test": {
-    "mode": "learn",
-    "assert": "soft"
   }
 }
