@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.autoweb.Browser;
+import io.unity.framework.TestRunner;
 import io.unity.framework.readers.json_file_reader;
 import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -37,31 +37,33 @@ public class base {
     @BeforeTest
     public WebDriver init() {
 
-        String currentConfig = config.getRunConfig();
-        platform = config.getPlatform(currentConfig);
+        if (TestRunner.currentConfig.equals("")) {
+            TestRunner. currentConfig = config.getRunConfig();
+        }
 
+        platform = config.getPlatform(TestRunner.currentConfig);
 
-        System.out.println("Env : " + env);
-        System.out.println("Platform Type : " + platform);
+        System.out.println("config to run : " + TestRunner.currentConfig);
+
 
 
         if (platform.equalsIgnoreCase("web")) {
 
-            if (config.isGrid(currentConfig)) {
-                setup_browser_for_grid(currentConfig);
+            if (config.isGrid(TestRunner.currentConfig)) {
+                setup_browser_for_grid(TestRunner.currentConfig);
             } else {
-                setup_browser(currentConfig);
+                setup_browser(TestRunner.currentConfig);
             }
-            env = config.getEnv(currentConfig);
+            env = config.getEnv(TestRunner.currentConfig);
             browser = new Browser(driver);
             browser.open_url(env);
 
         } else if (platform.equalsIgnoreCase("android")) {
             System.out.println("Inside android");
-            setup_android(currentConfig);
+            setup_android(TestRunner.currentConfig);
         } else if (platform.equalsIgnoreCase("iOS")) {
             System.out.println("Inside iOS");
-            setup_iOS(currentConfig);
+            setup_iOS(TestRunner.currentConfig);
         } else if (platform.equalsIgnoreCase("API")) {
 
         } else {
@@ -72,23 +74,26 @@ public class base {
 
 
     public WebDriver setup_browser(String configName) {
-
+        System.out.println("Inside  browser");
         browserName = config.getBrowser(configName);
+        System.out.println("browser name" + browserName);
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+            System.out.println("Inside chrome");
+
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
+            System.out.println("Inside firefox");
         } else if (browserName.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
+            System.out.println("Inside edge");
         } else if (browserName.equalsIgnoreCase("opera")) {
             WebDriverManager.operadriver().setup();
             driver = new OperaDriver();
-        } else if (browserName.equalsIgnoreCase("safari")) {
-            WebDriverManager.safaridriver().setup();
-            driver = new SafariDriver();
+            System.out.println("Inside opera");
         }
 
 
@@ -158,9 +163,7 @@ public class base {
 
     @AfterTest
     public void tear_down() {
-
         driver.quit();
-
     }
 
 }

@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Smoke ">
+    <test name = "QAblepoint">
+        <classes>
+            <class name = "web.test.login.google_test" >
+                <methods>
+                    <include name="search_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

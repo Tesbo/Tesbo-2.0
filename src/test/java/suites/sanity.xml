@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Sanity Testing">
+    <test name = "QAblepoint">
+        <classes>
+            <class name = "web.test.login.login_tests" >
+                <methods>
+                    <include name="verify_login_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,12 +1,14 @@
 package io.unity.framework.readers;
 
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class json_file_reader {
+
 
 
     public JSONObject getTestConfig() {
@@ -22,6 +24,8 @@ public class json_file_reader {
 
         return testConfig;
     }
+
+
 
     public String getRunConfig() {
         JSONObject object = getTestConfig();
@@ -69,6 +73,12 @@ public class json_file_reader {
         JSONObject object = getTestConfig();
         return getConfigObject(configName).getString("appiumURL");
     }
+    public JSONArray getSuites (String configName) throws org.json.JSONException
+    {
+        JSONObject object = getTestConfig();
+        return (JSONArray) getConfigObject(configName).get("testNGsuite");
+    }
+
    /* public String getExecutionOn() {
         JSONObject object = getTestConfig();
         return object.getString("executionOn");

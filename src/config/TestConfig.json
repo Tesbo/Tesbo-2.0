@@ -5,12 +5,12 @@
       "platform": "web",
       "browser": "chrome",
       "capabilities": {},
-      "env": "https://www.google.com",
+      "env": "https://app-lab.responser.com/login",
       "isGrid": false,
-      "gridURL": "",
+      "gridURL": "http://208.87.133.122:4444/wd/hub",
       "viewPort": "",
-      "suite": [
-        ""
+      "testNGsuite": [
+        "smoke.xml","sanity.xml"
       ]
     },
     "smokeConfig": {
@@ -47,7 +47,7 @@
         "platformVersion": "15.2",
         "automationName": "XCUITest"
       },
-      "suite": [],
+
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
     }
   }
