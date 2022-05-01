@@ -6,6 +6,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.autoweb.Browser;
 import io.unity.framework.TestRunner;
 import io.unity.framework.readers.json_file_reader;
+import kong.unirest.Unirest;
 import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,13 +39,12 @@ public class base {
     public WebDriver init() {
 
         if (TestRunner.currentConfig.equals("")) {
-            TestRunner. currentConfig = config.getRunConfig();
+            TestRunner.currentConfig = config.getRunConfig();
         }
 
         platform = config.getPlatform(TestRunner.currentConfig);
 
         System.out.println("config to run : " + TestRunner.currentConfig);
-
 
 
         if (platform.equalsIgnoreCase("web")) {
@@ -65,7 +65,8 @@ public class base {
             System.out.println("Inside iOS");
             setup_iOS(TestRunner.currentConfig);
         } else if (platform.equalsIgnoreCase("API")) {
-
+            env = config.getEnv(TestRunner.currentConfig);
+            Unirest.config().defaultBaseUrl(env);
         } else {
             System.out.println("Platform type you entered is not supported");
         }
@@ -163,7 +164,13 @@ public class base {
 
     @AfterTest
     public void tear_down() {
-        driver.quit();
+        if (!platform.equalsIgnoreCase("api")) {
+            {
+                driver.quit();
+            }
+
+        }
+
     }
 
 }

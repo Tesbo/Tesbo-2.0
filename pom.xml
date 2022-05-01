@@ -6,7 +6,7 @@
 
     <groupId>TestMan</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
 
     <distributionManagement>
@@ -132,6 +132,14 @@
             <artifactId>jcommander</artifactId>
             <version>1.78</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.konghq/unirest-java -->
+        <dependency>
+            <groupId>com.konghq</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>3.13.8</version>
+        </dependency>
+
     </dependencies>
 
 </project>

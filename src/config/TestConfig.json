@@ -1,5 +1,5 @@
 {
-  "run": "abcd",
+  "run": "StageAPI",
   "config": {
     "chromeConfig": {
       "platform": "web",
@@ -10,7 +10,8 @@
       "gridURL": "http://208.87.133.122:4444/wd/hub",
       "viewPort": "",
       "testNGsuite": [
-        "smoke.xml","sanity.xml"
+        "smoke.xml",
+        "sanity.xml"
       ]
     },
     "smokeConfig": {
@@ -47,8 +48,11 @@
         "platformVersion": "15.2",
         "automationName": "XCUITest"
       },
-
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
+    },
+    "StageAPI": {
+      "platform" : "API",
+      "env" : "https://likita.cmdev.cc"
     }
   }
 }
