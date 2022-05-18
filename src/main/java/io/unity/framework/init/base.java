@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.autoweb.Browser;
+import io.unity.autoweb.testng_logs;
 import io.unity.framework.TestRunner;
 import io.unity.framework.readers.json_file_reader;
 import kong.unirest.Unirest;
@@ -33,6 +34,7 @@ public class base {
 
     public WebDriver driver;
     json_file_reader config = new json_file_reader();
+    testng_logs logs = new testng_logs();
 
 
     @BeforeTest
@@ -58,15 +60,17 @@ public class base {
             browser = new Browser(driver);
             browser.open_url(env);
 
+            if (config.isAPITestConfigEnable(TestRunner.currentConfig)) {
+
+                Unirest.config().defaultBaseUrl(config.getAPIEnv(TestRunner.currentConfig));
+            }
         } else if (platform.equalsIgnoreCase("android")) {
             System.out.println("Inside android");
             setup_android(TestRunner.currentConfig);
         } else if (platform.equalsIgnoreCase("iOS")) {
             System.out.println("Inside iOS");
             setup_iOS(TestRunner.currentConfig);
-        } else if (platform.equalsIgnoreCase("API")) {
-            env = config.getEnv(TestRunner.currentConfig);
-            Unirest.config().defaultBaseUrl(env);
+
         } else {
             System.out.println("Platform type you entered is not supported");
         }

@@ -1,11 +1,11 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name = "Smoke ">
-    <test name = "QAblepoint">
+<suite name = "Smoke " parallel="tests" thread-count="3">
+    <test name = "LikitaDemo">
         <classes>
-            <class name = "web.test.login.google_test" >
+            <class name = "web.test.login.login_tests" >
                 <methods>
-                    <include name="search_page"></include>
+                    <include name="create_admin_user_and_verify_login"></include>
                 </methods>
             </class>
         </classes>

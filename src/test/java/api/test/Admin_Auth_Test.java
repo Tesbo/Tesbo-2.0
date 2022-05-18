@@ -14,16 +14,15 @@ public class Admin_Auth_Test extends base {
     @Test
     public void verify_get_response() {
         RequestBuilder builder = new RequestBuilder();
-        Map headers = new HashMap();
-        headers.put("Content-Type", "application/json");
 
-        Map body = new HashMap();
-        body.put("email", "vir@qable.io");
-        body.put("password", "Admin@admin123");
+        JSONObject response = builder.performRequest("admin_auth/admin_auth");
 
-        JSONObject response = builder.performRequestWithHeaderAndBody("admin_auth/admin_auth", headers, body);
-        System.out.println(response);
         ResponseValidator validator = new ResponseValidator(response);
-        validator.statusCodeShouldBe(404);
+        validator.statusCodeShouldBe(201);
+
+        String token =  validator.getDataFromBody("$.session.accessToken");
+
+
+
     }
 }

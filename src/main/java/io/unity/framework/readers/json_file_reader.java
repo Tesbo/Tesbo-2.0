@@ -44,6 +44,22 @@ public class json_file_reader {
 
     }
 
+    public JSONObject getAPIConfig(String configName)
+    {
+
+        return (JSONObject) getConfigObject(configName).get("apiTestConfig");
+    }
+
+    public boolean isAPITestConfigEnable(String configName){
+
+        return (boolean) getAPIConfig(configName).get("enable");
+    }
+
+    public String getAPIEnv(String configName){
+
+        return (String) getAPIConfig(configName).get("env");
+    }
+
 
     public String getEnv(String configName) {
         return getConfigObject(configName).getString("env");

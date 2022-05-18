@@ -1,18 +1,25 @@
 {
-  "run": "StageAPI",
+  "run": "likitaChromeConfig",
   "config": {
-    "chromeConfig": {
+    "likitaChromeConfig": {
+      "parallel" : 3,
       "platform": "web",
       "browser": "chrome",
       "capabilities": {},
-      "env": "https://app-lab.responser.com/login",
-      "isGrid": false,
+      "env": "https://likita-admin.vercel.app/",
+      "isGrid": true,
       "gridURL": "http://208.87.133.122:4444/wd/hub",
       "viewPort": "",
+      "apiTestConfig" :{
+        "enable" : true,
+        "env" : "https://likita.cmdev.cc"
+      },
       "testNGsuite": [
-        "smoke.xml",
-        "sanity.xml"
-      ]
+        "smoke.xml"
+      ],
+      "retry":
+      {"count" :  2}
+
     },
     "smokeConfig": {
       "platform": "web",
@@ -49,10 +56,6 @@
         "automationName": "XCUITest"
       },
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
-    },
-    "StageAPI": {
-      "platform" : "API",
-      "env" : "https://likita.cmdev.cc"
     }
   }
 }

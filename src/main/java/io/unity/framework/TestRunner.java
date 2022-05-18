@@ -42,7 +42,7 @@ public class TestRunner {
         try {
             suiteList = config.getSuites(currentConfig);
 
-        if (suiteList.length() == 0) {
+        if (suiteList.length() != 0) {
             List<String> testFilesList = new ArrayList<String>();
 
             for (Object suiteName : suiteList) {
