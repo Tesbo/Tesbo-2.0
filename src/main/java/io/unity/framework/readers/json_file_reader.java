@@ -4,11 +4,11 @@ package io.unity.framework.readers;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class json_file_reader {
-
 
 
     public JSONObject getTestConfig() {
@@ -24,7 +24,6 @@ public class json_file_reader {
 
         return testConfig;
     }
-
 
 
     public String getRunConfig() {
@@ -44,23 +43,22 @@ public class json_file_reader {
 
     }
 
-    public JSONObject getAPIConfig(String configName)
-    {
+    public JSONObject getAPIConfig(String configName) {
 
         return (JSONObject) getConfigObject(configName).get("apiTestConfig");
     }
 
-    public boolean isAPITestConfigEnable(String configName){
+    public boolean isAPITestConfigEnable(String configName) {
 
         return (boolean) getAPIConfig(configName).get("enable");
     }
 
-    public String getAPIEnv(String configName){
+    public String getAPIEnv(String configName) {
 
         return (String) getAPIConfig(configName).get("env");
     }
 
-    public String getAPIEnvDirect(String configName){
+    public String getAPIEnvDirect(String configName) {
 
         return (String) getConfigObject(configName).get("env");
     }
@@ -90,12 +88,25 @@ public class json_file_reader {
         JSONObject object = getTestConfig();
         return getConfigObject(configName).getString("gridURL");
     }
+
     public String get_appium_url(String configName) {
         JSONObject object = getTestConfig();
         return getConfigObject(configName).getString("appiumURL");
     }
-    public JSONArray getSuites (String configName) throws org.json.JSONException
-    {
+
+    public String get_app_name(String configName) {
+
+        return getConfigObject(configName).getString("app");
+    }
+
+    public String get_final_app_path(String configName) {
+        File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
+        System.out.println(file.getAbsolutePath());
+        return file.getAbsolutePath();
+    }
+
+
+    public JSONArray getSuites(String configName) throws org.json.JSONException {
         JSONObject object = getTestConfig();
         return (JSONArray) getConfigObject(configName).get("testNGsuite");
     }

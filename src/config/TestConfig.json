@@ -1,5 +1,5 @@
 {
-  "run": "nevvon_public",
+  "run": "android",
   "config": {
     "likitaChromeConfig": {
       "parallel" : 3,
@@ -33,12 +33,12 @@
         "smoke.xml"
       ]
     },
-    "abcd": {
+    "android": {
       "platform": "android",
+      "app" : "app-release.apk",
       "capabilities": {
         "platformName": "android",
-        "appium:app": "/Users/viralpatel/Viral/QAbleAutomation/src/test/java/suites/FLappv1.41.0(421).apk",
-        "appium:deviceName": "emulator-5554",
+        "appium:deviceName": "Pixel_4_API_Sv2",
         "appium:platformVersion": "12.0",
         "appium:automationName": "UiAutomator2",
         "appium:adbExecTimeout": 30000
@@ -48,9 +48,9 @@
     },
     "iOS": {
       "platform": "iOS",
+      "app" : "app-release.apk",
       "capabilities": {
         "platformName": "iOS",
-        "app": "/Users/viralpatel/Downloads/Upwork/App/FreelancersDM-iphonesimulator-iOS14-1.38.0.14.app",
         "deviceName": "iPhone 13",
         "platformVersion": "15.2",
         "automationName": "XCUITest"
