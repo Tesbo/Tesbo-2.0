@@ -1,5 +1,5 @@
 {
-  "run": "likitaChromeConfig",
+  "run": "nevvon_public",
   "config": {
     "likitaChromeConfig": {
       "parallel" : 3,
@@ -56,6 +56,12 @@
         "automationName": "XCUITest"
       },
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
+    },
+    "nevvon_public" :
+    {
+      "platform" : "api",
+      "enable" : true,
+      "env" : "https://likita.cmdev.cc"
     }
   }
 }

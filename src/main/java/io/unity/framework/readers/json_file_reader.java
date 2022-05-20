@@ -60,6 +60,11 @@ public class json_file_reader {
         return (String) getAPIConfig(configName).get("env");
     }
 
+    public String getAPIEnvDirect(String configName){
+
+        return (String) getConfigObject(configName).get("env");
+    }
+
 
     public String getEnv(String configName) {
         return getConfigObject(configName).getString("env");

@@ -5,7 +5,6 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.DataProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,23 +13,12 @@ import java.util.Iterator;
 
 public class DataReader {
 
+ /*   public Object[][] getExcelDataUsingFilo(String fileName, String columnName)
+    {
 
-    public static void main(String[] args) {
+    }*/
 
-        DataReader dataReader = new DataReader();
-
-        ArrayList list = new ArrayList();
-        list.add("item Class");
-        list.add("item Type");
-
-        dataReader.getExcelDataForDataProvider("addNewUser.xlsx", 0, list);
-
-
-    }
-
-
-    @DataProvider(name = "SearchProvider")
-    public Object[][] getExcelDataForDataProvider(String fileName, int sheetNo, ArrayList<String> columnName) {
+    public Object[][] getExcelDataForDataProvider(String fileName, int sheetNo) {
         ArrayList<ArrayList> collectionRow = new ArrayList();
         ArrayList<String> rowList = null;
         try {
@@ -82,21 +70,23 @@ public class DataReader {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        int row = collectionRow.size();
-        int column = columnName.size();
+        int row = collectionRow.size() - 1;
+        int column = collectionRow.get(0).size();
 
 
         System.out.println(row + "....." + column);
-        System.out.println(collectionRow);
 
 
         Object[][] test = new Object[row][column];
 
         for (int i = 0; i < row; i++) {
             try {
-                ArrayList collumList = collectionRow.get(i);
+                ArrayList collumList = collectionRow.get(i + 1);
                 if (collumList.size() != 0) {
                     for (int j = 0; j < column; j++) {
+                        System.out.println("i = " + i);
+                        System.out.println("j = " + j);
+                        System.out.println(collumList.get(j));
                         test[i][j] = collumList.get(j);
                     }
                 }
@@ -105,10 +95,9 @@ public class DataReader {
             }
 
         }
-        System.out.println(test);
+
+
         return test;
     }
 
 }
-
-

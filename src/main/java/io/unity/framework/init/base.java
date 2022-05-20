@@ -48,7 +48,6 @@ public class base {
 
         System.out.println("config to run : " + TestRunner.currentConfig);
 
-
         if (platform.equalsIgnoreCase("web")) {
 
             if (config.isGrid(TestRunner.currentConfig)) {
@@ -61,7 +60,6 @@ public class base {
             browser.open_url(env);
 
             if (config.isAPITestConfigEnable(TestRunner.currentConfig)) {
-
                 Unirest.config().defaultBaseUrl(config.getAPIEnv(TestRunner.currentConfig));
             }
         } else if (platform.equalsIgnoreCase("android")) {
@@ -71,6 +69,8 @@ public class base {
             System.out.println("Inside iOS");
             setup_iOS(TestRunner.currentConfig);
 
+        } else if (platform.equalsIgnoreCase("api")) {
+            Unirest.config().defaultBaseUrl(config.getAPIEnvDirect(TestRunner.currentConfig));
         } else {
             System.out.println("Platform type you entered is not supported");
         }

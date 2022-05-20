@@ -6,7 +6,7 @@
 
     <groupId>TestMan</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
 
     <distributionManagement>
@@ -80,6 +80,12 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>5.2.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.codoid.products/fillo -->
+        <dependency>
+            <groupId>com.codoid.products</groupId>
+            <artifactId>fillo</artifactId>
+            <version>1.21</version>
         </dependency>
 
         <dependency>
