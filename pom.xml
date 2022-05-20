@@ -6,7 +6,7 @@
 
     <groupId>TestMan</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
 
 
     <distributionManagement>
@@ -45,12 +45,48 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+
+                <configuration>
+                    <mainClass>Runner.Runner</mainClass>
+                    <classpathScope>test</classpathScope>
+                    <commandlineArgs>--config likitaChromeConfig</commandlineArgs>
+                </configuration>
+            </plugin>
         </plugins>
+
+
+
+
+
+
+
     </build>
 
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.codoid.products/fillo -->
+        <dependency>
+            <groupId>com.codoid.products</groupId>
+            <artifactId>fillo</artifactId>
+            <version>1.21</version>
+        </dependency>
 
         <dependency>
             <groupId>com.github.appium</groupId>
@@ -69,6 +105,11 @@
             <version>1.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>TestMan</groupId>
+            <artifactId>locator-generator</artifactId>
+            <version>1.0.1</version>
+        </dependency>
         <!--
                 <dependency>
                     <groupId>unity</groupId>
@@ -131,6 +172,23 @@
             <groupId>com.beust</groupId>
             <artifactId>jcommander</artifactId>
             <version>1.78</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.2.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.konghq/unirest-java -->
+        <dependency>
+            <groupId>com.konghq</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>3.13.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>2.7.0</version>
         </dependency>
     </dependencies>
 

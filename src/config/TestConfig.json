@@ -1,17 +1,25 @@
 {
-  "run": "abcd",
+  "run": "nevvon_public",
   "config": {
-    "chromeConfig": {
+    "likitaChromeConfig": {
+      "parallel" : 3,
       "platform": "web",
       "browser": "chrome",
       "capabilities": {},
-      "env": "https://app-lab.responser.com/login",
-      "isGrid": false,
+      "env": "https://likita-admin.vercel.app/",
+      "isGrid": true,
       "gridURL": "http://208.87.133.122:4444/wd/hub",
       "viewPort": "",
+      "apiTestConfig" :{
+        "enable" : true,
+        "env" : "https://likita.cmdev.cc"
+      },
       "testNGsuite": [
-        "smoke.xml","sanity.xml"
-      ]
+        "smoke.xml"
+      ],
+      "retry":
+      {"count" :  2}
+
     },
     "smokeConfig": {
       "platform": "web",
@@ -47,8 +55,13 @@
         "platformVersion": "15.2",
         "automationName": "XCUITest"
       },
-
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
+    },
+    "nevvon_public" :
+    {
+      "platform" : "api",
+      "enable" : true,
+      "env" : "https://likita.cmdev.cc"
     }
   }
 }

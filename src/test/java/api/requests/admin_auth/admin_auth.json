@@ -1,0 +1,21 @@
+{
+  "endPoint": "/admin-auth/login",
+  "methodType" : "POST",
+  "pathParameter": {
+    "": ""
+  },
+  "queryParameter": {
+    "": ""
+  },
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "email": "admin@admin.com",
+    "password": "Admin@123"
+  },
+  "schema-validator" : {
+
+  }
+
+}
