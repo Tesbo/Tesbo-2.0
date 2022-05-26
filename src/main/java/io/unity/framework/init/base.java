@@ -3,12 +3,16 @@ package io.unity.framework.init;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.unity.autoweb.Browser;
-import io.unity.autoweb.testng_logs;
-import io.unity.framework.TestRunner;
+import io.unity.framework.data.TestData;
 import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.runner.TestRunner;
+import io.unity.performaction.autoweb.Browser;
+import io.unity.performaction.autoweb.testng_logs;
 import kong.unirest.Unirest;
+import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -16,9 +20,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
@@ -37,7 +45,7 @@ public class base {
     testng_logs logs = new testng_logs();
 
 
-    @BeforeTest
+    @BeforeMethod
     public WebDriver init() {
 
         if (TestRunner.currentConfig.equals("")) {
@@ -74,6 +82,8 @@ public class base {
         } else {
             System.out.println("Platform type you entered is not supported");
         }
+
+
         return driver;
     }
 
@@ -101,7 +111,7 @@ public class base {
             System.out.println("Inside opera");
         }
 
-
+        //   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return driver;
     }
 
@@ -138,7 +148,7 @@ public class base {
             String key = (String) itr.next();
             capabilities.setCapability(key, capabilityList.get(key));
         }
-        capabilities.setCapability("app" ,config.get_final_app_path(configName));
+        capabilities.setCapability("app", config.get_final_app_path(configName));
         try {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
@@ -159,7 +169,7 @@ public class base {
             String key = (String) itr.next();
             capabilities.setCapability(key, capabilityList.get(key));
         }
-        capabilities.setCapability("app" ,config.get_final_app_path(configName));
+        capabilities.setCapability("app", config.get_final_app_path(configName));
         try {
             driver = new IOSDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
@@ -168,15 +178,35 @@ public class base {
         return (IOSDriver) driver;
     }
 
-    @AfterTest
-    public void tear_down() {
-        if (!platform.equalsIgnoreCase("api")) {
-            {
-                driver.quit();
+    @AfterMethod
+    public void tear_down(ITestResult result) {
+        Reporter.getCurrentTestResult();
+        Reporter.log("screenshot : <img src=viral alt=\"test\">");
+        logs.test_step("ABCDED");
+        System.out.println(result.getStatus());
+        if (ITestResult.FAILURE == result.getStatus()) {
+            try {
+
+                if (!platform.equalsIgnoreCase("api")) {
+                    {
+
+                        TakesScreenshot screenshot = (TakesScreenshot) driver;
+                        File src = screenshot.getScreenshotAs(OutputType.FILE);
+                        File file = new File("src/test/resources/failed_test_screenshot/" + result.getName() + "_" + TestData.random_alpha_numeric_string(5) + ".png");
+                        FileUtils.copyFile(src, file);
+
+                        Reporter.log("screenshot : <img src=\"" + file.getAbsolutePath() + "\" alt=\"test\">");
+                        System.out.println("Successfully captured a screenshot");
+
+                        driver.quit();
+                    }
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
         }
-
     }
-
 }

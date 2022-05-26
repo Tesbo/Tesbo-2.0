@@ -1,6 +1,6 @@
 package Runner;
 
-import io.unity.framework.TestRunner;
+import io.unity.framework.runner.TestRunner;
 
 
 public class Runner {

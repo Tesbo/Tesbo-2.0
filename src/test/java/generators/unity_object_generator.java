@@ -1,6 +1,7 @@
 package generators;
 
-import io.unity.methodgenerator.EntryPoint;
+import io.unity.framework.generators.locatorgenerator.EntryPoint;
+
 
 public class unity_object_generator {
 
