@@ -48,8 +48,7 @@ public class login_tests extends base {
         String email = user_create_validator.getDataFromBody("$.email");
         String password = body.get("password").toString();
 */
-Reporter.log("nishil");
-        logs.test_step("Voral");
+
 
         login_page login = new login_page(driver);
         dashboard_page dashboard = new dashboard_page(driver);

@@ -30,13 +30,14 @@ public class Verify {
         try {
             if (element.find(element_name).isDisplayed()) {
                 bool = true;
-                logs.test_step("Test Passed");
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         assertThat(bool).isTrue();
+        logs.test_result(bool);
 
     }
 
@@ -62,12 +63,13 @@ public class Verify {
         try {
             if (element.find(element_name).isEnabled()) {
                 bool = true;
-                logs.test_step("Test Passed");
+
             }
         } catch (Exception e) {
 
         }
         assertThat(bool).isTrue();
+        logs.test_result(bool);
     }
 
     public void element_is_selected(String element_name) {
@@ -76,28 +78,32 @@ public class Verify {
         try {
             if (element.find(element_name).isSelected()) {
                 bool = true;
-                logs.test_step("Test Passed");
+
             }
         } catch (Exception e) {
 
         }
         assertThat(bool).isTrue();
+        logs.test_result(bool);
 
     }
 
     public void current_title_is_equal_to(String title) {
         logs.test_step("verify current page title is " + title);
         assertThat(driver.getTitle()).isEqualTo(title);
+        logs.test_result(true);
     }
 
     public void element_text_is_equal_to(String element_name, String text_to_verify) {
         logs.test_step("verify element " + element_name + " text is equal " + text_to_verify);
         assertThat(element.find(element_name).getText()).isEqualTo(text_to_verify);
+        logs.test_result(true);
     }
 
     public void element_attribute_is_equal_to(String element_name, String attribute_name, String expected_attribute_value) {
         logs.test_step("verify element " + element_name + " attribute " + attribute_name + " text is equal " + expected_attribute_value);
         assertThat(element.find(element_name).getAttribute(attribute_name)).isEqualTo(expected_attribute_value);
+        logs.test_result(true);
     }
 
     public void element_text_is_available_in_list(String element_name, String text_to_verify) {
@@ -112,6 +118,7 @@ public class Verify {
             }
         }
         assertThat(bool).isTrue();
+        logs.test_result(true);
     }
 
 

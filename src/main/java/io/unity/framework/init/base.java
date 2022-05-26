@@ -21,12 +21,11 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
@@ -178,12 +177,12 @@ public class base {
         return (IOSDriver) driver;
     }
 
+    File file = null;
+
     @AfterMethod
     public void tear_down(ITestResult result) {
-        Reporter.getCurrentTestResult();
-        Reporter.log("screenshot : <img src=viral alt=\"test\">");
-        logs.test_step("ABCDED");
-        System.out.println(result.getStatus());
+
+
         if (ITestResult.FAILURE == result.getStatus()) {
             try {
 
@@ -192,21 +191,24 @@ public class base {
 
                         TakesScreenshot screenshot = (TakesScreenshot) driver;
                         File src = screenshot.getScreenshotAs(OutputType.FILE);
-                        File file = new File("src/test/resources/failed_test_screenshot/" + result.getName() + "_" + TestData.random_alpha_numeric_string(5) + ".png");
+                        file = new File("src/test/resources/failed_test_screenshot/" + result.getName() + "_" + TestData.random_alpha_numeric_string(5) + ".png");
                         FileUtils.copyFile(src, file);
 
-                        Reporter.log("screenshot : <img src=\"" + file.getAbsolutePath() + "\" alt=\"test\">");
-                        System.out.println("Successfully captured a screenshot");
+                        logs.test_result(false);
+                        logs.test_step("<img src=\"" + file.getAbsolutePath() + "\" alt=\"test\" width=\"1024\" height=\"640\">");
 
                         driver.quit();
                     }
 
                 }
 
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
+
     }
+
+
+
 }

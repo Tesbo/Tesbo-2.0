@@ -50,18 +50,8 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
 
-                <configuration>
-                    <mainClass>Runner.Runner</mainClass>
-                    <classpathScope>test</classpathScope>
-                    <commandlineArgs>--config likitaChromeConfig</commandlineArgs>
-                </configuration>
             </plugin>
         </plugins>
-
-
-
-
-
 
 
     </build>
@@ -168,12 +158,13 @@
             <version>3.21.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
-
+            <version>7.6.0</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.github.yangjie10930/EpMedia -->
         <dependency>
             <groupId>com.beust</groupId>

@@ -1,5 +1,5 @@
 {
-  "run": "android",
+  "run": "likitaChromeConfig",
   "config": {
     "likitaChromeConfig": {
       "parallel" : 3,
