@@ -3,13 +3,13 @@ package io.unity.framework.generators.methodsgenerator.methods;
 
 import org.jboss.forge.roaster.model.source.JavaClassSource;
 
-public class radioMethods
+public class RadioMethods
 {
     JavaClassSource java_class;
     String key_name;
     final static int total_button_methods = 4;
 
-    public radioMethods(JavaClassSource java_class, String key_name) {
+    public RadioMethods(JavaClassSource java_class, String key_name) {
         this.java_class = java_class;
         this.key_name = key_name;
     }

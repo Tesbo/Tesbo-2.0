@@ -111,6 +111,16 @@ public class json_file_reader {
         return (JSONArray) getConfigObject(configName).get("testNGsuite");
     }
 
+
+    public String getEnvFromCurrentConfig()
+    {
+        JSONObject object = getTestConfig();
+
+       return   getConfigObject(object.getString("run")).getString("env") ;
+    }
+
+
+
    /* public String getExecutionOn() {
         JSONObject object = getTestConfig();
         return object.getString("executionOn");

@@ -22,7 +22,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
@@ -81,7 +80,6 @@ public class base {
         } else {
             System.out.println("Platform type you entered is not supported");
         }
-
 
         return driver;
     }
@@ -197,7 +195,7 @@ public class base {
                         logs.test_result(false);
                         logs.test_step("<img src=\"" + file.getAbsolutePath() + "\" alt=\"test\" width=\"1024\" height=\"640\">");
 
-                        driver.quit();
+
                     }
 
                 }
@@ -206,9 +204,8 @@ public class base {
                 e.printStackTrace();
             }
         }
-
+        driver.quit();
     }
-
 
 
 }

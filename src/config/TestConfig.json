@@ -1,67 +1,96 @@
 {
-  "run": "likitaChromeConfig",
+  "run": "nevvon_test_admin",
   "config": {
-    "likitaChromeConfig": {
-      "parallel" : 3,
+    "nevvon_test_admin": {
       "platform": "web",
       "browser": "chrome",
       "capabilities": {},
-      "env": "https://likita-admin.vercel.app/",
+      "env": "https://test.nevvon.com/",
       "isGrid": false,
-      "gridURL": "http://208.87.133.122:4444/wd/hub",
+      "gridURL": "",
       "viewPort": "",
       "apiTestConfig" :{
         "enable" : true,
-        "env" : "https://likita.cmdev.cc"
+        "env" : ""
       },
       "testNGsuite": [
-        "smoke.xml"
-      ],
-      "retry":
-      {"count" :  2}
+        "nevvon_regression.xml"
+      ]
 
     },
-    "smokeConfig": {
+    "nevvon_prod_admin": {
       "platform": "web",
       "browser": "chrome",
       "capabilities": {},
-      "env": "",
-      "isGrid": "",
+      "env": "https://test.nevvon.com/",
+      "isGrid": false,
       "gridURL": "",
       "viewPort": "",
-      "suite": [
+      "apiTestConfig" :{
+        "enable" : true,
+        "env" : ""
+      },
+      "testNGsuite": [
         "smoke.xml"
       ]
+
     },
-    "android": {
+
+    "nevvon_android": {
       "platform": "android",
       "app" : "app-release.apk",
       "capabilities": {
         "platformName": "android",
-        "appium:deviceName": "Pixel_4_API_Sv2",
+        "appium:deviceName": "pixel_4_Api_Sv2",
         "appium:platformVersion": "12.0",
         "appium:automationName": "UiAutomator2",
         "appium:adbExecTimeout": 30000
       },
-      "suite": [],
+      "testNGsuite": [
+        "nevvon_android_all.xml"
+      ],
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
     },
-    "iOS": {
+    "nevvon_iOS": {
       "platform": "iOS",
-      "app" : "app-release.apk",
       "capabilities": {
         "platformName": "iOS",
+        "app": "/Users/viralpatel/Downloads/Upwork/App/FreelancersDM-iphonesimulator-iOS14-1.38.0.14.app",
         "deviceName": "iPhone 13",
         "platformVersion": "15.2",
         "automationName": "XCUITest"
       },
+      "testNGsuite": [
+        "smoke.xml"
+      ],
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
     },
-    "nevvon_public" :
+    "nevvon_test_api" :
     {
       "platform" : "api",
       "enable" : true,
-      "env" : "https://likita.cmdev.cc"
+      "env" : "https://public-api-test.cpl.nevvon.com",
+      "testNGsuite": [
+        "nevvon_public_api.xml"
+      ]
+    },
+    "nevvon_demo_api" :
+    {
+      "platform" : "api",
+      "enable" : true,
+      "env" : "https://pubapi.nevvon.com/v1",
+      "testNGsuite": [
+        "nevvon_public_api.xml"
+      ]
+    },
+    "nevvon_prod_api" :
+    {
+      "platform" : "api",
+      "enable" : true,
+      "env" : "https://pubapi.nevvon.com/v1",
+      "testNGsuite": [
+        "nevvon_public_api.xml"
+      ]
     }
   }
 }

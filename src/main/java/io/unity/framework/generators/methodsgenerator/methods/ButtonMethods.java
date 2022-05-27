@@ -5,7 +5,6 @@ import org.jboss.forge.roaster.model.source.JavaClassSource;
 
 public class ButtonMethods {
 
-
     JavaClassSource java_class;
     String key_name;
     final static int total_button_methods = 4;

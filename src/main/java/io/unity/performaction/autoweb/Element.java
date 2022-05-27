@@ -41,7 +41,7 @@ public class Element {
         locator_reader reader = new locator_reader();
 
         String[] locator_to_find = reader.get_locator_value(locator_value).split(":");
-        System.out.println("Locator" + locator_to_find[0]);
+        System.out.println("Locator Value : " + locator_to_find[1]);
         switch (locator_to_find[0]) {
             case "xpath":
                 element = driver.findElement(By.xpath(locator_to_find[1]));
