@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.testng.TestNG;
 
 import java.io.File;
+import java.nio.file.FileSystems;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class TestRunner {
         String configToRun = addCommandLine(args);
 
         json_file_reader config = new json_file_reader();
-
+        String pathSeparator = FileSystems.getDefault().getSeparator();
         TestNG testng = new TestNG();
         currentConfig = configToRun;
 
@@ -39,6 +40,7 @@ public class TestRunner {
 
         System.out.println("config to run : " + currentConfig);
         JSONArray suiteList = null;
+        String directory_path = "." + pathSeparator + "src" + pathSeparator + "test" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
         try {
             suiteList = config.getSuites(currentConfig);
 
@@ -46,7 +48,7 @@ public class TestRunner {
                 List<String> testFilesList = new ArrayList<String>();
 
                 for (Object suiteName : suiteList) {
-                    testFilesList.add(new File("./src/test/java/suites/" + suiteName).getAbsolutePath());
+                    testFilesList.add(new File((directory_path + suiteName)).getAbsolutePath());
                 }
                 testng.setTestSuites(testFilesList); //you can addd multiple suites either here by adding multiple files or include all suites needed in the testng.xml file
             } else {

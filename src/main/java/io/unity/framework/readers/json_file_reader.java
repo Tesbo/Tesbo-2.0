@@ -1,6 +1,7 @@
 package io.unity.framework.readers;
 
 
+import io.unity.framework.runner.TestRunner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -116,7 +117,7 @@ public class json_file_reader {
     {
         JSONObject object = getTestConfig();
 
-       return   getConfigObject(object.getString("run")).getString("env") ;
+       return   getConfigObject(TestRunner.currentConfig).getString("env") ;
     }
 
 

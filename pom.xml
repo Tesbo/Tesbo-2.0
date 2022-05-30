@@ -6,7 +6,7 @@
 
     <groupId>TestMan</groupId>
     <artifactId>framework-core</artifactId>
-    <version>2.0.4</version>
+    <version>2.0.7</version>
 
 
     <distributionManagement>
