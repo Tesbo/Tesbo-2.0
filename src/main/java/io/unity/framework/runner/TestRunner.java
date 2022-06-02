@@ -16,32 +16,39 @@ public class TestRunner {
     public static String currentConfig = "";
 
     public String addCommandLine(String[] args) {
-        CommandlineOption option = new CommandlineOption();
+        CommandlineOption option = null;
+        try {
+            option = new CommandlineOption();
 
-        JCommander runOption = JCommander.newBuilder()
-                .addObject(option)
-                .build();
-        runOption.parse(args);
-
+            JCommander runOption = JCommander.newBuilder()
+                    .addObject(option)
+                    .build();
+            runOption.parse(args);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return option.getConfigName();
     }
 
     public void start(String[] args) {
-        String configToRun = addCommandLine(args);
-
-        json_file_reader config = new json_file_reader();
-        String pathSeparator = FileSystems.getDefault().getSeparator();
         TestNG testng = new TestNG();
-        currentConfig = configToRun;
-
-        if (currentConfig.equals(null)) {
-            currentConfig = config.getRunConfig();
-        }
-
-        System.out.println("config to run : " + currentConfig);
-        JSONArray suiteList = null;
-        String directory_path = "." + pathSeparator + "src" + pathSeparator + "test" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
         try {
+
+            String configToRun = addCommandLine(args);
+
+            json_file_reader config = new json_file_reader();
+            String pathSeparator = FileSystems.getDefault().getSeparator();
+
+            currentConfig = configToRun;
+
+            if (currentConfig.equals(null)) {
+                currentConfig = config.getRunConfig();
+            }
+
+            System.out.println("config to run : " + currentConfig);
+            JSONArray suiteList = null;
+            String directory_path = "." + pathSeparator + "src" + pathSeparator + "test" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
+
             suiteList = config.getSuites(currentConfig);
 
             if (suiteList.length() != 0) {
@@ -56,10 +63,17 @@ public class TestRunner {
 
             }
 
-        } catch (JSONException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try{
+             testng.run();
+        }catch (Exception e)
+        {e.printStackTrace();
 
         }
-        testng.run();
+
 
 
     }

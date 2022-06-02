@@ -1,0 +1,65 @@
+{
+  "providers_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "locator_value": "//a[contains(text(),'Providers')]"
+  },
+
+  "agencies_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "locator_value": "//a[contains(text(),'Agencies')]"
+  },
+  "privacy_policy_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "locator_value": "//a[contains(text(),'Privacy Policy')]"
+  },
+  "shopify_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "locator_value": "//a[contains(text(),'Shopify')]"
+  },
+  "organization_providers_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "locator_value": "//a[contains(text(),'Organization Providers')]"
+  },
+  "search_for_option_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "locator_value": "//input[@aria-label='Search for option']"},
+  "logo": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "element",
+    "platform": "web",
+    "locator_value": "//a[@class='logo']"
+  },
+  "legal_terms_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "locator_value": "//a[contains(text(),'Legal Terms')]"
+  },
+  "logout_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "locator_value": "//a[contains(text(),'Logout')]"
+  }
+}

@@ -1,9 +1,5 @@
 package io.unity.framework.generators.locatorgenerator;
 
-import io.unity.*;
-
-import io.unity.framework.generators.locatorgenerator.Browser;
-
 import org.json.simple.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -17,7 +13,7 @@ import java.util.Scanner;
 public class PageObject {
 
 
-    public void generateLocatorForCurrentPage() {
+    public void generateLocatorForCurrentPage(String platform) {
         System.out.println("Current URL is" + Browser.driver.getCurrentUrl());
 
         Scanner in = new Scanner(System.in);
@@ -29,7 +25,7 @@ public class PageObject {
         String pageTitle = utility.getFormattedTextName(Browser.driver.getTitle()) + ".json";
 
 
-        JSONObject elementObject = domParser(pageDom);
+        JSONObject elementObject = domParser(pageDom,platform);
 
         System.out.println("Please Provide the locator File Name");
         Scanner commandIn = new Scanner(System.in);
@@ -41,7 +37,7 @@ public class PageObject {
 
     }
 
-    public JSONObject domParser(String dom) {
+    public JSONObject domParser(String dom, String platform) {
 
         Document doc = Jsoup.parse(dom);
 
@@ -85,7 +81,17 @@ public class PageObject {
                     }
                     tinyObject.put("locator_type", "xpath");
 
-                    tinyObject.put("locator_value", list.get(0));
+
+                    if (platform.equalsIgnoreCase("android")) {
+                        tinyObject.put("android_locator", list.get(0));
+                    }
+                    if (platform.equalsIgnoreCase("iOS")) {
+                        tinyObject.put("iOS_locator", list.get(0));
+                    }
+                    if (platform.equalsIgnoreCase("web")) {
+                        tinyObject.put("web_locator", list.get(0));
+                    }
+
 
                     tinyObject.put("objectGenerate", "generate");
 

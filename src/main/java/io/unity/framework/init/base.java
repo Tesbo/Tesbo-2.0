@@ -52,7 +52,7 @@ public class base {
 
         platform = config.getPlatform(TestRunner.currentConfig);
 
-        System.out.println("config to run : " + TestRunner.currentConfig);
+        System.out.println("Base config to run : " + TestRunner.currentConfig);
 
         if (platform.equalsIgnoreCase("web")) {
 

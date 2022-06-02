@@ -19,7 +19,7 @@ public class EntryPoint {
 
     public static void main(String[] args) {
 
-         EntryPoint generator = new EntryPoint();
+        EntryPoint generator = new EntryPoint();
         generator.generate("mobile");
     }
 

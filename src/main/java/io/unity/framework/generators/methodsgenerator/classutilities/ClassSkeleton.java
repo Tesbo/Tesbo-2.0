@@ -46,8 +46,8 @@ public class ClassSkeleton {
         java_class.setPackage(package_name).setName(className);
 
 
-        java_class.addImport("io.io.unity.unity.autoweb.Element");
-        java_class.addImport("io.io.unity.unity.autoweb.Verify");
+        java_class.addImport("io.unity.performaction.autoweb.Element");
+        java_class.addImport("io.unity.performaction.autoweb.Verify");
         java_class.addImport("org.openqa.selenium.WebDriver");
         java_class.addImport("org.testng.Assert");
 

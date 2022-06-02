@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class EntryPoint {
 
-   public static String website = "";
+    public static String website = "";
     public static String pageObjectDirectory = "";
 
     public static void main(String[] args) {
         EntryPoint point = new EntryPoint();
-        point.generate_locators();
+        point.generate_locators("android");
     }
 
-    public void generate_locators() {
+    public void generate_locators(String platform) {
 
         Scanner in = new Scanner(System.in);
 
@@ -31,43 +31,33 @@ public class EntryPoint {
         System.out.println("Okey, Now we are opening the page: " + entry.website);
         browser.openBrowser();
 
-        entry.waitForCommand();
+        entry.waitForCommand(platform);
 
 
     }
 
 
-
-
-
-
-
-
-    public void waitForCommand() {
+    public void waitForCommand(String platform) {
         System.out.println("When you are ready - Type : generate.");
 
         Scanner commandIn = new Scanner(System.in);
         String command = commandIn.nextLine();
 
         if (command.equals("generate")) {
-            generate();
-        } else
-        {
+            generate(platform);
+        } else {
             System.out.println("Sorry, It's out of my limit, Please try : generate");
-            waitForCommand();
+            waitForCommand(platform);
         }
-
-
 
 
     }
 
-    public void generate()
-    {
+    public void generate(String platform) {
         System.out.println("generate triggered");
         PageObject object = new PageObject();
-        object.generateLocatorForCurrentPage();
-        waitForCommand();
+        object.generateLocatorForCurrentPage(platform);
+        waitForCommand(platform);
 
     }
 
