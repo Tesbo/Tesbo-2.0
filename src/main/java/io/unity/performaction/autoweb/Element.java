@@ -236,6 +236,11 @@ public class Element {
         find(locator_value).click();
     }
 
+    /**
+     * @apiNote  Click on the First element from the list
+     * @param element_name
+     * @param element_text_for_click
+     */
     public void click_on_element_with_text_from_list(String element_name, String element_text_for_click) {
         logs.test_step("Click on " + element_text_for_click + " from list ");
         List<WebElement> elements_list = find_multiple_elements(element_name);
@@ -244,6 +249,7 @@ public class Element {
         for (WebElement element : elements_list) {
             if (element.getText().contains(element_text_for_click)) {
                 click(element_name);
+                break;
             }
         }
 
