@@ -3,8 +3,6 @@ package io.unity.performaction.autoweb;
 
 import com.google.common.net.MediaType;
 import io.appium.java_client.AppiumBy;
-import io.unity.performaction.autoweb.locator_reader;
-import io.unity.performaction.autoweb.testng_logs;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,9 +26,11 @@ public class Element {
 
     WebDriver driver;
     testng_logs logs = new testng_logs();
+    Wait wait = null;
 
     public Element(WebDriver dri) {
         this.driver = dri;
+        wait = new Wait(driver);
     }
 
 
@@ -233,6 +233,7 @@ public class Element {
 
     public void click(String locator_value) {
         logs.test_step("Click on " + locator_value);
+        wait.wait_until_element_is_visible(locator_value);
         find(locator_value).click();
     }
 
