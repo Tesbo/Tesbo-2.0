@@ -47,41 +47,45 @@ public class base {
     @BeforeMethod
     public WebDriver init() {
 
-        if (TestRunner.currentConfig.equals("")) {
-            TestRunner.currentConfig = config.getRunConfig();
-        }
+        try {
+            if (TestRunner.currentConfig.equals("")) {
+                TestRunner.currentConfig = config.getRunConfig();
+            }
 
-        platform = config.getPlatform(TestRunner.currentConfig);
+            platform = config.getPlatform(TestRunner.currentConfig);
 
-        System.out.println("Base config to run : " + TestRunner.currentConfig);
+            System.out.println("Base config to run : " + TestRunner.currentConfig);
 
-        if (platform.equalsIgnoreCase("web")) {
+            if (platform.equalsIgnoreCase("web")) {
 
-            if (config.isGrid(TestRunner.currentConfig)) {
-                setup_browser_for_grid(TestRunner.currentConfig);
+                if (config.isGrid(TestRunner.currentConfig)) {
+                    setup_browser_for_grid(TestRunner.currentConfig);
+                } else {
+                    setup_browser(TestRunner.currentConfig);
+                }
+                env = config.getEnv(TestRunner.currentConfig);
+                browser = new Browser(driver);
+                browser.open_url(env);
+
+                if (config.isAPITestConfigEnable(TestRunner.currentConfig)) {
+                    Unirest.config().defaultBaseUrl(config.getAPIEnv(TestRunner.currentConfig));
+                }
+            } else if (platform.equalsIgnoreCase("android")) {
+                System.out.println("Inside android");
+                setup_android(TestRunner.currentConfig);
+            } else if (platform.equalsIgnoreCase("iOS")) {
+                System.out.println("Inside iOS");
+                setup_iOS(TestRunner.currentConfig);
+
+            } else if (platform.equalsIgnoreCase("api")) {
+                Unirest.config().defaultBaseUrl(config.getAPIEnvDirect(TestRunner.currentConfig));
             } else {
-                setup_browser(TestRunner.currentConfig);
+                System.out.println("Platform type you entered is not supported");
             }
-            env = config.getEnv(TestRunner.currentConfig);
-            browser = new Browser(driver);
-            browser.open_url(env);
-
-            if (config.isAPITestConfigEnable(TestRunner.currentConfig)) {
-                Unirest.config().defaultBaseUrl(config.getAPIEnv(TestRunner.currentConfig));
-            }
-        } else if (platform.equalsIgnoreCase("android")) {
-            System.out.println("Inside android");
-            setup_android(TestRunner.currentConfig);
-        } else if (platform.equalsIgnoreCase("iOS")) {
-            System.out.println("Inside iOS");
-            setup_iOS(TestRunner.currentConfig);
-
-        } else if (platform.equalsIgnoreCase("api")) {
-            Unirest.config().defaultBaseUrl(config.getAPIEnvDirect(TestRunner.currentConfig));
-        } else {
-            System.out.println("Platform type you entered is not supported");
+        }catch (Exception e)
+        {
+            e.printStackTrace();
         }
-
         return driver;
     }
 

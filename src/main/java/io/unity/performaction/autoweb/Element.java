@@ -26,11 +26,11 @@ public class Element {
 
     WebDriver driver;
     testng_logs logs = new testng_logs();
-    Wait wait = null;
+
 
     public Element(WebDriver dri) {
         this.driver = dri;
-        wait = new Wait(driver);
+
     }
 
 
@@ -233,7 +233,6 @@ public class Element {
 
     public void click(String locator_value) {
         logs.test_step("Click on " + locator_value);
-        wait.wait_until_element_is_visible(locator_value);
         find(locator_value).click();
     }
 
@@ -281,38 +280,33 @@ public class Element {
         }
     }
 
-    public void network_interception_Method(WebDriver driver)
-    {
+    public void network_interception_Method(WebDriver driver) {
          /* 1. If you want to capture network events coming into the browser
             2. and you want to manipulate them you are able to do it with the following examples.*/
 
-        try(NetworkInterceptor interceptor = new NetworkInterceptor(
+        try (NetworkInterceptor interceptor = new NetworkInterceptor(
                 driver,
                 Route.matching(req -> true)
                         .to(() -> req -> new HttpResponse()
                                 .setStatus(200)
                                 .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
                                 .setStatus(200)
-                                .setContent(utf8String("Creamy, delicious cheese!"))));)
-        {
+                                .setContent(utf8String("Creamy, delicious cheese!"))));) {
             logs.test_step("INFO : Network Interceptor is executed..");
-        }
-        catch(Exception e)
-        {
-            logs.test_step("INFO : "+e.getStackTrace());
+        } catch (Exception e) {
+            logs.test_step("INFO : " + e.getStackTrace());
         }
 
     }
 
-    public void jsException_method( ChromeDriver driver,String locator_value)
-    {
+    public void jsException_method(ChromeDriver driver, String locator_value) {
         //Usage Of This method :
         //Listen to the JS Exceptions and register callbacks to process the exception details.
 
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
 
-       ((ChromeDriver) driver).getDevTools().createSession();
+        ((ChromeDriver) driver).getDevTools().createSession();
 
         List<JavascriptException> jsExceptionsList = new ArrayList<>();
         Consumer<JavascriptException> addEntry = jsExceptionsList::add;
@@ -335,122 +329,105 @@ public class Element {
         }
     }
 
-    public void console_Log_method(ChromeDriver driver)
-    {
+    public void console_Log_method(ChromeDriver driver) {
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
         devTools.getCdpSession();
         devTools.send(Log.enable());
         devTools.addListener(Log.entryAdded(),
                 logEntry -> {
-                    logs.test_step("INFO : log      : "+logEntry.getText());
-                    logs.test_step("INFO : level    : "+logEntry.getLevel());
-                    logs.test_step("INFO : Time     : "+logEntry.getTimestamp());
-                    logs.test_step("INFO : URL      : "+logEntry.getUrl());
-                    logs.test_step("INFO : WorkerID : "+logEntry.getWorkerId());
+                    logs.test_step("INFO : log      : " + logEntry.getText());
+                    logs.test_step("INFO : level    : " + logEntry.getLevel());
+                    logs.test_step("INFO : Time     : " + logEntry.getTimestamp());
+                    logs.test_step("INFO : URL      : " + logEntry.getUrl());
+                    logs.test_step("INFO : WorkerID : " + logEntry.getWorkerId());
 
                 });
 
     }
 
-    public void select_single_option_from_dropdown(String locator_value,String Value)
-    {
+    public void select_single_option_from_dropdown(String locator_value, String Value) {
         Select drp = new Select(find(locator_value));
         List<WebElement> options = drp.getOptions();
-        for (WebElement option:options)
-        {
-            if(option.getText().equals(Value))
-            {
+        for (WebElement option : options) {
+            if (option.getText().equals(Value)) {
                 option.click();
                 break;
             }
-            logs.test_step("INFO : "+Value+" is selected.");
+            logs.test_step("INFO : " + Value + " is selected.");
         }
     }
 
-    public void select_all_options_options_from_dropDown(String locator_value)
-    {
+    public void select_all_options_options_from_dropDown(String locator_value) {
         Select drp = new Select(find(locator_value));
         boolean multiple_Selected_dropDown = drp.isMultiple();
         List<WebElement> options = drp.getOptions();
-        if (multiple_Selected_dropDown == true)
-        {
-            for (WebElement option : options)
-            {
+        if (multiple_Selected_dropDown == true) {
+            for (WebElement option : options) {
                 option.click();
             }
             logs.test_step("INFO : All options are Selected..");
-        }else
-        {
+        } else {
             logs.test_step("INFO : This Dropdown is not a multiSelected DropDown.");
         }
     }
 
-    public void select_options_from_dropdown_by_value(String locator_value,String value)
-    {
+    public void select_options_from_dropdown_by_value(String locator_value, String value) {
         Select drp = new Select(find(locator_value));
         drp.selectByValue(value);
-        logs.test_step("INFO : Select "+value+" From Dropdown");
+        logs.test_step("INFO : Select " + value + " From Dropdown");
 
     }
 
-    public void select_options_from_dropdown_by_index(String locator_value,int index)
-    {
+    public void select_options_from_dropdown_by_index(String locator_value, int index) {
         Select drp = new Select(find(locator_value));
         drp.selectByIndex(index);
-        logs.test_step("INFO : Select "+index+" Index From Dropdown");
+        logs.test_step("INFO : Select " + index + " Index From Dropdown");
 
     }
 
-    public void select_options_from_dropdown_by_visibleText(String locator_value,String visibleText)
-    {
+    public void select_options_from_dropdown_by_visibleText(String locator_value, String visibleText) {
         Select drp = new Select(find(locator_value));
         drp.selectByVisibleText(visibleText);
-        logs.test_step("INFO : Select "+visibleText+" From Dropdown");
+        logs.test_step("INFO : Select " + visibleText + " From Dropdown");
 
     }
 
-    public void deSelect_allOptions_from_dropDown(String locator_value)
-    {
+    public void deSelect_allOptions_from_dropDown(String locator_value) {
         Select drp = new Select(find(locator_value));
         boolean multiple_Selected_dropDown = drp.isMultiple();
         if (multiple_Selected_dropDown == true) {
             drp.deselectAll();
             logs.test_step("INFO : All options are DeSelected..");
-        } else
-        {
+        } else {
             logs.test_step("INFO : This Dropdown is not a multiSelected DropDown.");
         }
 
     }
 
-    public void deSelect_options_from_dropDown_using_index(String locator_value,int index)
-    {
+    public void deSelect_options_from_dropDown_using_index(String locator_value, int index) {
         Select drp = new Select(find(locator_value));
         drp.deselectByIndex(index);
-        logs.test_step("INFO : De-Select "+index+" From Dropdown");
+        logs.test_step("INFO : De-Select " + index + " From Dropdown");
     }
 
-    public void deSelect_options_from_dropDown_using_value(String locator_value,String value)
-    {
+    public void deSelect_options_from_dropDown_using_value(String locator_value, String value) {
         Select drp = new Select(find(locator_value));
         drp.deselectByValue(value);
-        logs.test_step("INFO : De-Select "+value+" From Dropdown");
+        logs.test_step("INFO : De-Select " + value + " From Dropdown");
     }
 
-    public void deSelect_options_from_dropDown_using_visible_text(String locator_value,String text)
-    {
+    public void deSelect_options_from_dropDown_using_visible_text(String locator_value, String text) {
         Select drp = new Select(find(locator_value));
         drp.deselectByVisibleText(text);
-        logs.test_step("INFO : De-Select "+text+" From Dropdown");
+        logs.test_step("INFO : De-Select " + text + " From Dropdown");
     }
 
-    public void get_all_selected_options_from_dropDown(String locator_value){
+    public void get_all_selected_options_from_dropDown(String locator_value) {
         Select drp = new Select(find(locator_value));
         List<WebElement> AllOptions = drp.getAllSelectedOptions();
-        for(WebElement option:AllOptions)
-        {
-            logs.test_step("INFO : Selected Options are : "+option.getText());
+        for (WebElement option : AllOptions) {
+            logs.test_step("INFO : Selected Options are : " + option.getText());
         }
     }
 
