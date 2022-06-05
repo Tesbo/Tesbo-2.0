@@ -27,6 +27,7 @@ import org.testng.annotations.BeforeMethod;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Iterator;
 
 public class base {
@@ -108,7 +109,7 @@ public class base {
             System.out.println("Inside opera");
         }
 
-        //   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return driver;
     }
 
@@ -128,7 +129,7 @@ public class base {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
         return driver;
     }
@@ -150,7 +151,7 @@ public class base {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
-        }
+        } driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return (AndroidDriver) driver;
     }
 
@@ -172,6 +173,7 @@ public class base {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return (IOSDriver) driver;
     }
 
