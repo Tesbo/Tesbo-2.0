@@ -274,6 +274,13 @@ public class Element {
         }
     }
 
+    public String get_attribute_value(String locator_value,String attribute_name)
+    {
+        return find(locator_value).getAttribute(attribute_name);
+    }
+
+
+
     public void take_element_screen_shot(WebElement element, String image_name) {
 
         File scrFile = element.getScreenshotAs(OutputType.FILE);

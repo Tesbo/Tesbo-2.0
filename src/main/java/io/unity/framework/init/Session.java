@@ -15,10 +15,12 @@ public class Session {
     public void close_session(WebDriver driver) {
         driver.quit();
     }
-    public WebDriver create_new_mobile_session() {
+
+    public WebDriver create_new_mobile_session(String config_name) {
         WebDriver driver;
         base base = new base();
-        driver = base.init();
+        driver = base.setup_android(config_name);
         return driver;
     }
+
 }
