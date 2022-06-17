@@ -103,5 +103,45 @@ public class RequestBuilder {
         return responseObject;
     }
 
+    public JSONObject performRequestWithCustomHeader(String requestName, Map headers) {
+        String responseBody = "";
+        HttpResponse response = null;
+        JSONObject responseObject = null;
+        HttpRequest request = null;
+        GetApiConfig apiConfig = new GetApiConfig(requestName);
+
+        logs.test_step("========================================================================");
+        logs.test_step("Performing Request : " + requestName);
+        logs.test_step("Request End Point : " + requestName);
+        logs.test_step("Request Headers : " + headers);
+
+        if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
+            request = Unirest.get(apiConfig.getEndPoint()).headers(headers);
+            response = request.asString();
+            responseBody = (String) response.getBody();
+        }
+
+        if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
+            logs.test_step("Request body : " + headers);
+
+
+            request = Unirest.post(apiConfig.getEndPoint()).headers(headers).body(apiConfig.getBodyMap());
+            response = request.asString();
+            responseBody = (String) response.getBody();
+        }
+        logs.test_step("========================================================================");
+        logs.test_step("getting response : ");
+        JSONParser parser = new JSONParser();
+        try {
+            responseObject = (JSONObject) parser.parse(responseBody);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        logs.test_step("Response object : " + responseObject);
+        logs.test_step("========================================================================");
+        responseObject.put("statusCode", response.getStatus());
+        return responseObject;
+    }
 
 }
