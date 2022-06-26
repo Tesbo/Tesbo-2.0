@@ -122,8 +122,7 @@ public class RequestBuilder {
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
-            logs.test_step("Request body : " + headers);
-
+            logs.test_step("Request body : " + apiConfig.getBodyMap());
 
             request = Unirest.post(apiConfig.getEndPoint()).headers(headers).body(apiConfig.getBodyMap());
             response = request.asString();

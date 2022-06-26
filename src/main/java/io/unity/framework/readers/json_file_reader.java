@@ -116,7 +116,10 @@ public class json_file_reader {
     public String getEnvFromCurrentConfig()
     {
         JSONObject object = getTestConfig();
-
+        json_file_reader config = new json_file_reader();
+        if (TestRunner.currentConfig.equals("")) {
+            TestRunner.currentConfig = config.getRunConfig();
+        }
        return   getConfigObject(TestRunner.currentConfig).getString("env") ;
     }
 
