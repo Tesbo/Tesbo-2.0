@@ -82,8 +82,46 @@ public class base {
             } else {
                 System.out.println("Platform type you entered is not supported");
             }
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return driver;
+    }
+
+    public WebDriver init(String config_name) {
+
+        try {
+            platform = config.getPlatform(config_name);
+
+            System.out.println("Base config to run : " + config_name);
+
+            if (platform.equalsIgnoreCase("web")) {
+
+                if (config.isGrid(config_name)) {
+                    setup_browser_for_grid(config_name);
+                } else {
+                    setup_browser(config_name);
+                }
+                env = config.getEnv(config_name);
+                browser = new Browser(driver);
+                browser.open_url(env);
+
+                if (config.isAPITestConfigEnable(config_name)) {
+                    Unirest.config().defaultBaseUrl(config.getAPIEnv(config_name));
+                }
+            } else if (platform.equalsIgnoreCase("android")) {
+                System.out.println("Inside android");
+                setup_android(config_name);
+            } else if (platform.equalsIgnoreCase("iOS")) {
+                System.out.println("Inside iOS");
+                setup_iOS(config_name);
+
+            } else if (platform.equalsIgnoreCase("api")) {
+                Unirest.config().defaultBaseUrl(config.getAPIEnvDirect(config_name));
+            } else {
+                System.out.println("Platform type you entered is not supported");
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return driver;
@@ -113,7 +151,7 @@ public class base {
             System.out.println("Inside opera");
         }
 
-          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return driver;
     }
 
@@ -155,7 +193,8 @@ public class base {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
-        } driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return (AndroidDriver) driver;
     }
 
@@ -191,26 +230,24 @@ public class base {
             try {
 
                 if (!platform.equalsIgnoreCase("api")) {
-                    {
-
-                        TakesScreenshot screenshot = (TakesScreenshot) driver;
-                        File src = screenshot.getScreenshotAs(OutputType.FILE);
-                        file = new File("src/test/resources/failed_test_screenshot/" + result.getName() + "_" + TestData.random_alpha_numeric_string(5) + ".png");
-                        FileUtils.copyFile(src, file);
-
-                        logs.test_result(false);
-                        logs.test_step("<img src=\"" + file.getAbsolutePath() + "\" alt=\"test\" width=\"1024\" height=\"640\">");
 
 
-                    }
+                    TakesScreenshot screenshot = (TakesScreenshot) driver;
+                    File src = screenshot.getScreenshotAs(OutputType.FILE);
+                    file = new File("src/test/resources/failed_test_screenshot/" + result.getName() + "_" + TestData.random_alpha_numeric_string(5) + ".png");
+                    FileUtils.copyFile(src, file);
 
+                    logs.test_result(false);
+                    logs.test_step("<img src=\"" + file.getAbsolutePath() + "\" alt=\"test\" width=\"1024\" height=\"640\">");
+
+                    driver.quit();
                 }
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        driver.quit();
+
     }
 
 

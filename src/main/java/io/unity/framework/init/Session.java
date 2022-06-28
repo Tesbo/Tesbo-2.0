@@ -12,6 +12,14 @@ public class Session {
         return driver;
     }
 
+    public WebDriver create_new_web_session(String config_name) {
+        WebDriver driver;
+        base base = new base();
+        driver = base.init(config_name);
+        return driver;
+    }
+
+
     public void close_session(WebDriver driver) {
         driver.quit();
     }

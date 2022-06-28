@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.NetworkInterceptor;
 import org.openqa.selenium.devtools.v85.log.Log;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.WheelInput;
 import org.openqa.selenium.remote.http.HttpResponse;
 import org.openqa.selenium.remote.http.Route;
 import org.openqa.selenium.support.ui.Select;
@@ -237,9 +239,9 @@ public class Element {
     }
 
     /**
-     * @apiNote  Click on the First element from the list
      * @param element_name
      * @param element_text_for_click
+     * @apiNote Click on the First element from the list
      */
     public void click_on_element_with_text_from_list(String element_name, String element_text_for_click) {
         logs.test_step("Click on " + element_text_for_click + " from list ");
@@ -274,11 +276,9 @@ public class Element {
         }
     }
 
-    public String get_attribute_value(String locator_value,String attribute_name)
-    {
+    public String get_attribute_value(String locator_value, String attribute_name) {
         return find(locator_value).getAttribute(attribute_name);
     }
-
 
 
     public void take_element_screen_shot(WebElement element, String image_name) {
@@ -443,6 +443,37 @@ public class Element {
             logs.test_step("INFO : Selected Options are : " + option.getText());
         }
     }
+
+    public void perform_scroll_to_element(String locator_value) {
+
+        new Actions(driver)
+                .scrollToElement(find(locator_value))
+                .perform();
+    }
+
+    public void perform_horizontal_scroll_to_element(String locator_value, int scroll_amount) {
+
+        int deltaY = find(locator_value).getRect().y;
+        new Actions(driver)
+                .scrollByAmount(scroll_amount, deltaY)
+                .perform();
+    }
+
+    public void perform_scroll_by_amount(int x, int y) {
+
+        new Actions(driver)
+                .scrollByAmount(x, y)
+                .perform();
+    }
+
+    public void perform_scroll_from_element_by_amount(String locator_value, int x, int y) {
+
+        WheelInput.ScrollOrigin scrollOrigin = WheelInput.ScrollOrigin.fromElement(find(locator_value));
+        new Actions(driver)
+                .scrollFromOrigin(scrollOrigin, x, y)
+                .perform();
+    }
+
 
 
 }
