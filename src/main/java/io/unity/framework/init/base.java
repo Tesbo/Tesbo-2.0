@@ -188,7 +188,7 @@ public class base {
             String key = (String) itr.next();
             capabilities.setCapability(key, capabilityList.get(key));
         }
-        capabilities.setCapability("app", config.get_final_app_path(configName));
+        capabilities.setCapability("appium:app", config.get_final_app_path(configName));
         try {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
@@ -240,14 +240,17 @@ public class base {
                     logs.test_result(false);
                     logs.test_step("<img src=\"" + file.getAbsolutePath() + "\" alt=\"test\" width=\"1024\" height=\"640\">");
 
-                    driver.quit();
+
                 }
+
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-
+        if (platform.equalsIgnoreCase("web")) {
+            driver.quit();
+        }
     }
 
 
