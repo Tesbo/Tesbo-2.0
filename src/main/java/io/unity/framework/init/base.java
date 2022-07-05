@@ -188,7 +188,7 @@ public class base {
             String key = (String) itr.next();
             capabilities.setCapability(key, capabilityList.get(key));
         }
-        capabilities.setCapability("app", config.get_final_app_path(configName));
+        capabilities.setCapability("setApp", config.get_final_app_path(configName));
         try {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
@@ -210,7 +210,7 @@ public class base {
             String key = (String) itr.next();
             capabilities.setCapability(key, capabilityList.get(key));
         }
-        capabilities.setCapability("app", config.get_final_app_path(configName));
+        capabilities.setCapability("setApp", config.get_final_app_path(configName));
         try {
             driver = new IOSDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
