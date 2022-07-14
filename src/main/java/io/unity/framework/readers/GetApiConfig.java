@@ -36,6 +36,8 @@ public class GetApiConfig {
         return object.getString("endPoint");
     }
 
+
+
     public String getMethodType() {
         JSONObject object = getApiConfig();
         return object.getString("methodType");
