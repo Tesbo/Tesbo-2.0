@@ -2,6 +2,7 @@ package io.unity.framework.readers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.unity.performaction.autoapi.ApiFileReader;
 import org.json.JSONObject;
 
 import java.nio.file.Files;
