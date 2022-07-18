@@ -37,6 +37,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -50,6 +51,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
@@ -87,6 +89,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -100,6 +103,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
@@ -135,6 +139,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -145,6 +150,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
@@ -178,6 +184,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -187,6 +194,7 @@ public class RequestBuilder {
             response = request.asString();
             responseBody = (String) response.getBody();
             long responsetime = System.nanoTime() - startNanos;
+            System.out.println(responsetime);
         }
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
