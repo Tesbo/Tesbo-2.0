@@ -33,8 +33,16 @@ public class GetApiConfig {
     }
 
     public String getEndPoint() {
+        String test;
         JSONObject object = getApiConfig();
-        return object.getString("endPoint");
+        String specialcharacter = "{}";
+        if(object.getString("endPoint").contains(specialcharacter)){
+           test = object.getString("endPoint").replaceAll("[^a-zA-Z0-9]","");
+        }else {
+           test = object.getString("endPoint");
+        }
+
+        return test;
     }
 
 
