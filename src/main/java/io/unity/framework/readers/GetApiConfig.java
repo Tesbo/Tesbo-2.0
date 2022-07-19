@@ -23,8 +23,17 @@ public class GetApiConfig {
         String data = "";
         try {
             data = new String(Files.readAllBytes(Paths.get("src/test/java/api/requests/" + request_name + ".json").toAbsolutePath()));
-        } catch (Exception e) {
-            System.out.println("config file not found");
+
+        } catch (Exception baseFolder) {
+            //       System.out.println("config file not found in Base Folder, Trying for the Temp Folder");
+            try {
+
+                data = new String(Files.readAllBytes(Paths.get(request_name).toAbsolutePath()));
+
+            } catch (Exception tempFolder) {
+                //         System.out.println("config file not found in Temp folder as well");
+            }
+
         }
         JSONObject testConfig = new JSONObject(data);
 
@@ -32,9 +41,46 @@ public class GetApiConfig {
     }
 
     public String getEndPoint() {
+        String finalEndpoint;
         JSONObject object = getApiConfig();
-        return object.getString("endPoint");
+
+        finalEndpoint = object.getString("endPoint");
+
+        if (object.getString("endPoint").contains("${")) {
+            finalEndpoint = getEndPointWithPathParameter(finalEndpoint);
+        } else {
+
+        }
+
+        return finalEndpoint;
     }
+
+    public String getEndPointWithPathParameter(String endPoint) {
+
+
+        String newEndPoint = "";
+        String[] singleEndpointElement = endPoint.split("/");
+
+        for (int i = 0; i < singleEndpointElement.length; i++) {
+            if (singleEndpointElement[i].contains("${")) {
+                singleEndpointElement[i] = getPathParameterValue(singleEndpointElement[i].substring(2, singleEndpointElement[i].length() - 1));
+            }
+
+            newEndPoint = newEndPoint + singleEndpointElement[i] + "/";
+
+        }
+        System.out.println(newEndPoint);
+        return newEndPoint;
+    }
+
+    public String getPathParameterValue(String parameterName) {
+
+        JSONObject object = getApiConfig();
+        JSONObject pathParameter = (JSONObject) object.get("pathParameter");
+        return pathParameter.getString(parameterName);
+
+    }
+
 
     public String getMethodType() {
         JSONObject object = getApiConfig();
@@ -66,6 +112,7 @@ public class GetApiConfig {
         JSONObject object = getApiConfig();
         return (JSONObject) object.get("body");
     }
+
     public Map<String, String> getBodyMap() {
         JSONObject object = getApiConfig();
 

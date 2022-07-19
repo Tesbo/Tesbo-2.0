@@ -42,7 +42,7 @@ public class ClassMethodsValidator {
         }
     }
 
-    public List look_for_locator_json_file(String folder_path) {
+    public List<String> look_for_locator_json_file(String folder_path) {
         File dir = new File(folder_path);
 
         FilenameFilter filter = new FilenameFilter() {
@@ -115,7 +115,7 @@ public class ClassMethodsValidator {
     public List prepare_unavailable_method_tag_list(String locator_type, String java_class_name, String locator_name) {
 
         //Already declared Method list
-        ArrayList available_method_tag = prepare_list_of_available_methods_for_single_locator(java_class_name, locator_name);
+        ArrayList<String> available_method_tag = prepare_list_of_available_methods_for_single_locator(java_class_name, locator_name);
 
 
         Class cls = null;
@@ -126,7 +126,7 @@ public class ClassMethodsValidator {
         }
         Method[] m = cls.getMethods();
 
-        ArrayList expected_method_tag_list = new ArrayList();
+        ArrayList<String> expected_method_tag_list = new ArrayList<String>();
 
         for (int i = 0; i < m.length; i++) {
 
@@ -139,7 +139,7 @@ public class ClassMethodsValidator {
 
         }
 
-        List<String> result = (List<String>) expected_method_tag_list.stream()
+        List<String> result =  expected_method_tag_list.stream()
                 .filter(Predicate.not(new HashSet<>(available_method_tag)::contains))
                 .collect(Collectors.toList());
 
@@ -195,7 +195,7 @@ public class ClassMethodsValidator {
         return cls;
     }
 
-    public ArrayList prepare_list_of_available_methods_for_single_locator(String java_class_name, String locator_name) {
+    public ArrayList<String> prepare_list_of_available_methods_for_single_locator(String java_class_name, String locator_name) {
         Class cls = null;
         try {
             cls = Class.forName(java_class_name);
@@ -204,7 +204,7 @@ public class ClassMethodsValidator {
         }
         Method[] m = cls.getMethods();
 
-        ArrayList method_tag_list = new ArrayList();
+        ArrayList<String> method_tag_list = new ArrayList<>();
 
         for (int i = 0; i < m.length; i++) {
             if (m[i].getName().contains(locator_name)) {
