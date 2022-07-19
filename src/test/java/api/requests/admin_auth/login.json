@@ -1,5 +1,6 @@
 {
-  "endPoint": "/login",
+  "endPoint": "/login/${test}",
+
   "methodType" : "POST",
   "header": {
     "Content-Type": "application/json"
