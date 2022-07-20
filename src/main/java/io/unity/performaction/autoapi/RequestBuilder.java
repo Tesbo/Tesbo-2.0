@@ -44,7 +44,18 @@ public class RequestBuilder {
             request = Unirest.get(endPoint).headers(Header);
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responsetime = System.nanoTime() - startNanos;
+            long responset = (System.nanoTime() - startNanos)/1000000000;
+            int responsetime = (int)responset;
+            System.out.println(responsetime);
+        }
+
+        if (apiConfig.getMethodType().equalsIgnoreCase("delete")) {
+
+            request = Unirest.get(endPoint).headers(apiConfig.getHeaderMap());
+            response = request.asString();
+            responseBody = (String) response.getBody();
+            long responset = (System.nanoTime() - startNanos)/1000000000;
+            int responsetime = (int)responset;
             System.out.println(responsetime);
         }
 
@@ -54,9 +65,26 @@ public class RequestBuilder {
 
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responsetime = System.nanoTime() - startNanos;
+            long responset = (System.nanoTime() - startNanos)/1000000000;
+            int responsetime = (int)responset;
             System.out.println(responsetime);
         }
+
+        if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
+            logs.test_step("Request body : " + apiConfig.getHeaderMap());
+            System.out.println(apiConfig.getHeaderMap());
+            System.out.println(apiConfig.getBody());
+
+
+            request = Unirest.post(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
+
+            response = request.asString();
+            responseBody = (String) response.getBody();
+            long responset = (System.nanoTime() - startNanos)/1000000000;
+            int responsetime = (int)responset;
+            System.out.println(responsetime);
+        }
+
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
         JSONParser parser = new JSONParser();
@@ -91,10 +119,10 @@ public class RequestBuilder {
             request = Unirest.get(endpoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responsetime = System.nanoTime() - startNanos;
+            long responset = (System.nanoTime() - startNanos)/1000000000;
+            int responsetime = (int)responset;
             System.out.println(responsetime);
         }
-
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
             logs.test_step("Request body : " + apiConfig.getHeaderMap());
             System.out.println(apiConfig.getHeaderMap());
@@ -105,9 +133,11 @@ public class RequestBuilder {
 
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responsetime = System.nanoTime() - startNanos;
+            long responset = (System.nanoTime() - startNanos)/1000000000;
+            int responsetime = (int)responset;
             System.out.println(responsetime);
         }
+
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
         JSONParser parser = new JSONParser();
