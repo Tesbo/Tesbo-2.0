@@ -46,7 +46,7 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
             long responset = (System.nanoTime() - startNanos)/1000000000;
             int responsetime = (int)responset;
-            System.out.println(responsetime);
+            System.out.println("Response Time : " + responsetime + " sec");
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("delete")) {
@@ -56,7 +56,7 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
             long responset = (System.nanoTime() - startNanos)/1000000000;
             int responsetime = (int)responset;
-            System.out.println(responsetime);
+            System.out.println("Response Time : " + responsetime + " sec");
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -67,7 +67,7 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
             long responset = (System.nanoTime() - startNanos)/1000000000;
             int responsetime = (int)responset;
-            System.out.println(responsetime);
+            System.out.println("Response Time : " + responsetime + " sec");
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
@@ -82,7 +82,7 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
             long responset = (System.nanoTime() - startNanos)/1000000000;
             int responsetime = (int)responset;
-            System.out.println(responsetime);
+            System.out.println("Response Time : " + responsetime + " sec");
         }
 
         logs.test_step("========================================================================");
