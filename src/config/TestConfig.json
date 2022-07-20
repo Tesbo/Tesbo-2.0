@@ -1,5 +1,5 @@
 {
-  "run": "nevvon_test_api",
+  "run": "API_Regression",
   "config": {
     "nevvon_test_admin": {
       "platform": "web",
@@ -83,13 +83,12 @@
         "nevvon_public_api.xml"
       ]
     },
-    "nevvon_prod_api" :
-    {
-      "platform" : "api",
-      "enable" : true,
-      "env" : "https://pubapi.nevvon.com/v1",
+    "API_Regression": {
+      "platform": "api",
+      "enable": true,
+      "env": "https://v3api.lifeisgoodforlearner.com",
       "testNGsuite": [
-        "nevvon_public_api.xml"
+        "sequence.xml"
       ]
     }
   }

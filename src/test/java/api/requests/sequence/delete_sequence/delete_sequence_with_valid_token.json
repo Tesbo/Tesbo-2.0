@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/${sequenceId}",
+  "methodType" : "DELETE",
+  "header": {
+    "Content-Type":"application/json",
+    "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3NTUsImlhdCI6MTY1ODMwNjg4OCwiZXhwIjoxNjYwODk4ODg4fQ.BtfjdgS45fr75bLNUfOwHPxxbRTNj4R8IBO5TnOEsFQ"
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId" : "3724"
+  }
+
+}
