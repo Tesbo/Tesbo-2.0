@@ -46,12 +46,12 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
             long responset = (System.nanoTime() - startNanos)/1000000000;
             int responsetime = (int)responset;
-            System.out.println("Response Time : " + responsetime + " sec");
+            System.out.println("Response Time : " + responsetime + "sec");
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("delete")) {
 
-            request = Unirest.get(endPoint).headers(apiConfig.getHeaderMap());
+            request = Unirest.delete(endPoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
             long responset = (System.nanoTime() - startNanos)/1000000000;
@@ -76,7 +76,7 @@ public class RequestBuilder {
             System.out.println(apiConfig.getBody());
 
 
-            request = Unirest.post(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
+            request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
 
             response = request.asString();
             responseBody = (String) response.getBody();
