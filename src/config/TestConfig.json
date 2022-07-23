@@ -1,9 +1,9 @@
 {
-  "run": "API_Regression",
+  "run": "nevvon_test_admin",
   "config": {
     "nevvon_test_admin": {
       "platform": "web",
-      "browser": "chrome",
+      "browser": "chrome-headless",
       "capabilities": {},
       "env": "https://test.nevvon.com/",
       "isGrid": false,

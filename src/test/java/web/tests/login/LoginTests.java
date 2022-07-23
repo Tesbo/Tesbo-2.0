@@ -25,11 +25,9 @@ public class LoginTests extends base {
         return data;
     }
 
-    @Test(dataProvider = "login_credentials")
-    public void verify_login_with_valid_user(String username,String password)
+    @Test()
+    public void verify_login_with_valid_user()
     {
-        System.out.println("username" +username);
-        System.out.println("password" +password);
 
 
         login_page login = new login_page(driver);

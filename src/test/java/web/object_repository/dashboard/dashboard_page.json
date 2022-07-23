@@ -7,6 +7,14 @@
     "locator_value": "//a[contains(text(),'Providers')]"
   },
 
+  "test_providers_link": {
+    "objectGenerate": "generate",
+    "locator_type": "dyn-xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//a[contains(text(),'${element1}')]/${element2}"
+  },
+
   "agencies_link": {
     "objectGenerate": "generate",
     "locator_type": "xpath",

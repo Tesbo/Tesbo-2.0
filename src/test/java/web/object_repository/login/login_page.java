@@ -4,7 +4,11 @@ import io.unity.framework.generators.methodsgenerator.methods.MethodsData;
 import io.unity.performaction.autoweb.Element;
 import io.unity.performaction.autoweb.Verify;
 import io.unity.performaction.autoweb.Wait;
+import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class login_page {
 
@@ -23,6 +27,9 @@ public class login_page {
 
     @MethodsData(method_id = "button_1")
     public void verify_password_button_is_present_on_page() {
+
+
+        //   element.find_element_using_dynamic_xpath("",).click();
         verify.element_is_present("password_password");
     }
 
