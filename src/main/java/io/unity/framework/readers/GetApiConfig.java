@@ -6,6 +6,8 @@ import org.json.JSONObject;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class GetApiConfig {
@@ -51,6 +53,11 @@ public class GetApiConfig {
         } else {
 
         }
+        if (object.getString("endPoint").contains("$?{")) {
+            finalEndpoint = getQueryParameter(finalEndpoint);
+        } else {
+
+        }
 
         return finalEndpoint;
     }
@@ -78,6 +85,39 @@ public class GetApiConfig {
         JSONObject object = getApiConfig();
         JSONObject pathParameter = (JSONObject) object.get("pathParameter");
         return pathParameter.getString(parameterName);
+
+    }
+
+    public String getQueryParameter(String endPoint) {
+
+        String newEndPoint = "";
+        String[] singleEndpointElement = endPoint.split("/");
+        JSONObject object = getApiConfig();
+
+        for (int i = 0; i < singleEndpointElement.length; i++) {
+            if (singleEndpointElement[i].contains("$?{")) {
+                singleEndpointElement[i] =  "=" + getQueryParameterValue(singleEndpointElement[i].substring(3, singleEndpointElement[i].length() - 1)) ;
+            }
+            newEndPoint = newEndPoint +singleEndpointElement[i] + "/";
+            if (singleEndpointElement[i].contains("$&{")) {
+                singleEndpointElement[i] =  "=" + getQueryParameterValue(singleEndpointElement[i].substring(3, singleEndpointElement[i].length() - 1)) ;
+            }
+            newEndPoint = newEndPoint +singleEndpointElement[singleEndpointElement.length-1]+ "&";
+
+
+        }
+
+
+        System.out.println(newEndPoint);
+        return newEndPoint;
+    }
+
+
+    public String getQueryParameterValue(String queryparameterName) {
+
+        JSONObject object = getApiConfig();
+        JSONObject queryParameter = (JSONObject) object.get("queryparameter");
+        return queryParameter.getString(queryparameterName);
 
     }
 

@@ -258,14 +258,17 @@ public class RequestBuilder {
     }
 
 
-    public String updateRequestObject(String fileName, JSONObject pathParameter, JSONObject header, JSONObject body) {
+    public String updateRequestObject(String fileName, JSONObject pathParameter,JSONObject queryParameter, JSONObject header, JSONObject body) {
         String folder_path = createTempFolder();
         GetApiConfig config = new GetApiConfig(fileName);
         org.json.JSONObject baseConfig = config.getApiConfig();
 
-
         if (!pathParameter.isEmpty()) {
             baseConfig.put("pathParameter", pathParameter);
+        }
+
+        if (!queryParameter.isEmpty()) {
+            baseConfig.put("queryparameter", queryParameter);
         }
 
         if (!header.isEmpty()) {
