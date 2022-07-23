@@ -15,6 +15,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
@@ -129,14 +130,13 @@ public class base {
 
 
     public WebDriver setup_browser(String configName) {
-        System.out.println("Inside  browser");
+        System.out.println("Setting up browser");
         browserName = config.getBrowser(configName);
-        System.out.println("browser name" + browserName);
+        System.out.println("browser name :" + browserName);
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             System.out.println("Inside chrome");
-
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -149,6 +149,11 @@ public class base {
             WebDriverManager.operadriver().setup();
             driver = new OperaDriver();
             System.out.println("Inside opera");
+        } else if (browserName.equalsIgnoreCase("chrome-headless")) {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            driver = new ChromeDriver(options);
         }
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
@@ -195,6 +200,7 @@ public class base {
             e.printStackTrace();
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+
         return (AndroidDriver) driver;
     }
 
@@ -248,7 +254,7 @@ public class base {
                 e.printStackTrace();
             }
         }
-        if (platform.equalsIgnoreCase("web")) {
+        if (!platform.equalsIgnoreCase("api")) {
             driver.quit();
         }
     }
