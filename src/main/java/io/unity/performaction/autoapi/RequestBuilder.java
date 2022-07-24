@@ -32,7 +32,6 @@ public class RequestBuilder {
         Map Header = apiConfig.getHeaderMap();
         Map Body = apiConfig.getBodyMap();
 
-
         logs.test_step("========================================================================");
         logs.test_step("Performing Request : " + requestName);
         logs.test_step("Request End Point : " + endPoint);
@@ -44,8 +43,8 @@ public class RequestBuilder {
             request = Unirest.get(endPoint).headers(Header);
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos)/1000000000;
-            int responsetime = (int)responset;
+            long responset = (System.nanoTime() - startNanos) / 1000000000;
+            int responsetime = (int) responset;
             System.out.println("Response Time : " + responsetime + "sec");
         }
 
@@ -54,8 +53,8 @@ public class RequestBuilder {
             request = Unirest.delete(endPoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos)/1000000000;
-            int responsetime = (int)responset;
+            long responset = (System.nanoTime() - startNanos) / 1000000000;
+            int responsetime = (int) responset;
             System.out.println("Response Time : " + responsetime + " sec");
         }
 
@@ -65,8 +64,8 @@ public class RequestBuilder {
 
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos)/1000000000;
-            int responsetime = (int)responset;
+            long responset = (System.nanoTime() - startNanos) / 1000000000;
+            int responsetime = (int) responset;
             System.out.println("Response Time : " + responsetime + " sec");
         }
 
@@ -75,13 +74,12 @@ public class RequestBuilder {
             System.out.println(apiConfig.getHeaderMap());
             System.out.println(apiConfig.getBody());
 
-
             request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
 
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos)/1000000000;
-            int responsetime = (int)responset;
+            long responset = (System.nanoTime() - startNanos) / 1000000000;
+            int responsetime = (int) responset;
             System.out.println("Response Time : " + responsetime + " sec");
         }
 
@@ -115,12 +113,11 @@ public class RequestBuilder {
 
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
-
             request = Unirest.get(endpoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos)/1000000000;
-            int responsetime = (int)responset;
+            long responset = (System.nanoTime() - startNanos) / 1000000000;
+            int responsetime = (int) responset;
             System.out.println(responsetime);
         }
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -133,8 +130,8 @@ public class RequestBuilder {
 
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos)/1000000000;
-            int responsetime = (int)responset;
+            long responset = (System.nanoTime() - startNanos) / 1000000000;
+            int responsetime = (int) responset;
             System.out.println(responsetime);
         }
 
@@ -258,7 +255,7 @@ public class RequestBuilder {
     }
 
 
-    public String updateRequestObject(String fileName, JSONObject pathParameter, JSONObject header, JSONObject body) {
+    public String updateRequestObject(String fileName, JSONObject pathParameter, JSONObject queryParameter, JSONObject header, JSONObject body) {
         String folder_path = createTempFolder();
         GetApiConfig config = new GetApiConfig(fileName);
         org.json.JSONObject baseConfig = config.getApiConfig();
@@ -274,6 +271,10 @@ public class RequestBuilder {
 
         if (!body.isEmpty()) {
             baseConfig.put("body", body);
+        }
+
+        if (!queryParameter.isEmpty()) {
+            baseConfig.put("queryParameter", queryParameter);
         }
 
         File updatedFile = new File(folder_path + "/" + TestData.random_alpha_numeric_string(6) + ".json");

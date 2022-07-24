@@ -1,5 +1,5 @@
 {
-  "run": "nevvon_test_admin",
+  "run": "nevvon_demo_api",
   "config": {
     "nevvon_test_admin": {
       "platform": "web",
