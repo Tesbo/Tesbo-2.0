@@ -2,14 +2,31 @@ package io.unity.performaction.autoapi;
 
 import com.jayway.jsonpath.JsonPath;
 
+import io.unity.framework.readers.GetApiConfig;
 import io.unity.performaction.autoweb.testng_logs;
+import kong.unirest.json.JSONException;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.skyscreamer.jsonassert.Customization;
+import org.skyscreamer.jsonassert.comparator.CustomComparator;
 import org.testng.Assert;
+import org.skyscreamer.jsonassert.JSONAssert;
+import org.skyscreamer.jsonassert.JSONCompareMode;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class ResponseValidator {
 
     JSONObject response;
     testng_logs logs = new testng_logs();
+
+
 
     public ResponseValidator(JSONObject response) {
         this.response = response;
@@ -37,6 +54,17 @@ public class ResponseValidator {
 
     public String getDataFromBody(String jsonPath) {
         return JsonPath.parse(response.toString()).read(jsonPath).toString();
+
+    }
+
+    public void compareJsonData(JSONObject response,String request_name) throws JSONException, IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        Object obj = parser.parse(new String(Files.readAllBytes(Paths.get("src/test/java/api/data/"+request_name+".json").toAbsolutePath())));
+        JSONObject expectedJsonObj = (JSONObject)obj;
+
+        JSONObject actualJsonObj = response;
+
+        JSONAssert.assertEquals(expectedJsonObj.toString(), actualJsonObj.toString(),JSONCompareMode.STRICT_ORDER);
 
     }
 
