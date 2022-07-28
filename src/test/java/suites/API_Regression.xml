@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "API_Regression">
+    <test name = "delete sequence with valid toke">
+        <classes>
+            <class name = "api.test.getsequence" >
+                <methods>
+                    <include name="delete_sequence_with_valid_toke"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
