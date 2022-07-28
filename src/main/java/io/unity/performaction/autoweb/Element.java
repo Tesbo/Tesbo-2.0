@@ -3,6 +3,7 @@ package io.unity.performaction.autoweb;
 
 import com.google.common.net.MediaType;
 import io.appium.java_client.AppiumBy;
+import io.unity.framework.exception.locator_validation_exception;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
 import static org.openqa.selenium.remote.http.Contents.utf8String;
@@ -32,52 +34,94 @@ public class Element {
 
     public Element(WebDriver dri) {
         this.driver = dri;
+    }
 
+
+    private WebElement get_element_from_value(String locator_type, String locator_value) {
+        WebElement element = null;
+        switch (locator_type) {
+            case "xpath":
+                element = driver.findElement(By.xpath(locator_value));
+                break;
+            case "id":
+                element = driver.findElement(By.id(locator_value));
+                break;
+            case "css_selector":
+                element = driver.findElement(By.cssSelector(locator_value));
+                break;
+            case "class_name":
+                element = driver.findElement(By.className(locator_value));
+                break;
+            case "name":
+                element = driver.findElement(By.name(locator_value));
+                break;
+            case "link_text":
+                element = driver.findElement(By.linkText(locator_value));
+                break;
+            case "partial_link_text":
+                element = driver.findElement(By.partialLinkText(locator_value));
+                break;
+            case "tag":
+                element = driver.findElement(By.tagName(locator_value));
+                break;
+            case "accessibility-id":
+                element = driver.findElement(new AppiumBy.ByAccessibilityId(locator_value));
+            default:
+                logs.test_step("Incorrect Locator Type");
+        }
+        return element;
     }
 
 
     public WebElement find(String locator_value) {
-
 
         WebElement element = null;
         locator_reader reader = new locator_reader();
 
         String[] locator_to_find = reader.get_locator_value(locator_value).split(":");
         System.out.println("Locator Value : " + locator_to_find[1]);
-        switch (locator_to_find[0]) {
-            case "xpath":
-                element = driver.findElement(By.xpath(locator_to_find[1]));
-                break;
-            case "id":
-                element = driver.findElement(By.id(locator_to_find[1]));
-                break;
-            case "css_selector":
-                element = driver.findElement(By.cssSelector(locator_to_find[1]));
-                break;
-            case "class_name":
-                element = driver.findElement(By.className(locator_to_find[1]));
-                break;
-            case "name":
-                element = driver.findElement(By.name(locator_to_find[1]));
-                break;
-            case "link_text":
-                element = driver.findElement(By.linkText(locator_to_find[1]));
-                break;
-            case "partial_link_text":
-                element = driver.findElement(By.partialLinkText(locator_to_find[1]));
-                break;
-            case "tag":
-                element = driver.findElement(By.tagName(locator_to_find[1]));
-                break;
-            case "accessibility-id":
-                element = driver.findElement(new AppiumBy.ByAccessibilityId(locator_to_find[1]));
-            default:
-                logs.test_step("Incorrect Locator Type");
-        }
+
+        element = get_element_from_value(locator_to_find[0], locator_to_find[1]);
 
         return element;
     }
 
+    public WebElement find_element_by_xpath(String locator_value) {
+        WebElement element = null;
+        element = driver.findElement(By.xpath(locator_value));
+        return element;
+    }
+
+    public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws locator_validation_exception {
+        WebElement element = null;
+        locator_reader reader = new locator_reader();
+        String[] locator_to_find = reader.get_locator_value(locator_value).split(":");
+
+        String final_xpath = "";
+        if (locator_to_find[0].equalsIgnoreCase("dyn-xpath")) {
+            String current_xpath = locator_to_find[1];
+            final_xpath = current_xpath;
+            if (current_xpath.contains("${")) {
+
+                for (Map.Entry<String, String> entry : dynamic_value.entrySet()) {
+
+                    System.out.println("Key = " + entry.getKey() +
+                            ", Value = " + entry.getValue());
+
+                    final_xpath = final_xpath.replace("${" + entry.getKey() + "}", entry.getValue());
+                }
+
+            } else {
+                throw new locator_validation_exception("No Dynamic Value Found in locator");
+            }
+
+
+        } else {
+            throw new locator_validation_exception("locator type is not a dyn-xpath, This method only use for the Dynamic Xpath ");
+        }
+
+        return driver.findElement(By.xpath(final_xpath));
+    }
 
     public List<WebElement> find_multiple_elements(String locator_value) {
 
@@ -473,7 +517,6 @@ public class Element {
                 .scrollFromOrigin(scrollOrigin, x, y)
                 .perform();
     }
-
 
 
 }

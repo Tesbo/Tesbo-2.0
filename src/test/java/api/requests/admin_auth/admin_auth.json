@@ -1,12 +1,13 @@
 {
-  "endPoint": "/admin-auth/login/${mahesh}/${test}",
+  "endPoint": "/admin-auth/login/${mahesh}/${test}?name=${name}&products=${products}",
   "methodType" : "POST",
   "pathParameter": {
     "mahesh": "123",
     "test": "456"
   },
   "queryParameter": {
-    "": ""
+    "name": "Branch",
+    "products" : "[Journeys,Email,Universal%20Ads]"
   },
   "header": {
     "Content-Type": "application/json"

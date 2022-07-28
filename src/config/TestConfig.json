@@ -1,9 +1,9 @@
 {
-  "run": "nevvon_test_api",
+  "run": "nevvon_demo_api",
   "config": {
     "nevvon_test_admin": {
       "platform": "web",
-      "browser": "chrome",
+      "browser": "chrome-headless",
       "capabilities": {},
       "env": "https://test.nevvon.com/",
       "isGrid": false,
@@ -83,13 +83,12 @@
         "nevvon_public_api.xml"
       ]
     },
-    "nevvon_prod_api" :
-    {
-      "platform" : "api",
-      "enable" : true,
-      "env" : "https://pubapi.nevvon.com/v1",
+    "API_Regression": {
+      "platform": "api",
+      "enable": true,
+      "env": "https://v3api.lifeisgoodforlearner.com",
       "testNGsuite": [
-        "nevvon_public_api.xml"
+        "sequence.xml"
       ]
     }
   }
