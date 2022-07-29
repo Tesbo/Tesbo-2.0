@@ -1,0 +1,10 @@
+{
+  "endPoint": "/sequences",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+    "title":"test"
+  }
+
+}

@@ -1,0 +1,14 @@
+{
+  "endPoint": "/auth/signup",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "password": "QAble@1010",
+    "email": "vir+1@qable.io",
+    "timeZone": "",
+    "rewardfulReferralId": "76217"
+
+  }
+}

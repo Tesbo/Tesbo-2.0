@@ -1,0 +1,12 @@
+{
+  "endPoint": "/sequences",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type":"application/json",
+    "Authorization": ""
+  },
+  "body": {
+    "title":"test"
+  }
+
+}

@@ -1,0 +1,15 @@
+{
+  "endPoint": "/sequences/${sequenceId}/pause-resume",
+  "methodType" : "PATCH",
+  "header": {
+    "Content-Type":"application/json",
+    "Authorization":"test"
+  },
+  "body": {
+    "action": 2
+  },
+  "pathParameter": {
+    "sequenceId" : ""
+  }
+
+}

@@ -1,0 +1,17 @@
+{
+  "endPoint": "/sequences/${sequenceId}/steps",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "type": "test",
+    "variants": [
+      {"subject": "helloo from qable"}
+    ],
+    "relativeDays": 3
+  },
+  "pathParameter": {
+    "sequenceId" : ""
+  }
+}

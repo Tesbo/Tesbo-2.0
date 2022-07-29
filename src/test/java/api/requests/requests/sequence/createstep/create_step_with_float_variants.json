@@ -1,0 +1,17 @@
+{
+  "endPoint": "/sequences/${sequenceId}/steps",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "type": 2,
+    "variants": [
+      8.2872872
+    ],
+    "relativeDays": 3
+  },
+  "pathParameter": {
+    "sequenceId" : ""
+  }
+}

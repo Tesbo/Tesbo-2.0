@@ -1,0 +1,12 @@
+{
+  "endPoint": "/sequences/${sequenceId}",
+  "methodType" : "DELETE",
+  "header": {
+    "Content-Type":"",
+    "Authorization":""
+  },
+  "body": {},
+  "pathParameter": {
+  }
+
+}

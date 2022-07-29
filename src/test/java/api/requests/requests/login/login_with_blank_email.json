@@ -1,0 +1,11 @@
+{
+  "endPoint": "/auth/login",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "email": "",
+    "password": "QAble@1010"
+  }
+}

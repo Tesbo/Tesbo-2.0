@@ -1,0 +1,11 @@
+{
+  "endPoint": "/sequences?progress=${progress}&search=${search}&sortBy=${sortBy}",
+  "methodType" : "GET",
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {
+    "progress" : "1",
+    "search" : "test",
+    "sortBy" : "abc"
+  }
+}
