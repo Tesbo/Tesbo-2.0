@@ -6,6 +6,7 @@ import org.json.JSONObject;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Iterator;
 import java.util.Map;
 
 public class GetApiConfig {
@@ -25,13 +26,13 @@ public class GetApiConfig {
             data = new String(Files.readAllBytes(Paths.get("src/test/java/api/requests/" + request_name + ".json").toAbsolutePath()));
 
         } catch (Exception baseFolder) {
-            //       System.out.println("config file not found in Base Folder, Trying for the Temp Folder");
+
             try {
 
                 data = new String(Files.readAllBytes(Paths.get(request_name).toAbsolutePath()));
 
             } catch (Exception tempFolder) {
-                //         System.out.println("config file not found in Temp folder as well");
+
             }
 
         }
@@ -48,8 +49,11 @@ public class GetApiConfig {
 
         if (object.getString("endPoint").contains("${")) {
             finalEndpoint = getEndPointWithPathParameter(finalEndpoint);
-        } else {
 
+        }
+
+        if (object.getString("endPoint").contains("?")) {
+            finalEndpoint = getEndPointWithQueryParameter(finalEndpoint);
         }
 
         return finalEndpoint;
@@ -57,27 +61,56 @@ public class GetApiConfig {
 
     public String getEndPointWithPathParameter(String endPoint) {
 
+        String newEndPoint = endPoint;
 
-        String newEndPoint = "";
-        String[] singleEndpointElement = endPoint.split("/");
+        JSONObject allPathParameter = getPathParameter();
 
-        for (int i = 0; i < singleEndpointElement.length; i++) {
-            if (singleEndpointElement[i].contains("${")) {
-                singleEndpointElement[i] = getPathParameterValue(singleEndpointElement[i].substring(2, singleEndpointElement[i].length() - 1));
-            }
 
-            newEndPoint = newEndPoint + singleEndpointElement[i] + "/";
+        Iterator keys = allPathParameter.keys();
+
+        while (keys.hasNext()) {
+
+            String currentDynamicKey = (String) keys.next();
+
+            newEndPoint = newEndPoint.replace("${" + currentDynamicKey + "}", allPathParameter.get(currentDynamicKey).toString());
 
         }
-        System.out.println(newEndPoint);
+
         return newEndPoint;
     }
 
-    public String getPathParameterValue(String parameterName) {
+
+    public String getEndPointWithQueryParameter(String endPoint) {
+        String newEndPoint = endPoint;
+        String[] singleEndpointElement = endPoint.split("\\?");
+
+        String queryParameter = singleEndpointElement[1];
+
+        String[] total_parameter_list = queryParameter.split("&");
+
+        for (String single_parameter : total_parameter_list) {
+            String[] param_list = single_parameter.split("=");
+            String param_value = param_list[1].substring(2, param_list[1].length() - 1);
+            newEndPoint = newEndPoint.replace("${" + param_value + "}", getQueryParameterValue(param_value));
+        }
+
+        return newEndPoint;
+    }
+
+    public String getQueryParameterValue(String parameterName) {
+
+        JSONObject object = getApiConfig();
+        JSONObject pathParameter = (JSONObject) object.get("queryParameter");
+        return pathParameter.getString(parameterName);
+
+    }
+
+
+    public JSONObject getPathParameter() {
 
         JSONObject object = getApiConfig();
         JSONObject pathParameter = (JSONObject) object.get("pathParameter");
-        return pathParameter.getString(parameterName);
+        return pathParameter;
 
     }
 
