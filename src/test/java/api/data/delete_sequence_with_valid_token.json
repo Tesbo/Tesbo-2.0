@@ -1,0 +1,220 @@
+{
+  "message": "Sequence created successfully",
+  "statusCode": 201,
+  "payload": {
+    "totalSteps": 0,
+    "settings": [
+      {
+        "code": "email-limit",
+        "value": "2000",
+        "sequenceId": 3978,
+        "id": 23245
+      },
+      {
+        "code": "unsubscribe-link",
+        "value": "If you'd prefer not to receive email from me, <a href=\"{{link}}\" target=\"_blank\">Unsubscribe here</a>.",
+        "sequenceId": 3978,
+        "id": 23245
+      },
+      {
+        "code": "mark-as-finished",
+        "value": "1",
+        "sequenceId": 3978,
+        "id": 23246
+      },
+      {
+        "code": "track-link-clicks",
+        "value": "0",
+        "sequenceId": 3978,
+        "id": 23247
+      },
+      {
+        "code": "track-email-opens",
+        "value": "1",
+        "sequenceId": 3978,
+        "id": 23248
+      }
+    ],
+    "shAccount": {
+      "id": 1095,
+      "teamSize": "2-5",
+      "industry": null,
+      "createdAt": "2022-07-05T11:03:59.618Z",
+      "modifiedAt": "2022-07-05T11:04:32.000Z",
+      "deletedAt": null,
+      "agencyId": null,
+      "clientName": "",
+      "status": false,
+      "accountSubscription": {
+        "id": 995,
+        "shAccountId": 1095,
+        "startAt": "2022-07-25T11:39:47.000Z",
+        "endAt": "2022-07-27T11:39:47.000Z",
+        "planId": 5,
+        "userQuota": 1,
+        "emailAccountQuota": 1,
+        "subscriptionId": "sub_1LNEmGL2GrwUgystKFOzyo6n",
+        "customerId": "cus_M5Pbt5V5chAO3M",
+        "status": "active",
+        "plan": {
+          "id": 5,
+          "code": "paid-yearly",
+          "stripePlanId": "price_1JzLVkL2GrwUgystKU4HMI2C",
+          "parentId": null,
+          "name": "PRO (Annually)",
+          "amount": "300.00",
+          "currency": "USD",
+          "validityInDays": 365,
+          "configuration": null,
+          "type": "user",
+          "status": 1,
+          "createdAt": "2021-11-09T08:06:51.000Z",
+          "modifiedAt": "2021-11-24T13:32:52.361Z",
+          "deletedAt": null
+        }
+      },
+      "accountUsages": [
+        {
+          "id": 1217,
+          "shAccountId": 1095,
+          "planRestrictionId": 4,
+          "value": null,
+          "planRestriction": {
+            "id": 4,
+            "planId": 5,
+            "featureId": 1,
+            "value": null,
+            "feature": {
+              "id": 1,
+              "code": "EMAIL.SEND"
+            }
+          }
+        }
+      ]
+    },
+    "user": {
+      "id": 1755,
+      "role": "admin",
+      "shAccountId": 1095,
+      "firstName": "test",
+      "lastName": "jhjh",
+      "email": "testqable905@gmail.com",
+      "lastSeen": "2022-07-05T11:04:00.000Z",
+      "verified": true,
+      "status": 1,
+      "timeZone": "Asia/Kolkata",
+      "designation": "Recruiters",
+      "useCase": null,
+      "createdAt": "2022-07-05T11:03:59.643Z",
+      "modifiedAt": "2022-07-05T11:04:32.000Z",
+      "deletedAt": null,
+      "trackingId": "YW7YTU21qC",
+      "shAccount": {
+        "id": 1095,
+        "teamSize": "2-5",
+        "industry": null,
+        "createdAt": "2022-07-05T11:03:59.618Z",
+        "modifiedAt": "2022-07-05T11:04:32.000Z",
+        "deletedAt": null,
+        "agencyId": null,
+        "clientName": "",
+        "status": false,
+        "accountSubscription": {
+          "id": 995,
+          "shAccountId": 1095,
+          "startAt": "2022-07-25T11:39:47.000Z",
+          "endAt": "2022-07-27T11:39:47.000Z",
+          "planId": 5,
+          "userQuota": 1,
+          "emailAccountQuota": 1,
+          "subscriptionId": "sub_1LNEmGL2GrwUgystKFOzyo6n",
+          "customerId": "cus_M5Pbt5V5chAO3M",
+          "status": "active",
+          "plan": {
+            "id": 5,
+            "code": "paid-yearly",
+            "stripePlanId": "price_1JzLVkL2GrwUgystKU4HMI2C",
+            "parentId": null,
+            "name": "PRO (Annually)",
+            "amount": "300.00",
+            "currency": "USD",
+            "validityInDays": 365,
+            "configuration": null,
+            "type": "user",
+            "status": 1,
+            "createdAt": "2021-11-09T08:06:51.000Z",
+            "modifiedAt": "2021-11-24T13:32:52.361Z",
+            "deletedAt": null
+          }
+        },
+        "accountUsages": [
+          {
+            "id": 1217,
+            "shAccountId": 1095,
+            "planRestrictionId": 4,
+            "value": null,
+            "planRestriction": {
+              "id": 4,
+              "planId": 5,
+              "featureId": 1,
+              "value": null,
+              "feature": {
+                "id": 1,
+                "code": "EMAIL.SEND"
+              }
+            }
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": 6006,
+          "code": "desktop_notification",
+          "value": "1"
+        },
+        {
+          "id": 6007,
+          "code": "track_email_by_my_team",
+          "value": "1"
+        }
+      ]
+    },
+    "schedule": {
+      "id": 1258,
+      "shAccountId": 1095,
+      "name": "Default Schedule",
+      "timezone": "Asia/Kolkata",
+      "timeSlots": "[{\"day\":0,\"slots\":[]},{\"day\":1,\"slots\":[{\"start\":{\"hour\":9,\"minute\":0},\"end\":{\"hour\":18,\"minute\":0}}]},{\"day\":2,\"slots\":[{\"start\":{\"hour\":9,\"minute\":0},\"end\":{\"hour\":18,\"minute\":0}}]},{\"day\":3,\"slots\":[{\"start\":{\"hour\":9,\"minute\":0},\"end\":{\"hour\":18,\"minute\":0}}]},{\"day\":4,\"slots\":[{\"start\":{\"hour\":9,\"minute\":0},\"end\":{\"hour\":18,\"minute\":0}}]},{\"day\":5,\"slots\":[{\"start\":{\"hour\":9,\"minute\":0},\"end\":{\"hour\":18,\"minute\":0}}]},{\"day\":6,\"slots\":[]}]",
+      "createdAt": "2022-07-05T11:03:59.708Z",
+      "modifiedAt": "2022-07-05T11:03:59.708Z",
+      "deletedAt": null
+    },
+    "email": {
+      "id": 4288,
+      "userId": 1755,
+      "fromName": "test saleshandy",
+      "fromEmail": "testing.sapna@gmail.com",
+      "type": 1,
+      "status": 1,
+      "isDefault": true,
+      "lastConnectedAt": "2022-07-20T05:07:32.000Z",
+      "createdAt": "2022-07-05T11:17:36.767Z",
+      "modifiedAt": "2022-07-20T05:08:24.000Z",
+      "deletedAt": null,
+      "emailServiceProvider": "gmail",
+      "healthScore": 7
+    },
+    "shAccountId": 1095,
+    "userId": 1755,
+    "emailId": 4288,
+    "deletedAt": null,
+    "lastBouncedPausedAt": null,
+    "pausedReasonIdentifier": null,
+    "pausedAt": null,
+    "id": 3978,
+    "progress": 3,
+    "status": 1,
+    "createdAt": "2022-07-26T05:07:29.206Z",
+    "modifiedAt": "2022-07-26T05:07:29.206Z"
+  }
+}

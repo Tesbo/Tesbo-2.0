@@ -1,0 +1,10 @@
+{
+  "endPoint": "/auth/signup/otp",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "email": "qabletest+1@gmail.com"
+  }
+}

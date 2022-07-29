@@ -1,0 +1,15 @@
+{
+  "endPoint": "/sequences?progress=${progress}&search=${search}&sortBy=${sortBy}&order=${order}&page=${page}&limit=${limit}&numberOfSteps=${numberOfSteps}",
+  "methodType" : "GET",
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {
+    "progress" : "1",
+    "search" : "test",
+    "sortBy" : "created-date",
+    "order" : "1",
+    "page" : "3",
+    "limit" : "10",
+    "numberOfSteps" : ""
+  }
+}

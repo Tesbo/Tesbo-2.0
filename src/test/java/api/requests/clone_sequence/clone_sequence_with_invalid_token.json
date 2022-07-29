@@ -1,0 +1,14 @@
+{
+  "endPoint": "/sequences/clone/${sequenceId}",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type":"application/json",
+    "Authorization":"test"
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "sequenceId" : ""
+  }
+
+}

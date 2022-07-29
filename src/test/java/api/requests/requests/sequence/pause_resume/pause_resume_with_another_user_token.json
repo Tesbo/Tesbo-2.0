@@ -1,0 +1,15 @@
+{
+  "endPoint": "/sequences/${sequenceId}/pause-resume",
+  "methodType" : "PATCH",
+  "header": {
+    "Content-Type":"application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp.eyJzdWIiOjM1LCJpYXQiOjE2MNjAsImV4cCI0NDk5MTU2MH0.bow-u-MsOs2JYbAseWccF_4T09VCoHsMOVE"
+  },
+  "body": {
+    "action": 2
+  },
+  "pathParameter": {
+    "sequenceId" : ""
+  }
+
+}

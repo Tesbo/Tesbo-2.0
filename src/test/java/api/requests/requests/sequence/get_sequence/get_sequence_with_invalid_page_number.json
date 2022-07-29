@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences?progress=${progress}&search=${search}&sortBy=${sortBy}&order=${order}&page=${page}",
+  "methodType" : "GET",
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {
+    "progress" : "1",
+    "search" : "test",
+    "sortBy" : "created-date",
+    "order" : "1",
+    "page" : "hsa"
+  }
+}
