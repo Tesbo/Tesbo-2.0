@@ -33,9 +33,9 @@ public class ResponseValidator {
 
 
 
-  /*  public ResponseValidator(JSONObject response) {
+   public ResponseValidator(JSONObject response) {
         this.response = response;
-    }*/
+    }
 
 
     public void responseShouldContains(String jsonPath, Object excepted) {
@@ -62,108 +62,29 @@ public class ResponseValidator {
 
     }
 
-   public void validateSchema(String jsonString) {
+   public void validateSchema(String expectedJSonSchema) {
        UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
 
        for (String singlePath : parser.getPathList()) {
-
-           Object object = JsonPath.parse(jsonString).read(singlePath);
-
-           try {
-
-               assertThat(object).isNotNull();
-
-           } catch (Exception e) {
-
-           }
-
+           logs.test_step("finding Element :" + singlePath);
+           Object object = JsonPath.parse(expectedJSonSchema).read(singlePath);
+           logs.test_step("Element found : Schema Matched");
        }
    }
 
+    public void validateSchemaFromRequestFile(String request_name) {
+        UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
 
-
-
-    public static void main(String[] args) {
-        JSONParser parser = new JSONParser();
-        ResponseValidator validator = new ResponseValidator();
-        try {
-
-           String abc =  parser.parse(new String(Files.readAllBytes(Paths.get("src/test/java/api/data/response.json").toAbsolutePath()))).toString();
-
-            UnityJSONParser parser2 = new UnityJSONParser(abc);
-            System.out.println(     parser2.getPathList());
-
-            for(String q : parser2.getPathList())
-            {
-                System.out.println(q);
-
-                Object object = JsonPath.parse(abc).read(q);
-
-try {
-    System.out.println(   ! object.equals(null));
-}catch (Exception e)
-{
-
-}
-
-
-
-            }
-
-      //      validator.compareJsonData((JSONObject) parser.parse(new String(Files.readAllBytes(Paths.get("src/test/java/api/data/response.json").toAbsolutePath()))),"delete_sequence_with_valid_token");
-
-     //   validator. printJsonObject();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
+        GetApiConfig apiConfig = new GetApiConfig(request_name);
+        for (String singlePath : parser.getPathList()) {
+            logs.test_step("finding Element :" + singlePath);
+            Object object = JsonPath.parse(apiConfig.getSchema()).read(singlePath);
+            logs.test_step("Element found : Schema Matched");
         }
     }
 
-    public void compareJsonData(JSONObject response,String request_name) throws JSONException, IOException, ParseException {
-       /* JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new String(Files.readAllBytes(Paths.get("src/test/java/api/data/"+request_name+".json").toAbsolutePath())));
-        JSONObject expectedJsonObj = (JSONObject)obj;
-
-        JSONObject actualJsonObj = response;
 
 
-        JSONAssert.assertEquals(expectedJsonObj.toString(), actualJsonObj.toString(),JSONCompareMode.STRICT_ORDER);*/
 
-
-    }
-
-    public  void printJsonObject(JSONObject jsonObj) {
-       /* jsonObj.keySet().forEach(keyStr ->
-        {
-            Object keyvalue = jsonObj.get(keyStr);
-            System.out.println("key: "+ keyStr + " value: " + keyvalue);
-
-            //for nested objects iteration if required
-       //     if (keyvalue instanceof JSONObject)
-         //    printJsonObject((JSONObject)keyvalue);
-        });*/
-
-        Configuration conf = Configuration.defaultConfiguration();
-
-        Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonObj.toJSONString());
-
-        List<Map<String, Object>> expensiveBooks = JsonPath
-                .using(conf)
-                .parse(jsonObj.toJSONString())
-                .read("$..*");
-
-        System.out.println(expensiveBooks);
-
-
-      /*  List<String> jsonPaths = JsonPath.using(conf).parse(jsonObj).read("$");
-
-        for (String path : jsonPaths) {
-            System.out.println(path);
-        }*/
-
-
-    }
 
 }
