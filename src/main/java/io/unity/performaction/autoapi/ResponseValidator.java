@@ -4,6 +4,7 @@ import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 
 import io.unity.framework.readers.GetApiConfig;
+import io.unity.performaction.autoweb.Verify;
 import io.unity.performaction.autoweb.testng_logs;
 import kong.unirest.json.JSONException;
 import org.json.simple.JSONObject;
@@ -23,6 +24,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
+import static org.assertj.core.api.Assertions.*;
 
 public class ResponseValidator {
 
@@ -60,6 +62,26 @@ public class ResponseValidator {
 
     }
 
+   public void validateSchema(String jsonString) {
+       UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
+
+       for (String singlePath : parser.getPathList()) {
+
+           Object object = JsonPath.parse(jsonString).read(singlePath);
+
+           try {
+
+               assertThat(object).isNotNull();
+
+           } catch (Exception e) {
+
+           }
+
+       }
+   }
+
+
+
 
     public static void main(String[] args) {
         JSONParser parser = new JSONParser();
@@ -74,6 +96,18 @@ public class ResponseValidator {
             for(String q : parser2.getPathList())
             {
                 System.out.println(q);
+
+                Object object = JsonPath.parse(abc).read(q);
+
+try {
+    System.out.println(   ! object.equals(null));
+}catch (Exception e)
+{
+
+}
+
+
+
             }
 
       //      validator.compareJsonData((JSONObject) parser.parse(new String(Files.readAllBytes(Paths.get("src/test/java/api/data/response.json").toAbsolutePath()))),"delete_sequence_with_valid_token");
