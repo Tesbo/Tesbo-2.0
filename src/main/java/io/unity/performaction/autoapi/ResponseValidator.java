@@ -1,30 +1,14 @@
 package io.unity.performaction.autoapi;
 
-import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 
+import com.jayway.jsonpath.Predicate;
 import io.unity.framework.readers.GetApiConfig;
-import io.unity.performaction.autoweb.Verify;
 import io.unity.performaction.autoweb.testng_logs;
-import kong.unirest.json.JSONException;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import org.skyscreamer.jsonassert.Customization;
-import org.skyscreamer.jsonassert.comparator.CustomComparator;
 import org.testng.Assert;
-import org.skyscreamer.jsonassert.JSONAssert;
-import org.skyscreamer.jsonassert.JSONCompareMode;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
-import static org.assertj.core.api.Assertions.*;
+import java.util.Iterator;
 
 public class ResponseValidator {
 
@@ -62,14 +46,18 @@ public class ResponseValidator {
 
     }
 
-   public void validateSchema(String expectedJSonSchema) {
-       UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
+   public String validateSchema(String expectedJSonSchema) {
+       UnityJSONParser parser = new UnityJSONParser(this.response.toJSONString());
+       Iterator var3 = parser.getPathList().iterator();
+       String singlePath = null;
 
-       for (String singlePath : parser.getPathList()) {
-           logs.test_step("finding Element :" + singlePath);
-           Object object = JsonPath.parse(expectedJSonSchema).read(singlePath);
-           logs.test_step("Element found : Schema Matched");
+       while(var3.hasNext()) {
+           singlePath = (String)var3.next();
+           this.logs.test_step("finding Element :" + singlePath);
+           Object object = JsonPath.parse(expectedJSonSchema).read(singlePath, new Predicate[0]);
+           this.logs.test_step("Element found : Schema Matched");
        }
+       return singlePath;
    }
 
     public void validateSchemaFromRequestFile(String request_name) {
@@ -82,9 +70,5 @@ public class ResponseValidator {
             logs.test_step("Element found : Schema Matched");
         }
     }
-
-
-
-
 
 }
