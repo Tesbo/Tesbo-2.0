@@ -84,10 +84,7 @@ public class DataReader {
     }
 
 
-    public static void main(String[] args) {
-        DataReader rader = new DataReader();
-        rader.getColumnData("addNewUser.xlsx", "Sheet 1", "Item Type");
-    }
+
 
 
     public List getColumnData(String ExcelFile, String SheetName, String column) {

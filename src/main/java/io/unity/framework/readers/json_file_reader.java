@@ -2,6 +2,7 @@ package io.unity.framework.readers;
 
 
 import io.unity.framework.runner.TestRunner;
+import org.eclipse.jetty.util.ajax.JSON;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -64,6 +65,22 @@ public class json_file_reader {
         return (String) getConfigObject(configName).get("env");
     }
 
+
+    public JSONObject getTimeAssertion(String configName)
+    {
+        return (JSONObject) getConfigObject(configName).get("timeAssertion");
+    }
+
+
+    public Boolean isTimeAssertionEnable(String configName)
+    {
+        return (Boolean) getTimeAssertion(configName).get("enable");
+    }
+
+    public int getTimeToCompare(String configName)
+    {
+        return (int) getTimeAssertion(configName).get("timeToCompareInMs");
+    }
 
     public String getEnv(String configName) {
         return getConfigObject(configName).getString("env");
