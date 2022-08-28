@@ -181,9 +181,12 @@ public class base {
         return driver;
     }
 
+
+
     public AndroidDriver setup_android(String configName) {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
+
 
         JSONObject capabilityList = config.get_capabilities(configName);
 

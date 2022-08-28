@@ -57,6 +57,10 @@ public class TestRunner {
                 for (Object suiteName : suiteList) {
                     testFilesList.add(new File((directory_path + suiteName)).getAbsolutePath());
                 }
+
+
+
+
                 testng.setTestSuites(testFilesList); //you can addd multiple suites either here by adding multiple files or include all suites needed in the testng.xml file
             } else {
 
