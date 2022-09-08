@@ -102,10 +102,22 @@ public class json_file_reader {
     }
 
 
+    public JSONObject get_browserStackOption(String configName) {
+
+        return getConfigObject(configName).getJSONObject("browserStackOption");
+    }
+
+
     public String get_grid_url(String configName) {
         JSONObject object = getTestConfig();
         return getConfigObject(configName).getString("gridURL");
     }
+
+    public String get_grid_platForm(String configName) {
+        JSONObject object = getTestConfig();
+        return getConfigObject(configName).getString("gridPlatform");
+    }
+
 
     public String get_appium_url(String configName) {
         JSONObject object = getTestConfig();

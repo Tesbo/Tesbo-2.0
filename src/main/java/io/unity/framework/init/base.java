@@ -29,6 +29,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Iterator;
 
 public class base {
@@ -166,10 +167,34 @@ public class base {
         JSONObject object = config.get_capabilities(configName);
         Iterator<String> keys = object.keys();
         capabilities.setBrowserName(config.getBrowser(configName));
-        while (keys.hasNext()) {
-            String key = keys.next();
-            capabilities.setCapability(key, object.get(key));
+
+        if (config.get_grid_platForm(configName).equalsIgnoreCase("selenium")) {
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
+
+        } else if (config.get_grid_platForm(configName).equalsIgnoreCase("browserstack")) {
+
+            JSONObject browserStackOptionObject = config.get_browserStackOption(configName);
+
+
+            Iterator<String> browserStackOptionKey = object.keys();
+            HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
+
+
+            while (browserStackOptionKey.hasNext()) {
+                String key = browserStackOptionKey.next();
+
+                browserstackOptions.put(key, object.get(key));
+            }
+
+            capabilities.setCapability("bstack:options", browserstackOptions);
+
+
         }
+
+
         try {
 
             driver = new RemoteWebDriver(new URL(config.get_grid_url(configName)), capabilities);
@@ -180,7 +205,6 @@ public class base {
 
         return driver;
     }
-
 
 
     public AndroidDriver setup_android(String configName) {
