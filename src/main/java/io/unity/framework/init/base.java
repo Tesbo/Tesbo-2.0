@@ -178,7 +178,10 @@ public class base {
 
             JSONObject browserStackOptionObject = config.get_browserStackOption(configName);
 
-
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
             Iterator<String> browserStackOptionKey = object.keys();
             HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
 
@@ -211,7 +214,6 @@ public class base {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-
         JSONObject capabilityList = config.get_capabilities(configName);
 
         Iterator itr = capabilityList.keySet().iterator();
@@ -220,7 +222,9 @@ public class base {
             String key = (String) itr.next();
             capabilities.setCapability(key, capabilityList.get(key));
         }
+
         capabilities.setCapability("appium:app", config.get_final_app_path(configName));
+
         try {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {

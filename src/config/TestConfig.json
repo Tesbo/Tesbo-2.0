@@ -9,10 +9,10 @@
       },
       "env": "https://test.nevvon.com/",
       "isGrid": true,
-      "gridPlatform" : "browserstack",
-      "browserStackOption" :
-      {
-
+      "gridPlatform": "browserstack",
+      "browserStackOption": {
+        "os": "Windows",
+        "osVersion": "11"
       },
       "gridURL": "https://viralpatel_LWX2R3:ZCe4uALptzU8skpXYsky@hub-cloud.browserstack.com/wd/hub",
       "viewPort": "",
@@ -66,6 +66,7 @@
       "testNGsuite": [
         "nevvon_android_all.xml"
       ],
+      "appiumPlatform": "browserstack",
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
     },
     "nevvon_iOS": {
