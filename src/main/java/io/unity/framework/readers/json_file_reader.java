@@ -2,7 +2,6 @@ package io.unity.framework.readers;
 
 
 import io.unity.framework.runner.TestRunner;
-import org.eclipse.jetty.util.ajax.JSON;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -66,19 +65,16 @@ public class json_file_reader {
     }
 
 
-    public JSONObject getTimeAssertion(String configName)
-    {
+    public JSONObject getTimeAssertion(String configName) {
         return (JSONObject) getConfigObject(configName).get("timeAssertion");
     }
 
 
-    public Boolean isTimeAssertionEnable(String configName)
-    {
+    public Boolean isTimeAssertionEnable(String configName) {
         return (Boolean) getTimeAssertion(configName).get("enable");
     }
 
-    public int getTimeToCompare(String configName)
-    {
+    public int getTimeToCompare(String configName) {
         return (int) getTimeAssertion(configName).get("timeToCompareInMs");
     }
 
@@ -124,15 +120,28 @@ public class json_file_reader {
         return getConfigObject(configName).getString("appiumURL");
     }
 
+    public String get_appium_platform(String configName) {
+        JSONObject object = getTestConfig();
+        return getConfigObject(configName).getString("appiumPlatform");
+    }
+
+
     public String get_app_name(String configName) {
 
         return getConfigObject(configName).getString("app");
     }
 
+
     public String get_final_app_path(String configName) {
-        File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
-        System.out.println(file.getAbsolutePath());
-        return file.getAbsolutePath();
+
+        String app_path = "";
+        if (get_appium_platform(configName).equalsIgnoreCase("local")) {
+            File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
+        } else if (get_appium_platform(configName).equalsIgnoreCase("browserstack")) {
+            app_path = get_app_name(configName);
+        }
+
+        return app_path;
     }
 
 
@@ -142,14 +151,13 @@ public class json_file_reader {
     }
 
 
-    public String getEnvFromCurrentConfig()
-    {
+    public String getEnvFromCurrentConfig() {
         JSONObject object = getTestConfig();
         json_file_reader config = new json_file_reader();
         if (TestRunner.currentConfig.equals("")) {
             TestRunner.currentConfig = config.getRunConfig();
         }
-       return   getConfigObject(TestRunner.currentConfig).getString("env") ;
+        return getConfigObject(TestRunner.currentConfig).getString("env");
     }
 
 

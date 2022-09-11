@@ -53,7 +53,7 @@ public class GetApiConfig {
         }
 
         if (object.getString("endPoint").contains("?")) {
-            finalEndpoint = getEndPointWithQueryParameter(finalEndpoint);
+            finalEndpoint = addQueryParameterInURL(finalEndpoint);
         }
 
         return finalEndpoint;
@@ -64,8 +64,6 @@ public class GetApiConfig {
         String newEndPoint = endPoint;
 
         JSONObject allPathParameter = getPathParameter();
-
-
         Iterator keys = allPathParameter.keys();
 
         while (keys.hasNext()) {
@@ -97,11 +95,37 @@ public class GetApiConfig {
         return newEndPoint;
     }
 
+    public String addQueryParameterInURL(String endPoint) {
+
+        String newEndPoint = endPoint + "?";
+        JSONObject object = getAllQueryParameterList();
+        Iterator keys = object.keys();
+
+        while (keys.hasNext()) {
+
+            String currentDynamicKey = (String) keys.next();
+            JSONObject currentDynamicValue = object.getJSONObject(currentDynamicKey);
+            newEndPoint = newEndPoint + currentDynamicKey + "=" + currentDynamicValue + "&";
+        }
+
+
+        return newEndPoint.substring(0, newEndPoint.length() - 1);
+    }
+
+
     public String getQueryParameterValue(String parameterName) {
 
         JSONObject object = getApiConfig();
         JSONObject pathParameter = (JSONObject) object.get("queryParameter");
         return pathParameter.getString(parameterName);
+
+    }
+
+    public JSONObject getAllQueryParameterList() {
+
+        JSONObject object = getApiConfig();
+        JSONObject queryParameter = (JSONObject) object.get("queryParameter");
+        return queryParameter;
 
     }
 
@@ -150,6 +174,7 @@ public class GetApiConfig {
         JSONObject object = getApiConfig();
         return (JSONObject) object.get("schema");
     }
+
     public Map<String, String> getBodyMap() {
         JSONObject object = getApiConfig();
 
