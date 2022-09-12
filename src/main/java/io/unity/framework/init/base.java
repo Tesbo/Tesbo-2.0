@@ -182,7 +182,7 @@ public class base {
                 String key = keys.next();
                 capabilities.setCapability(key, object.get(key));
             }
-            Iterator<String> browserStackOptionKey = object.keys();
+            Iterator<String> browserStackOptionKey = browserStackOptionObject.keys();
             HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
 
 
@@ -193,6 +193,27 @@ public class base {
             }
 
             capabilities.setCapability("bstack:options", browserstackOptions);
+
+
+        } else if (config.get_grid_platForm(configName).equalsIgnoreCase("saucelab")) {
+
+            JSONObject sauceLabOption = config.get_sauceLabOption(configName);
+
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
+            Iterator<String> saucelabOptionKey = sauceLabOption.keys();
+            HashMap<String, Object> sauceLabOptions = new HashMap<String, Object>();
+
+
+            while (saucelabOptionKey.hasNext()) {
+                String key = saucelabOptionKey.next();
+
+                sauceLabOptions.put(key, object.get(key));
+            }
+
+            capabilities.setCapability("sauce:options", sauceLabOptions);
 
 
         }

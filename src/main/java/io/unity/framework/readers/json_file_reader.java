@@ -104,6 +104,13 @@ public class json_file_reader {
     }
 
 
+    public JSONObject get_sauceLabOption(String configName) {
+
+        return getConfigObject(configName).getJSONObject("sauceLabOption");
+    }
+
+
+
     public String get_grid_url(String configName) {
         JSONObject object = getTestConfig();
         return getConfigObject(configName).getString("gridURL");
