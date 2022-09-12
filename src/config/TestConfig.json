@@ -1,5 +1,5 @@
 {
-  "run": "nevvon_demo_api",
+  "run": "API_Regression",
   "config": {
     "nevvon_test_admin": {
       "platform": "web",

@@ -32,20 +32,22 @@ public class RequestBuilder {
         Map Header = apiConfig.getHeaderMap();
         Map Body = apiConfig.getBodyMap();
 
+
+
         logs.test_step("========================================================================");
         logs.test_step("Performing Request : " + requestName);
         logs.test_step("Request End Point : " + endPoint);
         logs.test_step("Request Headers : " + Header);
         logs.test_step("Request body : " + Body);
 
+
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
 
             request = Unirest.get(endPoint).headers(Header);
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos) / 1000000000;
-            int responsetime = (int) responset;
-            System.out.println("Response Time : " + responsetime + "sec");
+
+
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("delete")) {
@@ -53,9 +55,9 @@ public class RequestBuilder {
             request = Unirest.delete(endPoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos) / 1000000000;
-            int responsetime = (int) responset;
-            System.out.println("Response Time : " + responsetime + " sec");
+
+
+
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -64,9 +66,7 @@ public class RequestBuilder {
 
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos) / 1000000000;
-            int responsetime = (int) responset;
-            System.out.println("Response Time : " + responsetime + " sec");
+
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
@@ -78,9 +78,7 @@ public class RequestBuilder {
 
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos) / 1000000000;
-            int responsetime = (int) responset;
-            System.out.println("Response Time : " + responsetime + " sec");
+
         }
 
         logs.test_step("========================================================================");
@@ -101,6 +99,7 @@ public class RequestBuilder {
     public JSONObject performRequest(String requestName, String endpoint) {
 
         String responseBody = "";
+        String responseTime = "";
         HttpResponse response = null;
         JSONObject responseObject = null;
         HttpRequest request = null;
@@ -116,9 +115,6 @@ public class RequestBuilder {
             request = Unirest.get(endpoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos) / 1000000000;
-            int responsetime = (int) responset;
-            System.out.println(responsetime);
         }
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
             logs.test_step("Request body : " + apiConfig.getHeaderMap());
@@ -298,5 +294,6 @@ public class RequestBuilder {
         return updatedFile.getAbsolutePath();
     }
 
+    
 
 }

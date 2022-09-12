@@ -46,6 +46,8 @@ public class ResponseValidator {
         Assert.assertTrue(excepted.equals(object));
         logs.test_step("Test Passed");
 
+
+
     }
 
     public void statusCodeShouldBe(int statusCode) {

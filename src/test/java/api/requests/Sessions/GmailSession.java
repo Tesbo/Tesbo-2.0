@@ -1,4 +1,4 @@
-package api.requests.requests.Sessions;
+package api.requests.Sessions;
 
 import io.unity.framework.init.Session;
 import io.unity.performaction.autoweb.Wait;
