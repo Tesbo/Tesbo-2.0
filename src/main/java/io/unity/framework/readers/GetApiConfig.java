@@ -52,9 +52,8 @@ public class GetApiConfig {
 
         }
 
-        if (object.getString("endPoint").contains("?")) {
-            finalEndpoint = addQueryParameterInURL(finalEndpoint);
-        }
+
+        finalEndpoint = addQueryParameterInURL(finalEndpoint);
 
         return finalEndpoint;
     }
@@ -98,18 +97,24 @@ public class GetApiConfig {
     public String addQueryParameterInURL(String endPoint) {
 
         String newEndPoint = endPoint + "?";
-        JSONObject object = getAllQueryParameterList();
-        Iterator keys = object.keys();
+        String final_Endpoint = "";
+        try {
+            JSONObject object = getAllQueryParameterList();
+            Iterator keys = object.keys();
 
-        while (keys.hasNext()) {
+            while (keys.hasNext()) {
 
-            String currentDynamicKey = (String) keys.next();
-            JSONObject currentDynamicValue = object.getJSONObject(currentDynamicKey);
-            newEndPoint = newEndPoint + currentDynamicKey + "=" + currentDynamicValue + "&";
+                String currentDynamicKey = (String) keys.next();
+                JSONObject currentDynamicValue = object.getJSONObject(currentDynamicKey);
+                newEndPoint = newEndPoint + currentDynamicKey + "=" + currentDynamicValue + "&";
+            }
+
+            final_Endpoint = newEndPoint.substring(0, newEndPoint.length() - 1);
+        } catch (Exception e) {
+            final_Endpoint = endPoint;
         }
 
-
-        return newEndPoint.substring(0, newEndPoint.length() - 1);
+        return final_Endpoint;
     }
 
 
