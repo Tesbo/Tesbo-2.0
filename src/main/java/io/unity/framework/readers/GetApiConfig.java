@@ -86,9 +86,11 @@ public class GetApiConfig {
         String[] total_parameter_list = queryParameter.split("&");
 
         for (String single_parameter : total_parameter_list) {
+
             String[] param_list = single_parameter.split("=");
             String param_value = param_list[1].substring(2, param_list[1].length() - 1);
             newEndPoint = newEndPoint.replace("${" + param_value + "}", getQueryParameterValue(param_value));
+
         }
 
         return newEndPoint;
@@ -105,7 +107,7 @@ public class GetApiConfig {
             while (keys.hasNext()) {
 
                 String currentDynamicKey = (String) keys.next();
-                JSONObject currentDynamicValue = object.getJSONObject(currentDynamicKey);
+                String currentDynamicValue = object.get(currentDynamicKey).toString();
                 newEndPoint = newEndPoint + currentDynamicKey + "=" + currentDynamicValue + "&";
             }
 

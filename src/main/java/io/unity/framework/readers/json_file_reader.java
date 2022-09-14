@@ -144,6 +144,7 @@ public class json_file_reader {
         String app_path = "";
         if (get_appium_platform(configName).equalsIgnoreCase("local")) {
             File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
+            app_path = file.getAbsolutePath();
         } else if (get_appium_platform(configName).equalsIgnoreCase("browserstack")) {
             app_path = get_app_name(configName);
         }
