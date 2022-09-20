@@ -4,7 +4,6 @@ import com.beust.jcommander.JCommander;
 import io.unity.framework.readers.CommandlineOption;
 import io.unity.framework.readers.json_file_reader;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.testng.TestNG;
 
 import java.io.File;
@@ -47,7 +46,7 @@ public class TestRunner {
 
             System.out.println("config to run : " + currentConfig);
             JSONArray suiteList = null;
-            String directory_path = "." + pathSeparator + "src" + pathSeparator + "test" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
+            String directory_path = "." + pathSeparator + "src" + pathSeparator + "tests" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
 
             suiteList = config.getSuites(currentConfig);
 

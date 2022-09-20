@@ -109,6 +109,10 @@ public class json_file_reader {
         return getConfigObject(configName).getJSONObject("sauceLabOption");
     }
 
+    public JSONObject get_lambdaTestOption(String configName) {
+
+        return getConfigObject(configName).getJSONObject("lambdaTestOption");
+    }
 
 
     public String get_grid_url(String configName) {
@@ -142,12 +146,9 @@ public class json_file_reader {
     public String get_final_app_path(String configName) {
 
         String app_path = "";
-        if (get_appium_platform(configName).equalsIgnoreCase("local")) {
-            File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
-            app_path = file.getAbsolutePath();
-        } else if (get_appium_platform(configName).equalsIgnoreCase("browserstack")) {
-            app_path = get_app_name(configName);
-        }
+
+        File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
+        app_path = file.getAbsolutePath();
 
 
         return app_path;

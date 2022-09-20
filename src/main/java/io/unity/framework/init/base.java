@@ -216,8 +216,26 @@ public class base {
             capabilities.setCapability("sauce:options", sauceLabOptions);
 
 
-        }
+        } else if (config.get_grid_platForm(configName).equalsIgnoreCase("lambdatest")) {
 
+            JSONObject sauceLabOption = config.get_lambdaTestOption(configName);
+
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
+            Iterator<String> saucelabOptionKey = sauceLabOption.keys();
+            HashMap<String, Object> sauceLabOptions = new HashMap<String, Object>();
+
+
+            while (saucelabOptionKey.hasNext()) {
+                String key = saucelabOptionKey.next();
+
+                sauceLabOptions.put(key, object.get(key));
+            }
+
+            capabilities.setCapability("lt:options", sauceLabOptions);
+        }
 
         try {
 
@@ -234,7 +252,6 @@ public class base {
     public AndroidDriver setup_android(String configName) {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
         JSONObject capabilityList = config.get_capabilities(configName);
 
         Iterator itr = capabilityList.keySet().iterator();
@@ -244,8 +261,23 @@ public class base {
             capabilities.setCapability(key, capabilityList.get(key));
         }
 
-        capabilities.setCapability("appium:app", config.get_final_app_path(configName));
+        if (config.get_appium_platform(configName).equalsIgnoreCase("lambdaTest")) {
 
+            JSONObject lambdaTestOption = config.get_lambdaTestOption(configName);
+
+            Iterator<String> lambdaTestOptionKey = lambdaTestOption.keys();
+            HashMap<String, Object> lambdaTestOptionsMap = new HashMap<String, Object>();
+
+            while (lambdaTestOptionKey.hasNext()) {
+                String key = lambdaTestOptionKey.next();
+
+                lambdaTestOptionsMap.put(key, lambdaTestOption.get(key));
+            }
+            capabilities.setCapability("lt:options", lambdaTestOptionsMap);
+        } else {
+            capabilities.setCapability("appium:app", config.get_final_app_path(configName));
+        }
+        
         try {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
