@@ -1,5 +1,9 @@
 package io.unity.framework.readers;
 
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
+import com.google.common.collect.Lists;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -10,13 +14,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class DataReader {
 
- /*   public Object[][] getExcelDataUsingFilo(String fileName, String columnName)
-    {
-
-    }*/
 
     public Object[][] getExcelDataForDataProvider(String fileName, int sheetNo) {
         ArrayList<ArrayList> collectionRow = new ArrayList();
@@ -24,7 +25,6 @@ public class DataReader {
         try {
             File file = new File("src/test/java/data/" + fileName);
             FileInputStream fis = new FileInputStream(file.getAbsoluteFile());
-
 
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(sheetNo);
@@ -36,7 +36,6 @@ public class DataReader {
                 Iterator<Cell> cellIterator = row.cellIterator();
                 while (cellIterator.hasNext()) {
                     Cell cell = cellIterator.next();
-
 
                     if (cell.getCellType().equals(CellType.STRING)) {
                         rowList.add(cell.getStringCellValue());
@@ -50,20 +49,6 @@ public class DataReader {
                         rowList.add("" + cell.getBooleanCellValue());
                     }
 
-
-
-
-                  /*  switch (cell.getCellType()) {
-                        case STRING:
-                            rowList.add(cell.getStringCellValue());
-                            break;
-                        case NUMERIC:
-                            rowList.add(cell.getNumericCellValue());
-                            break;
-                        case BOOLEAN:
-                            rowList.add(cell.getBooleanCellValue());
-                            break;
-                    }*/
                 }
                 collectionRow.add(rowList);
             }
@@ -95,9 +80,52 @@ public class DataReader {
             }
 
         }
-
-
         return test;
     }
+
+
+    public static void main(String[] args) {
+        DataReader rader = new DataReader();
+        rader.getColumnData("addNewUser.xlsx", "Sheet 1", "Item Type");
+    }
+
+
+    public List getColumnData(String ExcelFile, String SheetName, String column) {
+        File file = new File("src/test/java/data/" + ExcelFile);
+        Fillo fillo = new Fillo();
+        List finalList = new ArrayList();
+        Connection connection = null;
+        try {
+            connection = fillo.getConnection(file.getAbsolutePath());
+
+            String strQuery = "Select * from \"" + SheetName + "\"";
+
+            Recordset recordset = connection.executeQuery(strQuery);
+
+            while (recordset.next()) {
+                finalList.add(recordset.getField(column));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return finalList;
+    }
+
+
+    public Object[][] generateCombinationData(List lists) {
+        List l = Lists.cartesianProduct(lists);
+        Object[][] finalList = new Object[l.size()][lists.size()];
+
+        for (int i = 0; i < l.size(); i++) {
+            Object[] a = ((List) l.get(i)).toArray();
+            for (int j = 0; j < a.length; j++) {
+                finalList[i][j] = a[j];
+            }
+        }
+
+        return finalList;
+    }
+
 
 }

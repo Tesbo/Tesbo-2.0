@@ -146,6 +146,10 @@ public class GetApiConfig {
         return (JSONObject) object.get("body");
     }
 
+    public JSONObject getSchema() {
+        JSONObject object = getApiConfig();
+        return (JSONObject) object.get("schema");
+    }
     public Map<String, String> getBodyMap() {
         JSONObject object = getApiConfig();
 
