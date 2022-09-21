@@ -218,18 +218,17 @@ public class base {
 
         } else if (config.get_grid_platForm(configName).equalsIgnoreCase("lambdatest")) {
 
-            JSONObject sauceLabOption = config.get_lambdaTestOption(configName);
+            JSONObject lambdaTestOption = config.get_lambdaTestOption(configName);
 
             while (keys.hasNext()) {
                 String key = keys.next();
                 capabilities.setCapability(key, object.get(key));
             }
-            Iterator<String> saucelabOptionKey = sauceLabOption.keys();
+            Iterator<String> lambdaTestOptionKey = lambdaTestOption.keys();
             HashMap<String, Object> sauceLabOptions = new HashMap<String, Object>();
 
-
-            while (saucelabOptionKey.hasNext()) {
-                String key = saucelabOptionKey.next();
+            while (lambdaTestOptionKey.hasNext()) {
+                String key = lambdaTestOptionKey.next();
 
                 sauceLabOptions.put(key, object.get(key));
             }
@@ -277,7 +276,7 @@ public class base {
         } else {
             capabilities.setCapability("appium:app", config.get_final_app_path(configName));
         }
-        
+
         try {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
