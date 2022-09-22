@@ -225,15 +225,16 @@ public class base {
                 capabilities.setCapability(key, object.get(key));
             }
             Iterator<String> lambdaTestOptionKey = lambdaTestOption.keys();
-            HashMap<String, Object> sauceLabOptions = new HashMap<String, Object>();
+
+            HashMap<String, Object> lambdaOptions = new HashMap<String, Object>();
 
             while (lambdaTestOptionKey.hasNext()) {
                 String key = lambdaTestOptionKey.next();
 
-                sauceLabOptions.put(key, object.get(key));
+                lambdaOptions.put(key, lambdaTestOption.get(key));
             }
 
-            capabilities.setCapability("lt:options", sauceLabOptions);
+            capabilities.setCapability("lt:options", lambdaOptions);
         }
 
         try {
