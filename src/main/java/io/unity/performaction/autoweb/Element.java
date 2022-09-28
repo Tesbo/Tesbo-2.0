@@ -73,7 +73,8 @@ public class Element {
     }
 
 
-    public WebElement find(String locator_value) {
+    public WebElement
+    find(String locator_value) {
 
         WebElement element = null;
         locator_reader reader = new locator_reader();

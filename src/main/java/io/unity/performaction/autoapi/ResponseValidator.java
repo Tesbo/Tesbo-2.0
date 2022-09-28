@@ -81,16 +81,16 @@ public class ResponseValidator {
 
     }
 
+
     public void validateSchema(String expectedJSonSchema) {
-        UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
+        UnityJSONParser parser = new UnityJSONParser(expectedJSonSchema);
 
         for (String singlePath : parser.getPathList()) {
             logs.test_step("finding Element :" + singlePath);
-            Object object = JsonPath.parse(expectedJSonSchema).read(singlePath);
+            Object object = JsonPath.parse(response.toJSONString()).read(singlePath);
             logs.test_step("Element found : Schema Matched");
         }
     }
-
     public void validateSchemaFromRequestFile(String request_name) {
         UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
 
