@@ -59,8 +59,6 @@ public class DataReader {
         int column = collectionRow.get(0).size();
 
 
-        System.out.println(row + "....." + column);
-
 
         Object[][] test = new Object[row][column];
 
@@ -69,8 +67,6 @@ public class DataReader {
                 ArrayList collumList = collectionRow.get(i + 1);
                 if (collumList.size() != 0) {
                     for (int j = 0; j < column; j++) {
-                        System.out.println("i = " + i);
-                        System.out.println("j = " + j);
                         System.out.println(collumList.get(j));
                         test[i][j] = collumList.get(j);
                     }
@@ -84,10 +80,7 @@ public class DataReader {
     }
 
 
-    public static void main(String[] args) {
-        DataReader rader = new DataReader();
-        rader.getColumnData("addNewUser.xlsx", "Sheet 1", "Item Type");
-    }
+
 
 
     public List getColumnData(String ExcelFile, String SheetName, String column) {

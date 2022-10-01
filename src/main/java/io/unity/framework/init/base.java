@@ -23,12 +23,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Iterator;
 
 public class base {
@@ -166,10 +169,76 @@ public class base {
         JSONObject object = config.get_capabilities(configName);
         Iterator<String> keys = object.keys();
         capabilities.setBrowserName(config.getBrowser(configName));
-        while (keys.hasNext()) {
-            String key = keys.next();
-            capabilities.setCapability(key, object.get(key));
+
+        if (config.get_grid_platForm(configName).equalsIgnoreCase("selenium")) {
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
+
+        } else if (config.get_grid_platForm(configName).equalsIgnoreCase("browserstack")) {
+
+            JSONObject browserStackOptionObject = config.get_browserStackOption(configName);
+
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
+            Iterator<String> browserStackOptionKey = browserStackOptionObject.keys();
+            HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
+
+
+            while (browserStackOptionKey.hasNext()) {
+                String key = browserStackOptionKey.next();
+
+                browserstackOptions.put(key, object.get(key));
+            }
+
+            capabilities.setCapability("bstack:options", browserstackOptions);
+
+
+        } else if (config.get_grid_platForm(configName).equalsIgnoreCase("saucelab")) {
+
+            JSONObject sauceLabOption = config.get_sauceLabOption(configName);
+
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
+            Iterator<String> saucelabOptionKey = sauceLabOption.keys();
+            HashMap<String, Object> sauceLabOptions = new HashMap<String, Object>();
+
+
+            while (saucelabOptionKey.hasNext()) {
+                String key = saucelabOptionKey.next();
+
+                sauceLabOptions.put(key, object.get(key));
+            }
+
+            capabilities.setCapability("sauce:options", sauceLabOptions);
+
+
+        } else if (config.get_grid_platForm(configName).equalsIgnoreCase("lambdatest")) {
+
+            JSONObject lambdaTestOption = config.get_lambdaTestOption(configName);
+
+            while (keys.hasNext()) {
+                String key = keys.next();
+                capabilities.setCapability(key, object.get(key));
+            }
+            Iterator<String> lambdaTestOptionKey = lambdaTestOption.keys();
+
+            HashMap<String, Object> lambdaOptions = new HashMap<String, Object>();
+
+            while (lambdaTestOptionKey.hasNext()) {
+                String key = lambdaTestOptionKey.next();
+
+                lambdaOptions.put(key, lambdaTestOption.get(key));
+            }
+
+            capabilities.setCapability("lt:options", lambdaOptions);
         }
+
         try {
 
             driver = new RemoteWebDriver(new URL(config.get_grid_url(configName)), capabilities);
@@ -181,10 +250,10 @@ public class base {
         return driver;
     }
 
+
     public AndroidDriver setup_android(String configName) {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
         JSONObject capabilityList = config.get_capabilities(configName);
 
         Iterator itr = capabilityList.keySet().iterator();
@@ -193,7 +262,24 @@ public class base {
             String key = (String) itr.next();
             capabilities.setCapability(key, capabilityList.get(key));
         }
-        capabilities.setCapability("appium:app", config.get_final_app_path(configName));
+
+        if (config.get_appium_platform(configName).equalsIgnoreCase("lambdaTest")) {
+
+            JSONObject lambdaTestOption = config.get_lambdaTestOption(configName);
+
+            Iterator<String> lambdaTestOptionKey = lambdaTestOption.keys();
+            HashMap<String, Object> lambdaTestOptionsMap = new HashMap<String, Object>();
+
+            while (lambdaTestOptionKey.hasNext()) {
+                String key = lambdaTestOptionKey.next();
+
+                lambdaTestOptionsMap.put(key, lambdaTestOption.get(key));
+            }
+            capabilities.setCapability("lt:options", lambdaTestOptionsMap);
+        } else {
+            capabilities.setCapability("appium:app", config.get_final_app_path(configName));
+        }
+
         try {
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
@@ -257,7 +343,27 @@ public class base {
         if (!platform.equalsIgnoreCase("api")) {
             driver.quit();
         }
+
+
+
+
     }
 
 
+
+    public void suiteTearDown()
+    {
+        if (platform.equalsIgnoreCase("api"))
+        {
+            File f = new File("./src/test/java/api/data/temp");
+
+            try {
+                FileUtils.cleanDirectory(f);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+
+    }
 }

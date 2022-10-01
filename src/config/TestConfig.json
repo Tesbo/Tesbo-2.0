@@ -1,6 +1,26 @@
 {
   "run": "API_Regression",
   "config": {
+    "cs_test_browserStack": {
+      "platform": "web",
+      "browser": "chrome",
+      "capabilities": {
+        "browserName": "Chrome"
+      },
+      "env": "https://test.nevvon.com/",
+      "isGrid": true,
+      "gridPlatform": "browserstack",
+      "browserStackOption": {
+        "os": "Windows",
+        "osVersion": "11"
+      },
+      "gridURL": "https://viralpatel_LWX2R3:ZCe4uALptzU8skpXYsky@hub-cloud.browserstack.com/wd/hub",
+      "viewPort": "",
+      "apiTestConfig": {
+        "enable": false,
+        "env": ""
+      }
+    },
     "nevvon_test_admin": {
       "platform": "web",
       "browser": "chrome-headless",
@@ -9,14 +29,13 @@
       "isGrid": false,
       "gridURL": "",
       "viewPort": "",
-      "apiTestConfig" :{
-        "enable" : true,
-        "env" : ""
+      "apiTestConfig": {
+        "enable": true,
+        "env": ""
       },
       "testNGsuite": [
         "nevvon_regression.xml"
       ]
-
     },
     "nevvon_prod_admin": {
       "platform": "web",
@@ -26,19 +45,17 @@
       "isGrid": false,
       "gridURL": "",
       "viewPort": "",
-      "apiTestConfig" :{
-        "enable" : true,
-        "env" : ""
+      "apiTestConfig": {
+        "enable": true,
+        "env": ""
       },
       "testNGsuite": [
         "smoke.xml"
       ]
-
     },
-
     "nevvon_android": {
       "platform": "android",
-      "app" : "app-release.apk",
+      "app": "app-release.apk",
       "capabilities": {
         "platformName": "android",
         "appium:deviceName": "pixel_4_Api_Sv2",
@@ -49,6 +66,7 @@
       "testNGsuite": [
         "nevvon_android_all.xml"
       ],
+      "appiumPlatform": "browserstack",
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
     },
     "nevvon_iOS": {
@@ -65,20 +83,18 @@
       ],
       "appiumURL": "http://0.0.0.0:4723/wd/hub"
     },
-    "nevvon_test_api" :
-    {
-      "platform" : "api",
-      "enable" : true,
-      "env" : "https://public-api-test.cpl.nevvon.com",
+    "nevvon_test_api": {
+      "platform": "api",
+      "enable": true,
+      "env": "https://public-api-test.cpl.nevvon.com",
       "testNGsuite": [
         "nevvon_public_api.xml"
       ]
     },
-    "nevvon_demo_api" :
-    {
-      "platform" : "api",
-      "enable" : true,
-      "env" : "https://pubapi.nevvon.com/v1",
+    "nevvon_demo_api": {
+      "platform": "api",
+      "enable": true,
+      "env": "https://pubapi.nevvon.com/v1",
       "testNGsuite": [
         "nevvon_public_api.xml"
       ]

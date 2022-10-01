@@ -1,6 +1,8 @@
 package io.unity.performaction.autoweb;
 
 
+import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.runner.TestRunner;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -17,7 +19,7 @@ import java.util.stream.Stream;
 public class locator_reader {
 
     public static void main(String[] args) {
-           locator_reader reader = new locator_reader();
+        locator_reader reader = new locator_reader();
         try {
             //       System.out.println(reader.get_locator_value("email_text_box"));
         } catch (Exception e) {
@@ -47,29 +49,27 @@ public class locator_reader {
         return (org.json.JSONObject) ((org.json.JSONObject) object.get("config")).get(configName);
     }
 
-    public String getPlatform() {
-
-        return getConfigObject(getRunConfig()).getString("platform");
-
-    }
 
     public String get_locator_value(String locator_name) {
-          locator_reader reader = new locator_reader();
+        locator_reader reader = new locator_reader();
+        json_file_reader config_reader = new json_file_reader();
+
         JSONObject object = null;
         String locator_value = null;
+        String platform = config_reader.getPlatform(TestRunner.currentConfig);
         try {
-            object = reader.get_locator_object(locator_name, getPlatform());
+            object = reader.get_locator_object(locator_name, platform);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (getPlatform().equalsIgnoreCase("web")) {
+        if (platform.equalsIgnoreCase("web")) {
             locator_value = object.get("locator_type").toString() + ":" + object.get("web_locator").toString();
-        } else if (getPlatform().equalsIgnoreCase("android")) {
+        } else if (platform.equalsIgnoreCase("android")) {
             locator_value = object.get("locator_type").toString() + ":" + object.get("android_locator").toString();
-        } else if (getPlatform().equalsIgnoreCase("ios")) {
+        } else if (platform.equalsIgnoreCase("ios")) {
             locator_value = object.get("locator_type").toString() + ":" + object.get("iOS_locator").toString();
         }
 
@@ -136,7 +136,7 @@ public class locator_reader {
 
 
     public JSONObject read_locator_file_and_get_object(String file_path, String locator_object_name) {
-       locator_reader reader = new locator_reader();
+        locator_reader reader = new locator_reader();
         JSONObject object = null;
         JSONParser parser = new JSONParser();
         JSONObject json = null;

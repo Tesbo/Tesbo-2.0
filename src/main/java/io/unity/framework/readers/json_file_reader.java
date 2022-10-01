@@ -65,6 +65,19 @@ public class json_file_reader {
     }
 
 
+    public JSONObject getTimeAssertion(String configName) {
+        return (JSONObject) getConfigObject(configName).get("timeAssertion");
+    }
+
+
+    public Boolean isTimeAssertionEnable(String configName) {
+        return (Boolean) getTimeAssertion(configName).get("enable");
+    }
+
+    public int getTimeToCompare(String configName) {
+        return (int) getTimeAssertion(configName).get("timeToCompareInMs");
+    }
+
     public String getEnv(String configName) {
         return getConfigObject(configName).getString("env");
     }
@@ -85,25 +98,60 @@ public class json_file_reader {
     }
 
 
+    public JSONObject get_browserStackOption(String configName) {
+
+        return getConfigObject(configName).getJSONObject("browserStackOption");
+    }
+
+
+    public JSONObject get_sauceLabOption(String configName) {
+
+        return getConfigObject(configName).getJSONObject("sauceLabOption");
+    }
+
+    public JSONObject get_lambdaTestOption(String configName) {
+
+        return getConfigObject(configName).getJSONObject("lambdaTestOption");
+    }
+
+
     public String get_grid_url(String configName) {
         JSONObject object = getTestConfig();
         return getConfigObject(configName).getString("gridURL");
     }
+
+    public String get_grid_platForm(String configName) {
+        JSONObject object = getTestConfig();
+        return getConfigObject(configName).getString("gridPlatform");
+    }
+
 
     public String get_appium_url(String configName) {
         JSONObject object = getTestConfig();
         return getConfigObject(configName).getString("appiumURL");
     }
 
+    public String get_appium_platform(String configName) {
+        JSONObject object = getTestConfig();
+        return getConfigObject(configName).getString("appiumPlatform");
+    }
+
+
     public String get_app_name(String configName) {
 
         return getConfigObject(configName).getString("app");
     }
 
+
     public String get_final_app_path(String configName) {
+
+        String app_path = "";
+
         File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
-        System.out.println(file.getAbsolutePath());
-        return file.getAbsolutePath();
+        app_path = file.getAbsolutePath();
+
+
+        return app_path;
     }
 
 
@@ -113,14 +161,13 @@ public class json_file_reader {
     }
 
 
-    public String getEnvFromCurrentConfig()
-    {
+    public String getEnvFromCurrentConfig() {
         JSONObject object = getTestConfig();
         json_file_reader config = new json_file_reader();
         if (TestRunner.currentConfig.equals("")) {
             TestRunner.currentConfig = config.getRunConfig();
         }
-       return   getConfigObject(TestRunner.currentConfig).getString("env") ;
+        return getConfigObject(TestRunner.currentConfig).getString("env");
     }
 
 

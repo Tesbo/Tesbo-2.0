@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class RequestBuilder {
 
@@ -26,6 +27,7 @@ public class RequestBuilder {
         HttpResponse response = null;
         JSONObject responseObject = null;
         HttpRequest request = null;
+        long responset = 0;
 
         GetApiConfig apiConfig = new GetApiConfig(requestName);
         String endPoint = apiConfig.getEndPoint();
@@ -44,7 +46,9 @@ public class RequestBuilder {
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
 
             request = Unirest.get(endPoint).headers(Header);
+            long startNanos = System.nanoTime();
             response = request.asString();
+            responset = System.nanoTime() - startNanos;
             responseBody = (String) response.getBody();
 
 
@@ -54,10 +58,10 @@ public class RequestBuilder {
 
             request = Unirest.delete(endPoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
+            responset = System.nanoTime() - startNanos;
             responseBody = (String) response.getBody();
-
-
-
+            int responsetime = (int) responset;
+            System.out.println("Response Time : " + responsetime + " sec");
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -65,6 +69,7 @@ public class RequestBuilder {
             request = Unirest.post(endPoint).headers(Header).body(apiConfig.getBodyMap());
 
             response = request.asString();
+            responset = System.nanoTime() - startNanos;
             responseBody = (String) response.getBody();
 
         }
@@ -74,7 +79,11 @@ public class RequestBuilder {
             request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
 
             response = request.asString();
+            responset = System.nanoTime() - startNanos;
             responseBody = (String) response.getBody();
+
+            int responsetime = (int) responset;
+            System.out.println("Response Time : " + responsetime + " sec");
 
         }
 
@@ -83,6 +92,7 @@ public class RequestBuilder {
         JSONParser parser = new JSONParser();
         try {
             responseObject = (JSONObject) parser.parse(responseBody);
+            responseObject.put("responseTime",  TimeUnit.MILLISECONDS.convert(responset, TimeUnit.NANOSECONDS));
         } catch (ParseException e) {
             e.printStackTrace();
         }

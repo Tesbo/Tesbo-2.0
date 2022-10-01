@@ -52,9 +52,8 @@ public class GetApiConfig {
 
         }
 
-        if (object.getString("endPoint").contains("?")) {
-            finalEndpoint = getEndPointWithQueryParameter(finalEndpoint);
-        }
+
+        finalEndpoint = addQueryParameterInURL(finalEndpoint);
 
         return finalEndpoint;
     }
@@ -64,8 +63,6 @@ public class GetApiConfig {
         String newEndPoint = endPoint;
 
         JSONObject allPathParameter = getPathParameter();
-
-
         Iterator keys = allPathParameter.keys();
 
         while (keys.hasNext()) {
@@ -89,19 +86,53 @@ public class GetApiConfig {
         String[] total_parameter_list = queryParameter.split("&");
 
         for (String single_parameter : total_parameter_list) {
+
             String[] param_list = single_parameter.split("=");
             String param_value = param_list[1].substring(2, param_list[1].length() - 1);
             newEndPoint = newEndPoint.replace("${" + param_value + "}", getQueryParameterValue(param_value));
+
         }
 
         return newEndPoint;
     }
+
+    public String addQueryParameterInURL(String endPoint) {
+
+        String newEndPoint = endPoint + "?";
+        String final_Endpoint = "";
+        try {
+            JSONObject object = getAllQueryParameterList();
+            Iterator keys = object.keys();
+
+            while (keys.hasNext()) {
+
+                String currentDynamicKey = (String) keys.next();
+                String currentDynamicValue = object.get(currentDynamicKey).toString();
+                newEndPoint = newEndPoint + currentDynamicKey + "=" + currentDynamicValue + "&";
+            }
+
+            final_Endpoint = newEndPoint.substring(0, newEndPoint.length() - 1);
+        } catch (Exception e) {
+            final_Endpoint = endPoint;
+        }
+
+        return final_Endpoint;
+    }
+
 
     public String getQueryParameterValue(String parameterName) {
 
         JSONObject object = getApiConfig();
         JSONObject pathParameter = (JSONObject) object.get("queryParameter");
         return pathParameter.getString(parameterName);
+
+    }
+
+    public JSONObject getAllQueryParameterList() {
+
+        JSONObject object = getApiConfig();
+        JSONObject queryParameter = (JSONObject) object.get("queryParameter");
+        return queryParameter;
 
     }
 
@@ -150,6 +181,7 @@ public class GetApiConfig {
         JSONObject object = getApiConfig();
         return (JSONObject) object.get("schema");
     }
+
     public Map<String, String> getBodyMap() {
         JSONObject object = getApiConfig();
 

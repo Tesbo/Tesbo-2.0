@@ -4,7 +4,6 @@ import com.beust.jcommander.JCommander;
 import io.unity.framework.readers.CommandlineOption;
 import io.unity.framework.readers.json_file_reader;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.testng.TestNG;
 
 import java.io.File;
@@ -57,6 +56,10 @@ public class TestRunner {
                 for (Object suiteName : suiteList) {
                     testFilesList.add(new File((directory_path + suiteName)).getAbsolutePath());
                 }
+
+
+
+
                 testng.setTestSuites(testFilesList); //you can addd multiple suites either here by adding multiple files or include all suites needed in the testng.xml file
             } else {
 
