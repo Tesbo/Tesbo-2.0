@@ -27,7 +27,6 @@ public class ElementNameGenerator {
             name = getNameForTextArea(element);
         }
 
-
         if (element.nodeName().equals("button")) {
             name = getNameForButton(element);
         }

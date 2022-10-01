@@ -34,11 +34,14 @@ public class RequestBuilder {
         Map Header = apiConfig.getHeaderMap();
         Map Body = apiConfig.getBodyMap();
 
+
+
         logs.test_step("========================================================================");
         logs.test_step("Performing Request : " + requestName);
         logs.test_step("Request End Point : " + endPoint);
         logs.test_step("Request Headers : " + Header);
         logs.test_step("Request body : " + Body);
+
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
 
@@ -57,7 +60,6 @@ public class RequestBuilder {
             response = request.asString();
             responset = System.nanoTime() - startNanos;
             responseBody = (String) response.getBody();
-
             int responsetime = (int) responset;
             System.out.println("Response Time : " + responsetime + " sec");
         }
@@ -70,14 +72,10 @@ public class RequestBuilder {
             responset = System.nanoTime() - startNanos;
             responseBody = (String) response.getBody();
 
-
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
-            logs.test_step("Request body : " + apiConfig.getHeaderMap());
-            System.out.println(apiConfig.getHeaderMap());
-            System.out.println(apiConfig.getBody());
-
+            logs.test_step("Request body : " + apiConfig.getBody());
             request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
 
             response = request.asString();
@@ -86,6 +84,7 @@ public class RequestBuilder {
 
             int responsetime = (int) responset;
             System.out.println("Response Time : " + responsetime + " sec");
+
         }
 
         logs.test_step("========================================================================");
@@ -107,6 +106,7 @@ public class RequestBuilder {
     public JSONObject performRequest(String requestName, String endpoint) {
 
         String responseBody = "";
+        String responseTime = "";
         HttpResponse response = null;
         JSONObject responseObject = null;
         HttpRequest request = null;
@@ -122,9 +122,6 @@ public class RequestBuilder {
             request = Unirest.get(endpoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            long responset = (System.nanoTime() - startNanos) / 1000000000;
-            int responsetime = (int) responset;
-            System.out.println(responsetime);
         }
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
             logs.test_step("Request body : " + apiConfig.getHeaderMap());
@@ -304,5 +301,6 @@ public class RequestBuilder {
         return updatedFile.getAbsolutePath();
     }
 
+    
 
 }

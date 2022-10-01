@@ -1,5 +1,5 @@
 {
-  "run": "cs_test_browserStack",
+  "run": "API_Regression",
   "config": {
     "cs_test_browserStack": {
       "platform": "web",
