@@ -74,11 +74,9 @@ public class RequestBuilder {
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
-            logs.test_step("Request body : " + apiConfig.getHeaderMap());
-            System.out.println(apiConfig.getHeaderMap());
-            System.out.println(apiConfig.getBody());
+            logs.test_step("Request body : " + apiConfig.getBody());
 
-            request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
+            request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBody().toString());
 
             response = request.asString();
             responset = System.nanoTime() - startNanos;
