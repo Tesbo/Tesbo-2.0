@@ -23,9 +23,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -341,7 +343,27 @@ public class base {
         if (!platform.equalsIgnoreCase("api")) {
             driver.quit();
         }
+
+
+
+
     }
 
 
+
+    public void suiteTearDown()
+    {
+        if (platform.equalsIgnoreCase("api"))
+        {
+            File f = new File("./src/test/java/api/data/temp");
+
+            try {
+                FileUtils.cleanDirectory(f);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+
+    }
 }

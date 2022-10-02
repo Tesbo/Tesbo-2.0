@@ -34,11 +34,14 @@ public class RequestBuilder {
         Map Header = apiConfig.getHeaderMap();
         Map Body = apiConfig.getBodyMap();
 
+
+
         logs.test_step("========================================================================");
         logs.test_step("Performing Request : " + requestName);
         logs.test_step("Request End Point : " + endPoint);
         logs.test_step("Request Headers : " + Header);
         logs.test_step("Request body : " + Body);
+
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
 
@@ -75,6 +78,8 @@ public class RequestBuilder {
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
             logs.test_step("Request body : " + apiConfig.getBody());
+            request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
+            logs.test_step("Request body : " + apiConfig.getBody());
 
             request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBody().toString());
 
@@ -84,6 +89,7 @@ public class RequestBuilder {
 
             int responsetime = (int) responset;
             System.out.println("Response Time : " + responsetime + " sec");
+
         }
 
         logs.test_step("========================================================================");

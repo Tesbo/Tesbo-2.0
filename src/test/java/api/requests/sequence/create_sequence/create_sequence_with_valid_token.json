@@ -9,6 +9,5 @@
     "title":""
   },
   "pathParameter": {},
-  "queryParameter": {}
-
+  "schema" : {"message":"Sequence deleted successfully","statusCode":200}
 }
