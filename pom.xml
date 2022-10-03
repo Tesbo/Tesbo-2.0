@@ -6,7 +6,7 @@
 
     <groupId>TestMan</groupId>
     <artifactId>framework-core</artifactId>
-    <version>2.0.48</version>
+    <version>3.0.0-Snapshot</version>
 
     <distributionManagement>
         <repository>
