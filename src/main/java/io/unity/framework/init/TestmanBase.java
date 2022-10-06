@@ -34,7 +34,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class base {
+public class TestmanBase {
 
     String env = "";
     String platform = "";
