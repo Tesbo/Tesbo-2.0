@@ -1,5 +1,6 @@
 package io.unity.framework.generators.suitegenerator;
 
+import io.unity.framework.data.TestData;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -18,6 +19,7 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -114,7 +116,10 @@ public class TestNGSuiteGenerator {
         for (String classPath : allClass) {
 
             System.out.println(classPath);
-            String fullClassPath = platform + classPath.split("/"+platform)[1].split(".class")[0].replace("/", ".");
+
+            String separator = FileSystems.getDefault().getSeparator();
+
+            String fullClassPath = platform + classPath.split(platform)[1].split(".class")[0].replace(separator, ".");
 
 
             Class<?> myClass = Class.forName(fullClassPath, true, classLoader);
@@ -125,7 +130,7 @@ public class TestNGSuiteGenerator {
             for (String methods : methodsList) {
                 Element test = document.createElement("test");
 
-                test.setAttribute("name", methods);
+                test.setAttribute("name", methods+"_"+ TestData.random_numeric_string(4));
 
                 Element classes = document.createElement("classes");
                 test.appendChild(classes);
