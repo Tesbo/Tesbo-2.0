@@ -1,9 +1,0 @@
-{
-  "endPoint": "/user/meta",
-  "methodType" : "GET",
-  "header": {
-    "Content-Type":"application/json",
-    "Authorization": ""
-  },
-  "body": {}
-}

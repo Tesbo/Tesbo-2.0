@@ -68,7 +68,7 @@ public class TestNGSuiteGenerator {
 
         List temp = new ArrayList();
         try {
-            Stream<Path> walk = Files.walk(Paths.get(dir + "/tests"));
+            Stream<Path> walk = Files.walk(Paths.get(dir + "/testcases"));
             result = walk.map(Path::toFile)
                     .sorted(Comparator.comparing(File::lastModified))
                     .map(p -> p.toString()) // convert path to string

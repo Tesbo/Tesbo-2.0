@@ -1,9 +1,0 @@
-{
-  "endPoint": "/sequences",
-  "methodType" : "GET",
-  "header": {
-    "Content-Type": "application/json",
-    "Authorization": ""
-  },
-  "body": {}
-}
