@@ -1,0 +1,60 @@
+{
+  "run": [
+    "cs_stage_local"
+  ],
+  "config": {
+    "cs_stage_local": {
+      "baseUrl": "https://test.nevvon.com/",
+      "platform": "web",
+      "executionOn": "chrome",
+      "testRunEnvironment": {
+        "chrome": {
+          "capabilities": {
+          },
+          "option": {
+          },
+          "viewport": ""
+        }
+      },
+      "testcaseToRun": {
+        "mode": "suite",
+        "suite": [
+          "login.xml",
+          "abc.xml"
+        ]
+      },
+      "parallel": {
+        "enable": true,
+        "count": 2,
+        "parallelBy": ""
+      },
+      "dataFile": "ProdData"
+    },
+    "cs_prod_BrowserStack": {
+      "baseUrl": "https://admin.nevvon.com/",
+      "platform": "web",
+      "executionOn": "lambdaTest",
+      "testExecutionEnvironment": {
+        "lambdaTest": {
+          "gridUrl": "",
+          "capabilities": {
+          },
+          "option": {
+          }
+        },
+        "parallel": {
+          "enable": true,
+          "count": 2,
+          "parallelBy": "methods"
+        },
+        "testcaseToRun": {
+          "mode": "tags",
+          "tags": [
+            "@regression",
+            "@smoke"
+          ]
+        }
+      }
+    }
+  }
+}
