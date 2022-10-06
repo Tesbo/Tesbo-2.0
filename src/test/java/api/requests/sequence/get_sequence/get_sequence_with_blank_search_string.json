@@ -1,9 +1,0 @@
-{
-  "endPoint": "/sequences?progress=${progress}",
-  "methodType" : "GET",
-  "body": {},
-  "pathParameter": {},
-  "queryParameter": {
-    "progress" : "1"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "endPoint": "/user/meta",
-  "methodType" : "GET",
-  "header": {
-    "Content-Type":"application/zip"
-  },
-  "body": {}
-}

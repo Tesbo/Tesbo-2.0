@@ -1,8 +1,0 @@
-{
-  "endPoint": "/sequences",
-  "methodType" : "POST",
-  "header": {
-    "Content-Type": "application/json"
-  },
-  "body": {}
-}
