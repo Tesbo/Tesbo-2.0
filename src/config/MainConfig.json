@@ -29,7 +29,6 @@
         "parallelBy": ""
       },
       "dataFile": "ProdData"
-
     },
     "cs_prod_BrowserStack": {
       "baseUrl": "https://admin.nevvon.com/",
@@ -56,6 +55,12 @@
           ]
         }
       }
+    },
+
+    "cs_prod_android" :
+    {
+      "platformName" : "mobile",
+      "executionOn"
     }
   }
 }
