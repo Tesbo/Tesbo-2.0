@@ -232,10 +232,10 @@ public class base {
 
             while (lambdaTestOptionKey.hasNext()) {
                 String key = lambdaTestOptionKey.next();
-
                 lambdaOptions.put(key, lambdaTestOption.get(key));
             }
 
+            capabilities.setCapability("build" , TestData.random_alpha_numeric_string(4)+"_"+TestData.getTodayDateinFormat("dd-MMM-yyyy"));
             capabilities.setCapability("LT:options", lambdaOptions);
         }
 
