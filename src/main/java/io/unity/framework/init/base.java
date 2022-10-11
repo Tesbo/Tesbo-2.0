@@ -5,6 +5,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.framework.data.TestData;
 import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.remotegrid.LambdaTestConfig;
 import io.unity.framework.runner.TestRunner;
 import io.unity.performaction.autoweb.Browser;
 import io.unity.performaction.autoweb.testng_logs;
@@ -23,7 +24,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
@@ -236,7 +236,7 @@ public class base {
                 lambdaOptions.put(key, lambdaTestOption.get(key));
             }
 
-            capabilities.setCapability("lt:options", lambdaOptions);
+            capabilities.setCapability("LT:options", lambdaOptions);
         }
 
         try {
@@ -275,7 +275,9 @@ public class base {
 
                 lambdaTestOptionsMap.put(key, lambdaTestOption.get(key));
             }
-            capabilities.setCapability("lt:options", lambdaTestOptionsMap);
+
+            capabilities.setCapability("LT:options", lambdaTestOptionsMap);
+
         } else {
             capabilities.setCapability("appium:app", config.get_final_app_path(configName));
         }
@@ -340,21 +342,28 @@ public class base {
                 e.printStackTrace();
             }
         }
+
+
+        if (config.get_grid_platForm(TestRunner.currentConfig).equalsIgnoreCase("lambdatest") || config.get_appium_platform(TestRunner.currentConfig).equalsIgnoreCase("lambdaTest")) {
+            LambdaTestConfig config = new LambdaTestConfig(driver);
+            if (ITestResult.FAILURE == result.getStatus()) {
+                config.markTestFailed();
+            } else {
+                config.markTestPassed();
+            }
+
+        }
+
         if (!platform.equalsIgnoreCase("api")) {
             driver.quit();
         }
 
 
-
-
     }
 
 
-
-    public void suiteTearDown()
-    {
-        if (platform.equalsIgnoreCase("api"))
-        {
+    public void suiteTearDown() {
+        if (platform.equalsIgnoreCase("api")) {
             File f = new File("./src/test/java/api/data/temp");
 
             try {
