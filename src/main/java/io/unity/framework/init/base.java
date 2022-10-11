@@ -235,7 +235,7 @@ public class base {
                 lambdaOptions.put(key, lambdaTestOption.get(key));
             }
 
-            capabilities.setCapability("build" , TestData.random_alpha_numeric_string(4)+"_"+TestData.getTodayDateinFormat("dd-MMM-yyyy"));
+            capabilities.setCapability("build", TestData.random_alpha_numeric_string(4) + "_" + TestData.getTodayDateinFormat("dd-MMM-yyyy"));
             capabilities.setCapability("LT:options", lambdaOptions);
         }
 
@@ -275,6 +275,8 @@ public class base {
 
                 lambdaTestOptionsMap.put(key, lambdaTestOption.get(key));
             }
+
+            capabilities.setCapability("build", TestData.random_alpha_numeric_string(4) + "_" + TestData.getTodayDateinFormat("dd-MMM-yyyy"));
 
             capabilities.setCapability("LT:options", lambdaTestOptionsMap);
 
