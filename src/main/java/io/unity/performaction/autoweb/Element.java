@@ -66,6 +66,7 @@ public class Element {
                 break;
             case "accessibility-id":
                 element = driver.findElement(new AppiumBy.ByAccessibilityId(locator_value));
+                break;
             default:
                 logs.test_step("Incorrect Locator Type");
         }
