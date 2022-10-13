@@ -346,15 +346,33 @@ public class base {
         }
 
 
-        if (config.get_grid_platForm(TestRunner.currentConfig).equalsIgnoreCase("lambdatest") || config.get_appium_platform(TestRunner.currentConfig).equalsIgnoreCase("lambdaTest")) {
-            LambdaTestConfig config = new LambdaTestConfig(driver);
-            if (ITestResult.FAILURE == result.getStatus()) {
-                config.markTestFailed();
-            } else {
-                config.markTestPassed();
+        if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("web")) {
+            if (config.get_grid_platForm(TestRunner.currentConfig).equalsIgnoreCase("lambdatest")) {
+                LambdaTestConfig config = new LambdaTestConfig(driver);
+                if (ITestResult.FAILURE == result.getStatus()) {
+                    config.markTestFailed();
+                } else {
+                    config.markTestPassed();
+                }
+
             }
 
         }
+
+
+        if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("android") || config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("android")) {
+            if (config.get_appium_platform(TestRunner.currentConfig).equalsIgnoreCase("lambdatest")) {
+                LambdaTestConfig config = new LambdaTestConfig(driver);
+                if (ITestResult.FAILURE == result.getStatus()) {
+                    config.markTestFailed();
+                } else {
+                    config.markTestPassed();
+                }
+
+            }
+
+        }
+
 
         if (!platform.equalsIgnoreCase("api")) {
             driver.quit();
