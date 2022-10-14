@@ -1,12 +1,15 @@
 package io.unity.performaction.automob;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.functions.ActionSupplier;
 import io.appium.java_client.ios.IOSDriver;
 import io.unity.framework.readers.json_file_reader;
 import io.unity.framework.runner.TestRunner;
 import io.unity.performaction.autoweb.Element;
 import io.unity.performaction.autoweb.locator_reader;
+import org.openqa.selenium.By;
 
 public class Device {
     AppiumDriver driver;
@@ -28,6 +31,10 @@ public class Device {
             ((IOSDriver) driver).context(context_name);
         }
     }
+
+
+
+
 
 
 }
