@@ -25,6 +25,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,7 +48,15 @@ public class base {
     json_file_reader config = new json_file_reader();
     testng_logs logs = new testng_logs();
 
+public static String build_Name;
 
+    @BeforeSuite
+    public void beforeSuiteWorks()
+    {
+
+        build_Name = "Build "+TestData.random_alpha_numeric_string(4) + "_" + TestData.getTodayDateinFormat("dd-MMM-yyyy");
+
+    }
     @BeforeMethod
     public WebDriver init() {
 
@@ -235,7 +244,7 @@ public class base {
                 lambdaOptions.put(key, lambdaTestOption.get(key));
             }
 
-            capabilities.setCapability("build", TestData.random_alpha_numeric_string(4) + "_" + TestData.getTodayDateinFormat("dd-MMM-yyyy"));
+            capabilities.setCapability("build",build_Name );
             capabilities.setCapability("LT:options", lambdaOptions);
         }
 
@@ -276,7 +285,7 @@ public class base {
                 lambdaTestOptionsMap.put(key, lambdaTestOption.get(key));
             }
 
-            capabilities.setCapability("build", TestData.random_alpha_numeric_string(4) + "_" + TestData.getTodayDateinFormat("dd-MMM-yyyy"));
+            capabilities.setCapability("build",build_Name );
 
             capabilities.setCapability("LT:options", lambdaTestOptionsMap);
 
