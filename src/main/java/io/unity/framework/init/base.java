@@ -369,7 +369,7 @@ public static String build_Name;
         }
 
 
-        if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("android") || config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("android")) {
+        if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("android") || config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("ios")) {
             if (config.get_appium_platform(TestRunner.currentConfig).equalsIgnoreCase("lambdatest")) {
                 LambdaTestConfig config = new LambdaTestConfig(driver);
                 if (ITestResult.FAILURE == result.getStatus()) {

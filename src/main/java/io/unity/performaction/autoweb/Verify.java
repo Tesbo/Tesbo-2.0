@@ -100,6 +100,12 @@ public class Verify {
         logs.test_result(true);
     }
 
+    /**
+     *
+     * @param element_name name of the element from json file
+     * @param attribute_name attribute that you wanted to compare
+     * @param expected_attribute_value attribute value that you wanted to compare
+     */
     public void element_attribute_is_equal_to(String element_name, String attribute_name, String expected_attribute_value) {
         logs.test_step("verify element " + element_name + " attribute " + attribute_name + " text is equal " + expected_attribute_value);
         assertThat(element.find(element_name).getAttribute(attribute_name)).isEqualTo(expected_attribute_value);
