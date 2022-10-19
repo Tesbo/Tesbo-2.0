@@ -54,7 +54,7 @@ public static String build_Name;
     public void beforeSuiteWorks()
     {
 
-        build_Name = "Build "+TestData.random_alpha_numeric_string(4) + "_" + TestData.getTodayDateinFormat("dd-MMM-yyyy");
+        build_Name = "Build_" + TestData.getTodayDateinFormat("dd-MMM-yyyy");
 
     }
     @BeforeMethod
