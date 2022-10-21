@@ -26,6 +26,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.tinylog.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,7 +68,7 @@ public static String build_Name;
 
             platform = config.getPlatform(TestRunner.currentConfig);
 
-            System.out.println("Base config to run : " + TestRunner.currentConfig);
+            Logger.info("Base config to run : " + TestRunner.currentConfig);
 
             if (platform.equalsIgnoreCase("web")) {
 
@@ -93,7 +94,7 @@ public static String build_Name;
             } else if (platform.equalsIgnoreCase("api")) {
                 Unirest.config().defaultBaseUrl(config.getAPIEnvDirect(TestRunner.currentConfig));
             } else {
-                System.out.println("Platform type you entered is not supported");
+               Logger.info("Platform type you entered is not supported");
             }
         } catch (Exception e) {
             e.printStackTrace();

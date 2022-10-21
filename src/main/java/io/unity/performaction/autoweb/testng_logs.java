@@ -1,12 +1,15 @@
 package io.unity.performaction.autoweb;
 
-import org.pmw.tinylog.Logger;
+
 import org.testng.Reporter;
+import org.tinylog.Logger;
+import org.tinylog.configuration.Configuration;
 
 public class testng_logs {
 
 
     public void test_step(String message) {
+
         Logger.info("Step : " + message );
         Reporter.log("Step : " + message + "<br>");
     }

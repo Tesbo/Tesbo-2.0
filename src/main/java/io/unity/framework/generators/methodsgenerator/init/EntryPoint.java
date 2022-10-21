@@ -8,10 +8,7 @@ import io.unity.framework.generators.methodsgenerator.classutilities.JavaFileRea
 import net.minidev.json.parser.JSONParser;
 import org.jboss.forge.roaster.Roaster;
 import org.jboss.forge.roaster.model.source.JavaClassSource;
-
-import org.pmw.tinylog.Configurator;
-import org.pmw.tinylog.Logger;
-
+import org.tinylog.Logger;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,9 +22,7 @@ public class EntryPoint {
 
     public void generate(String type) {
 
-        Configurator.currentConfig()
-                .formatPattern("{level}:{message}")
-                .activate();
+
         ClassMethodsValidator validator = new ClassMethodsValidator();
         GenerateMethods methods = null;
         JavaFileReader file_reader = new JavaFileReader();
@@ -72,7 +67,6 @@ public class EntryPoint {
                     methods = new GenerateMethods(javaClass);
                     methods.generate_missing_methods(json_file_path, skeleton.get_package_name(file_path,type) + "." + only_class_name);
                     skeleton.write_java_file(java_class_file_path, javaClass);
-
 
                 }
             } else {

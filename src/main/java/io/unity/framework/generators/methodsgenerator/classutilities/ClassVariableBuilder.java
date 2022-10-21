@@ -1,7 +1,8 @@
 package io.unity.framework.generators.methodsgenerator.classutilities;
 
 import org.jboss.forge.roaster.model.source.JavaClassSource;
-import org.pmw.tinylog.Logger;
+
+import org.tinylog.Logger;
 
 public class ClassVariableBuilder {
 
