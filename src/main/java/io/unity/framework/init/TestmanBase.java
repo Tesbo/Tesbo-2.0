@@ -5,6 +5,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.framework.data.TestData;
 import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.remotegrid.LambdaTestConfig;
 import io.unity.framework.runner.TestRunner;
 import io.unity.performaction.autoweb.Browser;
 import io.unity.performaction.autoweb.testng_logs;
@@ -23,8 +24,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.tinylog.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,7 +49,15 @@ public class TestmanBase {
     json_file_reader config = new json_file_reader();
     testng_logs logs = new testng_logs();
 
+public static String build_Name;
 
+    @BeforeSuite
+    public void beforeSuiteWorks()
+    {
+
+        build_Name = "Build_" + TestData.getTodayDateinFormat("dd-MMM-yyyy");
+
+    }
     @BeforeMethod
     public WebDriver init() {
 
@@ -58,7 +68,7 @@ public class TestmanBase {
 
             platform = config.getPlatform(TestRunner.currentConfig);
 
-            System.out.println("Base config to run : " + TestRunner.currentConfig);
+            Logger.info("Base config to run : " + TestRunner.currentConfig);
 
             if (platform.equalsIgnoreCase("web")) {
 
@@ -84,7 +94,7 @@ public class TestmanBase {
             } else if (platform.equalsIgnoreCase("api")) {
                 Unirest.config().defaultBaseUrl(config.getAPIEnvDirect(TestRunner.currentConfig));
             } else {
-                System.out.println("Platform type you entered is not supported");
+               Logger.info("Platform type you entered is not supported");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -232,11 +242,11 @@ public class TestmanBase {
 
             while (lambdaTestOptionKey.hasNext()) {
                 String key = lambdaTestOptionKey.next();
-
                 lambdaOptions.put(key, lambdaTestOption.get(key));
             }
 
-            capabilities.setCapability("lt:options", lambdaOptions);
+            capabilities.setCapability("build",build_Name );
+            capabilities.setCapability("LT:options", lambdaOptions);
         }
 
         try {
@@ -275,7 +285,11 @@ public class TestmanBase {
 
                 lambdaTestOptionsMap.put(key, lambdaTestOption.get(key));
             }
-            capabilities.setCapability("lt:options", lambdaTestOptionsMap);
+
+            capabilities.setCapability("build",build_Name );
+
+            capabilities.setCapability("LT:options", lambdaTestOptionsMap);
+
         } else {
             capabilities.setCapability("appium:app", config.get_final_app_path(configName));
         }
@@ -340,21 +354,46 @@ public class TestmanBase {
                 e.printStackTrace();
             }
         }
+
+
+        if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("web")) {
+            if (config.get_grid_platForm(TestRunner.currentConfig).equalsIgnoreCase("lambdatest")) {
+                LambdaTestConfig config = new LambdaTestConfig(driver);
+                if (ITestResult.FAILURE == result.getStatus()) {
+                    config.markTestFailed();
+                } else {
+                    config.markTestPassed();
+                }
+
+            }
+
+        }
+
+
+        if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("android") || config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("ios")) {
+            if (config.get_appium_platform(TestRunner.currentConfig).equalsIgnoreCase("lambdatest")) {
+                LambdaTestConfig config = new LambdaTestConfig(driver);
+                if (ITestResult.FAILURE == result.getStatus()) {
+                    config.markTestFailed();
+                } else {
+                    config.markTestPassed();
+                }
+
+            }
+
+        }
+
+
         if (!platform.equalsIgnoreCase("api")) {
             driver.quit();
         }
 
 
-
-
     }
 
 
-
-    public void suiteTearDown()
-    {
-        if (platform.equalsIgnoreCase("api"))
-        {
+    public void suiteTearDown() {
+        if (platform.equalsIgnoreCase("api")) {
             File f = new File("./src/test/java/api/data/temp");
 
             try {

@@ -4,7 +4,8 @@ package io.unity.framework.generators.methodsgenerator.classutilities;
 import org.apache.commons.io.FileExistsException;
 import org.apache.commons.io.FileUtils;
 import org.jboss.forge.roaster.model.source.JavaClassSource;
-import org.pmw.tinylog.Logger;
+import org.tinylog.Logger;
+
 
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
