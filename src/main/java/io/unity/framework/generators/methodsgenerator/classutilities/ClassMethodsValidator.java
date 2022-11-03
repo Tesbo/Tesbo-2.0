@@ -4,8 +4,9 @@ package io.unity.framework.generators.methodsgenerator.classutilities;
 import io.unity.framework.generators.methodsgenerator.methods.LocatorType;
 import io.unity.framework.generators.methodsgenerator.methods.MethodsData;
 import org.apache.commons.io.FilenameUtils;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+
+import org.json.JSONObject;
+import org.openqa.selenium.json.Json;
 import org.tinylog.Logger;
 
 
@@ -83,8 +84,8 @@ public class ClassMethodsValidator {
     public Map prepare_list_of_element_not_generated(String json_file_path, String java_class_name) {
         Map pending_method_list = new HashMap();
         try {
-            JSONParser parser = new JSONParser();
-            JSONObject whole_file = (JSONObject) parser.parse(new FileReader(json_file_path));
+
+            JSONObject whole_file = new JSONObject(new FileReader(json_file_path));
 
             Set whole_file_set = whole_file.keySet();
             Iterator iterator = whole_file_set.iterator();

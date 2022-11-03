@@ -6,7 +6,8 @@ import io.unity.framework.readers.GetApiConfig;
 import io.unity.framework.readers.json_file_reader;
 import io.unity.framework.runner.TestRunner;
 import io.unity.performaction.autoweb.testng_logs;
-import org.json.simple.JSONObject;
+
+import org.json.JSONObject;
 import org.testng.Assert;
 
 public class ResponseValidator {
@@ -93,12 +94,12 @@ public class ResponseValidator {
         for (String singlePath : parser.getPathList()) {
 
             logs.test_step("Single path to match " + singlePath);
-            Object object = JsonPath.parse(response.toJSONString()).read(singlePath);
+            Object object = JsonPath.parse(response).read(singlePath);
 
         }
     }
     public void validateSchemaFromRequestFile(String request_name) {
-        UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
+        UnityJSONParser parser = new UnityJSONParser(response.toString());
 
         GetApiConfig apiConfig = new GetApiConfig(request_name);
         for (String singlePath : parser.getPathList()) {

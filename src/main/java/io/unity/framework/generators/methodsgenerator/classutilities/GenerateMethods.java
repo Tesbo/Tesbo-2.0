@@ -3,9 +3,7 @@ package io.unity.framework.generators.methodsgenerator.classutilities;
 
 import io.unity.framework.generators.methodsgenerator.methods.MethodsData;
 import org.jboss.forge.roaster.model.source.JavaClassSource;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.json.JSONObject;
 import org.tinylog.Logger;
 
 
@@ -31,13 +29,11 @@ public class GenerateMethods {
         ClassMethodsValidator validator = new ClassMethodsValidator();
 
         Map<String, ArrayList> missing_method_locator_list = validator.prepare_list_of_element_not_generated(json_file_path, java_class_name);
-        JSONParser parser = new JSONParser();
+
         JSONObject whole_file = null;
         try {
-            whole_file = (JSONObject) parser.parse(new FileReader(json_file_path));
+            whole_file = new JSONObject(new FileReader(json_file_path));
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
             e.printStackTrace();
         }
 

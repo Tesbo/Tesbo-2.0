@@ -39,6 +39,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
                 <configuration>
                     <source>11</source>
                     <target>11</target>
@@ -101,17 +102,8 @@
             <artifactId>poi</artifactId>
             <version>5.2.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.codoid.products/fillo -->
-        <dependency>
-            <groupId>com.codoid.products</groupId>
-            <artifactId>fillo</artifactId>
-            <version>1.21</version>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>1.1.1</version>
-        </dependency>
+
+
         <dependency>
             <groupId>com.github.appium</groupId>
             <artifactId>java-client</artifactId>
@@ -141,19 +133,6 @@
             <version>2.4.1</version>
         </dependency>
 
-        <!--
-                <dependency>
-                    <groupId>io.unity.framework.generators.methodsgenerator</groupId>
-                    <artifactId>object_repository_generator</artifactId>
-                    <version>1.0.5</version>
-                </dependency>-->
-
-        <!--      <dependency>
-                  <groupId>io.unity.framework.generators.methodsgenerator</groupId>
-                  <artifactId>image-comparision</artifactId>
-                  <version>0.0.12</version>
-              </dependency>-->
-
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -161,19 +140,7 @@
             <version>5.2.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.9.0</version>
-        </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.json/json -->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20220320</version>
-        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
@@ -213,11 +180,19 @@
             <artifactId>json-path</artifactId>
             <version>2.7.0</version>
         </dependency>
+<!--
 
         <dependency>
             <groupId>org.skyscreamer</groupId>
             <artifactId>jsonassert</artifactId>
             <version>1.5.0</version>
+        </dependency>
+-->
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20220924</version>
         </dependency>
 
         <dependency>
@@ -225,6 +200,8 @@
             <artifactId>jsoup</artifactId>
             <version>1.15.3</version>
         </dependency>
+
+
         <dependency>
             <groupId>com.github.surpsg</groupId>
             <artifactId>kombi</artifactId>

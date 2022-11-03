@@ -1,6 +1,7 @@
 package io.unity.framework.generators.locatorgenerator;
 
-import org.json.simple.JSONObject;
+
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

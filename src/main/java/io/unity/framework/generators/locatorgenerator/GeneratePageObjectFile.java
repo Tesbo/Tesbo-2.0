@@ -1,6 +1,6 @@
 package io.unity.framework.generators.locatorgenerator;
 
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,7 +16,7 @@ public class GeneratePageObjectFile {
             Path fileName1 = Path.of(
                     EntryPoint.pageObjectDirectory + "/" + fileName);
 
-            Files.writeString(fileName1, array.toJSONString());
+            Files.writeString(fileName1, array.toString());
 
 
             System.out.println("---------------------------------------- file generated " + fileName);

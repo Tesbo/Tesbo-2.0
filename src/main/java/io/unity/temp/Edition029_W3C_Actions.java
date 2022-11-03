@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Arrays;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.openqa.selenium.Point;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.PointerInput.Kind;
@@ -16,6 +14,9 @@ import org.openqa.selenium.interactions.PointerInput.MouseButton;
 import org.openqa.selenium.interactions.PointerInput.Origin;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class Edition029_W3C_Actions {
     private String APP = "http://appium.s3.amazonaws.com/ApiDemos-debug-2015-03-19.apk";
@@ -25,7 +26,7 @@ public class Edition029_W3C_Actions {
 
     private AndroidDriver driver;
 
-    @Before
+    @BeforeTest
     public void setUp() throws IOException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
@@ -36,7 +37,7 @@ public class Edition029_W3C_Actions {
         driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), caps);
     }
 
-    @After
+    @AfterMethod
     public void tearDown() {
         try {
             driver.quit();

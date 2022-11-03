@@ -2,8 +2,7 @@ package io.unity.framework.readers;
 
 
 import io.unity.framework.exception.locator_not_found_exception;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+
 
 import java.io.*;
 import java.nio.file.Files;

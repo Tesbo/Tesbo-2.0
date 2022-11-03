@@ -3,8 +3,8 @@ package io.unity.performaction.autoweb;
 
 import io.unity.framework.readers.json_file_reader;
 import io.unity.framework.runner.TestRunner;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+import org.json.JSONObject;
+
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -140,11 +140,11 @@ public class locator_reader {
     public JSONObject read_locator_file_and_get_object(String file_path, String locator_object_name) {
         locator_reader reader = new locator_reader();
         JSONObject object = null;
-        JSONParser parser = new JSONParser();
+
         JSONObject json = null;
         try {
 
-            json = (JSONObject) parser.parse(new String(Files.readAllBytes(Paths.get(file_path).toAbsolutePath())));
+            json = new JSONObject(new String(Files.readAllBytes(Paths.get(file_path).toAbsolutePath())));
 
 
             object = (JSONObject) json.get(locator_object_name);

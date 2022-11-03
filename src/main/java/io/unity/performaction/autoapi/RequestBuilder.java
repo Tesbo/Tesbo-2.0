@@ -6,9 +6,7 @@ import io.unity.performaction.autoweb.testng_logs;
 import kong.unirest.HttpRequest;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -83,16 +81,12 @@ public class RequestBuilder {
 
 
         logs.test_step("getting response : ");
-        JSONParser parser = new JSONParser();
-        try {
 
 
-            responseObject = (JSONObject) parser.parse(responseBody);
-            long responset = 0;
-            responseObject.put("responseTime",  TimeUnit.MILLISECONDS.convert(responset, TimeUnit.NANOSECONDS));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        responseObject = new JSONObject(responseBody);
+        long responset = 0;
+        responseObject.put("responseTime", TimeUnit.MILLISECONDS.convert(responset, TimeUnit.NANOSECONDS));
+
         responseObject.put("statusCode", response.getStatus());
         logs.test_step("Response object : " + responseObject);
         return responseObject;
@@ -134,12 +128,9 @@ public class RequestBuilder {
 
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
-        JSONParser parser = new JSONParser();
-        try {
-            responseObject = (JSONObject) parser.parse(responseBody);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
+
+            responseObject = new JSONObject(responseBody);
         responseObject.put("statusCode", response.getStatus());
         logs.test_step("Response object : " + responseObject);
         logs.test_step("========================================================================");
@@ -176,13 +167,11 @@ public class RequestBuilder {
         }
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
-        JSONParser parser = new JSONParser();
-        try {
-            responseObject = (JSONObject) parser.parse(responseBody);
 
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
+            responseObject = new JSONObject(responseBody);
+
+
         logs.test_step("Response object : " + responseObject);
         logs.test_step("========================================================================");
         responseObject.put("statusCode", response.getStatus());
@@ -215,17 +204,15 @@ public class RequestBuilder {
             request = Unirest.post(apiConfig.getEndPoint()).headers(headers).body(apiConfig.getBodyMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            
+
         }
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
-        JSONParser parser = new JSONParser();
-        try {
-            responseObject = (JSONObject) parser.parse(responseBody);
 
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
+            responseObject = new JSONObject(responseBody);
+
+
         logs.test_step("Response object : " + responseObject);
         logs.test_step("========================================================================");
         responseObject.put("statusCode", response.getStatus());
