@@ -149,6 +149,11 @@ public static String build_Name;
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+
+
+
+
+
             System.out.println("Inside chrome");
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
