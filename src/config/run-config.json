@@ -31,7 +31,6 @@
           "parallelBy": "methods"
         },
         "testcaseToRun": {
-          "mode": "tags",
           "tags": [
             "@regression",
             "@smoke"
