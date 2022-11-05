@@ -1,6 +1,5 @@
 {
   "platformList": {
-
     "Chrome": {
       "capabilities": {
         "browserName" : "chrome",

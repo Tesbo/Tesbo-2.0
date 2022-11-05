@@ -7,14 +7,14 @@ public class Session {
 
     public WebDriver create_new_web_session() {
         WebDriver driver;
-        TestmanBase base = new TestmanBase();
+        Base base = new Base();
         driver = base.init();
         return driver;
     }
 
     public WebDriver create_new_web_session(String config_name) {
         WebDriver driver;
-        TestmanBase base = new TestmanBase();
+        Base base = new Base();
         driver = base.init(config_name);
         return driver;
     }
@@ -26,7 +26,7 @@ public class Session {
 
     public WebDriver create_new_mobile_session(String config_name) {
         WebDriver driver;
-        TestmanBase TestmanBase = new TestmanBase();
+        Base TestmanBase = new Base();
         driver = TestmanBase.setup_android(config_name);
         return driver;
     }

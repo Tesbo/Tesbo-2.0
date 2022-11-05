@@ -1,0 +1,16 @@
+{
+  "GlobalVariable" :
+  {
+    "Name" : "Viral Patel"
+  },
+  "userCredentials" : {
+    "dataType" : "variable",
+    "data" : {
+      "userName" : "Vir1010"
+    }
+  },
+  "CreateRecord" : {
+    "dataType" : "excel",
+     "file" : ""
+  }
+}

@@ -36,7 +36,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class TestmanBase {
+public class Base {
 
     String env = "";
     String platform = "";
@@ -49,7 +49,7 @@ public class TestmanBase {
     json_file_reader config = new json_file_reader();
     testng_logs logs = new testng_logs();
 
-public static String build_Name;
+     public static String build_Name;
 
     @BeforeSuite
     public void beforeSuiteWorks()
@@ -149,10 +149,6 @@ public static String build_Name;
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-
-
-
-
 
             System.out.println("Inside chrome");
         } else if (browserName.equalsIgnoreCase("firefox")) {
