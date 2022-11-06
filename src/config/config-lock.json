@@ -1,8 +1,7 @@
 {
   "baseUrl": "https://test.nevvon.com/",
-  "executionOn": [
+  "executionOn":
     {
-      "platformName": "chrome",
       "capabilities": {
         "browserName": "chrome",
         "browserVersion": "102.0",
@@ -11,7 +10,7 @@
       "options": {
       }
     }
-  ],
+  ,
   "testcaseToRun": {
     "suite": [
       "login.xml",

@@ -1,7 +1,6 @@
 package io.tesbo.framework.readers.config;
 
 import io.tesbo.framework.init.Base;
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.tinylog.Logger;
 
@@ -50,23 +49,16 @@ public class CurrentConfigGenerator {
 
     public JSONObject readConfig(String configName) {
         JSONObject object = getConfigObject(configName);
+        JSONObject new_object = new JSONObject();
+
+        new_object = object;
         PlatformReader reader = new PlatformReader();
         DataConfigReader dataConfigReader = new DataConfigReader();
 
-        JSONArray platformObjectList = new JSONArray();
-        JSONArray platformList = new JSONArray();
+        new_object.put("executionOn", reader.getPlatformDetails(object.get("executionOn").toString()));
 
-        for (Object platform : platformList) {
-
-            JSONObject object1 = reader.getPlatformDetails(platform.toString());
-
-            object1.put("platformName", platform.toString());
-            platformObjectList.put(object1);
-        }
-
-        object.put("platformList", platformList);
         object.put("dataFile", dataConfigReader.getData((String) object.get("dataFile")));
-        return object;
+        return new_object;
     }
 
     public void generateFile(JSONObject fileContent) {
@@ -80,6 +72,16 @@ public class CurrentConfigGenerator {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    /*
+    * Generate the Suite in case for the Tags, Methods and Class Name Run
+    *
+    *
+    * */
+    public void generateSuite()
+    {
+
     }
 
 }

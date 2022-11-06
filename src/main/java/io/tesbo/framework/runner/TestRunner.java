@@ -35,13 +35,17 @@ public class TestRunner {
 
             String pathSeparator = FileSystems.getDefault().getSeparator();
 
+
+
+
+
             CurrentConfigGenerator configGenerator = new CurrentConfigGenerator();
             configGenerator.generatorCurrentConfigFile(configToRun);
 
 
             /*
-             * if suite is available then read the suite
-             * otherwise generate the suite and provide the list
+             * getSuite Methods, Now suite will generate while creating a current config file, it will read and if found that test cases by tags, methods or class name then
+             * automatically generate the suite will all the test required and add them into the lock file
              *
              * */
 
