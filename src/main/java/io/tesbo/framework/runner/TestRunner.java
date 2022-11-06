@@ -3,7 +3,6 @@ package io.tesbo.framework.runner;
 import com.beust.jcommander.JCommander;
 import io.tesbo.framework.readers.CommandlineOption;
 import io.tesbo.framework.readers.config.CurrentConfigGenerator;
-import io.tesbo.framework.readers.json_file_reader;
 import org.json.JSONArray;
 import org.testng.TestNG;
 
@@ -14,12 +13,10 @@ import java.util.List;
 
 public class TestRunner {
 
-
     public String addCommandLine(String[] args) {
         CommandlineOption option = null;
         try {
             option = new CommandlineOption();
-
             JCommander runOption = JCommander.newBuilder()
                     .addObject(option)
                     .build();
@@ -36,16 +33,21 @@ public class TestRunner {
 
             String configToRun = addCommandLine(args);
 
-            json_file_reader config = new json_file_reader();
             String pathSeparator = FileSystems.getDefault().getSeparator();
 
             CurrentConfigGenerator configGenerator = new CurrentConfigGenerator();
             configGenerator.generatorCurrentConfigFile(configToRun);
 
-            System.out.println("config to run : " + currentConfig);
+
+            /*
+             * if suite is available then read the suite
+             * otherwise generate the suite and provide the list
+             *
+             * */
+
+
             JSONArray suiteList = null;
             String directory_path = "." + pathSeparator + "src" + pathSeparator + "test" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
-
             suiteList = config.getSuites(currentConfig);
 
             if (suiteList.length() != 0) {
@@ -63,14 +65,19 @@ public class TestRunner {
             e.printStackTrace();
         }
 
-        try{
-             testng.run();
-        }catch (Exception e)
-        {e.printStackTrace();
+        try {
+            testng.run();
+        } catch (Exception e) {
+            e.printStackTrace();
 
         }
 
+    }
+
+    public Boolean checkForSuiteAvailable() {
 
 
     }
+
+
 }

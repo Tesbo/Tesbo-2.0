@@ -3,7 +3,7 @@
   "config": {
     "cs_stage_local": {
       "baseUrl": "https://test.nevvon.com/",
-      "executionOn": ["chrome"],
+      "executionOn": ["chrome","LambdaTest"],
       "testcaseToRun": {
         "suite": ["login.xml", "abc.xml"]
       },

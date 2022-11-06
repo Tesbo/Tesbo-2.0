@@ -9,6 +9,14 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.Map;
 
+
+/*
+*
+* Need a new class with the Name Request Reader
+*
+* */
+
+@Deprecated
 public class GetApiConfig {
 
     String request_name;

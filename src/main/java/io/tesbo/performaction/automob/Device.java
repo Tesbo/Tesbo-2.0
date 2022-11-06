@@ -3,7 +3,6 @@ package io.tesbo.performaction.automob;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.tesbo.framework.readers.json_file_reader;
 import io.tesbo.framework.runner.TestRunner;
 import io.tesbo.performaction.autoweb.Element;
 import org.openqa.selenium.interactions.PointerInput;

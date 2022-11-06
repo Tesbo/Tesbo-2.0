@@ -8,6 +8,7 @@ import org.tinylog.Logger;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -16,7 +17,8 @@ public class CurrentConfigGenerator {
     public JSONObject getTestConfig() {
         String data = "";
         try {
-            data = new String(Files.readAllBytes(Paths.get("src/config/run-config.json").toAbsolutePath()));
+            String pathSeparator = FileSystems.getDefault().getSeparator();
+            data = new String(Files.readAllBytes(Paths.get("src" + pathSeparator + "config" + pathSeparator + "run-config.json").toAbsolutePath()));
         } catch (Exception e) {
             System.out.println("config file not found");
         }
@@ -47,26 +49,31 @@ public class CurrentConfigGenerator {
 
 
     public JSONObject readConfig(String configName) {
-        JSONObject object = new JSONObject();
-        object = getConfigObject(configName);
-
+        JSONObject object = getConfigObject(configName);
         PlatformReader reader = new PlatformReader();
+        DataConfigReader dataConfigReader = new DataConfigReader();
 
         JSONArray platformObjectList = new JSONArray();
-
         JSONArray platformList = new JSONArray();
 
         for (Object platform : platformList) {
-            platformObjectList.put(reader.getPlatformDetails(platform.toString()));
+
+            JSONObject object1 = reader.getPlatformDetails(platform.toString());
+
+            object1.put("platformName", platform.toString());
+            platformObjectList.put(object1);
         }
 
         object.put("platformList", platformList);
+        object.put("dataFile", dataConfigReader.getData((String) object.get("dataFile")));
         return object;
     }
 
     public void generateFile(JSONObject fileContent) {
         try {
-            FileWriter file = new FileWriter(new File("/src/config/config-lock.json"));
+            String pathSeparator = FileSystems.getDefault().getSeparator();
+
+            FileWriter file = new FileWriter(new File("src" + pathSeparator + "config" + pathSeparator + "config-lock.json"));
             file.write(fileContent.toString());
             file.close();
         } catch (IOException e) {

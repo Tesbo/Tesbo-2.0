@@ -3,7 +3,6 @@ package io.tesbo.performaction.autoapi;
 import com.jayway.jsonpath.JsonPath;
 import io.tesbo.framework.exception.ResponseTimeAssertionException;
 import io.tesbo.framework.readers.GetApiConfig;
-import io.tesbo.framework.readers.json_file_reader;
 import io.tesbo.framework.runner.TestRunner;
 import io.tesbo.performaction.autoweb.testng_logs;
 

@@ -5,7 +5,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.tesbo.framework.data.TestData;
 import io.tesbo.framework.readers.config.CurrentConfigGenerator;
-import io.tesbo.framework.readers.json_file_reader;
 import io.tesbo.framework.remotegrid.LambdaTestConfig;
 import io.tesbo.framework.runner.TestRunner;
 import io.tesbo.performaction.autoweb.Browser;
@@ -49,7 +48,6 @@ public class Base {
 
 
     public WebDriver driver;
-    json_file_reader config = new json_file_reader();
     testng_logs logs = new testng_logs();
 
      public static String build_Name;
@@ -69,6 +67,7 @@ public class Base {
                 CurrentConfigGenerator currentConfigGenerator = new CurrentConfigGenerator();
                 currentConfigGenerator.generatorCurrentConfigFile("");
             }
+
 
             platform = config.getPlatform(TestRunner.currentConfig);
 

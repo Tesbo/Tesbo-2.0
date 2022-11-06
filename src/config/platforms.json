@@ -9,7 +9,6 @@
       "options": {
       }
     },
-
     "LambdaTest": {
       "capabilities": {
         "browserName" : "chrome",

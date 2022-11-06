@@ -1,6 +1,5 @@
 package io.tesbo.framework.remotegrid;
 
-import io.tesbo.framework.readers.json_file_reader;
 import io.tesbo.framework.runner.TestRunner;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
