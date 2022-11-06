@@ -1,0 +1,40 @@
+{
+  "baseUrl": "https://test.nevvon.com/",
+  "executionOn": [
+    {
+      "platformName": "chrome",
+      "capabilities": {
+        "browserName": "chrome",
+        "browserVersion": "102.0",
+        "platformName": "win10"
+      },
+      "options": {
+      }
+    }
+  ],
+  "testcaseToRun": {
+    "suite": [
+      "login.xml",
+      "abc.xml"
+    ]
+  },
+  "parallel": {
+    "count": 2,
+    "parallelBy": ""
+  },
+  "dataFile": {
+    "GlobalVariable": {
+      "Name": "Viral Patel"
+    },
+    "userCredentials": {
+      "dataType": "variable",
+      "data": {
+        "userName": "Vir1010"
+      }
+    },
+    "CreateRecord": {
+      "dataType": "excel",
+      "file": ""
+    }
+  }
+}
