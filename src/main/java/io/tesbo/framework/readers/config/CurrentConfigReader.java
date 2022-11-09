@@ -1,5 +1,6 @@
 package io.tesbo.framework.readers.config;
 
+import com.jayway.jsonpath.JsonPath;
 import org.json.JSONObject;
 import org.tinylog.Logger;
 
@@ -24,9 +25,42 @@ public class CurrentConfigReader {
     }
 
     public String getBaseURL() {
-        JSONObject object = getLockedConfig();
-        return (String) object.get("baseUrl");
+
+        String baseURl = JsonPath.read(getLockedConfig(), "$.baseUrl");
+
+        return (baseURl);
     }
+
+
+    public String getPlatform() {
+
+        String platformName = JsonPath.read(getLockedConfig(), "$.executionOn.capabilities.platformName");
+
+
+        return platformName;
+    }
+
+    public String getBrowserVersion() {
+
+        String browserVersion = JsonPath.read(getLockedConfig(), "$.executionOn.capabilities.browserVersion");
+
+
+        return browserVersion;
+    }
+
+
+    public String getBrowserName() {
+
+        String browserVersion = JsonPath.read(getLockedConfig(), "$.executionOn.capabilities.browserVersion");
+        return browserVersion;
+    }
+
+    public JSONObject getOptions()
+    {      JSONObject browserVersion = JsonPath.read(getLockedConfig(), "$.executionOn.options");
+        return browserVersion;
+    }
+
+
 
 
 }
