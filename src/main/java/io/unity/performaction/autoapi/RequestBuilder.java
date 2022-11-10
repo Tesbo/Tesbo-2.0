@@ -26,15 +26,18 @@ public class RequestBuilder {
         HttpResponse response = null;
         JSONObject responseObject = null;
         HttpRequest request = null;
+        String responseSchema = "";
 
 
         GetApiConfig apiConfig = new GetApiConfig(requestName);
         String endPoint = apiConfig.getEndPoint();
+        org.json.JSONObject schema = apiConfig.getSchema();
         Map Header = apiConfig.getHeaderMap();
         Map Body = apiConfig.getBodyMap();
 
 
         logs.test_step("Request End Point : " + endPoint);
+        logs.test_step("Schema:"+ schema);
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
 
@@ -45,6 +48,7 @@ public class RequestBuilder {
             request = Unirest.get(endPoint).headers(Header);
             response = request.asString();
             responseBody = (String) response.getBody();
+
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("delete")) {
@@ -54,6 +58,8 @@ public class RequestBuilder {
             request = Unirest.delete(endPoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
+
+
 
         }
 
@@ -67,6 +73,8 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
 
 
+
+
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
@@ -78,6 +86,8 @@ public class RequestBuilder {
 
             response = request.asString();
             responseBody = (String) response.getBody();
+
+
 
         }
 
@@ -215,7 +225,7 @@ public class RequestBuilder {
             request = Unirest.post(apiConfig.getEndPoint()).headers(headers).body(apiConfig.getBodyMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-            
+
         }
         logs.test_step("========================================================================");
         logs.test_step("getting response : ");
@@ -246,7 +256,7 @@ public class RequestBuilder {
     }
 
 
-    public String updateRequestObject(String fileName, JSONObject pathParameter, JSONObject queryParameter, JSONObject header, JSONObject body) {
+    public String updateRequestObject(String fileName, JSONObject pathParameter, JSONObject queryParameter, JSONObject header, JSONObject body, JSONObject schema) {
         String folder_path = createTempFolder();
         GetApiConfig config = new GetApiConfig(fileName);
         org.json.JSONObject baseConfig = config.getApiConfig();
@@ -266,6 +276,10 @@ public class RequestBuilder {
 
         if (!queryParameter.isEmpty()) {
             baseConfig.put("queryParameter", queryParameter);
+        }
+
+        if (!schema.isEmpty()){
+            baseConfig.put("schema",schema);
         }
 
         File updatedFile = new File(folder_path + "/" + TestData.random_alpha_numeric_string(6) + ".json");
