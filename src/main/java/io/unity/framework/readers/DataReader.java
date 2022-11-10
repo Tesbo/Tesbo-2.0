@@ -67,7 +67,6 @@ public class DataReader {
                 ArrayList collumList = collectionRow.get(i + 1);
                 if (collumList.size() != 0) {
                     for (int j = 0; j < column; j++) {
-                        System.out.println(collumList.get(j));
                         test[i][j] = collumList.get(j);
                     }
                 }

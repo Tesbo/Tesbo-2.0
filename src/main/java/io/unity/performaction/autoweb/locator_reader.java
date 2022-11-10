@@ -12,7 +12,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -50,12 +52,12 @@ public class locator_reader {
     }
 
 
-    public String get_locator_value(String locator_name) {
+    public Map<String,String> get_locator_value(String locator_name) {
         locator_reader reader = new locator_reader();
         json_file_reader config_reader = new json_file_reader();
 
         JSONObject object = null;
-        String locator_value = null;
+        Map locator_details = new HashMap();
         String platform = config_reader.getPlatform(TestRunner.currentConfig);
         try {
             object = reader.get_locator_object(locator_name, platform);
@@ -64,17 +66,17 @@ public class locator_reader {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        locator_details.put("locator_type", object.get("locator_type").toString());
         if (platform.equalsIgnoreCase("web")) {
-            locator_value = object.get("locator_type").toString() + ":" + object.get("web_locator").toString();
+            locator_details.put("locator_value", object.get("web_locator").toString());
         } else if (platform.equalsIgnoreCase("android")) {
-            locator_value = object.get("locator_type").toString() + ":" + object.get("android_locator").toString();
+            locator_details.put("locator_value", object.get("android_locator").toString());
         } else if (platform.equalsIgnoreCase("ios")) {
-            locator_value = object.get("locator_type").toString() + ":" + object.get("iOS_locator").toString();
+            locator_details.put("locator_value", object.get("iOS_locator").toString());
         }
 
 
-        return locator_value;
+        return locator_details;
     }
 
 

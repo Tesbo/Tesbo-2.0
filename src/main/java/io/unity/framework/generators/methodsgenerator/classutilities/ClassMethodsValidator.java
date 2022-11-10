@@ -6,7 +6,8 @@ import io.unity.framework.generators.methodsgenerator.methods.MethodsData;
 import org.apache.commons.io.FilenameUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.pmw.tinylog.Logger;
+import org.tinylog.Logger;
+
 
 import java.io.File;
 import java.io.FileReader;
