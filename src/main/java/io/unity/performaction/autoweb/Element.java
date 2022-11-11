@@ -66,6 +66,7 @@ public class Element {
                 break;
             case "accessibility-id":
                 element = driver.findElement(new AppiumBy.ByAccessibilityId(locator_value));
+                break;
             default:
                 logs.test_step("Incorrect Locator Type");
         }
@@ -73,16 +74,13 @@ public class Element {
     }
 
 
-    public WebElement
-    find(String locator_value) {
+    public WebElement find(String locator_value) {
 
         WebElement element = null;
         locator_reader reader = new locator_reader();
 
-        String[] locator_to_find = reader.get_locator_value(locator_value).split(":");
-        System.out.println("Locator Value : " + locator_to_find[1]);
-
-        element = get_element_from_value(locator_to_find[0], locator_to_find[1]);
+        Map<String, String> locator_details = reader.get_locator_value(locator_value);
+        element = get_element_from_value(locator_details.get("locator_type"), locator_details.get("locator_value"));
 
         return element;
     }
@@ -96,11 +94,14 @@ public class Element {
     public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws locator_validation_exception {
         WebElement element = null;
         locator_reader reader = new locator_reader();
-        String[] locator_to_find = reader.get_locator_value(locator_value).split(":");
+
+
+        Map<String, String> locator_details = reader.get_locator_value(locator_value);
+
 
         String final_xpath = "";
-        if (locator_to_find[0].equalsIgnoreCase("dyn-xpath")) {
-            String current_xpath = locator_to_find[1];
+        if (locator_details.get("locator_type").equalsIgnoreCase("dyn-xpath")) {
+            String current_xpath = locator_details.get("locator_value");
             final_xpath = current_xpath;
             if (current_xpath.contains("${")) {
 
@@ -129,32 +130,36 @@ public class Element {
         List<WebElement> elements = null;
 
         locator_reader reader = new locator_reader();
-        String[] locator_to_find = reader.get_locator_value(locator_value).split(":");
 
-        switch (locator_to_find[0]) {
+        Map<String, String> locator_details = reader.get_locator_value(locator_value);
+
+
+
+
+        switch (locator_details.get("locator_type")) {
             case "xpath":
-                elements = driver.findElements(By.xpath(locator_to_find[1]));
+                elements = driver.findElements(By.xpath(locator_details.get("locator_value")));
                 break;
             case "id":
-                elements = driver.findElements(By.id(locator_to_find[1]));
+                elements = driver.findElements(By.id(locator_details.get("locator_value")));
                 break;
             case "css_selector":
-                elements = driver.findElements(By.cssSelector(locator_to_find[1]));
+                elements = driver.findElements(By.cssSelector(locator_details.get("locator_value")));
                 break;
             case "class_name":
-                elements = driver.findElements(By.className(locator_to_find[1]));
+                elements = driver.findElements(By.className(locator_details.get("locator_value")));
                 break;
             case "name":
-                elements = driver.findElements(By.name(locator_to_find[1]));
+                elements = driver.findElements(By.name(locator_details.get("locator_value")));
                 break;
             case "link_text":
-                elements = driver.findElements(By.linkText(locator_to_find[1]));
+                elements = driver.findElements(By.linkText(locator_details.get("locator_value")));
                 break;
             case "partial_link_text":
-                elements = driver.findElements(By.partialLinkText(locator_to_find[1]));
+                elements = driver.findElements(By.partialLinkText(locator_details.get("locator_value")));
                 break;
             case "tag":
-                elements = driver.findElements(By.tagName(locator_to_find[1]));
+                elements = driver.findElements(By.tagName(locator_details.get("locator_value")));
                 break;
             default:
                 logs.test_step("Incorrect Locator Type");
@@ -170,32 +175,34 @@ public class Element {
         List<WebElement> elements = null;
 
         locator_reader reader = new locator_reader();
-        String[] locator_to_find = reader.get_locator_value(element_to_find).split(":");
 
-        switch (locator_to_find[0]) {
+        Map<String, String> locator_details = reader.get_locator_value(element_to_find);
+
+
+        switch (locator_details.get("locator_type")) {
             case "xpath":
-                elements = main.findElements(By.xpath(locator_to_find[1]));
+                elements = main.findElements(By.xpath(locator_details.get("locator_value")));
                 break;
             case "id":
-                elements = main.findElements(By.id(locator_to_find[1]));
+                elements = main.findElements(By.id(locator_details.get("locator_value")));
                 break;
             case "css_selector":
-                elements = main.findElements(By.cssSelector(locator_to_find[1]));
+                elements = main.findElements(By.cssSelector(locator_details.get("locator_value")));
                 break;
             case "class_name":
-                elements = main.findElements(By.className(locator_to_find[1]));
+                elements = main.findElements(By.className(locator_details.get("locator_value")));
                 break;
             case "name":
-                elements = main.findElements(By.name(locator_to_find[1]));
+                elements = main.findElements(By.name(locator_details.get("locator_value")));
                 break;
             case "link_text":
-                elements = main.findElements(By.linkText(locator_to_find[1]));
+                elements = main.findElements(By.linkText(locator_details.get("locator_value")));
                 break;
             case "partial_link_text":
-                elements = main.findElements(By.partialLinkText(locator_to_find[1]));
+                elements = main.findElements(By.partialLinkText(locator_details.get("locator_value")));
                 break;
             case "tag":
-                elements = main.findElements(By.tagName(locator_to_find[1]));
+                elements = main.findElements(By.tagName(locator_details.get("locator_value")));
                 break;
             default:
                 logs.test_step("Incorrect Locator Type");

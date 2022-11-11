@@ -6,7 +6,8 @@ import org.jboss.forge.roaster.model.source.JavaClassSource;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.pmw.tinylog.Logger;
+import org.tinylog.Logger;
+
 
 import java.io.FileReader;
 import java.io.IOException;

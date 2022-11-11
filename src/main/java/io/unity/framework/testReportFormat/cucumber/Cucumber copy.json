@@ -1,0 +1,150 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-10-14T11:56:11.602Z",
+        "before": [
+          {
+            "result": {
+              "duration": 14314369000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.unity.framework.init.base.before_test()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "To verify that Super admin can verify created client",
+        "description": "",
+        "id": "add-new-client;to-verify-that-super-admin-can-verify-created-client;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 925917000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.unity.framework.init.base.after_test()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 843925000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Super Admin is on login page",
+            "match": {
+              "location": "web.Steps.AddNewClientSteps.Super_Admin_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1626469000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Super Admin is enter email superAdminUser",
+            "match": {
+              "arguments": [
+                {
+                  "val": "superAdminUser",
+                  "offset": 27
+                }
+              ],
+              "location": "web.Steps.AddNewClientSteps.i_submit_username_and_email(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1277241000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Super Admin is enter password superAdminPassword",
+            "match": {
+              "arguments": [
+                {
+                  "val": "superAdminPassword",
+                  "offset": 30
+                }
+              ],
+              "location": "web.Steps.AddNewClientSteps.i_submit_username_and_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1202827000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Super Admin click on login button",
+            "match": {
+              "location": "web.Steps.AddNewClientSteps.Click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 66368626000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Super Admin login successfully",
+            "match": {
+              "location": "web.Steps.AddNewClientSteps.i_should_be_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3427092000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Super Admin click on admin tab",
+            "match": {
+              "location": "web.Steps.AddNewClientSteps.admin_click_on_admin_tab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2171518000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Created client should display in client list",
+            "match": {
+              "location": "web.Steps.AddNewClientSteps.created_client_should_display_in_client_list()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression"
+          },
+          {
+            "name": "@addClient"
+          }
+        ]
+      }
+    ],
+    "name": "Add New Client",
+    "description": "",
+    "id": "add-new-client",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/web/Features/CreateClient/AddClient.feature",
+    "tags": []
+  }
+]

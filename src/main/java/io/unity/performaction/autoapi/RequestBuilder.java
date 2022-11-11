@@ -35,11 +35,15 @@ public class RequestBuilder {
         Map Header = apiConfig.getHeaderMap();
         Map Body = apiConfig.getBodyMap();
 
-        logs.test_step("========================================================================");
+
         logs.test_step("Request End Point : " + endPoint);
         logs.test_step("Schema:"+ schema);
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
+
+
+            logs.test_step("Header : " + Header);
+
 
             request = Unirest.get(endPoint).headers(Header);
             response = request.asString();
@@ -48,6 +52,8 @@ public class RequestBuilder {
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("delete")) {
+
+            logs.test_step("Header : " + apiConfig.getHeaderMap());
 
             request = Unirest.delete(endPoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
@@ -59,6 +65,9 @@ public class RequestBuilder {
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
 
+            logs.test_step("Header : " + Header);
+
+            logs.test_step("Body : " + apiConfig.getBodyMap());
             request = Unirest.post(endPoint).headers(Header).body(apiConfig.getBodyMap());
             response = request.asString();
             responseBody = (String) response.getBody();
@@ -69,7 +78,9 @@ public class RequestBuilder {
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
-            request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
+
+            logs.test_step("Header : " + apiConfig.getHeaderMap());
+            logs.test_step("Body : " + apiConfig.getBody().toString());
 
             request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBody().toString());
 
@@ -80,10 +91,12 @@ public class RequestBuilder {
 
         }
 
-        logs.test_step("========================================================================");
+
         logs.test_step("getting response : ");
         JSONParser parser = new JSONParser();
         try {
+
+
             responseObject = (JSONObject) parser.parse(responseBody);
             long responset = 0;
             responseObject.put("responseTime",  TimeUnit.MILLISECONDS.convert(responset, TimeUnit.NANOSECONDS));
@@ -92,7 +105,6 @@ public class RequestBuilder {
         }
         responseObject.put("statusCode", response.getStatus());
         logs.test_step("Response object : " + responseObject);
-        logs.test_step("========================================================================");
         return responseObject;
     }
 

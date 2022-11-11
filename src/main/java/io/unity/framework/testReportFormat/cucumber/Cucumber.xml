@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="98.387">
+    <testcase classname="Add New Client" name="To verify that Super admin can verify created client" time="97.347">
+        <system-out><![CDATA[Given Super Admin is on login page..........................................passed
+When Super Admin is enter email superAdminUser..............................passed
+And Super Admin is enter password superAdminPassword........................passed
+And Super Admin click on login button.......................................passed
+Then Super Admin login successfully.........................................passed
+When Super Admin click on admin tab.........................................passed
+And Created client should display in client list............................passed
+]]></system-out>
+    </testcase>
+</testsuite>

@@ -87,16 +87,24 @@ public class ResponseValidator {
     public void validateSchema(String expectedJSonSchema) {
         UnityJSONParser parser = new UnityJSONParser(expectedJSonSchema);
 
+
+
+
         for (String singlePath : parser.getPathList()) {
+
+            logs.test_step("Single path to match " + singlePath);
             Object object = JsonPath.parse(response.toJSONString()).read(singlePath);
+
         }
     }
     public void validateSchemaFromRequestFile(String request_name) {
-        UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
 
         GetApiConfig apiConfig = new GetApiConfig(request_name);
+        String test = String.valueOf(apiConfig.getSchema());
+        UnityJSONParser parser = new UnityJSONParser(test);
+
         for (String singlePath : parser.getPathList()) {
-            Object object = JsonPath.parse(apiConfig.getSchema()).read(singlePath);
+            Object object = JsonPath.parse(response.toJSONString()).read(singlePath);
         }
     }
 
