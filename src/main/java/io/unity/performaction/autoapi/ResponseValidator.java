@@ -98,11 +98,13 @@ public class ResponseValidator {
         }
     }
     public void validateSchemaFromRequestFile(String request_name) {
-        UnityJSONParser parser = new UnityJSONParser(response.toJSONString());
 
         GetApiConfig apiConfig = new GetApiConfig(request_name);
+        String test = String.valueOf(apiConfig.getSchema());
+        UnityJSONParser parser = new UnityJSONParser(test);
+
         for (String singlePath : parser.getPathList()) {
-            Object object = JsonPath.parse(apiConfig.getSchema()).read(singlePath);
+            Object object = JsonPath.parse(response.toJSONString()).read(singlePath);
         }
     }
 
