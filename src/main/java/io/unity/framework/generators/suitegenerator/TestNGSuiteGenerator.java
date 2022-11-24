@@ -128,7 +128,7 @@ public class TestNGSuiteGenerator {
             List<String> methodsList = generator.getMethodsAnnotatedWith(myClass, ann);
 
             for (String methods : methodsList) {
-                Element test = document.createElement("test");
+                Element test = document.createElement("src/test");
 
                 test.setAttribute("name", methods+"_"+ TestData.random_numeric_string(4));
 
