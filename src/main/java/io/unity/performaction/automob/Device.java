@@ -56,6 +56,40 @@ public class Device {
         driver.perform(Arrays.asList(circle));
 
     }
+    public void horizontal_scroll() {
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        int startY = (int)((double)this.driver.manage().window().getSize().getHeight() * 0.8);
+        int endY = (int)((double)this.driver.manage().window().getSize().getHeight() * 0.2);
+        int startX = (int)((double)this.driver.manage().window().getSize().getWidth() * 0.5);
+        Sequence circle = new Sequence(finger, 0);
+        circle.addAction(finger.createPointerMove(this.NO_TIME, this.VIEW, startX, startY));
+        circle.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+
+        for(int i = 1; i < 300+1; ++i) {
+            circle.addAction(finger.createPointerMove(this.STEP_DURATION, this.VIEW, startX - (i+10), startY));
+        }
+
+        this.driver.perform(Arrays.asList(circle));
+
+    }
+
+    public  void  slider(){
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        int startY = (int)((double)this.driver.manage().window().getSize().getHeight() * 0.8);
+        int endY = (int)((double)this.driver.manage().window().getSize().getHeight() * 0.2);
+        int startX = (int)((double)this.driver.manage().window().getSize().getWidth() * 0.5);
+        Sequence circle = new Sequence(finger, 0);
+        circle.addAction(finger.createPointerMove(this.NO_TIME, this.VIEW, startX, startY));
+        circle.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+
+        for(int i = 1; i < 300+1; ++i) {
+            circle.addAction(finger.createPointerMove(this.STEP_DURATION, this.VIEW, startX+(i+10) , startY));
+        }
+
+        this.driver.perform(Arrays.asList(circle));
+
+    }
+
 
 
 }

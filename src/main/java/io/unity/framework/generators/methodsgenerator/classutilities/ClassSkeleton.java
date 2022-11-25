@@ -91,7 +91,7 @@ public class ClassSkeleton {
 
         String source_class_file = java_file.replace(".java", ".class");
 
-        String target_file_path_replace = FileSystems.getDefault().getSeparator() + "src" + FileSystems.getDefault().getSeparator() + "test" + FileSystems.getDefault().getSeparator() + "java";
+        String target_file_path_replace = FileSystems.getDefault().getSeparator() + "src" + FileSystems.getDefault().getSeparator() + "src/test" + FileSystems.getDefault().getSeparator() + "java";
         String destination_file_path_replace = FileSystems.getDefault().getSeparator() + "target" + FileSystems.getDefault().getSeparator() + "test-classes";
         String destination_file_path = source_class_file.replace(target_file_path_replace, destination_file_path_replace);
 
