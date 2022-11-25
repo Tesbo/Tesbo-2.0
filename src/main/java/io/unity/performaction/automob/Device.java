@@ -70,6 +70,7 @@ public class Device {
         }
 
         this.driver.perform(Arrays.asList(circle));
+
     }
 
     public  void  slider(){
