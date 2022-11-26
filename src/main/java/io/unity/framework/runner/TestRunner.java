@@ -1,6 +1,8 @@
 package io.unity.framework.runner;
 
 import com.beust.jcommander.JCommander;
+import io.tesbo.report.ReportGenerator;
+import io.tesbo.report.RequestBuilder;
 import io.unity.framework.readers.CommandlineOption;
 import io.unity.framework.readers.json_file_reader;
 import org.json.JSONArray;
@@ -30,12 +32,14 @@ public class TestRunner {
     }
 
     public void start(String[] args) {
+
         TestNG testng = new TestNG();
+        json_file_reader config = new json_file_reader();
         try {
 
             String configToRun = addCommandLine(args);
 
-            json_file_reader config = new json_file_reader();
+
             String pathSeparator = FileSystems.getDefault().getSeparator();
 
             currentConfig = configToRun;
@@ -56,28 +60,29 @@ public class TestRunner {
                 for (Object suiteName : suiteList) {
                     testFilesList.add(new File((directory_path + suiteName)).getAbsolutePath());
                 }
-
-
-
-
                 testng.setTestSuites(testFilesList); //you can addd multiple suites either here by adding multiple files or include all suites needed in the testng.xml file
             } else {
-
-
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        try{
-             testng.run();
-        }catch (Exception e)
-        {e.printStackTrace();
+        try {
+            testng.run();
+        } catch (Exception e) {
+            e.printStackTrace();
 
         }
 
 
+
+        try {
+            ReportGenerator generator = new ReportGenerator();
+            generator.generateReportDirectly(config.getReportKey(currentConfig), config.getCurrentReportDirectory(), config.getPlatform(currentConfig), config.getBrowser(currentConfig), "", "");
+        }catch (Exception e)
+        {
+
+        }
 
     }
 }

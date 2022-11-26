@@ -27,6 +27,8 @@ public class json_file_reader {
     }
 
 
+
+
     public String getRunConfig() {
         JSONObject object = getTestConfig();
         return object.getString("run");
@@ -38,16 +40,33 @@ public class json_file_reader {
 
     }
 
+    public String getReportKey(String configName)
+    {
+        return (String) getConfigObject(configName).get("tesboReportKey");
+    }
+
+
+
     public String getPlatform(String configName) {
 
         return getConfigObject(configName).getString("platform");
 
     }
 
+    public String getCurrentReportDirectory() {
+        String dir = System.getProperty("user.dir");
+
+        return dir+"/test-output";
+    }
+
+
+
     public JSONObject getAPIConfig(String configName) {
 
         return (JSONObject) getConfigObject(configName).get("apiTestConfig");
     }
+
+
 
     public boolean isAPITestConfigEnable(String configName) {
 
@@ -159,6 +178,7 @@ public class json_file_reader {
         JSONObject object = getTestConfig();
         return (JSONArray) getConfigObject(configName).get("testNGsuite");
     }
+
 
 
     public String getEnvFromCurrentConfig() {

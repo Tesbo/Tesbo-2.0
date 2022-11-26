@@ -11,7 +11,7 @@ public class testng_logs {
     public void test_step(String message) {
 
         Logger.info("Step : " + message );
-        Reporter.log("Step : " + message + "<br>");
+        Reporter.log( message);
     }
 
 

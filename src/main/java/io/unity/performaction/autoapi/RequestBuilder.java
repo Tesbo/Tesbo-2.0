@@ -37,7 +37,6 @@ public class RequestBuilder {
 
 
         logs.test_step("Request End Point : " + endPoint);
-        logs.test_step("Schema:"+ schema);
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
 
@@ -60,7 +59,6 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
 
 
-
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
@@ -71,8 +69,6 @@ public class RequestBuilder {
             request = Unirest.post(endPoint).headers(Header).body(apiConfig.getBodyMap());
             response = request.asString();
             responseBody = (String) response.getBody();
-
-
 
 
         }
@@ -88,7 +84,6 @@ public class RequestBuilder {
             responseBody = (String) response.getBody();
 
 
-
         }
 
 
@@ -99,7 +94,7 @@ public class RequestBuilder {
 
             responseObject = (JSONObject) parser.parse(responseBody);
             long responset = 0;
-            responseObject.put("responseTime",  TimeUnit.MILLISECONDS.convert(responset, TimeUnit.NANOSECONDS));
+            responseObject.put("responseTime", TimeUnit.MILLISECONDS.convert(responset, TimeUnit.NANOSECONDS));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -278,8 +273,8 @@ public class RequestBuilder {
             baseConfig.put("queryParameter", queryParameter);
         }
 
-        if (!schema.isEmpty()){
-            baseConfig.put("schema",schema);
+        if (!schema.isEmpty()) {
+            baseConfig.put("schema", schema);
         }
 
         File updatedFile = new File(folder_path + "/" + TestData.random_alpha_numeric_string(6) + ".json");

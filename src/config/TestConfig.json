@@ -1,5 +1,5 @@
 {
-  "run": "API_Regression",
+  "run": "nevvon_test_admin",
 
   "config": {
     "cs_test_browserStack": {
@@ -20,11 +20,12 @@
       "apiTestConfig": {
         "enable": false,
         "env": ""
-      }
+      },
+      "tesboReportKey" : ""
     },
     "nevvon_test_admin": {
       "platform": "web",
-      "browser": "chrome-headless",
+      "browser": "chrome",
       "capabilities": {},
       "env": "https://test.nevvon.com/",
       "isGrid": false,
@@ -35,8 +36,10 @@
         "env": ""
       },
       "testNGsuite": [
-        "nevvon_regression.xml"
-      ]
+        "dev.xml"
+      ],
+      "tesboReportKey" : "LzZ4EkXbcjUYggnZ81bRxBLXNe4tPzAC"
+
     },
     "nevvon_prod_admin": {
       "platform": "web",
