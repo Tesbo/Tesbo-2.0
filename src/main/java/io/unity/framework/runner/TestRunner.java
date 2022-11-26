@@ -50,7 +50,7 @@ public class TestRunner {
 
             System.out.println("config to run : " + currentConfig);
             JSONArray suiteList = null;
-            String directory_path = "." + pathSeparator + "src" + pathSeparator + "src/test" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
+            String directory_path = "." + pathSeparator + "src" + pathSeparator + "test" + pathSeparator + "java" + pathSeparator + "suites" + pathSeparator;
 
             suiteList = config.getSuites(currentConfig);
 
