@@ -3,6 +3,7 @@ package io.unity.performaction.autoweb;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.javalin.http.SinglePageHandler;
 import org.apache.commons.io.FileUtils;
+import org.assertj.core.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,11 +11,16 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.v101.emulation.Emulation;
 import org.openqa.selenium.devtools.v101.emulation.model.DisplayFeature;
+import org.openqa.selenium.devtools.v101.log.Log;
 import org.openqa.selenium.devtools.v101.performance.Performance;
 import org.openqa.selenium.devtools.v101.performance.model.Metric;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.virtualauthenticator.Credential;
+import org.openqa.selenium.virtualauthenticator.HasVirtualAuthenticator;
+import org.openqa.selenium.virtualauthenticator.VirtualAuthenticator;
+import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,6 +33,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+
+import static org.assertj.core.api.Assertions.*;
 
 public class Browser {
     WebDriver driver;
@@ -169,9 +177,10 @@ public class Browser {
                 .dragAndDrop(from, to)
                 .perform();
     }
+
     public void drag_and_drop_byOffset(String source, String target) {
         Element element1 = new Element(driver);
-        WebElement draggable =  element1.find(source);
+        WebElement draggable = element1.find(source);
         Rectangle start = draggable.getRect();
         Rectangle finish = element1.find(target).getRect();
         new Actions(driver)
@@ -187,8 +196,8 @@ public class Browser {
         devTools.createSession();
         devTools.send(Emulation.setGeolocationOverride
                 (Optional.of(latitude),
-                Optional.of(longitude),
-                Optional.of(accuracy)));
+                        Optional.of(longitude),
+                        Optional.of(accuracy)));
     }
 
     public void emulate_geo_location_with_remote_webDriver(double latitude, double longitude, double accuracy) throws MalformedURLException {
@@ -201,12 +210,12 @@ public class Browser {
         devTools.createSession();
 
         devTools.send(Emulation.setGeolocationOverride
-                        (Optional.of(latitude),
+                (Optional.of(latitude),
                         Optional.of(longitude),
                         Optional.of(accuracy)));
     }
 
-    public void over_ride_deviceMode(Integer width, Integer height, Number deviceScaleFactor,Boolean mobile){
+    public void over_ride_deviceMode(Integer width, Integer height, Number deviceScaleFactor, Boolean mobile) {
 
         ChromeDriver driver = new ChromeDriver();
         DevTools devTools = driver.getDevTools();
@@ -214,23 +223,23 @@ public class Browser {
 
         devTools.send(Emulation.setDeviceMetricsOverride
                 (width,
-                height,
-                deviceScaleFactor,
-                mobile,
-                Optional.empty(),
-                Optional.empty(),
-                Optional.empty(),
-                Optional.empty(),
-                Optional.empty(),
-                Optional.empty(),
-                Optional.empty(),
-                Optional.empty(),
-                Optional.empty()));
+                        height,
+                        deviceScaleFactor,
+                        mobile,
+                        Optional.empty(),
+                        Optional.empty(),
+                        Optional.empty(),
+                        Optional.empty(),
+                        Optional.empty(),
+                        Optional.empty(),
+                        Optional.empty(),
+                        Optional.empty(),
+                        Optional.empty()));
 //        driver.get("https://selenium.dev/");
 //        driver.quit();
     }
 
-    public void getPerformanceMetrics(){
+    public void getPerformanceMetrics() {
         ChromeDriver driver = new ChromeDriver();
         DevTools devTools = driver.getDevTools();
         devTools.createSession();
@@ -238,9 +247,53 @@ public class Browser {
         List<Metric> metricList = devTools.send(Performance.getMetrics());
 //        System.out.println("metrics is :" + metricList);
 
-        for(Metric m : metricList) {
+        for (Metric m : metricList) {
             System.out.println(m.getName() + " = " + m.getValue());
         }
+    }
+
+    public void create_authenticator() {
+        // Create virtual authenticator options
+        VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
+                .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)
+                .setHasResidentKey(false);
+
+        // Register a virtual authenticator
+        VirtualAuthenticator authenticator =
+                ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+
+        List<Credential> credentialList = authenticator.getCredentials();
+    }
+
+    public void remove_authenticator() {
+
+        // Create virtual authenticator options
+        VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
+        VirtualAuthenticator authenticator =
+                ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+
+        ((HasVirtualAuthenticator) driver).removeVirtualAuthenticator(authenticator);
+    }
+
+    public void set_user_verified() {
+        VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
+                .setIsUserVerified(true);
+    }
+
+    public void capture_console_logs(WebDriver driver){
+
+        DevTools devTools = ((ChromeDriver)driver).getDevTools();;
+
+        devTools.createSession();
+
+        devTools.send(org.openqa.selenium.devtools.v85.runtime.Runtime.enable());
+        devTools.send(Log.enable());
+
+        devTools.addListener(Log.entryAdded(),
+                logEntry -> {
+                    System.out.println("log: " + logEntry.getText());
+                    System.out.println("level: " + logEntry.getLevel());
+                });
     }
 }
 

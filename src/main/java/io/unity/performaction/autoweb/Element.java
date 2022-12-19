@@ -12,14 +12,18 @@ import org.openqa.selenium.devtools.NetworkInterceptor;
 import org.openqa.selenium.devtools.v85.log.Log;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.WheelInput;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.http.HttpResponse;
 import org.openqa.selenium.remote.http.Route;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
@@ -304,6 +308,27 @@ public class Element {
         new Actions(driver)
                 .click(clickable)
                 .perform();
+    }
+
+    public void alternate_button_click_back_click(){
+    PointerInput mouse = new PointerInput(PointerInput.Kind.MOUSE,"default-mouse");
+
+    Sequence actions = new Sequence(mouse,0)
+        .addAction(mouse.createPointerDown(PointerInput.MouseButton.BACK.asArg()))
+        .addAction(mouse.createPointerUp(PointerInput.MouseButton.BACK.asArg()));
+
+        ((RemoteWebDriver) driver).perform(Collections.singletonList(actions));
+    }
+
+    public void alternate_button_click_forward_click(){
+        PointerInput mouse = new PointerInput(PointerInput.Kind.MOUSE, "default mouse");
+
+        Sequence actions = new Sequence(mouse, 0)
+                .addAction(mouse.createPointerDown(PointerInput.MouseButton.FORWARD.asArg()))
+                .addAction(mouse.createPointerUp(PointerInput.MouseButton.FORWARD.asArg()));
+
+        ((RemoteWebDriver) driver).perform(Collections.singletonList(actions));
+
     }
 
     /**
@@ -716,6 +741,24 @@ public class Element {
                 .perform();
     }
 
+    /*public void add_pointer_event_attribute(WebElement locator_value, int tiltX, int tiltY, int twist){
+        WebElement pointerArea = find(String.valueOf(locator_value));
+        PointerInput pen = new PointerInput(PointerInput.Kind.PEN, "default pen");
+        PointerInput.PointerEventProperties eventProperties = PointerInput.eventProperties()
+                .setTiltX(-tiltX)
+                .setTiltY(tiltY)
+                .setTwist(twist);
+        PointerInput.Origin origin = PointerInput.Origin.fromElement(pointerArea);
+
+        Sequence actionListPen = new Sequence(pen, 0)
+                .addAction(pen.createPointerMove(Duration.ZERO, origin, 0, 0))
+                .addAction(pen.createPointerDown(0))
+                .addAction(pen.createPointerMove(Duration.ZERO, origin, 2, 2, eventProperties))
+                .addAction(pen.createPointerUp(0));
+
+        ((RemoteWebDriver) driver).perform(Collections.singletonList(actionListPen));
+    }*/
+
     public void size_and_position(String locator_value){
 
 // Returns height, width, x and y coordinates referenced element
@@ -723,7 +766,6 @@ public class Element {
 
 // Rectangle class provides getX,getY, getWidth, getHeight methods
         System.out.println("X is :" + res.getX() + "Y is:" +res.getY() + "height is :" + res.height);
-
     }
 
     public void move_to_element(String locator_value){
@@ -732,7 +774,6 @@ public class Element {
                 .moveToElement(hoverable)
                 .perform();
     }
-
     public void offset_from_element_center_origin(String locator_value, Integer xOffset,Integer yOffset){
         WebElement tracker = find(locator_value);
         new Actions(driver)
@@ -740,31 +781,29 @@ public class Element {
                 .perform();
     }
 
+    public void moveByOffsetFromViewport(int x, int y) {
 
+        PointerInput mouse = new PointerInput(PointerInput.Kind.MOUSE, "default mouse");
 
-    public void switching_frame_using_webElement(String locator_value){
-        WebElement iframe = find(locator_value);
-        driver.switchTo().frame(iframe);
+        Sequence actions = new Sequence(mouse, 0)
+                .addAction(mouse.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, y));
+        ((RemoteWebDriver) driver).perform(Collections.singletonList(actions));
+
+        String[] result = driver.findElement(By.id("absolute-location")).getText().split(", ");
     }
-    public void switching_frame_using_id(String locator_value, int frameNumber){
-        WebElement iframe = find(locator_value);
-        driver.switchTo().frame(iframe);
-    }
+    public void moveByOffsetFromCurrentPointer(int x, int  y) {
 
-    public void switching_frame_using_name(String locator_value, String frameName){
-        WebElement iframe = find(locator_value);
-        driver.switchTo().frame(iframe);
-    }
+        PointerInput mouse = new PointerInput(PointerInput.Kind.MOUSE, "default mouse");
 
-    public void switching_frame_using_index(String locator_value, int index){
-        WebElement iframe = find(locator_value);
-        driver.switchTo().frame(iframe);
-    }
+        Sequence actions = new Sequence(mouse, 0)
+                .addAction(mouse.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, y));
+        ((RemoteWebDriver) driver).perform(Collections.singletonList(actions));
 
-    public void leave_frame(String locator_value){
-        WebElement iframe = find(locator_value);
-        driver.switchTo().defaultContent();
-    }
+        new Actions(driver)
+                .moveByOffset(x, y)
+                .perform();
 
+        String[] result = driver.findElement(By.id("absolute-location")).getText().split(", ");
+    }
 
 }

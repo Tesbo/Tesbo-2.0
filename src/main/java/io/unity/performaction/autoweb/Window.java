@@ -93,6 +93,20 @@ public class Window {
         driver.manage().window().fullscreen();
     }
 
-
+    public void switching_frame_using_webElement(WebElement element){
+        driver.switchTo().frame(element);
+    }
+    public void switching_frame_using_id(int frameNumber){
+        driver.switchTo().frame(frameNumber);
+    }
+    public void switching_frame_using_name(String frameName){
+        driver.switchTo().frame(frameName);
+    }
+    public void switching_frame_using_index(int index){
+        driver.switchTo().frame(index);
+    }
+    public void leave_frame(){
+        driver.switchTo().defaultContent();
+    }
 
 }
