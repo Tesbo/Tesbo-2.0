@@ -1,17 +1,32 @@
 package io.unity.performaction.autoweb;
 
-import io.unity.performaction.autoweb.Element;
-import io.unity.performaction.autoweb.testng_logs;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.javalin.http.SinglePageHandler;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
+import org.openqa.selenium.devtools.v101.emulation.Emulation;
+import org.openqa.selenium.devtools.v101.emulation.model.DisplayFeature;
+import org.openqa.selenium.devtools.v101.performance.Performance;
+import org.openqa.selenium.devtools.v101.performance.model.Metric;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 
 public class Browser {
     WebDriver driver;
@@ -49,7 +64,7 @@ public class Browser {
 
     public String get_title() {
         String current_page_title = driver.getTitle();
-        logs.test_step("getting current page title : " +current_page_title);
+        logs.test_step("getting current page title : " + current_page_title);
         return current_page_title;
     }
 
@@ -80,9 +95,9 @@ public class Browser {
         try {
             create_screenshot_dir();
             File screenshot_file = new File("./screenshot/" + image_name + ".png");
-            FileUtils.copyFile(scrFile,screenshot_file);
+            FileUtils.copyFile(scrFile, screenshot_file);
 
-            logs.test_step("Screenshot saved at  <img href="+screenshot_file.getAbsolutePath()+">" );
+            logs.test_step("Screenshot saved at  <img href=" + screenshot_file.getAbsolutePath() + ">");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -105,15 +120,127 @@ public class Browser {
         try {
             File screenshot_file = new File(folder_path + "/" + image_name + ".png");
             FileUtils.copyFile(scrFile, screenshot_file);
-            logs.test_step("Screenshot saved at  <img href="+screenshot_file.getAbsolutePath()+">" );
+            logs.test_step("Screenshot saved at  <img href=" + screenshot_file.getAbsolutePath() + ">");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
+    public void addCookie(String cookieName, String cookieValue) {
+        var cookie = new Cookie(cookieName, cookieValue);
+        driver.manage().addCookie(cookie);
+    }
 
+    public Cookie get_named_cookies(String cookieName) {
+        Cookie cookie1 = driver.manage().getCookieNamed(cookieName);
+        return cookie1;
+    }
 
+    public Set<Cookie> getAllCookies() {
+        return driver.manage().getCookies();
+    }
 
+    public void deleteCookie(String cookieName) {
+        Cookie cookie = driver.manage().getCookieNamed(cookieName);
+        driver.manage().deleteCookie(cookie);
+    }
+
+    public void deleteAllCookie() {
+        driver.manage().deleteAllCookies();
+    }
+
+    public void cookies_strict(String cookieName, String cookieValue) {
+        Cookie cookie = new Cookie.Builder(cookieName, cookieValue).sameSite("Strict").build();
+        driver.manage().addCookie(cookie);
+    }
+
+    public void cookies_lax(String cookieName, String cookieValue) {
+        Cookie cookie1 = new Cookie.Builder(cookieName, cookieValue).sameSite("Lax").build();
+        driver.manage().addCookie(cookie1);
+    }
+
+    public void DragandDrop(String source, String target) {
+        Element element1 = new Element(driver);
+        WebElement from = element1.find(source);
+        WebElement to = element1.find(target);
+
+        new Actions(driver)
+                .dragAndDrop(from, to)
+                .perform();
+    }
+    public void drag_and_drop_byOffset(String source, String target) {
+        Element element1 = new Element(driver);
+        WebElement draggable =  element1.find(source);
+        Rectangle start = draggable.getRect();
+        Rectangle finish = element1.find(target).getRect();
+        new Actions(driver)
+                .dragAndDropBy(draggable, finish.getX() - start.getX(),
+                        finish.getY() - start.getY()).perform();
+    }
+
+    public void emulate_geo_location(double latitude, double longitude, double accuracy) {
+
+        ChromeDriver driver = new ChromeDriver();
+        WebDriverManager.chromedriver().getInstance();
+        DevTools devTools = driver.getDevTools();
+        devTools.createSession();
+        devTools.send(Emulation.setGeolocationOverride
+                (Optional.of(latitude),
+                Optional.of(longitude),
+                Optional.of(accuracy)));
+    }
+
+    public void emulate_geo_location_with_remote_webDriver(double latitude, double longitude, double accuracy) throws MalformedURLException {
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        WebDriver driver = new RemoteWebDriver(new URL("<grid-url>"), chromeOptions);
+        driver = new Augmenter().augment(driver);
+
+        DevTools devTools = ((HasDevTools) driver).getDevTools();
+        devTools.createSession();
+
+        devTools.send(Emulation.setGeolocationOverride
+                        (Optional.of(latitude),
+                        Optional.of(longitude),
+                        Optional.of(accuracy)));
+    }
+
+    public void over_ride_deviceMode(Integer width, Integer height, Number deviceScaleFactor,Boolean mobile){
+
+        ChromeDriver driver = new ChromeDriver();
+        DevTools devTools = driver.getDevTools();
+        devTools.createSession();
+
+        devTools.send(Emulation.setDeviceMetricsOverride
+                (width,
+                height,
+                deviceScaleFactor,
+                mobile,
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty()));
+//        driver.get("https://selenium.dev/");
+//        driver.quit();
+    }
+
+    public void getPerformanceMetrics(){
+        ChromeDriver driver = new ChromeDriver();
+        DevTools devTools = driver.getDevTools();
+        devTools.createSession();
+        devTools.send(Performance.enable(Optional.empty()));
+        List<Metric> metricList = devTools.send(Performance.getMetrics());
+//        System.out.println("metrics is :" + metricList);
+
+        for(Metric m : metricList) {
+            System.out.println(m.getName() + " = " + m.getValue());
+        }
+    }
 }
 

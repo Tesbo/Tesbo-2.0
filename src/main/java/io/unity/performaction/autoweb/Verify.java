@@ -35,7 +35,6 @@ public class Verify {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         assertThat(bool).isTrue();
         logs.test_result(bool);
 

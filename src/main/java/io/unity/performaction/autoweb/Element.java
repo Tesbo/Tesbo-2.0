@@ -11,6 +11,7 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.NetworkInterceptor;
 import org.openqa.selenium.devtools.v85.log.Log;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.WheelInput;
 import org.openqa.selenium.remote.http.HttpResponse;
 import org.openqa.selenium.remote.http.Route;
@@ -23,7 +24,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
 import static org.openqa.selenium.remote.http.Contents.utf8String;
+import static org.testng.Assert.assertThrows;
 
 
 public class Element {
@@ -132,9 +136,6 @@ public class Element {
         locator_reader reader = new locator_reader();
 
         Map<String, String> locator_details = reader.get_locator_value(locator_value);
-
-
-
 
         switch (locator_details.get("locator_type")) {
             case "xpath":
@@ -266,6 +267,7 @@ public class Element {
     }
 
     public String get_element_text(String locator_value) {
+        System.out.println("locator value is:" +locator_value);
         return find(locator_value).getText();
     }
 
@@ -288,6 +290,20 @@ public class Element {
     public void click(String locator_value) {
         logs.test_step("Click on " + locator_value);
         find(locator_value).click();
+    }
+
+    public void click_and_hold(String locator_value){
+        WebElement clickable = find(locator_value);
+        new Actions(driver)
+                .clickAndHold(clickable)
+                .perform();
+    }
+
+    public void click_and_release(String locator_value){
+        WebElement clickable = find(locator_value);
+        new Actions(driver)
+                .click(clickable)
+                .perform();
     }
 
     /**
@@ -428,6 +444,7 @@ public class Element {
         boolean multiple_Selected_dropDown = drp.isMultiple();
         List<WebElement> options = drp.getOptions();
         if (multiple_Selected_dropDown == true) {
+            System.out.println("This Dropdown is  a multiSelected DropDown.");
             for (WebElement option : options) {
                 option.click();
             }
@@ -436,7 +453,24 @@ public class Element {
             logs.test_step("INFO : This Dropdown is not a multiSelected DropDown.");
         }
     }
+    public void select_dropdown_value(String locator_value, String type, String value){
+        Select drp = new Select(find(locator_value));
+        switch (type){
+            case "index":
+                drp.selectByIndex(Integer.parseInt(value));
+                break;
+            case "value":
+                drp.selectByValue(value);
+                break;
+            case "visibletext":
+                drp.selectByVisibleText(value);
+                break;
+            default:
+                System.out.println("Please pass the correct selection criteria...");
+                break;
+        }
 
+    }
     public void select_options_from_dropdown_by_value(String locator_value, String value) {
         Select drp = new Select(find(locator_value));
         drp.selectByValue(value);
@@ -466,6 +500,25 @@ public class Element {
             logs.test_step("INFO : All options are DeSelected..");
         } else {
             logs.test_step("INFO : This Dropdown is not a multiSelected DropDown.");
+        }
+
+    }
+
+    public void deSelect_dropdown_value(String locator_value, String type, String value){
+        Select drp = new Select(find(locator_value));
+        switch (type){
+            case "index":
+                drp.deselectByIndex(Integer.parseInt(value));
+                break;
+            case "value":
+                drp.deselectByValue(value);
+                break;
+            case "visibletext":
+                drp.deselectByVisibleText(value);
+                break;
+            default:
+                System.out.println("Please pass the correct selection criteria...");
+                break;
         }
 
     }
@@ -524,6 +577,193 @@ public class Element {
         new Actions(driver)
                 .scrollFromOrigin(scrollOrigin, x, y)
                 .perform();
+    }
+
+    public void perform_scroll_from_offset_of_origin_by_amount(String locator_value, int x, int y) {
+
+        WheelInput.ScrollOrigin scrollOrigin = WheelInput.ScrollOrigin.fromViewport(x,y);
+        new Actions(driver)
+                .scrollFromOrigin(scrollOrigin, x, y)
+                .perform();
+    }
+
+
+    public void double_click(String locator_value){
+        Actions actions = new Actions(driver);
+        WebElement copyFrom = find(String.valueOf(locator_value));
+        actions.doubleClick(copyFrom);
+       actions.build().perform();
+    }
+
+    public void send_keys(String key){
+        Actions actions = new Actions(driver);
+        actions.sendKeys(key);
+        actions.perform();
+    }
+    public void copy_paste_element(String copy_from, String copy_to){
+
+        Actions actions = new Actions(driver);
+        WebElement copyFrom = find(String.valueOf(copy_from));
+        WebElement copyTo = find(String.valueOf(copy_to));
+        boolean bool = false;
+        try {
+            if (copyFrom.isDisplayed()) {
+                bool = true;
+                actions.doubleClick(copyFrom);
+                actions.keyDown(copyFrom, Keys.CONTROL);
+                actions.sendKeys("c");
+                actions.keyUp(copyFrom,Keys.CONTROL);
+                actions.build().perform();
+                actions.keyDown(copyTo,Keys.CONTROL);
+                actions.sendKeys("v");
+                actions.perform();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        assertThat(bool).isTrue();
+    }
+
+    public void context_click(String locator_value)
+    {
+
+        Actions actions = new Actions(driver);
+        WebElement locatorValue = find(String.valueOf(locator_value));
+        boolean bool = false;
+        try {
+            if (locatorValue.isDisplayed()) {
+                bool = true;
+              actions.contextClick(locatorValue);
+              actions.perform();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        assertThat(bool).isTrue();
+    }
+    public void key_down(String locator_value, String key){
+        Actions actions = new Actions(driver);
+        WebElement locatorValue = find(String.valueOf(locator_value));
+        boolean bool = false;
+        try {
+            if (locatorValue.isDisplayed()) {
+                bool = true;
+                actions.keyDown(locatorValue, Keys.valueOf(key));
+                actions.build().perform();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        assertThat(bool).isTrue();
+    }
+    public void key_up(String locator_value, String key){
+        Actions actions = new Actions(driver);
+        WebElement locatorValue = find(String.valueOf(locator_value));
+        boolean bool = false;
+        try {
+            if (locatorValue.isDisplayed()) {
+                bool = true;
+                actions.keyUp(locatorValue, Keys.valueOf(key));
+                actions.build().perform();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        assertThat(bool).isTrue();
+    }
+
+
+    public void list_all_options(WebElement locator_value) {
+        WebElement element = find(String.valueOf(locator_value));
+        Select select = new Select(element);
+        List<WebElement> optionElements = (List<WebElement>) find(String.valueOf(locator_value));
+        List<WebElement> optionList = select.getOptions();
+    }
+
+    public void element_text(String locator_value, String value){
+        Select select = new Select(find(locator_value));
+        select.selectByValue(value);
+    }
+
+    public void element_value(String locator_value, String value){
+        Select select = new Select(find(locator_value));
+        select.selectByValue(value);
+    }
+
+    public void element_index(String locator_value, String value){
+        Select select = new Select(find(locator_value));
+        select.selectByIndex(Integer.parseInt(value));
+    }
+
+    public void disable_option(WebElement locator_value){
+        WebElement selectElement = find(String.valueOf(locator_value));
+        Select select = new Select(selectElement);
+
+        assertThrows(UnsupportedOperationException.class, () -> {
+            select.selectByValue("disabled");
+        });
+    }
+
+
+    public void pen(String locator_value,Integer xOffset,Integer yOffset){
+        WebElement locatorValue = find(String.valueOf(locator_value));
+        new Actions(driver)
+                .setActivePointer(PointerInput.Kind.PEN, "default pen")
+                .moveToElement(locatorValue)
+                .clickAndHold()
+                .moveByOffset(xOffset, yOffset)
+                .release()
+                .perform();
+    }
+
+    public void size_and_position(String locator_value){
+
+// Returns height, width, x and y coordinates referenced element
+        Rectangle res = find(locator_value).getRect();
+
+// Rectangle class provides getX,getY, getWidth, getHeight methods
+        System.out.println("X is :" + res.getX() + "Y is:" +res.getY() + "height is :" + res.height);
+
+    }
+
+    public void move_to_element(String locator_value){
+        WebElement hoverable = find(locator_value);
+        new Actions(driver)
+                .moveToElement(hoverable)
+                .perform();
+    }
+
+    public void offset_from_element_center_origin(String locator_value, Integer xOffset,Integer yOffset){
+        WebElement tracker = find(locator_value);
+        new Actions(driver)
+                .moveToElement(tracker, xOffset, yOffset)
+                .perform();
+    }
+
+
+
+    public void switching_frame_using_webElement(String locator_value){
+        WebElement iframe = find(locator_value);
+        driver.switchTo().frame(iframe);
+    }
+    public void switching_frame_using_id(String locator_value, int frameNumber){
+        WebElement iframe = find(locator_value);
+        driver.switchTo().frame(iframe);
+    }
+
+    public void switching_frame_using_name(String locator_value, String frameName){
+        WebElement iframe = find(locator_value);
+        driver.switchTo().frame(iframe);
+    }
+
+    public void switching_frame_using_index(String locator_value, int index){
+        WebElement iframe = find(locator_value);
+        driver.switchTo().frame(iframe);
+    }
+
+    public void leave_frame(String locator_value){
+        WebElement iframe = find(locator_value);
+        driver.switchTo().defaultContent();
     }
 
 
