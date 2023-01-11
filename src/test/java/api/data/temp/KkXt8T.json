@@ -1,0 +1,1 @@
+{"endPoint":"https://pyxis-edge.lifeisgoodforlearner.com/auth/login","methodType":"POST","queryParameters":{},"header":{"content-type":"application/json"},"body":{"password":"Saleshandy@1","email":"dhaval+59@saleshandy.com"},"pathParameter":{}}

@@ -1,0 +1,13 @@
+{
+  "endPoint": "/team/${id}/user",
+  "methodType" : "DELETE",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/${sequenceId}/contacts?status=${status}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {
+    "status": ""
+  }
+}

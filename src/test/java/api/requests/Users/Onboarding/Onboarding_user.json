@@ -1,0 +1,19 @@
+{
+  "endPoint": "/user/onboarding",
+  "methodType" : "PATCH",
+  "header": {
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "body": {
+    "designation":"Sales Development Manager",
+    "phoneNumber":"879-877-8787",
+    "firstName":"Bob",
+    "lastName":"Bob",
+    "teamSize":"1-10",
+    "industry":"SaaS",
+    "useCase":"test"
+  },
+  "pathParameter": {},
+  "queryParameter": {}
+}

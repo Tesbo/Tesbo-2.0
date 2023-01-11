@@ -1,0 +1,1 @@
+{"endPoint":"/email-account/email-warmup/warmup-status/${emailAccountId}","methodType":"GET","queryParameters":{},"header":{"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE5MzgsImlhdCI6MTY3MjgxMTI1NSwiZXhwIjoxNjc1NDAzMjU1fQ.qWGsqM0NcFTKIjMJTIKFigqCQqEhg8JdkYgLR1lIP1o","content-type":"application/json"},"body":{},"pathParameter":{"emailAccountId":"4512"}}

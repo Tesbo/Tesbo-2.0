@@ -1,0 +1,3260 @@
+<suite name="regression">
+    <test name="clone_sequence_with_different_sequence_id_2608">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="clone_sequence_with_different_content_type_4721">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="clone_sequence_with_different_method_name_9247">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="clone_sequence_id_with_valid_token_free_plan_3320">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_id_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="clone_sequence_with_invalid_token_2870">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="clone_sequence_with_expired_token_3741">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="clone_sequence_with_blank_token_4950">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="clone_sequence_with_valid_token_7153">
+        <classes>
+            <class name="api.tests.CloneSequenceTest">
+                <methods>
+                    <include name="clone_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="create_sample_step_with_different_sequence_id_data_provider_8150">
+        <classes>
+            <class name="api.tests.CreateSampleStepTest">
+                <methods>
+                    <include name="create_sample_step_with_different_sequence_id_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_valid_token_free_plan_7347">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_with_different_sequence_id_3353">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_with_different_content_type_8036">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_with_different_method_name_3924">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_with_valid_token_5606">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_invalid_token_4482">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_blank_token_8290">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="delete_sequence_expired_token_6952">
+        <classes>
+            <class name="api.tests.DeleteSequenceTest">
+                <methods>
+                    <include name="delete_sequence_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_sequences_parameter_9930">
+        <classes>
+            <class name="api.tests.GetContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="contact_count_with_valid_sequence_is_none_data_provider_2535">
+        <classes>
+            <class name="api.tests.GetContactCountTest">
+                <methods>
+                    <include name="contact_count_with_valid_sequence_is_none_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_page_num_parameter_3039">
+        <classes>
+            <class name="api.tests.GetContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_page_num_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="contact_count_with_valid_sequences_parameter_2470">
+        <classes>
+            <class name="api.tests.GetContactCountTest">
+                <methods>
+                    <include name="contact_count_with_valid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_step_4869">
+        <classes>
+            <class name="api.tests.GetContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_contact_with_valid_sequence_is_none_data_2860">
+        <classes>
+            <class name="api.tests.GetContactsTest">
+                <methods>
+                    <include name="get_contact_with_valid_sequence_is_none_data"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_contact_with_invalid_sequences_parameter_2806">
+        <classes>
+            <class name="api.tests.GetContactsTest">
+                <methods>
+                    <include name="get_contact_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_contact_with_valid_sequences_parameter_6169">
+        <classes>
+            <class name="api.tests.GetContactsTest">
+                <methods>
+                    <include name="get_contact_with_valid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_contact_with_invalid_sequence_is_none_data_0192">
+        <classes>
+            <class name="api.tests.GetContactsTest">
+                <methods>
+                    <include name="get_contact_with_invalid_sequence_is_none_data"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_in_sequence_with_blank_token_0992">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_in_sequence_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_in_sequence_with_valid_token_7853">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_in_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_in_sequence_valid_token_free_plan_4780">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_in_sequence_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_in_sequence_with_expired_token_2960">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_in_sequence_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_in_sequence_with_invalid_token_6168">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_in_sequence_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_sequence_is_none_2820">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_sequence_is_none"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_tags_parameter_6348">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_different_method_name_6931">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_page_size_8597">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_page_size"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_verification_6227">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_verification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_page_num_0647">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_page_num"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_step_0782">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_different_content_type_6478">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_status_8073">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_status"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_sort_by_parameter_3476">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_sort_by_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_blank_search_parameter_7656">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_step_8982">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_tags_parameter_7910">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_verification_5594">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_verification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_valid_search_parameter_6633">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_status_2300">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_status"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_sequence_is_none_1996">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_sequence_is_none"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_page_num_parameter_8086">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_page_num_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_owners_parameter_data_provider_4158">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_owners_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_sequences_parameter_9560">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_contact_id_parameter_6013">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_contact_id_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_created_date_parameter_3280">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_created_date_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_page_size_parameter_6530">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_page_size_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_created_date_parameter_2306">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_created_date_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_include_all_fields_parameter_8274">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_include_all_fields_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_sort_order_parameter_8838">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_sort_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_include_all_fields_1735">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_include_all_fields"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_sequences_parameter_8324">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_valid_owners_parameter_data_provider_0862">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_valid_owners_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_sort_by_parameter_8542">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_sort_by_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_export_prospects_with_invalid_sort_order_parameter_3556">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_sort_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_export_prospects_with_invalid_contact_id_parameter_9654">
+        <classes>
+            <class name="api.tests.GetExportProspectsSequenceTest">
+                <methods>
+                    <include name="get_export_prospects_with_invalid_contact_id_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_valid_token_5051">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_valid_token_free_plan_8620">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_blank_token_5717">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_invalid_token_0352">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_expired_token_9139">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_different_method_name_4769">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_different_content_type_8453">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_config_with_different_sequence_id_5442">
+        <classes>
+            <class name="api.tests.GetSequenceConfigTest">
+                <methods>
+                    <include name="get_sequence_config_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_sort_order_parameter_data_provider_4469">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_sort_order_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_contact_count_with_invalid_sort_by_parameter_data_provider_4588">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_sort_by_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_contact_id_parameter_data_provider_8465">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_contact_id_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_contact_id_parameter_data_provider_2186">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_contact_id_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_page_size_parameter_data_provider_0508">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_page_size_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_sort_order_parameter_data_provider_6767">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_sort_order_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_created_date_parameter_data_provider_7649">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_created_date_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_sequences_parameter_2719">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_page_num_parameter_1099">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_page_num_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_step_5695">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_step_8982">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_token_9437">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_blank_token_5062">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_verification_1546">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_verification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_expired_token_8004">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_token_9512">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_token_with_free_plan_1953">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_different_sequence_id_3071">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_sequence_is_none_7064">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_sequence_is_none"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_status_data_provider_3352">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_status_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_status_data_provider_7777">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_status_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_verification_data_provider_9279">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_verification_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_sequence_is_none_1612">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_sequence_is_none"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_different_method_name_4024">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_include_all_fields_parameter_1303">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_include_all_fields_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_search_parameter_6638">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_created_date_parameter_3196">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_created_date_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_page_size_data_provider_1914">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_page_size_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_different_content_type_6326">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_owners_parameter_7564">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_owners_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_page_num_data_provider_1151">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_page_num_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_sequences_parameter_2074">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_include_all_fields_4595">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_include_all_fields"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_tags_parameter_5873">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_blank_search_parameter_6360">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_sort_by_parameter_2818">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_sort_by_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_tags_parameter_5276">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_invalid_owners_parameter_5184">
+        <classes>
+            <class name="api.tests.GetSequenceContactCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_invalid_owners_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_status_data_provider_9708">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_status_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_page_size_parameter_data_provider_5881">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_page_size_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_include_all_fields_parameter_9833">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_include_all_fields_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_sort_order_parameter_data_provider_7526">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_sort_order_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_page_num_data_provider_9696">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_page_num_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_sort_order_parameter_data_provider_0753">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_sort_order_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_page_size_data_provider_7794">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_page_size_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_sort_by_parameter_data_provider_8942">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_sort_by_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_verification_data_provider_4489">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_verification_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_contact_status_count_with_invalid_created_date_parameter_1755">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_created_date_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_contact_id_parameter_data_provider_8319">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_contact_id_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_contact_id_parameter_data_provider_0489">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_contact_id_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_created_date_parameter_data_provider_2597">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_created_date_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_token_1930">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_step_4207">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_blank_token_8020">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_token_with_free_plan_1142">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_count_with_valid_sequence_is_none_0953">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_count_with_valid_sequence_is_none"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_token_1003">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_sequences_parameter_4128">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_sequences_parameter_8369">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_different_method_name_4574">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_sort_by_parameter_9351">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_sort_by_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_expired_token_8499">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_sequence_is_none_4753">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_sequence_is_none"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_tags_parameter_0571">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_blank_search_parameter_3432">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_different_content_type_2104">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_status_data_provider_2781">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_status_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_page_num_parameter_7700">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_page_num_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_owners_parameter_1128">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_owners_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_different_sequence_id_5633">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_step_8877">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_include_all_fields_3753">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_include_all_fields"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_verification_8438">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_verification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_invalid_tags_parameter_5909">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_invalid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_owners_parameter_9909">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_owners_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_status_count_with_valid_search_parameter_4248">
+        <classes>
+            <class name="api.tests.GetSequenceContactStatusCountTest">
+                <methods>
+                    <include name="get_sequence_contact_status_count_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_sequences_parameter_2555">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_page_num_parameter_9325">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_page_num_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_step_8457">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_status_3922">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_status"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_blank_token_6209">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_page_size_4939">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_page_size"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_page_num_4402">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_page_num"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_token_1250">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_token_0843">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_expired_token_4896">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_different_content_type_3254">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_search_parameter_7562">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_sort_by_parameter_4085">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_sort_by_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_tags_parameter_7760">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_verification_2342">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_verification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_verification_5812">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_verification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_tags_parameter_8245">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_tags_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_different_method_name_6094">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_step_7819">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_step"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_status_4477">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_status"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_token_with_free_plan_9879">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_is_sequence_none_data_4804">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_is_sequence_none_data"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_is_sequence_none_data_3159">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_is_sequence_none_data"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_page_size_parameter_8401">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_page_size_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_contact_with_valid_include_all_fields_parameter_4691">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_include_all_fields_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_include_all_fields_5950">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_include_all_fields"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_sort_order_parameter_1559">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_sort_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_contact_id_parameter_9509">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_contact_id_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_contact_id_parameter_1597">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_contact_id_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_sort_by_parameter_0448">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_sort_by_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_sequences_parameter_2988">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_owners_parameter_data_provider_8237">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_owners_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_sort_order_parameter_1144">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_sort_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_owners_parameter_data_provider_4503">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_owners_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_invalid_created_date_parameter_1267">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_invalid_created_date_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_contact_with_valid_created_date_parameter_2971">
+        <classes>
+            <class name="api.tests.GetSequenceContactTest">
+                <methods>
+                    <include name="get_sequence_contact_with_valid_created_date_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_email_status_count_with_invalid_token_3568">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_count_with_blank_token_3930">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_count_with_expired_token_2505">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_count_with_valid_search_parameter_7930">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_contact_with_valid_sequences_parameter_8620">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_contact_with_valid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_count_with_different_content_type_7755">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_contact_with_invalid_step_parameter_2186">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_contact_with_invalid_step_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_contact_with_valid_step_parameter_5850">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_contact_with_valid_step_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_count_with_different_method_name_9722">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_contact_with_blank_search_parameter_5849">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_contact_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_count_with_valid_token_free_plan_5040">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_contact_with_invalid_sequences_parameter_1358">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_contact_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_status_count_8324">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStatusCount">
+                <methods>
+                    <include name="get_sequence_email_status_count"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_email_step_count_with_invalid_token_2862">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_count_with_blank_token_8810">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_count_with_expired_token_1329">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_count_with_valid_search_parameter_6343">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_contact_with_blank_search_parameter_8799">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_contact_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_contact_with_invalid_sequences_parameter_2204">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_contact_with_invalid_sequences_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_contact_with_valid_step_parameter_1707">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_contact_with_valid_step_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_contact_with_invalid_step_parameter_8430">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_contact_with_invalid_step_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_count_with_valid_token_free_plan_1836">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_count_with_different_method_name_0082">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_count_with_different_content_type_9826">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_email_step_count_1963">
+        <classes>
+            <class name="api.tests.GetSequenceEmailStepCount">
+                <methods>
+                    <include name="get_sequence_email_step_count"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_blank_limit_parameter_1300">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_blank_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_invalid_token_8655">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_blank_page_parameter_9793">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_blank_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_different_method_name_5391">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_expired_token_5584">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_valid_order_parameter_7415">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_list_owner_with_valid_limit_parameter_5297">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_blank_order_parameter_4594">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_blank_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_limit_parameter_8584">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_valid_page_parameter_1004">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_blank_token_2052">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_valid_owner_parameter_7370">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_owner_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_invalid_owners_parameter_0855">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_invalid_owners_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_valid_pause_reason_parameter_5033">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_pause_reason_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_invalid_number_of_step_parameter_5651">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_invalid_number_of_step_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_different_content_type_0931">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_valid_sortBy_parameter_5610">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_invalid_order_parameter_8355">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_invalid_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_invalid_page_parameter_3330">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_invalid_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_progress_invalid_parameter_6684">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_progress_invalid_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_invalid_sortBy_parameter_3257">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_invalid_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_valid_token_with_free_plan_7627">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_valid_search_parameter_5919">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_blank_sortBy_parameter_8984">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_blank_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_progress_valid_parameter_9960">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_progress_valid_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_blank_search_parameter_7394">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner__with_valid_number_of_step_parameter_data_provider_6899">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner__with_valid_number_of_step_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_owner_with_invalid_pause_reason_parameter_data_provider_6465">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_list_owner_with_invalid_pause_reason_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_token_4160">
+        <classes>
+            <class name="api.tests.GetSequenceListOwnerTest">
+                <methods>
+                    <include name="get_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_search_parameter_7296">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_number_of_step_parameter_0654">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_number_of_step_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_progress_valid_parameter_0021">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_progress_valid_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_owner_parameter_6394">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_owner_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_with_blank_sortBy_parameter_6418">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_blank_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_page_parameter_7364">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_with_different_method_name_5390">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_limit_parameter_8069">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_blank_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_owners_parameter_7362">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_owners_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_page_parameter_8587">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_blank_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_page_parameter_9924">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_limit_parameter_4466">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_sortBy_parameter_8958">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_sortBy_parameter_4903">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_limit_parameter_7511">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_with_different_content_type_9888">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_with_valid_token_with_free_plan_4940">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_search_parameter_7838">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_progress_invalid_parameter_7058">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_progress_invalid_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_order_parameter_9656">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_order_parameter_3096">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_blank_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_with_invalid_token_8621">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_pause_reason_parameter_5922">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_pause_reason_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_with_expired_token_8325">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_order_parameter_4503">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_pause_reason_parameter_data_provider_0068">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_pause_reason_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_number_of_step_parameter_data_provider_5597">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_with_valid_number_of_step_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_with_valid_token_5842">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_list_with_blank_token_4419">
+        <classes>
+            <class name="api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_valid_token_0896">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_expired_token_2143">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_invalid_token_0415">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_blank_token_6496">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_different_method_name_8677">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_different_sequence_id_6780">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_valid_token_free_plan_6549">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_different_content_type_7310">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_settings_valid_token_with_free_plan_3499">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_settings_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_setting_expired_token_data_provider_1018">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_setting_expired_token_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_setting_with_different_sequence_id_0224">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_setting_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_setting_with_different_content_type_7771">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_setting_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_setting_different_method_name_0049">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_setting_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_setting_with_valid_token_8482">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_setting_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_setting_blank_token_7839">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_setting_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_setting_invalid_token_8778">
+        <classes>
+            <class name="api.tests.GetSequenceSettingsTest">
+                <methods>
+                    <include name="get_sequence_setting_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_valid_token_4682">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_different_content_type_2928">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_invalid_token_1586">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_valid_token_free_plan_0548">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_different_method_name_2902">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_blank_token_8308">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_different_sequence_id_data_provider_3419">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_different_sequence_id_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_stats_with_expired_token_data_provider_6135">
+        <classes>
+            <class name="api.tests.GetSequenceStatsTest">
+                <methods>
+                    <include name="get_sequence_stats_with_expired_token_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_expired_token_1053">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_different_method_name_5615">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_different_content_type_9823">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_different_sequence_id_1085">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_valid_token_free_plan_8436">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_invalid_token_1531">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_valid_token_0495">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_step_with_blank_token_5953">
+        <classes>
+            <class name="api.tests.GetSequenceStepTest">
+                <methods>
+                    <include name="get_sequence_step_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_search_parameter_9596">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_number_of_step_parameter_7240">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_number_of_step_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_progress_valid_parameter_6185">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_progress_valid_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_owner_parameter_8729">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_owner_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="get_sequence_with_blank_sortBy_parameter_6349">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_blank_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_page_parameter_2280">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_limit_parameter_9720">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_blank_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_owners_parameter_1806">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_owners_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_page_parameter_5565">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_blank_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_page_parameter_3677">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_page_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_limit_parameter_1315">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_sortBy_parameter_3992">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_sortBy_parameter_6844">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_sortBy_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_limit_parameter_3378">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_limit_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_search_parameter_1886">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_blank_search_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_progress_invalid_parameter_0318">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_progress_invalid_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_order_parameter_0047">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_order_parameter_5952">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_blank_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_pause_reason_parameter_0314">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_pause_reason_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_order_parameter_9489">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_order_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_different_method_name_1542">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_token_with_free_plan_2851">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_different_content_type_4182">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_pause_reason_parameter_data_provider_0416">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_pause_reason_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_number_of_step_parameter_data_provider_6787">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_number_of_step_parameter_data_provider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_valid_token_4248">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_blank_token_4266">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_expired_token_5854">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_invalid_token_9946">
+        <classes>
+            <class name="api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_id_with_different_content_type_7878">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_id_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_with_different_sequence_id_9684">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_id_with_valid_token_with_failed_9027">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_id_with_valid_token_with_failed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_id_with_different_method_name_5719">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_id_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_id_with_valid_token_4237">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_id_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_id_with_expired_token_8492">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_id_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_id_with_blank_token_6023">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_id_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_id_with_invalid_token_1518">
+        <classes>
+            <class name="api.tests.GetSequenceWithIdTest">
+                <methods>
+                    <include name="get_sequence_id_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_different_content_type_1018">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_different_method_name_2048">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_valid_token_with_free_plan_9718">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_valid_token_with_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_valid_token_6946">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_blank_token_1881">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_invalid_token_2048">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_expired_token_9609">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getting_started_with_invalid_title_7128">
+        <classes>
+            <class name="api.tests.GettingStartedSequenceTest">
+                <methods>
+                    <include name="getting_started_with_invalid_title"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="import_contact_with_different_sequence_id_6168">
+        <classes>
+            <class name="api.tests.ImportContactTest">
+                <methods>
+                    <include name="import_contact_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="import_prospect_contact_with_different_sequence_id_4651">
+        <classes>
+            <class name="api.tests.ImportProspectContactTest">
+                <methods>
+                    <include name="import_prospect_contact_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pause_sequence_with_different_content_type_8629">
+        <classes>
+            <class name="api.tests.PauseResumeSequenceTest">
+                <methods>
+                    <include name="pause_sequence_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pause_sequence_with_different_method_name_4373">
+        <classes>
+            <class name="api.tests.PauseResumeSequenceTest">
+                <methods>
+                    <include name="pause_sequence_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pause_sequence_id_with_valid_token_free_plan_5891">
+        <classes>
+            <class name="api.tests.PauseResumeSequenceTest">
+                <methods>
+                    <include name="pause_sequence_id_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pause_sequence_with_blank_token_5887">
+        <classes>
+            <class name="api.tests.PauseResumeSequenceTest">
+                <methods>
+                    <include name="pause_sequence_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pause_sequence_with_invalid_token_6537">
+        <classes>
+            <class name="api.tests.PauseResumeSequenceTest">
+                <methods>
+                    <include name="pause_sequence_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pause_sequence_with_valid_token_2770">
+        <classes>
+            <class name="api.tests.PauseResumeSequenceTest">
+                <methods>
+                    <include name="pause_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pause_sequence_with_expired_token_9160">
+        <classes>
+            <class name="api.tests.PauseResumeSequenceTest">
+                <methods>
+                    <include name="pause_sequence_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="send_email_test_with_different_sequence_id_0959">
+        <classes>
+            <class name="api.tests.SendEmailTest">
+                <methods>
+                    <include name="send_email_test_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_different_sequence_id_1860">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_different_method_name_3168">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_different_method_name"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_sequence_prospect_with_valid_token_free_plan_3875">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_different_content_type_4623">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_sequence_prospect_with_invalid_token_3013">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_expired_token_7645">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_blank_token_8527">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_valid_token_0187">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

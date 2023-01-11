@@ -1,0 +1,11 @@
+{
+  "endPoint": "/templates/clone",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

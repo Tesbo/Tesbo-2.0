@@ -1,0 +1,11 @@
+{
+  "endPoint": "/subscription/resume",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

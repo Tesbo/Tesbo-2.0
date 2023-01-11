@@ -1,0 +1,14 @@
+{
+  "endPoint": "/team/${id}/resend-invitation",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "userId": ""
+  },
+  "queryParameters": {
+  }
+}

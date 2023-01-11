@@ -1,0 +1,11 @@
+{
+  "endPoint": "/schedules/${scheduleId}/make-default",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "scheduleId" : ""
+  },
+  "queryParameters": {}
+}

@@ -1,0 +1,11 @@
+{
+  "endPoint": "/sequences/${sequenceId}/prospect-verification-stats",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {}
+}

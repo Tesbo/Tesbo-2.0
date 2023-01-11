@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/email-warmup/deliverability/${emailAccountId}",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

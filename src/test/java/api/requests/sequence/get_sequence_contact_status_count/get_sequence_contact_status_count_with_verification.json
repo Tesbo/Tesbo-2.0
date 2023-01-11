@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/${sequenceId}/contacts?verification=${verification}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {
+    "verification": ""
+  }
+}

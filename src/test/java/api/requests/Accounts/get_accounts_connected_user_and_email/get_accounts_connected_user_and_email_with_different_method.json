@@ -1,0 +1,8 @@
+{
+  "endPoint": "/accounts/connected-emails-and-users-count",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

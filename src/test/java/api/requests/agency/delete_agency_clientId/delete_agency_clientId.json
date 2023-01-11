@@ -1,0 +1,10 @@
+{
+  "endPoint": "/agency/client/${clientId}",
+  "methodType" : "DELETE",
+  "header": {},
+  "body": {},
+  "pathParameter": {
+    "clientId": ""
+  },
+  "queryParameters": {}
+}

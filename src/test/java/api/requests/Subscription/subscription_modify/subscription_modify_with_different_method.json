@@ -1,0 +1,8 @@
+{
+  "endPoint": "/subscription/modify",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

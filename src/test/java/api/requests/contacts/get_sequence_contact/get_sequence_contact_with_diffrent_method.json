@@ -1,0 +1,11 @@
+{
+  "endPoint": "/contacts/${contactId}/sequences",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "contactId": ""
+  },
+  "queryParameter": {}
+}

@@ -1,0 +1,8 @@
+{
+  "endPoint": "/analytics/webhook/mixpanel-cohort",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

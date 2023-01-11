@@ -1,0 +1,10 @@
+{
+  "endPoint": "/agency/one-click-token/${clientId}",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {
+    "clientId": ""
+  },
+  "queryParameters": {}
+}

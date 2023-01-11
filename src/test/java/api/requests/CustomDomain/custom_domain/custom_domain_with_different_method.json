@@ -1,0 +1,10 @@
+{
+  "endPoint": "/custom-domain",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameter": {}
+}

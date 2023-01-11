@@ -1,0 +1,13 @@
+{
+  "endPoint": "/team/${id}/reactivate",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {
+  }
+}

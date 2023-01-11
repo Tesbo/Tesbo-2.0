@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/${sequenceId}/contacts?sortBy=${sortBy}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {
+    "sortBy": ""
+  }
+}

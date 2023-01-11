@@ -1,0 +1,8 @@
+{
+  "endPoint": "/notification/mark-as-read",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,9 @@
+{
+  "endPoint": "/email-account/esp-limits",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

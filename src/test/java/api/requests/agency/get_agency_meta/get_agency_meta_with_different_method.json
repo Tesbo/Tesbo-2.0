@@ -1,0 +1,8 @@
+{
+  "endPoint": "/agency/meta",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

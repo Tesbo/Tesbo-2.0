@@ -1,0 +1,8 @@
+{
+  "endPoint": "/blacklist-domains",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

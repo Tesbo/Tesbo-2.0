@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/${emailAccountId}/disconnect",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

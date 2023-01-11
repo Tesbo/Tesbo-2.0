@@ -1,0 +1,12 @@
+{
+  "endPoint": "/api-token/${id}",
+  "methodType" : "DELETE",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {}
+}

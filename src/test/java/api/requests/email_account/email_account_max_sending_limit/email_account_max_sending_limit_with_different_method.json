@@ -1,0 +1,13 @@
+{
+  "endPoint": "/email-account/max-sending-limit/${emailAccountId}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+    "limit":"10"
+  },
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

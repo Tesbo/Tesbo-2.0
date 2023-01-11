@@ -1,0 +1,13 @@
+{
+  "endPoint": "/team/${id}/reactivate",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {
+  }
+}

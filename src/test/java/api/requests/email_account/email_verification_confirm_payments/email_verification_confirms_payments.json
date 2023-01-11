@@ -1,0 +1,10 @@
+{
+  "endPoint": "/email-verification-credits/confirm-payment-intent",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

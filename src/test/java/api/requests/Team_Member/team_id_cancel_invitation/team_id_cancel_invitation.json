@@ -1,0 +1,13 @@
+{
+  "endPoint": "/team/${id}/cancel-invitation",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {
+  }
+}

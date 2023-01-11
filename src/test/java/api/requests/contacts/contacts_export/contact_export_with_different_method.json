@@ -1,0 +1,10 @@
+{
+  "endPoint": "/contacts/export",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameter": {}
+}

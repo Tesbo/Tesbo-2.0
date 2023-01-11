@@ -1,0 +1,11 @@
+{
+  "endPoint": "/contacts/sequence/${stepId}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "stepId": ""
+  },
+  "queryParameter": {}
+}

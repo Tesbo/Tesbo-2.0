@@ -1,0 +1,11 @@
+{
+  "endPoint": "/sequences/${sequenceId}/settings",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {}
+}

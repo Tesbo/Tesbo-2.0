@@ -1,0 +1,14 @@
+{
+  "endPoint": "/user/profile/progress",
+  "methodType" : "PATCH",
+  "header": {
+    "Authorization": "",
+    "Content_Type": ""
+  },
+  "body": {
+  "step": "watch-video",
+  "isCompleted": true
+  },
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,8 @@
+{
+  "endPoint": "/agency/verify-invitation-token",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

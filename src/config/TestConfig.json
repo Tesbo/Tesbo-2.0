@@ -1,115 +1,119 @@
 {
-  "run": "nevvon_test_admin",
-
+  "run":"API_Regression",
   "config": {
-    "cs_test_browserStack": {
+    "generate_code": {
       "platform": "web",
       "browser": "chrome",
-      "capabilities": {
-        "browserName": "Chrome"
-      },
-      "env": "https://test.nevvon.com/",
-      "isGrid": true,
-      "gridPlatform": "browserstack",
-      "browserStackOption": {
-        "os": "Windows",
-        "osVersion": "11"
-      },
-      "gridURL": "https://viralpatel_LWX2R3:ZCe4uALptzU8skpXYsky@hub-cloud.browserstack.com/wd/hub",
+      "capabilities": {},
+      "env": "https://pyxis-edge.lifeisgoodforlearner.com",
+      "isGrid": false,
+      "gridURL": "",
       "viewPort": "",
       "apiTestConfig": {
         "enable": false,
         "env": ""
       },
-      "tesboReportKey" : ""
+      "suite": [
+        ""
+      ]
     },
-    "nevvon_test_admin": {
+    "api_session": {
       "platform": "web",
       "browser": "chrome",
       "capabilities": {},
-      "env": "https://test.nevvon.com/",
+      "env": "https://google.com",
       "isGrid": false,
       "gridURL": "",
       "viewPort": "",
       "apiTestConfig": {
-        "enable": true,
+        "enable": false,
         "env": ""
       },
-      "testNGsuite": [
-        "dev.xml"
-      ],
-      "tesboReportKey" : "LzZ4EkXbcjUYggnZ81bRxBLXNe4tPzAC"
-
+      "suite": [
+        ""
+      ]
     },
-    "nevvon_prod_admin": {
+    "test_session": {
       "platform": "web",
       "browser": "chrome",
       "capabilities": {},
-      "env": "https://test.nevvon.com/",
+      "env": "https://google.com",
       "isGrid": false,
       "gridURL": "",
       "viewPort": "",
       "apiTestConfig": {
-        "enable": true,
+        "enable": false,
+        "env": ""
+      },
+      "suite": [
+        ""
+      ]
+    },
+    "WebTestDemo": {
+      "platform": "web",
+      "browser": "chrome",
+      "capabilities": {},
+      "env": "https://my.saleshandy.com/login",
+      "isGrid": false,
+      "gridURL": "",
+      "viewPort": "",
+      "apiTestConfig": {
+        "enable": false,
         "env": ""
       },
       "testNGsuite": [
-        "smoke.xml"
-      ]
-    },
-    "nevvon_android": {
-      "platform": "android",
-      "app": "app-release.apk",
-      "capabilities": {
-        "platformName": "android",
-        "appium:deviceName": "pixel_4_Api_Sv2",
-        "appium:platformVersion": "12.0",
-        "appium:automationName": "UiAutomator2",
-        "appium:adbExecTimeout": 30000
-      },
-      "testNGsuite": [
-        "nevvon_android_all.xml"
-      ],
-      "appiumPlatform": "browserstack",
-      "appiumURL": "http://0.0.0.0:4723/wd/hub"
-    },
-    "nevvon_iOS": {
-      "platform": "iOS",
-      "capabilities": {
-        "platformName": "iOS",
-        "app": "/Users/viralpatel/Downloads/Upwork/App/FreelancersDM-iphonesimulator-iOS14-1.38.0.14.app",
-        "deviceName": "iPhone 13",
-        "platformVersion": "15.2",
-        "automationName": "XCUITest"
-      },
-      "testNGsuite": [
-        "smoke.xml"
-      ],
-      "appiumURL": "http://0.0.0.0:4723/wd/hub"
-    },
-    "nevvon_test_api": {
-      "platform": "api",
-      "enable": true,
-      "env": "https://public-api-test.cpl.nevvon.com",
-      "testNGsuite": [
-        "nevvon_public_api.xml"
-      ]
-    },
-    "nevvon_demo_api": {
-      "platform": "api",
-      "enable": true,
-      "env": "https://pubapi.nevvon.com/v1",
-      "testNGsuite": [
-        "nevvon_public_api.xml"
+        "wsignup.xml"
       ]
     },
     "API_Regression": {
       "platform": "api",
       "enable": true,
+      "env": "https://pyxis-edge.lifeisgoodforlearner.com",
+      "testNGsuite": [
+        "test.xml"
+      ],
+      "timeAssertion" : {
+        "enable" : true,
+        "timeToCompareInMs" : 500
+      }
+    },
+    "API_Sequence": {
+      "platform": "api",
+      "enable": true,
       "env": "https://v3api.lifeisgoodforlearner.com",
       "testNGsuite": [
         "sequence.xml"
-      ]
+      ],
+      "timeAssertion" : {
+        "enable" : true,
+        "timeToCompareInMs" : 500
+      }
+    },
+    "API_Prospect": {
+      "platform": "api",
+      "enable": true,
+      "env": "https://v3api.lifeisgoodforlearner.com",
+      "testNGsuite": [
+        "prospect.xml"
+      ],
+      "timeAssertion" : {
+        "enable" : true,
+        "timeToCompareInMs" : 500
+      }
+    },
+    "API_Agency": {
+      "platform": "api",
+      "enable": true,
+      "env": "https://v3api.lifeisgoodforlearner.com",
+      "testNGsuite": [
+        "agency.xml"
+      ],
+      "timeAssertion" : {
+        "enable" : true,
+        "timeToCompareInMs" : 500
+      }
     }
+
+
   }
 }

@@ -1,0 +1,13 @@
+{
+  "endPoint": "/contacts/${contactId}/profile",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+    "contactId": ""
+  },
+  "queryParameters": {
+  }
+}

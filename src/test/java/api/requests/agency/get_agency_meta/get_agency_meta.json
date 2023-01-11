@@ -1,0 +1,8 @@
+{
+  "endPoint": "/agency/meta",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,8 @@
+{
+  "endPoint": "/user/time-zone",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,8 @@
+{
+  "endPoint": "/user/time-zone",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

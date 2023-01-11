@@ -1,0 +1,1 @@
+{"endPoint":"/tag/${id}","methodType":"GET","queryParameters":{},"header":{"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE5NjUsImlhdCI6MTY3MjcyNjMzMCwiZXhwIjoxNjc1MzE4MzMwfQ.YF2iNGGKwU6m3EOO2jAggyizc8j82eIH2wk4LkRgu80","content-type":"application/json"},"body":{},"pathParameter":{"id":1342}}

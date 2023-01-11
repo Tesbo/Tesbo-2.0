@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/ramp-up-settings/${emailAccountId}",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

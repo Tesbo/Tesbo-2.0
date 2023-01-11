@@ -1,0 +1,10 @@
+{
+  "endPoint": "/tag",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

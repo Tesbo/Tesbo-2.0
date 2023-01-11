@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/email-account-settings/${emailAccountId}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

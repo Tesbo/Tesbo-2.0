@@ -1,0 +1,10 @@
+{
+  "endPoint": "/contacts/count",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameter": {}
+}

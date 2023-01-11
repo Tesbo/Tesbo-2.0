@@ -1,0 +1,30 @@
+{
+  "endPoint": "/email-account/smtp-imap/connect",
+  "methodType" : "POST",
+  "header": {
+    "Content_Type": "application/json"
+  },
+  "body": {
+    "emailServiceProvider": "Gmail",
+    "fromName": "test",
+    "payload": {
+      "smtp": {
+        "emailAddress": "testing.keval@gmail.com",
+        "password": "dipdjwlmuykoidor",
+        "host": "Gmail",
+        "port": 465,
+        "encryption": "SSL",
+        "userName": "test"
+      },
+      "imap": {
+        "emailAddress": "testing.keval@gmail.com",
+        "password": "dipdjwlmuykoidor",
+        "host": "Gmail",
+        "port": 465,
+        "encryption": "SSL"
+      }
+    }
+},
+  "pathParameter": {},
+  "queryParameters": {}
+}

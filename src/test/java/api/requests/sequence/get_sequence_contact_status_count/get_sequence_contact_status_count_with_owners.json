@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/${sequenceId}/contacts?owners=${owners}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {
+    "owners": ""
+  }
+}

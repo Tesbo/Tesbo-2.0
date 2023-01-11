@@ -1,0 +1,10 @@
+{
+  "endPoint": "/fields/list",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

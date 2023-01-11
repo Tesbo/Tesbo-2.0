@@ -1,0 +1,11 @@
+{
+  "endPoint": "/templates/share",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

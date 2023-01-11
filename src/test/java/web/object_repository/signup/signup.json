@@ -1,0 +1,484 @@
+{
+  "preferably_your_work_email_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@name='email']"
+  },
+  "signup_for_free_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h3[contains(text(),'Signup for free')]"
+  },
+  "a_secure_one_please_password": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "password",
+    "platform": "web",
+    "web_locator": "//input[@name='password']"
+  },
+  "sign_up_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[contains(text(),'Sign Up')]"
+  },
+  "first_name_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@name = \"firstName\"]"
+  },
+  "last_name_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@name = \"lastName\"]"
+  },
+  "select_people": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//p[contains(.,'How many people are in your team?')]//..//div"
+  },
+  "select_people_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div/ul/li[3]"
+  },
+  "select_industry": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//p[contains(.,'What describes your industry best?')]//..//div"
+  },
+  "select_industry_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div/ul/li[3]"
+  },
+  "saleshandy_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//label[text()='Recruiters']"
+  },
+  "continue_signup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[text()='Continue']"
+  },
+  "onboard_page": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div//h1[contains(text(),\"Add email account\")]"
+  },
+  "onboard_gmail": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[contains(text(),\"Gmail\")]"
+  },
+  "gmail_verify": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div//div[contains(text(),\"qabletest@gmail.com\")]"
+  },
+  "gmail_verify_allow": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[contains(text(),\"Allow\")]"
+  },
+  "setting_menu": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul//a//li//div[contains(text(),'Settings')]"
+  },
+  "close_video": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//i[@class = 'sh-close']"
+  },
+  "close_startted_get":{
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//h1[contains(text(),\"Getting Started\")]//../img"
+  },
+
+  "iframe1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//iframe[@title ='Help Scout Beacon - Messages and Notifications']"
+  },
+  "close_comment": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[@class = 'Textcss__TextUI-cdrlb6-0 faqzWx c-Text is-span is-13 is-default']"
+  },
+  "click_on_schedule": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[contains(text(),\"Schedules\")]"
+  },
+  "add_new_schedule": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[contains(text(),\"Add new schedule\")]"
+  },
+  "schedule_save": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[1]//button[contains(.,'Save')]"
+  },
+  "enter_schedule_name":{
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder = 'Enter a schedule name']"
+  },
+  "select_time_zone":{
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//label[contains(text(),'Time zone')]//..//div"
+  },
+  "change_time_zone": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[contains(text(),'Africa/Bamako ')]"
+  },
+  "monday_time_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Monday']/../div/div/input[1])[1]"
+  },
+
+  "monday_time_1_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Monday']/../div/div/input[2])[1]"
+  },
+  "monday_time_1_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Monday']/../div/div/input[3])[1]"
+  },
+  "monday_time_1_4": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Monday']/../div/div/input[4])[1]"
+  },
+  "monday_add_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Monday']/../div/div/i)[1]"
+  },
+  "monday_time_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[2]/input[1]"
+  },
+  "monday_time_2_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[2]/input[2]"
+  },
+  "monday_time_2_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[2]/input[3]"
+  },
+  "monday_time_2_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[2]/input[4]"
+  },
+  "monday_add_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[3]/i"
+  },
+  "monday_time_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[3]/input[1]"
+  },
+  "monday_time_3_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[3]/input[2]"
+  },
+  "monday_time_3_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[3]/input[3]"
+  },
+  "monday_time_3_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Monday']/../div/div[3]/input[4]"
+  },
+  "tuesday_time_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Tuesday']/../div/div/input)[1]"
+  },
+
+  "tuesday_time_1_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Tuesday']/../div/div/input)[2]"
+  },
+  "tuesday_time_1_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Tuesday']/../div/div/input)[3]"
+  },
+  "tuesday_time_1_4": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Tuesday']/../div/div/input)[4]"
+  },
+  "wednesday_time_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Wednesday']/../div/div/input)[1]"
+  },
+
+  "wednesday_time_1_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Wednesday']/../div/div/input)[2]"
+  },
+  "wednesday_time_1_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Wednesday']/../div/div/input)[3]"
+  },
+  "wednesday_time_1_4": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Wednesday']/../div/div/input)[4]"
+  },
+  "thursday_time_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Thursday']/../div/div/input)[1]"
+  },
+
+  "thursday_time_1_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Thursday']/../div/div/input)[2]"
+  },
+  "thursday_time_1_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Thursday']/../div/div/input)[3]"
+  },
+  "thursday_time_1_4": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Thursday']/../div/div/input)[4]"
+  },
+  "friday_time_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Friday']/../div/div/input)[1]"
+  },
+
+  "friday_time_1_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Thursday']/../div/div/input)[2]"
+  },
+  "friday_time_1_3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Thursday']/../div/div/input)[3]"
+  },
+  "friday_time_1_4": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Thursday']/../div/div/input)[4]"
+  },
+  "saturday_add_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div)[1]"
+  },
+  "saturday_time_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[1]"
+  },
+
+  "saturday_time_1_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[2]"
+  },
+  "saturday_time_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[3]"
+  },
+  "saturday_time_2_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[4]"
+  },
+  "sunday_add_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Sunday']/../div)[1]"
+  },
+  "sunday_time_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[1]"
+  },
+
+  "sunday_time_1_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[2]"
+  },
+  "sunday_time_2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[3]"
+  },
+  "sunday_time_2_1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Saturday']/../div/div/input)[4]"
+  }
+
+}
+
+
+
+

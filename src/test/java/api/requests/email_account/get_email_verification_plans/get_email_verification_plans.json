@@ -1,0 +1,9 @@
+{
+  "endPoint": "/email-verification-plans",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/${emailAccountId}/make-default",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

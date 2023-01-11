@@ -1,0 +1,18 @@
+{
+  "endPoint": "/email-account/smtp-imap/test-connection",
+  "methodType" : "POST",
+  "header": {},
+  "body": {
+    "type":"SMTP",
+    "payload":
+          {
+            "emailAddress":"testing.keval@gmail.com",
+            "password":"dipdjwlmuykoidor",
+            "host":"Gmail",
+            "port":465,
+            "encryption":"SSL"
+          }
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

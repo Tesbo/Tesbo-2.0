@@ -1,0 +1,12 @@
+{
+  "endPoint":"/auth/signup/otp/resend",
+  "methodType" :"POST",
+  "header": {
+    "Content-Type":"application/json"
+  },
+  "body": {
+    "email":""
+  },
+  "pathParameter": {},
+  "queryParameter": {}
+}

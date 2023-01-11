@@ -1,0 +1,10 @@
+{
+  "endPoint": "/sequences/steps/list",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {},
+  "pathParameter":{},
+  "queryParameters":{}
+}

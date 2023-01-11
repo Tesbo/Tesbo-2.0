@@ -1,0 +1,12 @@
+{
+  "endPoint": "/email-verification-credits/purchase",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+    "stripeCardToken": "tok_us",
+    "planId": 1
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

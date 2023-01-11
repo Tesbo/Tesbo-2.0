@@ -1,0 +1,8 @@
+{
+  "endPoint": "/safety-settings",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

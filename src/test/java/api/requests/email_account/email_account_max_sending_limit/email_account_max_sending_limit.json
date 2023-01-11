@@ -1,0 +1,12 @@
+{
+  "endPoint": "/email-account/max-sending-limit/${emailAccountId}",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

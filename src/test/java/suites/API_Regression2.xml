@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "API_Regression">
+
+    <test name = "get sequence list with valid token">
+        <classes>
+            <class name = "api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "get sequence list with valid token with free plan">
+        <classes>
+            <class name = "api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_valid_token_with_free_plan"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "get sequence list with invalid token">
+        <classes>
+            <class name = "api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "get sequence list with blank token">
+        <classes>
+            <class name = "api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "get sequence list with valid progress number">
+        <classes>
+            <class name = "api.tests.GetSequenceListTest">
+                <methods>
+                    <include name="get_sequence_list_with_valid_progress_number"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

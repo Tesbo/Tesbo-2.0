@@ -1,0 +1,9 @@
+{
+  "endPoint": "/email-account/connected",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

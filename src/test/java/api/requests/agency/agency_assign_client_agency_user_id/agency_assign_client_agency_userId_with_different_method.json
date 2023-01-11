@@ -1,0 +1,10 @@
+{
+  "endPoint": "/agency/assign-clients/${agencyUserId}",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {
+    "agencyUserId": ""
+  },
+  "queryParameters": {}
+}

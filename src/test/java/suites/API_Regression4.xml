@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "API_Regression">
+    <test name = "verify_prospect_sequence_with_valid_token">
+        <classes>
+            <class name = "api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_sequence_prospect_with_valid_token_free_plan">
+        <classes>
+            <class name = "api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_valid_token_free_plan"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_sequence_prospect_with_valid_token_free_plan_with_sequence">
+        <classes>
+            <class name = "api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_valid_token_free_plan_with_sequence"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,1 @@
+{"endPoint":"/safety-settings","methodType":"GET","header":{"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE5NDIsImlhdCI6MTY3MjgxMTI2NCwiZXhwIjoxNjc1NDAzMjY0fQ.KuF9YkQGTpqdluWobHGz9MVYAJcXAb213iZrql_SqM4","content-type":"application/json"},"body":{},"queryParameter":{},"pathParameter":{}}

@@ -1,0 +1,12 @@
+{
+  "endPoint": "/image-broker/image/${buffer}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "buffer": ""
+  },
+  "queryParameters": {}
+}

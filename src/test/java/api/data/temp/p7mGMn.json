@@ -1,0 +1,1 @@
+{"endPoint":"/subscription/churnkey-event","methodType":"POST","header":{"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE5NDEsImlhdCI6MTY3MjgxMTI2MSwiZXhwIjoxNjc1NDAzMjYxfQ.C0UGG4nn3krZ6oYVA2JcEFmi2SZmprHRrgyFvJXCHmI","content-type":"application/json"},"body":{},"queryParameter":{},"pathParameter":{}}

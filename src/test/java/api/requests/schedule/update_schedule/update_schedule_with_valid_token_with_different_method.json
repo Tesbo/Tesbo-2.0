@@ -1,0 +1,31 @@
+{
+  "endPoint": "/schedules/${scheduleId}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  "name": "Just Schedule",
+  "timezone": "Asia/Kolkata",
+  "timeSlots": [
+    {
+      "day": 1,
+      "slots": [
+        {
+          "start": {
+            "hour": "09",
+            "minute": "00"
+          },
+          "end": {
+            "hour": 18,
+            "minute": "00"
+          }
+        }
+      ]
+    }
+  ]
+  },
+  "pathParameter": {
+    "scheduleId" : ""
+  },
+  "queryParameters": {}
+}

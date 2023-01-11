@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/${sequenceId}/emails/send",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+    "sequenceContactHistoryId": ""
+  },
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {}
+}

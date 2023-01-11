@@ -1,0 +1,13 @@
+{
+  "endPoint": "/team/${id}/deactivate",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {
+  }
+}

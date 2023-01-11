@@ -1,0 +1,10 @@
+{
+  "endPoint": "/fields",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

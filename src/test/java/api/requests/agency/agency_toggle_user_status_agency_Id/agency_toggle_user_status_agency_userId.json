@@ -1,0 +1,10 @@
+{
+  "endPoint": "/agency/toggle-user-status/${agencyUserId}",
+  "methodType" : "PATCH",
+  "header": {},
+  "body": {},
+  "pathParameter": {
+    "agencyUserId": ""
+  },
+  "queryParameters": {}
+}

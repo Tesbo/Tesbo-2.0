@@ -1,0 +1,11 @@
+{
+  "endPoint": "/templates/delete",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

@@ -1,0 +1,1 @@
+{"endPoint":"/templates/delete","methodType":"POST","queryParameters":{},"header":{"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE5MjcsImlhdCI6MTY3MjgxMTI2OCwiZXhwIjoxNjc1NDAzMjY4fQ.6NtcVddV80nKtwHCo_CNKYpqJqTBBnKZaPt_08-x65o","content-type":"application/json"},"body":{"ids":[3637]},"pathParameter":{}}

@@ -1,0 +1,10 @@
+{
+  "endPoint": "/templates/send-test-mail",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

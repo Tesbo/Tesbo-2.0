@@ -1,0 +1,15 @@
+{
+  "endPoint": "/contacts/${contactId}/profile",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "attributes": ""
+  },
+  "pathParameter": {
+    "contactId": ""
+  },
+  "queryParameters": {
+  }
+}

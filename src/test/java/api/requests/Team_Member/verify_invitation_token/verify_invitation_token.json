@@ -1,0 +1,10 @@
+{
+  "endPoint": "/team/verify-invitation-token",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

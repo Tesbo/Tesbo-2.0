@@ -1,0 +1,11 @@
+{
+  "endPoint": "/schedules/${scheduleId}/make-default",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "scheduleId" : ""
+  },
+  "queryParameters": {}
+}

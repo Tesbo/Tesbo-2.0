@@ -1,0 +1,14 @@
+{
+  "endPoint": "/contacts/sequence/${stepId}/sample",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "stepId": ""
+  },
+  "queryParameters": {
+  }
+}

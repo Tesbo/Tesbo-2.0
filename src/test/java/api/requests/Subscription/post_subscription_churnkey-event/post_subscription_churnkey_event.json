@@ -1,0 +1,8 @@
+{
+  "endPoint": "/subscription/churnkey-event",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

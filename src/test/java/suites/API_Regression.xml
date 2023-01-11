@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "API_Regression">
+    <test name = "get sequence with valid token">
+        <classes>
+            <class name = "api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "get sequence with valid token with free plan">
+        <classes>
+            <class name = "api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_valid_token_with_free_plan"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "get sequence with content-type token">
+        <classes>
+            <class name = "api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_content-type_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "get sequence with blank token">
+        <classes>
+            <class name = "api.tests.GetSequenceTest">
+                <methods>
+                    <include name="get_sequence_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

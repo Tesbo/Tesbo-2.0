@@ -1,0 +1,11 @@
+{
+  "endPoint": "/sequences/list",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {},
+  "Schema": {"payload":[],"responseTime":0,"statusCode":200}
+}

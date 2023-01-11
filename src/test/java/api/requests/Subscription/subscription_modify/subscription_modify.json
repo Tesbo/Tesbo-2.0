@@ -1,0 +1,8 @@
+{
+  "endPoint": "/subscription/modify",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

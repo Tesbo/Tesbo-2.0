@@ -1,0 +1,9 @@
+{
+  "endPoint": "/email-account/email-warmup/list",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

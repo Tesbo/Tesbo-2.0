@@ -1,0 +1,12 @@
+{
+  "endPoint": "/contacts/unsubscribe",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+  }
+}

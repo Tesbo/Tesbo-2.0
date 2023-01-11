@@ -1,0 +1,12 @@
+{
+  "endPoint": "/templates/${templateHistoryId}",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "templateHistoryId": ""
+  },
+  "queryParameters": {}
+}

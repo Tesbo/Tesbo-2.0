@@ -1,0 +1,11 @@
+{
+  "endPoint": "/tag/assign",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

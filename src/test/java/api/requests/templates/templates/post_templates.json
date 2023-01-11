@@ -1,0 +1,10 @@
+{
+  "endPoint": "/templates",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

@@ -1,0 +1,12 @@
+{
+  "endPoint": "/tag/${id}",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {}
+}

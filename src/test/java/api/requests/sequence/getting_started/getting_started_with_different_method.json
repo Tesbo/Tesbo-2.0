@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/getting-started",
+  "methodType" : "GET",
+  "header": {
+    "content-type" : "",
+    "Authorization" : ""
+  },
+  "body": {
+      "title": ""
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

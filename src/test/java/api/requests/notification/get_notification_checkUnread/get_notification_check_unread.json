@@ -1,0 +1,8 @@
+{
+  "endPoint": "/notification/check-unread",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,12 @@
+{
+  "endPoint": "/email-account/connect/${method}/${emailAccountId}",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "method": "",
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

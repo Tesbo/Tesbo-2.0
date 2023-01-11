@@ -1,0 +1,8 @@
+{
+  "endPoint": "/plans",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

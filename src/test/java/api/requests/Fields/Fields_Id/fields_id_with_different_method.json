@@ -1,0 +1,12 @@
+{
+  "endPoint": "/fields/${fieldId}",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "fieldId": ""
+  },
+  "queryParameters": {}
+}

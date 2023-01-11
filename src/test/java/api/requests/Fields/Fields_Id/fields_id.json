@@ -1,0 +1,12 @@
+{
+  "endPoint": "/fields/${fieldId}",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "fieldId": ""
+  },
+  "queryParameters": {}
+}

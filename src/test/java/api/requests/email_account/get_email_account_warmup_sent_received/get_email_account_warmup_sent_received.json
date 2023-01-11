@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/email-warmup/sent-received/${emailAccountId}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

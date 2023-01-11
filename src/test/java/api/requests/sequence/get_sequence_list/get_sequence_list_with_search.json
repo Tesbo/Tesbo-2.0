@@ -1,0 +1,12 @@
+{
+  "endPoint": "/sequences/list?search=${search}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+    "search": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "endPoint": "/contacts/import",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameter": {}
+}

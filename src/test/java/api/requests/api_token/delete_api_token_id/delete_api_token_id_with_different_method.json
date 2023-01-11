@@ -1,0 +1,12 @@
+{
+  "endPoint": "/api-token/${id}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "id": ""
+  },
+  "queryParameters": {}
+}

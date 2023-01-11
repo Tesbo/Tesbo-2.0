@@ -1,0 +1,18 @@
+{
+  "endPoint": "/sequences/${sequenceId}/test-email",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+  "subject": "test",
+  "preheader": "test",
+  "content": "test",
+  "stepNumber": 1,
+  "to": ["dhaval@saleshandy.com"]
+  },
+  "pathParameter":{
+    "sequenceId": ""
+  },
+  "queryParameters":{}
+}

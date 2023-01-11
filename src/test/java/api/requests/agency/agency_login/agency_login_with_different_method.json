@@ -1,0 +1,13 @@
+{
+  "endPoint":"/agency/users/login",
+  "methodType" :"GET",
+  "header": {
+    "content_type":"application/json"
+  },
+  "body": {
+    "email":"",
+    "password":""
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

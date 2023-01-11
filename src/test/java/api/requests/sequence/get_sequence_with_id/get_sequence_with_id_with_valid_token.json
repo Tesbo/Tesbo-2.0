@@ -1,0 +1,12 @@
+{
+  "endPoint": "/sequences/${sequenceId}",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {}
+}

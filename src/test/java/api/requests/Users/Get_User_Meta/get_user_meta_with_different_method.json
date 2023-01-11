@@ -1,0 +1,8 @@
+{
+  "endPoint": "/user/meta",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,11 @@
+{
+  "endPoint": "/sequences/${sequenceId}/settings",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {}
+}

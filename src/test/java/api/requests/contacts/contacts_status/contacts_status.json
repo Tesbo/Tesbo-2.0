@@ -1,0 +1,12 @@
+{
+  "endPoint": "/contacts/status",
+  "methodType" : "PATCH",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+  }
+}

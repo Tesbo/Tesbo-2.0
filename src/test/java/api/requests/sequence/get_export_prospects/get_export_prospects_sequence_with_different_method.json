@@ -1,0 +1,11 @@
+{
+  "endPoint": "/sequences/${sequenceId}/prospects/export",
+  "methodType" : "PUSH",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameter": {}
+}

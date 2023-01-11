@@ -1,0 +1,10 @@
+{
+  "endPoint": "/contacts/send-email",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameter": {}
+}

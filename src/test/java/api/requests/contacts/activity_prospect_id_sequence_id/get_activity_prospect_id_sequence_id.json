@@ -1,0 +1,15 @@
+{
+  "endPoint": "/activity/prospect/${prospectId}/sequence/${sequenceId}",
+  "methodType" : "GET",
+  "header": {
+    "content-type": "application/json"
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "prospectId": "",
+    "sequenceId": ""
+  },
+  "queryParameters": {
+  }
+}

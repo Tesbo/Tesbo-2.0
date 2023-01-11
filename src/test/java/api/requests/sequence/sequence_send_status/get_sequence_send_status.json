@@ -1,0 +1,11 @@
+{
+  "endPoint": "/sequences/${sequenceId}/send-status",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {}
+}

@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "web test signup">
+
+    <test name = "verify signup with valid email password">
+        <classes>
+            <class name = "web.tests.SignUpTest" >
+                <methods>
+                    <include name="verify_signup_with_valid_email_password"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

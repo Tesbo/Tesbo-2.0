@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="regression" parallel = "methods" Thread-count= "100">
+    <test name="get_sequence_prospect_contact_with_valid_token_2638">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_expired_token_5369">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_expired_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_blank_token_5044">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_invalid_token_3507">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_valid_token_free_plan_4027">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="get_sequence_prospect_contact_with_different_sequence_id_3108">
+        <classes>
+            <class name="api.tests.GetSequenceProspectContactTest">
+                <methods>
+                    <include name="get_sequence_prospect_contact_with_different_sequence_id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_sequence_prospect_with_valid_token_free_plan_with_sequence_8907">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_valid_token_free_plan_with_sequence"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_sequence_prospect_with_valid_token_free_plan_0713">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_valid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_sequence_prospect_with_invalid_token_free_plan_7777">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_invalid_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_blank_token_free_plan_7927">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_blank_token_free_plan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_valid_token_1836">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_valid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_sequence_prospect_with_invalid_token_5876">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_blank_token_5621">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_blank_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_sequence_prospect_with_invalid_sequence_2940">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_sequence_prospect_with_invalid_sequence"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_blank_sequence_4601">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_blank_sequence"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_prospect_sequence_with_same_sequenceId_5763">
+        <classes>
+            <class name="api.tests.VerifyProspectInSequenceTest">
+                <methods>
+                    <include name="verify_prospect_sequence_with_same_sequenceId"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

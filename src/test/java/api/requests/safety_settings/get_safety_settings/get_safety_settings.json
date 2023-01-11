@@ -1,0 +1,8 @@
+{
+  "endPoint": "/safety-settings",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

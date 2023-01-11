@@ -1,0 +1,14 @@
+{
+  "endPoint": "/sequences/${sequenceId}/pause-resume",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "action": 1
+  },
+  "pathParameter":{
+    "sequenceId": ""
+  },
+  "queryParameters":{}
+}

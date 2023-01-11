@@ -1,0 +1,10 @@
+{
+  "endPoint": "/team/members/active",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

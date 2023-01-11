@@ -1,0 +1,8 @@
+{
+  "endPoint": "/stripe-event",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,18 @@
+{
+  "endPoint": "/email-account/smtp-imap/test-connection",
+  "methodType" : "GET",
+  "header": {},
+  "body": {
+    "type":"SMTP",
+    "payload":
+          {
+            "emailAddress":"shltddeal@yandex.com",
+            "password":"wkarohzhkkupjynh",
+            "host":"smtp.yandex.com",
+            "port":465,
+            "encryption":"SSL"
+          }
+  },
+  "pathParameter": {},
+  "queryParameters": {}
+}

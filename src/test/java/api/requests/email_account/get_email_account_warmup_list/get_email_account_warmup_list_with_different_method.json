@@ -1,0 +1,9 @@
+{
+  "endPoint": "/email-account/email-warmup/list",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

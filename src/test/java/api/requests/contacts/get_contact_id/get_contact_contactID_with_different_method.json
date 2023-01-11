@@ -1,0 +1,13 @@
+{
+  "endPoint": "/contacts/${contactId}",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+    "contactId": ""
+  },
+  "queryParameters": {
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "endPoint": "/sequences/list?owners=${owners}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+   "owners": ""
+  }
+}

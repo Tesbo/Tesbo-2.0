@@ -1,0 +1,10 @@
+{
+  "endPoint": "/custom-domain/list",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameter": {}
+}

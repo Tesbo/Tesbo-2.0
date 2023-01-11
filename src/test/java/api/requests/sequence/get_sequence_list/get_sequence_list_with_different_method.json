@@ -1,0 +1,10 @@
+{
+  "endPoint": "/sequences/list",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

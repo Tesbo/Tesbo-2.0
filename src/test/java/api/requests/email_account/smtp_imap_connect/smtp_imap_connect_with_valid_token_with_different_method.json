@@ -1,0 +1,32 @@
+{
+  "endPoint": "/email-account/smtp-imap/connect",
+  "methodType" : "GET",
+  "header": {
+    "Content_Type": "application/json"
+  },
+  "body": {
+  "emailServiceProvider": "Yandex",
+  "fromName": "yab",
+  "payload":
+    {
+    "smtp":
+      {
+      "emailAddress":"shltddeal@yandex.com",
+      "password": "wkarohzhkkupjynh",
+      "host": "smtp.yandex.com",
+      "port": 465,
+      "encryption": "SSL",
+      "userName": "newtest"
+    },
+    "imap": {
+      "emailAddress": "shltddeal@yandex.com",
+      "password": "wkarohzhkkupjynh",
+      "host": "imap.yandex.com",
+      "port": 993,
+      "encryption": "SSL"
+    }
+  }
+},
+  "pathParameter": {},
+  "queryParameters": {}
+}

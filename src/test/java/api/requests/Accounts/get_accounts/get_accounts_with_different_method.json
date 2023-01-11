@@ -1,0 +1,8 @@
+{
+  "endPoint": "/accounts",
+  "methodType": "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

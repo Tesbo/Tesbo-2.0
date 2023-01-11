@@ -1,0 +1,10 @@
+{
+  "endPoint": "/schedules",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

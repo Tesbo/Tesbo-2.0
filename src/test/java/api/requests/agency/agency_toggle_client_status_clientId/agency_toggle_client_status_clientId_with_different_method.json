@@ -1,0 +1,10 @@
+{
+  "endPoint": "/agency/toggle-client-status/${clientId}",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {
+    "clientId": ""
+  },
+  "queryParameters": {}
+}

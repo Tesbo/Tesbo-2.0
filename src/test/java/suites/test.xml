@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="testRegression">
+    <test name="verify_add_agency_user_with_different_method_6668">
+        <classes>
+            <class name="api.tests.AddAgencyClientTest">
+                <methods>
+                    <include name="verify_add_agency_user_with_different_method"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify_add_agency_user_with_invalid_token_9688">
+        <classes>
+            <class name="api.tests.AddAgencyClientTest">
+                <methods>
+                    <include name="verify_add_agency_user_with_invalid_token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="auth_reset_password_with_different_content_type_5830">
+        <classes>
+            <class name="api.tests.AuthResetPasswordTest">
+                <methods>
+                    <include name="auth_reset_password_with_different_content_type"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

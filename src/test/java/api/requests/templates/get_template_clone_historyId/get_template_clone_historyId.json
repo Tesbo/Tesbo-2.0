@@ -1,0 +1,12 @@
+{
+  "endPoint": "/templates/clone/${templateHistoryId}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "templateHistoryId": ""
+  },
+  "queryParameters": {}
+}

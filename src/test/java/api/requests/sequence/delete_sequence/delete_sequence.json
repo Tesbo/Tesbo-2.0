@@ -1,0 +1,10 @@
+{
+  "endPoint": "/sequences/delete",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

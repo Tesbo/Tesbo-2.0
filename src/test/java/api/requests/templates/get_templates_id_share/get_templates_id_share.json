@@ -1,0 +1,12 @@
+{
+  "endPoint": "/templates/share/${templateId}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "templateId": ""
+  },
+  "queryParameters": {}
+}

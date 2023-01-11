@@ -1,0 +1,8 @@
+{
+  "endPoint": "/invoice-url",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

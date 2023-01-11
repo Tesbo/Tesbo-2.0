@@ -1,0 +1,10 @@
+{
+  "endPoint": "/user/freshworks-meta",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

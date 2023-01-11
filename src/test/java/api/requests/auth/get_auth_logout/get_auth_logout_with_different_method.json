@@ -1,0 +1,8 @@
+{
+  "endPoint": "/auth/logout",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

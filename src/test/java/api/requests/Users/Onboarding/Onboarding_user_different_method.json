@@ -1,0 +1,17 @@
+{
+  "endPoint": "/user/onboarding",
+  "methodType" : "GET",
+  "header": {
+    "Authorization": "",
+    "Content_Type": ""
+  },
+  "body": {
+    "phoneNumber": "879-877-8787",
+    "firstName": "Bob",
+    "lastName": "Bob",
+    "teamSize": "1-10",
+    "industry": "SaaS"
+  },
+  "pathParameter": {},
+  "queryParameter": {}
+}

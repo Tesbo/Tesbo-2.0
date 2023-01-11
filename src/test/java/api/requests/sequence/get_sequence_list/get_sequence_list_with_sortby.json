@@ -1,0 +1,12 @@
+{
+  "endPoint": "/sequences/list?sortBy=${sortBy}",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+   "sortBy": ""
+  }
+}

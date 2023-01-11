@@ -1,0 +1,8 @@
+{
+  "endPoint": "/sequences/list-owners",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

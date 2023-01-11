@@ -1,0 +1,84 @@
+{
+  "login_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//a[contains(text(),'Login')]"
+  },
+  "enter_otp_sent_to_your_email_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder = \"Enter OTP sent to your email\"]"
+  },
+  "a_quick_verification_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h3[contains(text(),'A quick verification')]"
+  },
+  "qabletest_gmail_com_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h3[contains(text(),'qabletest@gmail.com')]"
+  },
+  "verify_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[contains(text(),'Verify')]"
+  },
+  "gmailt":{
+  "objectGenerate": "generate",
+  "locator_type": "xpath",
+  "element_type": "text_box",
+  "platform": "web",
+  "web_locator": "//input[@id='identifierId']"
+
+},
+  "gmail_next":{
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//*[@id='identifierNext']/div/button"
+
+  },
+  "gmail_password":{
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@name='password']"
+
+  },
+  "gmail_password_next":{
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//*[@id='passwordNext']/div/button"
+
+  },
+  "gmail_subject_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[contains(.,\"OTP for Saleshandy Account is\")]"
+  },
+  "otp_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//div[@id = \":ns\"]//div//br[4]"
+
+  }
+}

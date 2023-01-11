@@ -1,0 +1,12 @@
+{
+  "endPoint": "/templates/${templateId}",
+  "methodType" : "DELETE",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "templateId": ""
+  },
+  "queryParameters": {}
+}

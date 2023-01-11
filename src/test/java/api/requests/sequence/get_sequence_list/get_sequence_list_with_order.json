@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/list?order=${order}",
+  "methodType" : "GET",
+  "header": {
+    "Content_Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+    "order": ""
+  }
+}

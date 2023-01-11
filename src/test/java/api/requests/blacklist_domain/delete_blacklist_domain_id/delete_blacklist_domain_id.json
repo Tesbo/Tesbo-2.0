@@ -1,0 +1,12 @@
+{
+  "endPoint": "/blacklist-domains/${domainId}",
+  "methodType" : "DELETE",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "domainId": ""
+  },
+  "queryParameters": {}
+}

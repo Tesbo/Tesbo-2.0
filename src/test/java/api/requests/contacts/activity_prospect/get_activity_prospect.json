@@ -1,0 +1,13 @@
+{
+  "endPoint": "/activity/prospect",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+    "contactId": ""
+  }
+}

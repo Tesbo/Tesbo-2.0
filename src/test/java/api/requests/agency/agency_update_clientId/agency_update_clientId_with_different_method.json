@@ -1,0 +1,10 @@
+{
+  "endPoint": "/agency/update-client/${clientId}",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {
+    "clientId": ""
+  },
+  "queryParameters": {}
+}

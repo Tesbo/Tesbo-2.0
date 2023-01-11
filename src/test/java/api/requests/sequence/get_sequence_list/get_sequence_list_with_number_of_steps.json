@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/list?numberOfSteps=${numberOfSteps}",
+  "methodType" : "GET",
+  "header": {
+    "Content_Type": "application/json"
+  },
+  "body": {},
+  "pathParameter": {
+  },
+  "queryParameters": {
+    "numberOfSteps": ""
+  }
+}

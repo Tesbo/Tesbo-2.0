@@ -1,0 +1,9 @@
+{
+  "endPoint": "/email-verification-credits/purchase",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

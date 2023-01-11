@@ -1,0 +1,11 @@
+{
+  "endPoint": "/subscription/reactivate",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

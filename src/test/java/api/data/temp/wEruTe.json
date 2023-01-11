@@ -1,0 +1,1 @@
+{"endPoint":"/agency/users/login","methodType":"POST","queryParameters":{},"header":{"content-type":"application/json"},"body":{"password":"P@ssword1","email":"testqable905@gmail.com"},"pathParameter":{}}

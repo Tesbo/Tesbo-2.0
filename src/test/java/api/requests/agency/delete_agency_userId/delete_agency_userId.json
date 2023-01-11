@@ -1,0 +1,10 @@
+{
+  "endPoint": "/agency/user/${agencyUserId}",
+  "methodType" : "DELETE",
+  "header": {},
+  "body": {},
+  "pathParameter": {
+    "agencyUserId": ""
+  },
+  "queryParameters": {}
+}

@@ -1,0 +1,1 @@
+{"endPoint":"/sequences/${sequenceId}/emails/export","methodType":"GET","queryParameters":{},"header":{"Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIwOTQsImlhdCI6MTY3MjgxMTI3MCwiZXhwIjoxNjc1NDAzMjcwfQ.c48tITsygYHxfwkZsVpgaggH3bN2qirK64HEDAPn6Es","content-type":"application/json"},"body":{},"pathParameter":{"sequenceId":"11787"}}

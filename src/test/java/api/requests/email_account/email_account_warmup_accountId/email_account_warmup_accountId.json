@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/email-warmup/${emailAccountId}",
+  "methodType" : "PATCH",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

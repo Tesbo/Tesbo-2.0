@@ -1,0 +1,9 @@
+{
+  "endPoint": "/email-account",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

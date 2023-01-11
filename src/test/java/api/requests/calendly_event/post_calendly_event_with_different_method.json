@@ -1,0 +1,8 @@
+{
+  "endPoint": "/calendly/event",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

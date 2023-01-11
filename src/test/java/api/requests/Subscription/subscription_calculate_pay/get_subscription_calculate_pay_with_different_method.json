@@ -1,0 +1,8 @@
+{
+  "endPoint": "/subscription/calculate-pay",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

@@ -1,0 +1,8 @@
+{
+  "endPoint": "/team/invite-user",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameters": {}
+}

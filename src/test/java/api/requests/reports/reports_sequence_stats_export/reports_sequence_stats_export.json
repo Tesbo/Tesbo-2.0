@@ -1,0 +1,8 @@
+{
+  "endPoint": "/reports/sequence-stats/export",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

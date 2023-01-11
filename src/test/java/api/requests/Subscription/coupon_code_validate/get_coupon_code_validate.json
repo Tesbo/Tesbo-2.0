@@ -1,0 +1,12 @@
+{
+  "endPoint": "/coupons/${code}/validate",
+  "methodType" : "GET",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+    "code": ""
+  },
+  "queryParameters": {}
+}

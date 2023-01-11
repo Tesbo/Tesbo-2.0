@@ -1,0 +1,8 @@
+{
+  "endPoint": "/agency/users",
+  "methodType" : "GET",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}

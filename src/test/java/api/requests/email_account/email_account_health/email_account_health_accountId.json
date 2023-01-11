@@ -1,0 +1,11 @@
+{
+  "endPoint": "/email-account/email-health/${emailAccountId}",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "emailAccountId": ""
+  },
+  "queryParameters": {}
+}

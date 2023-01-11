@@ -1,0 +1,13 @@
+{
+  "endPoint": "/sequences/${sequenceId}/emails/status-count",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {},
+  "pathParameter": {
+    "sequenceId": ""
+  },
+  "queryParameters": {
+    "stepId": ""
+  }
+}

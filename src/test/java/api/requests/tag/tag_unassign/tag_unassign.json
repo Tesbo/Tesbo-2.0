@@ -1,0 +1,11 @@
+{
+  "endPoint": "/tag/un-assign",
+  "methodType" : "POST",
+  "header": {
+  },
+  "body": {
+  },
+  "pathParameter": {
+  },
+  "queryParameters": {}
+}

@@ -1,0 +1,8 @@
+{
+  "endPoint": "/api-token",
+  "methodType" : "POST",
+  "header": {},
+  "body": {},
+  "pathParameter": {},
+  "queryParameter": {}
+}
