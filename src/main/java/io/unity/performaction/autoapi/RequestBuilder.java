@@ -36,12 +36,14 @@ public class RequestBuilder {
         Map Body = apiConfig.getBodyMap();
 
 
-        logs.test_step("<b>End Point</b> :  </br> <code>" + endPoint + "</code>");
+        logs.test_step("<b>End Point</b> :");
+        logs.add_code_step(endPoint);
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
 
 
-            logs.test_step("<b> Header : </b> </br> <code>" + Header + "</code>");
+            logs.test_step("<b> Header : </b> </br>");
+            logs.add_code_step(Header.toString());
 
 
             request = Unirest.get(endPoint).headers(Header);
@@ -52,8 +54,8 @@ public class RequestBuilder {
 
         if (apiConfig.getMethodType().equalsIgnoreCase("delete")) {
 
-            logs.test_step("<b> Header : </b> <code>" + apiConfig.getHeaderMap()+"</code>");
-
+            logs.test_step("<b> Header : </b>");
+            logs.add_code_step("" + apiConfig.getHeaderMap());
             request = Unirest.delete(endPoint).headers(apiConfig.getHeaderMap());
             response = request.asString();
             responseBody = (String) response.getBody();
@@ -63,9 +65,11 @@ public class RequestBuilder {
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
 
-            logs.test_step("<b> Header : </b> <code>" + Header+ "</code>");
+            logs.test_step("<b> Header : </b>");
+            logs.add_code_step("" + Header);
+            logs.test_step("<b> Body : </b>");
+            logs.add_code_step("" + apiConfig.getBodyMap());
 
-            logs.test_step("<b> Body : </b> <code>" + apiConfig.getBodyMap()+"</code>");
             request = Unirest.post(endPoint).headers(Header).body(apiConfig.getBodyMap());
             response = request.asString();
             responseBody = (String) response.getBody();
@@ -75,8 +79,10 @@ public class RequestBuilder {
 
         if (apiConfig.getMethodType().equalsIgnoreCase("patch")) {
 
-            logs.test_step("<b> Header : </b> <code>" + apiConfig.getHeaderMap()+"</code>");
-            logs.test_step("<b> Body : </b> <code>" + apiConfig.getBody().toString() + "</code>");
+            logs.test_step("<b> Header : </b>");
+            logs.add_code_step("" + Header);
+            logs.test_step("<b> Body : </b>");
+            logs.add_code_step("" + apiConfig.getBodyMap());
 
             request = Unirest.patch(endPoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBody().toString());
 
@@ -99,7 +105,8 @@ public class RequestBuilder {
             e.printStackTrace();
         }
         responseObject.put("statusCode", response.getStatus());
-        logs.test_step("<b> Response object : </b> <code>" + responseObject+ "</code>");
+        logs.test_step("<b> Response object : </b>");
+        logs.add_code_step("" + responseObject);
         return responseObject;
     }
 
@@ -112,10 +119,12 @@ public class RequestBuilder {
         HttpRequest request = null;
         GetApiConfig apiConfig = new GetApiConfig(requestName);
 
-        logs.test_step("<b>Performing Request : </b> <code>" + requestName+ "</code>");
-        logs.test_step("<b>Request End Point : </b> <code>" + requestName+"</code>");
-        logs.test_step("<b>Request Headers : </b> <code>" + apiConfig.getHeaderMap()+"</code>");
-
+        logs.test_step("<b>Performing Request : </b>");
+        logs.add_code_step(requestName);
+        logs.test_step("<b>Request End Point : </b> " + requestName + "");
+        logs.add_code_step(requestName);
+        logs.test_step("<b>Request Headers : </b> ");
+        logs.add_code_step(apiConfig.getHeaderMap().toString());
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
             request = Unirest.get(endpoint).headers(apiConfig.getHeaderMap());
@@ -124,19 +133,15 @@ public class RequestBuilder {
 
         }
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
-            logs.test_step("<b> Request body : </b> <code>" + apiConfig.getHeaderMap()+ "</code>");
-            System.out.println(apiConfig.getHeaderMap());
-            System.out.println(apiConfig.getBody());
-
-
+            logs.test_step("<b> Request body : </b> " + apiConfig.getHeaderMap());
+            logs.add_code_step(apiConfig.getHeaderMap().toString());
             request = Unirest.post(endpoint).headers(apiConfig.getHeaderMap()).body(apiConfig.getBodyMap());
-
             response = request.asString();
             responseBody = (String) response.getBody();
-
         }
 
         logs.test_step("<b>getting response : </b>");
+
         JSONParser parser = new JSONParser();
         try {
             responseObject = (JSONObject) parser.parse(responseBody);
@@ -144,7 +149,9 @@ public class RequestBuilder {
             e.printStackTrace();
         }
         responseObject.put("statusCode", response.getStatus());
-        logs.test_step("<b>Response object : </b> <code>" + responseObject + "</code>");
+        logs.test_step("<b>Response object :</b>");
+        logs.add_code_step("" + responseObject);
+
         return responseObject;
     }
 
@@ -156,9 +163,9 @@ public class RequestBuilder {
         HttpRequest request = null;
         GetApiConfig apiConfig = new GetApiConfig(requestName);
 
-        logs.test_step("<b> Performing Request : </br> <code>" + requestName+ "</code>");
-        logs.test_step("<b> Request End Point : </br> <code>" + requestName+ "</code>");
-        logs.test_step("<b> Request Headers :  </br> <code>" + headers+"</code>");
+        logs.test_step("<b> Performing Request : </br> <code>" + requestName + "</code>");
+        logs.test_step("<b> Request End Point : </br> <code>" + requestName + "</code>");
+        logs.test_step("<b> Request Headers :  </br> <code>" + headers + "</code>");
 
         if (apiConfig.getMethodType().equalsIgnoreCase("get")) {
             request = Unirest.get(apiConfig.getEndPoint()).headers(headers);
@@ -167,7 +174,7 @@ public class RequestBuilder {
         }
 
         if (apiConfig.getMethodType().equalsIgnoreCase("post")) {
-            logs.test_step("<b>Request body : </b> <code>" + headers+"</code>");
+            logs.test_step("<b>Request body : </b> <code>" + headers + "</code>");
 
 
             request = Unirest.post(apiConfig.getEndPoint()).headers(headers).body(body);
@@ -183,8 +190,8 @@ public class RequestBuilder {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        logs.test_step("<b>Response object : </b> <code>" + responseObject+"</code>");
-        responseObject.put("<b>statusCode</b> <code>", response.getStatus()+"</code>");
+        logs.test_step("<b>Response object : </b> <code>" + responseObject + "</code>");
+        responseObject.put("<b>statusCode</b> <code>", response.getStatus() + "</code>");
         return responseObject;
     }
 
@@ -290,6 +297,7 @@ public class RequestBuilder {
 
         return updatedFile.getAbsolutePath();
     }
+
     public String updateRequestObject(String fileName, JSONObject pathParameter, JSONObject queryParameter, JSONObject header, JSONObject body) {
         String folder_path = createTempFolder();
         GetApiConfig config = new GetApiConfig(fileName);
