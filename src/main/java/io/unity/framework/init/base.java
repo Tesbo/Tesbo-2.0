@@ -24,6 +24,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.tinylog.Logger;
@@ -52,15 +53,9 @@ public class base {
 public static String build_Name;
 
     @BeforeSuite
-    public void beforeSuiteWorks()
+    public WebDriver init()
     {
-
         build_Name = "Build_" + TestData.getTodayDateinFormat("dd-MMM-yyyy");
-
-    }
-    @BeforeMethod
-    public WebDriver init() {
-
         try {
             if (TestRunner.currentConfig.equals("")) {
                 TestRunner.currentConfig = config.getRunConfig();
@@ -70,38 +65,22 @@ public static String build_Name;
 
             Logger.info("Base config to run : " + TestRunner.currentConfig);
 
-            if (platform.equalsIgnoreCase("web")) {
-
-                if (config.isGrid(TestRunner.currentConfig)) {
-                    setup_browser_for_grid(TestRunner.currentConfig);
-                } else {
-                    setup_browser(TestRunner.currentConfig);
-                }
-                env = config.getEnv(TestRunner.currentConfig);
-                browser = new Browser(driver);
-                browser.open_url(env);
-
-                if (config.isAPITestConfigEnable(TestRunner.currentConfig)) {
-                    Unirest.config().defaultBaseUrl(config.getAPIEnv(TestRunner.currentConfig));
-                }
-            } else if (platform.equalsIgnoreCase("android")) {
+            if (platform.equalsIgnoreCase("android")) {
                 System.out.println("Inside android");
                 setup_android(TestRunner.currentConfig);
             } else if (platform.equalsIgnoreCase("iOS")) {
                 System.out.println("Inside iOS");
                 setup_iOS(TestRunner.currentConfig);
 
-            } else if (platform.equalsIgnoreCase("api")) {
-                Unirest.config().defaultBaseUrl(config.getAPIEnvDirect(TestRunner.currentConfig));
-            } else {
-               Logger.info("Platform type you entered is not supported");
+            }else {
+                Logger.info("Platform type you entered is not supported");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return driver;
-    }
 
+    }
     public WebDriver init(String config_name) {
 
         try {
@@ -331,13 +310,9 @@ public static String build_Name;
     @AfterMethod
     public void tear_down(ITestResult result) {
 
-
         if (ITestResult.FAILURE == result.getStatus()) {
             try {
-
                 if (!platform.equalsIgnoreCase("api")) {
-
-
                     TakesScreenshot screenshot = (TakesScreenshot) driver;
                     File src = screenshot.getScreenshotAs(OutputType.FILE);
                     file = new File("src/test/resources/failed_test_screenshot/" + result.getName() + "_" + TestData.random_alpha_numeric_string(5) + ".png");
@@ -345,28 +320,12 @@ public static String build_Name;
 
                     logs.test_result(false);
                     logs.test_step("<img src=\"" + file.getAbsolutePath() + "\" alt=\"test\" width=\"1024\" height=\"640\">");
-
-
                 }
 
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-
-
-        if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("web")) {
-            if (config.get_grid_platForm(TestRunner.currentConfig).equalsIgnoreCase("lambdatest")) {
-                LambdaTestConfig config = new LambdaTestConfig(driver);
-                if (ITestResult.FAILURE == result.getStatus()) {
-                    config.markTestFailed();
-                } else {
-                    config.markTestPassed();
-                }
-
-            }
-
         }
 
 
@@ -384,13 +343,14 @@ public static String build_Name;
         }
 
 
+
+    }
+    @AfterSuite
+    public void afterSuite(){
         if (!platform.equalsIgnoreCase("api")) {
             driver.quit();
         }
-
-
     }
-
 
     public void suiteTearDown() {
         if (platform.equalsIgnoreCase("api")) {
