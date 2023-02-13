@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>TestMan</groupId>
-    <artifactId>framework-core</artifactId>
+    <artifactId>framework-core-kotak</artifactId>
 
-    <version>2.0.50.5</version>
+    <version>0.0.1</version>
 
 
     <distributionManagement>
