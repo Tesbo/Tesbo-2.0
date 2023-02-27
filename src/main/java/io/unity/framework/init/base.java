@@ -2,6 +2,9 @@ package io.unity.framework.init;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.framework.data.TestData;
 import io.unity.framework.readers.json_file_reader;
@@ -44,12 +47,16 @@ public class base {
     String execution_on = "";
     public Browser browser;
 
+    AppiumDriverLocalService service;
+
+    Utility utility = new Utility();
 
     public WebDriver driver;
     json_file_reader config = new json_file_reader();
     testng_logs logs = new testng_logs();
+    AndroidParallel androidParallel = new AndroidParallel();
 
-public static String build_Name;
+    public static String build_Name;
 
     @BeforeSuite
     public void beforeSuiteWorks()
@@ -86,7 +93,13 @@ public static String build_Name;
                 }
             } else if (platform.equalsIgnoreCase("android")) {
                 System.out.println("Inside android");
-                setup_android(TestRunner.currentConfig);
+                int i = 0;
+                if(config.isMobileParallelConfigEnable(TestRunner.currentConfig)==true){
+                    androidParallel.setup_android_parallel(TestRunner.currentConfig);
+                }
+                else {
+                    setup_android(TestRunner.currentConfig);
+                }
             } else if (platform.equalsIgnoreCase("iOS")) {
                 System.out.println("Inside iOS");
                 setup_iOS(TestRunner.currentConfig);
@@ -292,9 +305,11 @@ public static String build_Name;
 
         } else {
             capabilities.setCapability("appium:app", config.get_final_app_path(configName));
-        }
 
+        }
         try {
+            this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Atul Sharma\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress("127.0.0.1").withArgument(GeneralServerFlag.BASEPATH,"/wd/hub").usingPort(utility.generateRandomPort()).build();
+            service.start();
             driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -375,10 +390,19 @@ public static String build_Name;
                 LambdaTestConfig config = new LambdaTestConfig(driver);
                 if (ITestResult.FAILURE == result.getStatus()) {
                     config.markTestFailed();
+                    androidParallel.kill_appium_servers();
                 } else {
                     config.markTestPassed();
+                    androidParallel.kill_appium_servers();
                 }
 
+            }
+            else if(config.get_appium_platform(TestRunner.currentConfig).equalsIgnoreCase("local")){
+                if(config.isMobileParallelConfigEnable(TestRunner.currentConfig)==true){
+                    androidParallel.kill_appium_servers();
+                }
+                else {
+                }
             }
 
         }

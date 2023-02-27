@@ -73,6 +73,7 @@ public class json_file_reader {
         return (boolean) getAPIConfig(configName).get("enable");
     }
 
+
     public String getAPIEnv(String configName) {
 
         return (String) getAPIConfig(configName).get("env");
@@ -162,6 +163,7 @@ public class json_file_reader {
     }
 
 
+
     public String get_final_app_path(String configName) {
 
         String app_path = "";
@@ -190,7 +192,19 @@ public class json_file_reader {
         return getConfigObject(TestRunner.currentConfig).getString("env");
     }
 
+    //___________________________For Appium Parallel Sessions_______________________//
+    public boolean isMobileParallelConfigEnable(String configName) {
 
+        return (boolean) getConfigObject(configName).get("mobile_parallel");
+    }
+
+    public int getNoOfMobileDevices(String configName) {
+        return (int) getConfigObject(configName).get("mobile_devices");
+    }
+    public JSONObject get_mobile_parallel_capabilities(String configName,int i) {
+        JSONArray capabiliteArray = getConfigObject(configName).getJSONArray("mobile_parallel_capabilities");
+        return (JSONObject) capabiliteArray.get(i);
+    }
 
    /* public String getExecutionOn() {
         JSONObject object = getTestConfig();
