@@ -5,7 +5,9 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.unity.framework.readers.json_file_reader;
+import org.json.JSONArray;
 import org.json.JSONObject;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -26,18 +28,30 @@ public class AndroidParallel{
     public AppiumDriverLocalService[] servers = new AppiumDriverLocalService[20];
     int[] ports = new int[20];
     AndroidDriver drivers[] = new AndroidDriver[20];
-    DesiredCapabilities capabilities_android[] = new DesiredCapabilities[20];
+    JSONArray capabilities_android = new JSONArray();
 
     public AndroidDriver start_appium_servers() throws MalformedURLException {
         int count=0;
         while(servers[count]!=null){
-            System.out.println(capabilities_android[count]+" "+count);
             servers[count].start();
-            driver = new AndroidDriver(new URL("http://" + ip+ ":" + ports[count] + "" + base_path), capabilities_android[count]);
+//            servers[count].stop();
+            System.out.println(count+"servers ****************"+"for Index "+count+" "+servers[count]);
+            System.out.println(count+"capabilities_android ****************"+"for Index "+count+" "+capabilities_android.get(count));
+            System.out.println(count+"ports ****************"+"for Index "+count+" "+ports[count]);
+
+
+            driver = new AndroidDriver(new URL("http://" + ip+ ":" + ports[count] + "" + base_path), (Capabilities) capabilities_android.get(count));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
             count++;
-            return (AndroidDriver) driver;
         }
+        return null;
+    }
+    public AndroidDriver start_appium_server(AppiumDriverLocalService local_service,DesiredCapabilities capability,int port_number,String local_ip) throws MalformedURLException {
+        System.out.println("capability"+capability);
+        System.out.println("port_number"+port_number);
+        capabilities_android.put(capability);
+        local_service.start();
+        driver = new AndroidDriver(new URL("http://" + local_ip+ ":" + port_number + "" + base_path), capability);
         return null;
     }
     public void kill_appium_servers(){
@@ -59,26 +73,49 @@ public class AndroidParallel{
         return capabilities;
     }
 
+    public DesiredCapabilities get_capability_1(String configName){
+        JSONArray capabilityListObject = config.get_mobile_parallel_capabilities_array(configName);
+
+        capabilities.setCapability("appium:app", config.get_final_app_path(configName));
+        return capabilities;
+    }
+
     public AndroidDriver setup_android_parallel(String configName) throws MalformedURLException {
         System.out.println("In Android Parallel");
 
-       try {
+        /////////////OLD COde
+     /*  try {
            int i=0;
+           int j=0;
            while(i<config.getNoOfMobileDevices(configName)) {
                capabilities = get_capability(configName,i);
-               capabilities_android[i] = capabilities;
+//               capabilities_android[i] = capabilities;
+               String ipAgain = "127.0.0."+i;
+               capabilities_android.put(i,capabilities);
+               int port = utility.generateRandomPort();
+               String appium_url= "http://" + ipAgain+ ":" + port + "" + base_path;
+               System.out.println("Appium URL "+appium_url);
+               AppiumDriverLocalService service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Atul Sharma\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress(ipAgain).withArgument(GeneralServerFlag.BASEPATH,base_path).usingPort(port).build();
+               servers[i] = service;
+               ports[i] = port;
+               i++;
+//               return start_appium_server(service,capabilities,port,ipAgain);
+           }*/
+        /////////////New COde
+           try {
+               capabilities = get_capability(configName,i);
+//               String ipAgain = "127.0.0."+i;
                int port = utility.generateRandomPort();
                String appium_url= "http://" + ip+ ":" + port + "" + base_path;
                System.out.println("Appium URL "+appium_url);
                AppiumDriverLocalService service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Atul Sharma\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress(ip).withArgument(GeneralServerFlag.BASEPATH,base_path).usingPort(port).build();
-               servers[i] = service;
-               ports[i] = port;
-               i++;
-           }
+               service.start();
+               driver = new AndroidDriver(new URL(appium_url), capabilities);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return start_appium_servers();
+//        return start_appium_servers();
+        return null;
     }
 
 }

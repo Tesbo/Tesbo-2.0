@@ -9,18 +9,18 @@
       "mobile_parallel_capabilities": [
         {
           "platformName": "Android",
-          "appium:deviceName": "ec92755d",
+          "appium:deviceName": "R9ZT205C2SV",
           "appium:deviceOrientation": "portrait",
-          "appium:platformVersion": "9.0",
+          "appium:platformVersion": "12.0",
           "appium:autoGrantPermissions": true,
           "appium:noReset": true,
           "WaitForQuiescence":false
         },
         {
           "platformName": "Android",
-          "appium:deviceName": "Atul",
+          "appium:deviceName": "8xi7dmbi8xais4x4",
           "appium:deviceOrientation": "portrait",
-          "appium:platformVersion": "9.0",
+          "appium:platformVersion": "11.0",
           "appium:autoGrantPermissions": true,
           "appium:noReset": true,
           "WaitForQuiescence":false

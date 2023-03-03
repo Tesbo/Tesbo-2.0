@@ -206,6 +206,10 @@ public class json_file_reader {
         return (JSONObject) capabiliteArray.get(i);
     }
 
+    public JSONArray get_mobile_parallel_capabilities_array(String configName) {
+        return getConfigObject(configName).getJSONArray("mobile_parallel_capabilities");
+    }
+
    /* public String getExecutionOn() {
         JSONObject object = getTestConfig();
         return object.getString("executionOn");

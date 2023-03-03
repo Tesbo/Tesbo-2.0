@@ -15,6 +15,7 @@ import io.unity.performaction.autoweb.testng_logs;
 import kong.unirest.Unirest;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +45,9 @@ public class base {
     String env = "";
     String platform = "";
     String browserName = "";
+
+    final String ip = "127.0.0.1";
+    final String base_path = "/wd/hub";
     String execution_on = "";
     public Browser browser;
 
@@ -93,13 +97,14 @@ public class base {
                 }
             } else if (platform.equalsIgnoreCase("android")) {
                 System.out.println("Inside android");
-                int i = 0;
-                if(config.isMobileParallelConfigEnable(TestRunner.currentConfig)==true){
-                    androidParallel.setup_android_parallel(TestRunner.currentConfig);
-                }
-                else {
-                    setup_android(TestRunner.currentConfig);
-                }
+//                int i = 0;
+//                if(config.isMobileParallelConfigEnable(TestRunner.currentConfig)==true){
+//                    androidParallel.setup_android_parallel(TestRunner.currentConfig);
+//                }
+//                else {
+//                    setup_android(TestRunner.currentConfig);
+//                }
+                setup_android(TestRunner.currentConfig);
             } else if (platform.equalsIgnoreCase("iOS")) {
                 System.out.println("Inside iOS");
                 setup_iOS(TestRunner.currentConfig);
@@ -273,11 +278,30 @@ public class base {
         return driver;
     }
 
-
+    static int device_counter = 0;
+    static boolean flag = false;
     public AndroidDriver setup_android(String configName) {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        JSONObject capabilityList = config.get_capabilities(configName);
+
+        JSONObject capabilityList = null;
+        if(config.isMobileParallelConfigEnable(configName)) {
+            synchronized (this) {
+//                capabilityList = config.get_mobile_parallel_capabilities(configName, device_counter);
+//                System.out.println("Capabilities : "+device_counter+" "+capabilityList);
+                if(config.getNoOfMobileDevices(configName) > device_counter) {
+                    capabilityList = config.get_mobile_parallel_capabilities(configName, device_counter);
+                    System.out.println("Capabilities : "+device_counter+" "+capabilityList);
+                    device_counter++;
+                }
+                else{
+                    device_counter=0;
+                }
+            }
+        }else {
+
+        }
+
 
         Iterator itr = capabilityList.keySet().iterator();
 
@@ -308,16 +332,22 @@ public class base {
 
         }
         try {
-            this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Atul Sharma\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress("127.0.0.1").withArgument(GeneralServerFlag.BASEPATH,"/wd/hub").usingPort(utility.generateRandomPort()).build();
-            service.start();
-            driver = new AndroidDriver(new URL(config.get_appium_url(configName)), capabilities);
+            int port = utility.generateRandomPort();
+            String appium_url= "http://" + ip+ ":" + port + "" + base_path;
+            System.out.println("Appium URL "+appium_url);
+            this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Atul Sharma\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress(ip).withArgument(GeneralServerFlag.BASEPATH,base_path).usingPort(port).build();
+            this.service.start();
+            driver = new AndroidDriver(new URL(appium_url), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
         return (AndroidDriver) driver;
     }
+
 
     public IOSDriver setup_iOS(String configName) {
 
