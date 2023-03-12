@@ -1,0 +1,122 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Profile Module Testing" parallel="methods" thread-count="2">
+
+    <test name = "profileScreen">
+        <classes>
+            <class name = "mobile.tests.profileScreenTest.profileScreenTest" />
+<!--            <class name = "mobile.tests.HomeScreen.HomeScreenTest" />-->
+<!--            <class name = "mobile.tests.BlockCard.BlockCard" />-->
+
+
+            <!--                <methods>-->
+<!--                    <include name="profileScreen"></include>-->
+<!--                </methods>-->
+<!--                <methods>-->
+<!--                    <include name="to_verify_profile_personal_mail_verification_functionality"></include>-->
+<!--                </methods>-->
+        </classes>
+    </test>
+
+<!--    <test name = "to_verify_profile_personal_mail_verification_functionality">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="to_verify_profile_personal_mail_verification_functionality"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "Profile_Email_ID_already_added_functionality">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="Profile_Email_ID_already_added_functionality"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "verify_resend_code_button_functionality">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="verify_resend_code_button_functionality"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "Profile_Email_ID_NOT_added_functionality_for_valid_email_id">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="Profile_Email_ID_NOT_added_functionality_for_valid_email_id"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "Profile_Email_ID_NOT_added_functionality_for_invalid_email_id">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="Profile_Email_ID_NOT_added_functionality_for_invalid_email_id"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "Profile_Email_ID_NOT_added_functionality_for_blank_email">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="Profile_Email_ID_NOT_added_functionality_for_blank_email"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "To_verify_enter_verification_code_screen">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="To_verify_enter_verification_code_screen"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "To_verify_the_OTP_field_with_invalid_data">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="To_verify_the_OTP_field_with_invalid_data"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "verify_profile_personal_details">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="verify_profile_personal_details"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "profile_personal_change_mpin_functionality">-->
+<!--        <classes>-->
+<!--            <class name = "mobile.tests.profileScreenTest.profileScreenTest" >-->
+<!--                <methods>-->
+<!--                    <include name="profile_personal_change_mpin_functionality"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+</suite>

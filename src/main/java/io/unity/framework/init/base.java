@@ -60,6 +60,8 @@ public class base {
     testng_logs logs = new testng_logs();
     AndroidParallel androidParallel = new AndroidParallel();
 
+    JSONObject capabilityList = null;
+
     public static String build_Name;
 
     @BeforeSuite
@@ -280,19 +282,25 @@ public class base {
 
     static int device_counter = 0;
     static boolean flag = false;
-    public AndroidDriver setup_android(String configName) {
+    public AndroidDriver setup_android(String configName) throws InterruptedException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        JSONObject capabilityList = null;
         if(config.isMobileParallelConfigEnable(configName)) {
             synchronized (this) {
 //                capabilityList = config.get_mobile_parallel_capabilities(configName, device_counter);
 //                System.out.println("Capabilities : "+device_counter+" "+capabilityList);
                 if(config.getNoOfMobileDevices(configName) > device_counter) {
                     capabilityList = config.get_mobile_parallel_capabilities(configName, device_counter);
-                    System.out.println("Capabilities : "+device_counter+" "+capabilityList);
-                    device_counter++;
+                        System.out.println("Capabilities : " + device_counter + " " + capabilityList);
+                    Iterator itr = capabilityList.keySet().iterator();
+
+                    while (itr.hasNext()) {
+                        String key = (String) itr.next();
+                        capabilities.setCapability(key, capabilityList.get(key));
+                    }
+                    androidParallel.setCapabilities(capabilities);
+                        device_counter++;
                 }
                 else{
                     device_counter=0;
@@ -303,12 +311,12 @@ public class base {
         }
 
 
-        Iterator itr = capabilityList.keySet().iterator();
-
-        while (itr.hasNext()) {
-            String key = (String) itr.next();
-            capabilities.setCapability(key, capabilityList.get(key));
-        }
+//        Iterator itr = capabilityList.keySet().iterator();
+//
+//        while (itr.hasNext()) {
+//            String key = (String) itr.next();
+//            capabilities.setCapability(key, capabilityList.get(key));
+//        }
 
         if (config.get_appium_platform(configName).equalsIgnoreCase("lambdaTest")) {
 
@@ -332,6 +340,7 @@ public class base {
 
         }
         try {
+            System.out.println("****"+capabilities);
             int port = utility.generateRandomPort();
             String appium_url= "http://" + ip+ ":" + port + "" + base_path;
             System.out.println("Appium URL "+appium_url);
@@ -344,7 +353,6 @@ public class base {
 
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-
         return (AndroidDriver) driver;
     }
 
