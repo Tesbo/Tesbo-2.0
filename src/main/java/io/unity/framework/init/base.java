@@ -147,8 +147,10 @@ public static String build_Name;
         browserName = config.getBrowser(configName);
         System.out.println("browser name :" + browserName);
         if (browserName.equalsIgnoreCase("chrome")) {
+            ChromeOptions ops = new ChromeOptions();
+            ops.addArguments("--remote-allow-origins=*");
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(ops);
             System.out.println("Inside chrome");
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
