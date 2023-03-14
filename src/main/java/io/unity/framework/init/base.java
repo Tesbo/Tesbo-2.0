@@ -299,7 +299,6 @@ public class base {
                         String key = (String) itr.next();
                         capabilities.setCapability(key, capabilityList.get(key));
                     }
-                    androidParallel.setCapabilities(capabilities);
                         device_counter++;
                 }
                 else{
@@ -339,19 +338,18 @@ public class base {
             capabilities.setCapability("appium:app", config.get_final_app_path(configName));
 
         }
+
         try {
             System.out.println("****"+capabilities);
             int port = utility.generateRandomPort();
             String appium_url= "http://" + ip+ ":" + port + "" + base_path;
             System.out.println("Appium URL "+appium_url);
-            this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Atul Sharma\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress(ip).withArgument(GeneralServerFlag.BASEPATH,base_path).usingPort(port).build();
+            this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Automation\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress(ip).withArgument(GeneralServerFlag.BASEPATH,base_path).usingPort(port).withTimeout(Duration.ofMinutes(10)).build();
             this.service.start();
             driver = new AndroidDriver(new URL(appium_url), capabilities);
-        } catch (MalformedURLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         return (AndroidDriver) driver;
     }
@@ -437,7 +435,9 @@ public class base {
             }
             else if(config.get_appium_platform(TestRunner.currentConfig).equalsIgnoreCase("local")){
                 if(config.isMobileParallelConfigEnable(TestRunner.currentConfig)==true){
-                    androidParallel.kill_appium_servers();
+//                    androidParallel.kill_appium_servers();
+//                    driver.quit();
+//                    this.service.stop(); //Will nUncomment this in some time
                 }
                 else {
                 }
