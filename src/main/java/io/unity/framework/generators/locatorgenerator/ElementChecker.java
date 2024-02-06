@@ -1,6 +1,5 @@
 package io.unity.framework.generators.locatorgenerator;
 
-import io.unity.framework.generators.locatorgenerator.xPathValidator;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Element;
@@ -10,8 +9,8 @@ import java.util.ArrayList;
 public class ElementChecker {
 
     public ArrayList getElementList(Element element) {
-        xPathGenerator generator = new xPathGenerator();
-        xPathValidator validator = new xPathValidator();
+        XPathGenerator generator = new XPathGenerator();
+        XPathValidator validator = new XPathValidator();
         ArrayList list = new ArrayList();
 
 

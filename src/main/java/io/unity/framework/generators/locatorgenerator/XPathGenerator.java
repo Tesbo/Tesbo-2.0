@@ -2,7 +2,7 @@ package io.unity.framework.generators.locatorgenerator;
 
 import org.jsoup.nodes.Element;
 
-public class xPathGenerator {
+public class XPathGenerator {
 
     public String generateXpathBasedOnIdWithoutNode(Element element) {
         String xpath = "//*[@id='" + element.attr("id") + "']";

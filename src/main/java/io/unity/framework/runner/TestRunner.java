@@ -2,9 +2,8 @@ package io.unity.framework.runner;
 
 import com.beust.jcommander.JCommander;
 import io.tesbo.report.ReportGenerator;
-import io.tesbo.report.RequestBuilder;
 import io.unity.framework.readers.CommandlineOption;
-import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.readers.JsonFileReader;
 import org.json.JSONArray;
 import org.testng.TestNG;
 
@@ -34,10 +33,11 @@ public class TestRunner {
     public void start(String[] args) {
 
         TestNG testng = new TestNG();
-        json_file_reader config = new json_file_reader();
+        JsonFileReader config = new JsonFileReader();
         try {
 
-            String configToRun = addCommandLine(args);
+
+            String configToRun =addCommandLine(args);
 
 
             String pathSeparator = FileSystems.getDefault().getSeparator();
@@ -68,21 +68,25 @@ public class TestRunner {
         }
 
         try {
-            testng.run();
+                  testng.run();
         } catch (Exception e) {
             e.printStackTrace();
 
         }
 
 
-
         try {
             ReportGenerator generator = new ReportGenerator();
-            generator.generateReportDirectly(config.getReportKey(currentConfig), config.getCurrentReportDirectory(), config.getPlatform(currentConfig), config.getBrowser(currentConfig), "", "");
-        }catch (Exception e)
-        {
-
+            generator.generateTestNGReportDirectly(config.getReportKey(currentConfig), config.getCurrentReportDirectory(), config.getPlatform(currentConfig), config.getBrowser(currentConfig), "", "");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
+    }
+
+    public static void main(String[] args) {
+        TestRunner runner = new TestRunner();
+
+        runner.start(args);
     }
 }

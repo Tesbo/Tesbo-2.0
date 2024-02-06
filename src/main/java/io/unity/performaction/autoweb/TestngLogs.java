@@ -3,9 +3,8 @@ package io.unity.performaction.autoweb;
 
 import org.testng.Reporter;
 import org.tinylog.Logger;
-import org.tinylog.configuration.Configuration;
 
-public class testng_logs {
+public class TestngLogs {
 
 
     public void test_step(String message) {

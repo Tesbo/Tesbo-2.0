@@ -21,7 +21,7 @@ public class PageObject {
         String pageDom = Browser.driver.getPageSource();
 
 
-        io.unity.Utils utility = new io.unity.Utils();
+        Utils utility = new Utils();
         String pageTitle = utility.getFormattedTextName(Browser.driver.getTitle()) + ".json";
 
 
@@ -41,7 +41,7 @@ public class PageObject {
 
         Document doc = Jsoup.parse(dom);
 
-        xPathGenerator generator = new xPathGenerator();
+        XPathGenerator generator = new XPathGenerator();
 
 
         String currentPath = "";

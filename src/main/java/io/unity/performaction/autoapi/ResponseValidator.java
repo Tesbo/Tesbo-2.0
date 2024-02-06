@@ -3,16 +3,16 @@ package io.unity.performaction.autoapi;
 import com.jayway.jsonpath.JsonPath;
 import io.unity.framework.exception.ResponseTimeAssertionException;
 import io.unity.framework.readers.GetApiConfig;
-import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.readers.JsonFileReader;
 import io.unity.framework.runner.TestRunner;
-import io.unity.performaction.autoweb.testng_logs;
+import io.unity.performaction.autoweb.TestngLogs;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 
 public class ResponseValidator {
 
     JSONObject response;
-    testng_logs logs = new testng_logs();
+    TestngLogs logs = new TestngLogs();
 
 
     public ResponseValidator(JSONObject response) {
@@ -35,7 +35,7 @@ public class ResponseValidator {
 
     public void validateResponseTime(Object apiResponseTime) {
         Long responseTime = (Long) apiResponseTime;
-        json_file_reader reader = new json_file_reader();
+        JsonFileReader reader = new JsonFileReader();
 
         if (reader.isTimeAssertionEnable(TestRunner.currentConfig)) {
 
@@ -56,7 +56,7 @@ public class ResponseValidator {
     public void validateResponseTime(Object ExpectedTime, Object ActualTime) {
         Long expectedTime = (Long) ExpectedTime;
         Long actualTime = (Long) ActualTime;
-        json_file_reader reader = new json_file_reader();
+        JsonFileReader reader = new JsonFileReader();
 
         if (actualTime <= expectedTime) {
 

@@ -2,7 +2,7 @@ package io.unity.framework.generators.locatorgenerator;
 
 import org.openqa.selenium.By;
 
-public class xPathValidator {
+public class XPathValidator {
 
 
     public boolean isxPathIsVisible(String xPath) {

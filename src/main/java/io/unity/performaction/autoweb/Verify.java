@@ -1,7 +1,7 @@
 package io.unity.performaction.autoweb;
 
 
-import io.unity.framework.exception.list_size_not_matching_exception;
+import io.unity.framework.exception.ListSizeNotMatchingException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -16,7 +16,7 @@ public class Verify {
 
     WebDriver driver;
     Element element;
-    testng_logs logs = new testng_logs();
+    TestngLogs logs = new TestngLogs();
 
     public Verify(WebDriver dri) {
         this.driver = dri;
@@ -137,7 +137,7 @@ public class Verify {
         return actual_list;
     }
 
-    public void element_text_is_in_alphabetical_order(String element_name, ArrayList<String> list_to_verify) throws list_size_not_matching_exception {
+    public void element_text_is_in_alphabetical_order(String element_name, ArrayList<String> list_to_verify) throws ListSizeNotMatchingException {
         List<WebElement> elements_list = element.find_multiple_elements(element_name);
         ArrayList<String> actual_list = convert_web_element_to_string_list(elements_list);
 
@@ -157,7 +157,7 @@ public class Verify {
             }
         } else {
             bool = false;
-            throw new list_size_not_matching_exception("Element List on page is not matching with the Given List");
+            throw new ListSizeNotMatchingException("Element List on page is not matching with the Given List");
         }
         assertThat(bool).isTrue();
 

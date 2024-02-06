@@ -7,8 +7,7 @@
     <groupId>io.tesbo</groupId>
     <artifactId>framework-core</artifactId>
 
-    <version>2.2.1</version>
-
+    <version>2.2.7</version>
 
     <distributionManagement>
         <repository>
@@ -65,10 +64,8 @@
         <dependency>
             <groupId>io.tesbo</groupId>
             <artifactId>Report-Adaptor</artifactId>
-            <version>3.0.0</version>
+            <version>3.5.0</version>
         </dependency>
-
-
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -92,7 +89,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.3.0</version>
+            <version>4.8.0</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
@@ -126,7 +123,7 @@
         <dependency>
             <groupId>com.github.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>8.1.1</version>
+            <version>8.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.forge.roaster</groupId>
@@ -152,20 +149,7 @@
             <version>2.4.1</version>
         </dependency>
 
-        <!--
-                <dependency>
-                    <groupId>io.unity.framework.generators.methodsgenerator</groupId>
-                    <artifactId>object_repository_generator</artifactId>
-                    <version>1.0.5</version>
-                </dependency>-->
 
-        <!--      <dependency>
-                  <groupId>io.unity.framework.generators.methodsgenerator</groupId>
-                  <artifactId>image-comparision</artifactId>
-                  <version>0.0.12</version>
-              </dependency>-->
-
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>

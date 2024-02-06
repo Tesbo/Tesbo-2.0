@@ -3,7 +3,7 @@ package io.unity.performaction.autoweb;
 
 import com.google.common.net.MediaType;
 import io.appium.java_client.AppiumBy;
-import io.unity.framework.exception.locator_validation_exception;
+import io.unity.framework.exception.LocatorValidationException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,7 +29,7 @@ import static org.openqa.selenium.remote.http.Contents.utf8String;
 public class Element {
 
     WebDriver driver;
-    testng_logs logs = new testng_logs();
+    TestngLogs logs = new TestngLogs();
 
 
     public Element(WebDriver dri) {
@@ -91,7 +91,7 @@ public class Element {
         return element;
     }
 
-    public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws locator_validation_exception {
+    public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws LocatorValidationException {
         WebElement element = null;
         locator_reader reader = new locator_reader();
 
@@ -114,12 +114,12 @@ public class Element {
                 }
 
             } else {
-                throw new locator_validation_exception("No Dynamic Value Found in locator");
+                throw new LocatorValidationException("No Dynamic Value Found in locator");
             }
 
 
         } else {
-            throw new locator_validation_exception("locator type is not a dyn-xpath, This method only use for the Dynamic Xpath ");
+            throw new LocatorValidationException("locator type is not a dyn-xpath, This method only use for the Dynamic Xpath ");
         }
 
         return driver.findElement(By.xpath(final_xpath));

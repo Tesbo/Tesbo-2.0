@@ -1,7 +1,5 @@
 package io.unity.performaction.autoweb;
 
-import io.unity.performaction.autoweb.Element;
-import io.unity.performaction.autoweb.testng_logs;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -16,7 +14,7 @@ import java.nio.file.Paths;
 public class Browser {
     WebDriver driver;
     Element element;
-    testng_logs logs = new testng_logs();
+    TestngLogs logs = new TestngLogs();
 
     public Browser(WebDriver dri) {
         this.driver = dri;

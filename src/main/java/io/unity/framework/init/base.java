@@ -4,11 +4,11 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.unity.framework.data.TestData;
-import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.readers.JsonFileReader;
 import io.unity.framework.remotegrid.LambdaTestConfig;
 import io.unity.framework.runner.TestRunner;
 import io.unity.performaction.autoweb.Browser;
-import io.unity.performaction.autoweb.testng_logs;
+import io.unity.performaction.autoweb.TestngLogs;
 import kong.unirest.Unirest;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
@@ -19,7 +19,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
@@ -46,8 +46,8 @@ public class base {
 
 
     public WebDriver driver;
-    json_file_reader config = new json_file_reader();
-    testng_logs logs = new testng_logs();
+    JsonFileReader config = new JsonFileReader();
+    TestngLogs logs = new TestngLogs();
 
 public static String build_Name;
 
@@ -160,11 +160,8 @@ public static String build_Name;
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
             System.out.println("Inside edge");
-        } else if (browserName.equalsIgnoreCase("opera")) {
-            WebDriverManager.operadriver().setup();
-            driver = new OperaDriver();
-            System.out.println("Inside opera");
-        } else if (browserName.equalsIgnoreCase("chrome-headless")) {
+        }
+        else if (browserName.equalsIgnoreCase("chrome-headless")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");

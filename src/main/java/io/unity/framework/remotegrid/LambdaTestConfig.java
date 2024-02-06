@@ -1,11 +1,9 @@
 package io.unity.framework.remotegrid;
 
-import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.readers.JsonFileReader;
 import io.unity.framework.runner.TestRunner;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.grid.config.JsonConfig;
-import org.testng.ITestResult;
 
 public class LambdaTestConfig {
 
@@ -19,7 +17,7 @@ public class LambdaTestConfig {
 
     public void addTestName(String TestName) {
 
-        json_file_reader config = new json_file_reader();
+        JsonFileReader config = new JsonFileReader();
 
         if (config.getPlatform(TestRunner.currentConfig).equalsIgnoreCase("web")) {
             if (config.get_grid_platForm(TestRunner.currentConfig).equalsIgnoreCase("lambdatest")) {

@@ -1,4 +1,4 @@
-package io.unity;
+package io.unity.framework.generators.locatorgenerator;
 
 import java.util.Locale;
 

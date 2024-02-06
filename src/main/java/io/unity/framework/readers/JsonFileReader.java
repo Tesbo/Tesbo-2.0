@@ -9,7 +9,7 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class json_file_reader {
+public class JsonFileReader {
 
 
     public JSONObject getTestConfig() {
@@ -183,7 +183,7 @@ public class json_file_reader {
 
     public String getEnvFromCurrentConfig() {
         JSONObject object = getTestConfig();
-        json_file_reader config = new json_file_reader();
+        JsonFileReader config = new JsonFileReader();
         if (TestRunner.currentConfig.equals("")) {
             TestRunner.currentConfig = config.getRunConfig();
         }

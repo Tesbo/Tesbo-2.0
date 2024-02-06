@@ -1,18 +1,7 @@
 package io.unity.framework.readers;
 
 
-import io.unity.framework.exception.locator_not_found_exception;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class locator_reader {
+public class LocatorReader {
 
     /*public static void main(String[] args) {
         locator_reader reader = new locator_reader();

@@ -1,7 +1,7 @@
 package io.unity.performaction.autoweb;
 
 
-import io.unity.framework.readers.json_file_reader;
+import io.unity.framework.readers.JsonFileReader;
 import io.unity.framework.runner.TestRunner;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -54,7 +54,7 @@ public class locator_reader {
 
     public Map<String,String> get_locator_value(String locator_name) {
         locator_reader reader = new locator_reader();
-        json_file_reader config_reader = new json_file_reader();
+        JsonFileReader config_reader = new JsonFileReader();
 
         JSONObject object = null;
         Map locator_details = new HashMap();

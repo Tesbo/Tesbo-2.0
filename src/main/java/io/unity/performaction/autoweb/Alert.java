@@ -11,7 +11,7 @@ public class Alert {
 
     WebDriver driver;
     Element element;
-    testng_logs logs = new testng_logs();
+    TestngLogs logs = new TestngLogs();
 
     public Alert(WebDriver dri) {
         this.driver = dri;

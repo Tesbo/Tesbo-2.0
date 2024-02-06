@@ -2,7 +2,7 @@ package io.unity.performaction.autoapi;
 
 import io.unity.framework.data.TestData;
 import io.unity.framework.readers.GetApiConfig;
-import io.unity.performaction.autoweb.testng_logs;
+import io.unity.performaction.autoweb.TestngLogs;
 import kong.unirest.HttpRequest;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class RequestBuilder {
 
-    testng_logs logs = new testng_logs();
+    TestngLogs logs = new TestngLogs();
 
     public JSONObject performRequest(String requestName) {
 
