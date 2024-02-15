@@ -1,6 +1,5 @@
 package io.unity.performaction.autoweb;
 
-
 import io.unity.framework.readers.json_file_reader;
 import io.unity.framework.runner.TestRunner;
 import org.json.simple.JSONObject;
@@ -52,7 +51,7 @@ public class locator_reader {
     }
 
 
-    public Map<String,String> get_locator_value(String locator_name) {
+    public Map<String, String> get_locator_value(String locator_name) {
         locator_reader reader = new locator_reader();
         json_file_reader config_reader = new json_file_reader();
 
@@ -66,18 +65,27 @@ public class locator_reader {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        locator_details.put("locator_type", object.get("locator_type").toString());
+
         if (platform.equalsIgnoreCase("web")) {
-            locator_details.put("locator_value", object.get("web_locator").toString());
+            assert object != null;
+            locator_details.put("locator_value", object.get("web_locator").toString().split(":")[1]);
+            locator_details.put("locator_type", object.get("web_locator").toString().split(":")[0]);
+
         } else if (platform.equalsIgnoreCase("android")) {
-            locator_details.put("locator_value", object.get("android_locator").toString());
+            assert object != null;
+            locator_details.put("locator_value", object.get("android_locator").toString().split(":")[1]);
+            locator_details.put("locator_type", object.get("android_locator").toString().split(":")[0]);
+
         } else if (platform.equalsIgnoreCase("ios")) {
-            locator_details.put("locator_value", object.get("iOS_locator").toString());
+            assert object != null;
+            locator_details.put("locator_value", object.get("iOS_locator").toString().split(":")[1]);
+            locator_details.put("locator_type", object.get("iOS_locator").toString().split(":")[0]);
         }
 
-
+        System.out.println(locator_details);
         return locator_details;
     }
+
 
 
     public List<String> look_for_locator_json_file(String folder_path) {
