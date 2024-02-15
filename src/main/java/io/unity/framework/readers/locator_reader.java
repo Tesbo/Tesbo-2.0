@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class locator_reader {
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         locator_reader reader = new locator_reader();
         try {
             System.out.println(reader.get_locator_value("email_text_box"));
@@ -91,7 +91,7 @@ public class locator_reader {
 
         return object;
     }
-*/
+
 
 
 }
