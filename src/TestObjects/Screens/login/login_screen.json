@@ -1,0 +1,222 @@
+{
+  "okey_button_popup": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"Ok\"]"
+  },
+  "email": {
+    "platform": "android",
+    "element_type": "text_box",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View/android.widget.EditText[1]"
+  },
+  "password": {
+    "platform": "android",
+    "element_type": "text_box",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View/android.widget.EditText[2]"
+  },
+  "forgot_password_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Forgot your password?\"]"
+  },
+
+  "invalid_login_message": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Wrong email/password. Please try again\"]"
+  },
+
+  "email_error_message": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Please Enter Number or Email\"]"
+  },
+
+  "password_error_message": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Please Enter Your Password\"]"
+  },
+
+  "user_not_found_message": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Wrong email/password. Please try again\"]"
+  },
+
+  "incorrect_username_password": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Incorrect username or password. Please try again.\"]"
+  },
+
+  "need_help_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[contains(@content-desc,'Need Help?')]"
+  },
+
+  "help_for_manager_text": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"\uF069 Help for Managers\"]/android.view.View[2]"
+  },
+
+  "user_email_text_box": {
+    "platform": "android",
+    "element_type": "text_box",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.EditText"
+  },
+
+  "send_reset_password_button": {
+    "platform": "android",
+    "element_type": "text_box",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"Send Reset Password Link\"]"
+  },
+
+  "email_send_message": {
+    "platform": "android",
+    "element_type": "text_box",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Email sent successfully.\"]"
+  },
+  "okay_PopUp_Invalid_Error_Msg": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"OK\"]"
+  },
+  "enter_Your_Phone_number": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "accessibility-id",
+    "android_locator": "Enter your phone number or your email address:"
+  },
+  "enter_Your_Phone_number": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Enter your phone number or your email address:\"]"
+  },
+  "enter_Your_Phone_number_Text_Box": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.EditText"
+  },
+  "continue_Button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"CONTINUE \"]"
+  },
+  "enter_Your_Password": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Enter your password:\"]"
+  },
+  "enter_Your_Password_Text_Box": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.EditText"
+  },
+  "login_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"LOG IN \"]"
+  },
+  "logo_image": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.ImageView"
+  },
+  "need_help_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"NEED HELP?\"]"
+  },
+  "version_text": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.view.View[contains(@class, 'V')])[last()]"
+  },
+  "splash_screen_logo": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.widget.Button)[1]"
+  },
+  "incorrect_alert_message": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Incorrect.\"]"
+  },
+  "why_cannot_i_login_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Why can't I log in?\"]"
+  },
+  "why_cannot_i_login_popup_header": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"Ok\"]"
+  },
+  "password_eye_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View/android.view.View/android.view.View/android.widget.EditText/android.widget.Button"
+  },
+  "please_enter_your_email_alert": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Please Enter Your Email or Number\"]"
+  },
+  "send_reset_password_email_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"Send Reset Password Link\"]"
+  },
+  "forgot_password_email_text_box": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.EditText"
+  },
+  "user_email_not_found_alert": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "accessibility-id",
+    "android_locator": "If we find your account, we will send you a password recovery email."
+  },
+  "ok_button_forgot_Password_invalid_user": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"Ok\"]"
+  }
+}

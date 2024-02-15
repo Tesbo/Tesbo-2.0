@@ -1,0 +1,161 @@
+{
+  "home_bottom_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.view.View[6]/android.view.View)[1]",
+    "ios_locator": ""
+  },
+  "search_bottom_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.view.View[6]/android.view.View)[2]",
+    "ios_locator": ""
+  },
+  "Notification_bottom_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.view.View[6]/android.view.View)[3]",
+    "ios_locator": ""
+  },
+  "Notification_tab_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.view.View[3])[2]",
+    "ios_locator": ""
+  },
+  "Bookmarks_bottom_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.view.View[6]/android.view.View)[4]",
+    "ios_locator": ""
+  },
+
+  "Bookmarks_Tab": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[4]",
+    "ios_locator": ""
+  },
+
+  "Home_Tab": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.view.View[1])[6]",
+    "ios_locator": ""
+  },
+
+  "assign_program_text": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[contains(@content-desc,\"Test 2\")]",
+    "ios_locator": ""
+  },
+  "profile_icon": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.widget.Button)[2]",
+    "ios_locator": ""
+  },
+  "home_back_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(//android.widget.Button)[last()]",
+    "ios_locator": ""
+  },
+  "home_page_video": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button",
+    "ios_locator": ""
+  },
+  "play_video_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.webkit.WebView",
+    "ios_locator": ""
+  },
+  "bookmarks_icon": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "(/hierarchy//android.view.View/android.view.View/android.widget.Button[2])[2]",
+    "ios_locator": ""
+  },
+  "change_Agency": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc='ABCD']",
+    "ios_locator": ""
+  },
+
+  "test_Agency_option": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"2. Test\"]",
+    "ios_locator": ""
+  },
+  "QA_team_Agency_option": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"2. Mob\"]",
+    "ios_locator": ""
+  },
+  "test_Agency_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"2. Test\"]",
+    "ios_locator": ""
+  },
+
+  "first_video_of_6m": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "accessibility-id",
+    "android_locator": "0%, 15m",
+    "ios_locator": ""
+  },
+  "ok_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "accessibility-id",
+    "android_locator": "OK",
+    "ios_locator": ""
+  },
+  "alert_msg_when_npo_program_is_assign": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Hello! There are currently no programs assigned to you. Please contact your agency if you have any questions.\"]",
+    "ios_locator": ""
+  },
+  "change_Agency_with_no": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.widget.Button[@content-desc=\"1. ABCD\"]",
+    "ios_locator": ""
+  },
+  "change_Agency_with_no_view_text": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"1. ABCD\"]",
+    "ios_locator": ""
+  }
+}

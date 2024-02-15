@@ -1,0 +1,12 @@
+{
+  "endPoint": "/v1/programs/completions?approved_only=false",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": "bjhgejhwejhgjewhjgw"
+  },
+  "body": {
+
+  }
+
+}

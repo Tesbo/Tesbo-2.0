@@ -1,0 +1,228 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Reports Suite" parallel="tests" thread-count="5">
+
+    <test name="To verify when click on reports">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_click_on_reports"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when search for the program in search box report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_search_for_the_program_in_search_box_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on New report button report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_New_report_button_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on one time report button report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_One_time_report_button_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on cross button on New report popup">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_cross_button_on_Newreport_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on help icon of programs completion aggregate data range on new report report popup">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include
+                            name="verify_when_clicks_on_help_icon_of_programs_completion_aggregate_data_range_on_new_report_report_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on All link from new reports popup">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_All_link_from_new_reports_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on the dropdown of Programs report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_the_dropdown_of_Programs_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on Lessons/Modules/Programs">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Lessons_Modules_Programs_reports_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on Aggregate dropdown report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Aggregate_dropdown_reports_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on Specific date from calendar in date range">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Specific_date_from_calendar_in_date_range"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when edit date and time report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_edit_date_and_time_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name=" verify when selects more than one program report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_selects_more_than_one_program_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="To verify when clicks on All date link of the  report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_All_date_link_of_the_reports"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on Generate button reports">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Generate_button_reports"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on Generate button without selecting program / completion / aggerate / data range report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include
+                            name="verify_when_clicks_on_Generate_button_without_selecting_program_completion_aggerate_data_range"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name=" verify when clicks on Download icon report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Download_icon_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name=" verify when clicks on the number between the next and previous arrow.">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_the_number_between_the_next_and_previous_arrow"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name=" verify when clicks on Previous arrow from report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Previous_arrow_from_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on next arrow from report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_next_arrow_from_report_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify without selecting specific date then click on generate button">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_without_selecting_specific_date_then_click_on_generate_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when select per user Aggregate in dropdown report history">
+        <classes>
+            <class name="WebUITests.reportsTests.reportsTest">
+                <methods>
+                    <include name="verify_when_select_per_user_Aggregate_in_dropdown_reports_history"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

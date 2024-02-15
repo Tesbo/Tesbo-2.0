@@ -1,0 +1,127 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Admin Panel Profile Page Suite" parallel="tests" thread-count="5">
+
+
+    <test name="To verify when edits the agency name">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="To_verify_when_edits_the_agency_name"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when remove agency name from the name text box">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="To_verify_when_remove_agency_name_from_the_name_text_box"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when click on my profile on side nav bar">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_when_click_on_my_profile_on_side_nav_bar"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on edit button">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_edit_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when edit email address">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_when_edit_email_address"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on cancel button admin Profile">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_cancel_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on logout">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_logout"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify the details on the profile page">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_the_details_on_the_profile_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when remove Agency Email from the email text box">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="To_verify_when_remove_Agency_Email_from_the_email_text_box"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on default landing page dropdown">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_default_landing_page_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify that change image button is clickable">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_that_change_image_button_is_clickable"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="To verify when clicks on update">
+        <classes>
+            <class name="WebUITests.adminProfileTests.adminProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_update"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

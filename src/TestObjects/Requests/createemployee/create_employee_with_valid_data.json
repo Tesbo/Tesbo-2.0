@@ -1,0 +1,26 @@
+{
+  "endPoint": "/v1/employees",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": ""
+  },
+  "body": {
+    "first_name": "",
+    "last_name": "",
+    "country_code": "1",
+    "email": "viral@nevvon.com",
+    "phone": "",
+    "onboard_date": "2022-04-01",
+    "employee_number": "",
+    "disciplines": "PCA,HHA",
+    "location": "CA",
+    "language": "English",
+    "status": "Active"
+  },
+
+  "pathParameter":{},
+  "queryParameters": {},
+  "schema": {}
+
+}

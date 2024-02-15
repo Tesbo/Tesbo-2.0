@@ -1,0 +1,1941 @@
+{
+  "employee_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name']/div/a)[1]"
+  },
+  "verify_employee_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//h2[contains(text(),' ')]"
+  },
+  "message_button_web": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-button p-component']"
+  },
+  "employee_name_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h2"
+  },
+  "employee_disciplines_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-multiselect-trigger']"
+  },
+  "employee_disciplines_dropdown_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-multiselect-items-wrapper']"
+  },
+  "employee_location_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@id='employee-location']"
+  },
+  "employee_location_dropdown_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul[@role='listbox']"
+  },
+  "select_location_in_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div//ul//li)[1]"
+  },
+  "sub_location_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[@aria-label='Choose']//parent::div"
+  },
+  "sub_location_dropdown_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul[@role='listbox']"
+  },
+  "click_on_sub_location": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div//ul//li[1]"
+  },
+  "training_Accessible_check_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-checkbox p-component p-checkbox-checked']"
+  },
+  "click_on_Is_Applicant_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-checkbox p-component']"
+  },
+  "click_on_Is_Applicant_button_checked": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-checkbox p-component p-checkbox-checked']"
+  },
+  "confirm_popup_show_heading": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[normalize-space()='Confirm Disabling Shift Blocking']"
+  },
+  "click_confirm_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='confirm-ok']"
+  },
+  "accessible_during_shift_validation_msg_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//div[@role='alert'])[2]  "
+  },
+  "click_cancel_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='confirm-cancel']"
+  },
+  "notes_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//textarea[@id='employee-notes-notes']"
+  },
+  "click_on_notes_cancel_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='employee-notes-cancel']"
+  },
+  "enter_notes": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//textarea[@id='employee-notes']"
+  },
+  "notes_title_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h6[normalize-space()='Notes']"
+  },
+  "notes_save_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='employee-notes-submit']"
+  },
+  "notes_edit_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//button[@aria-label='Edit'])[3]"
+  },
+  "notes_update_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='employee-notes-submit']"
+  },
+  "popup_close_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='close']"
+  },
+  "send_message_employee_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//h4[(text()='Send Message to Employee')]"
+  },
+  "cross_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+  "first_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//button[text()='First name']"
+  },
+  "first_name_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//label[normalize-space()='First Name']"
+  },
+  "phone_number_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Phone number is required']"
+  },
+  "last_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//button[text()='Last name']"
+  },
+  "message_cancel_button_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='message-cancel']"
+  },
+  "send_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='message-submit']"
+  },
+  "message_require_error_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Message is required']"
+  },
+  "write_message_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//textarea[@class='p-inputtextarea p-inputtext p-component w-full']"
+  },
+  "personal_info_edit_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='personal-info-edit']"
+  },
+  "management_info_edit_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='management-info-edit']"
+  },
+  "click_on_discipline_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-multiselect-trigger']"
+  },
+  "discipline_dropdown_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='p-multiselect-items-wrapper']"
+  },
+  "select_discipline1": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "((//ul[@role='listbox'])//li//div)[1]"
+  },
+  "select_discipline2": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "((//ul[@role='listbox'])//li//div)[3]"
+  },
+  "select_discipline3": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "((//ul[@role='listbox'])//li//div)[5]"
+  },
+  "preferred_language_drop_down": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@id='employee-language']"
+  },
+  "language_text_box_edit_info": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@id='employee-language']"
+  },
+  "select_language_from_drop_down": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul//li[2]"
+  },
+  "click_on_birthday_calendar_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//button[@type='button'])[6]"
+  },
+  "birthday_calendar_popup_show": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@role='dialog']"
+  },
+  "select_birthday_from_calendar": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='14']"
+  },
+  "email_text_box_edit_info": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//label[normalize-space()='Email']"
+  },
+  "disable_email_text_box_edit_info": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//input[@id=\"employee-email\"][@disabled]"
+  },
+  "manage_info_employee_number_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@id='employee-employee-number']"
+  },
+  "employee_first_name": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "employee-first-name"
+  },
+  "employee_last_name": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "employee-last-name"
+  },
+  "personal_info_update_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='personal-info-submit']"
+  },
+  "management_info_update_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='management-info-submit']"
+  },
+  "info_edited_successfully_alert_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "personal_info_cancel": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "personal-info-cancel"
+  },
+  "employee_employee_number": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text-box",
+    "platform": "web",
+    "web_locator": "employee-employee-number"
+  },
+  "add_program_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "employee-add-to-program"
+  },
+  "add_employee_to_program_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//h4[text()='Add Employees to Program']"
+  },
+  "online_program_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='button-select-online']"
+  },
+  "online_program_details": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": ""
+  },
+  "cross_button_add_program": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='close']"
+  },
+  "employee_phone": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "employee-phone"
+  },
+  "first_name_required_validation": {
+    "objectGenerate": "generate",
+    "locator_type": "",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='First name is required']"
+  },
+  "last_name_required_validation": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Last name is required']"
+  },
+  "phone_number_required_validation": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Phone number is required']"
+  },
+  "help_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//i[@class='icon-help']"
+  },
+  "program_dropdown_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-multiselect-label p-placeholder'][1]"
+  },
+  "program_popup_dropdown_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//ul[@role='listbox']//parent::div)[1]"
+  },
+  "add_program_start_date_dropdown_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-dropdown-trigger'])[1]"
+  },
+  "start_date_dropdown_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//ul[@class='p-dropdown-items'])"
+  },
+  "start_date_anniversary_date_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Anniversary date']"
+  },
+  "start_date_anniversary_month_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Anniversary month']"
+  },
+  "program_due_date_dropdown_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-dropdown-trigger'])[2]"
+  },
+  "in_class_program_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[text()='In-Class Program']"
+  },
+  "session_dropdown_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "add-to-program-access-type"
+  },
+  "search_program_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@class='p-multiselect-filter p-inputtext p-component']"
+  },
+  "search_program_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@class='p-multiselect-filter p-inputtext p-component']"
+  },
+  "click_searched_program_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='rise test']"
+  },
+  "search_employee_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Search']"
+  },
+  "due_date_dropdown_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//ul[@role='listbox']"
+  },
+  "custom_due_date_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Custom date']"
+  },
+  "custom_start_date_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul//li[@aria-label='Custom date']"
+  },
+  "custom_due_date_calendar_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='label pt-4']//following::button[1]"
+  },
+  "custom_start_date_calendar_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//label[text()=' Start date ']//following::button[1]"
+  },
+  "calendar_icon_for_due_custom_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//input[@placeholder='Choose'])[2]"
+  },
+  "click_on_calendar_icon_for_start_custom_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@class='p-inputtext p-component']"
+  },
+  "display_calendar_popup_for_due_custom_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//table[@class=\"p-datepicker-calendar\"]//td//span[not(contains(@class,'p-disabled'))])[16]"
+  },
+  "display_calendar_popup_for_start_custom_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//table[@class=\"p-datepicker-calendar\"]//td//span[not(contains(@class,'p-disabled'))])[8]"
+  },
+  "select_custom_date": {
+    "objectGenerate": "generate",
+    "locator_type": "dyn-xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//tbody/tr[2]/td[1]"
+  },
+  "select_custom_start_date": {
+    "objectGenerate": "generate",
+    "locator_type": "dyn-xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//tbody/tr[2]/td[1]"
+  },
+  "add_program_Popup_submit_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "add-to-program-submit"
+  },
+  "session_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "add-to-program-access-type"
+  },
+  "session_dropdown_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='p-dropdown-items-wrapper']"
+  },
+  "select_session_in_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-dropdown-items-wrapper']//following::li)[1]"
+  },
+  "select_in_class_program_from_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Healthy life']//div[@class='p-checkbox p-component']"
+  },
+  "today_option_start_date_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Today']"
+  },
+  "select_program_from_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//li//div[@class='p-checkbox-box'])[1]"
+  },
+  "select_program_more_from_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-checkbox p-component'])[2]"
+  },
+  "select_program_one_more_from_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-checkbox p-component'])[3]"
+  },
+  "submit_button_from_program_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='add-to-program-submit']"
+  },
+  "cancel_button_from_program_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='add-to-program-cancel']"
+  },
+  "program_added_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Session is required']//parent::div"
+  },
+  "employee_added_program_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "already_program_added_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "custom_duration_day_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Days from start date is mandatory for selected program duration']"
+  },
+  "session_added_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Employee added to program']"
+  },
+  "inactive_emp_program_added_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Add program to provider action is disabled when provider is terminated!']"
+  },
+  "start_date_mandatory_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Start date is required']//parent::div"
+  },
+  "close_icon_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+  "employee_profile_page": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='w-full flex justify-between']"
+  },
+  "due_date_validation_msg_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Due date is required']//parent::div"
+  },
+  "add_employee_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='p-dialog-content']"
+  },
+  "program_required_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[@class='p-error text-xs']"
+  },
+  "click_on_cancel_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='add-to-program-cancel']"
+  },
+  "click_on_country_code_drop_down": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-dropdown-trigger'])[1]"
+  },
+  "enter_country_code": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Find Country']"
+  },
+  "select_country_code_and_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='India +91']//parent::li"
+  },
+  "click_on_phone_number_text_box_edit_info": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@id='employee-phone']"
+  },
+  "enter_text_phone_number_edit_info": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@id='employee-phone']"
+  },
+  "message_popup_copy_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-button p-component p-button-icon-only p-button-text p-button-rounded !-mr-2']"
+  },
+  "add_program_popup_copy_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-button p-component p-button-icon-only p-button-text p-button-rounded !-mr-2']"
+  },
+  "message_text_area": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//textarea[@class='p-inputtextarea p-inputtext p-component w-full']"
+  },
+  "copy_message_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div/textarea"
+  },
+  "action_dropdown_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Actions']"
+  },
+  "action_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//ul[@role='menu']"
+  },
+  "set_status_action_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Set status to']"
+  },
+  "reset_password_action_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Reset password']//parent::a"
+  },
+  "employee_history_action_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Employee History']"
+  },
+  "open_ticket_action_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Open ticket']"
+  },
+  "copy_api_id_action_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Copy API ID']"
+  },
+  "custom_duration_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Custom duration']"
+  },
+  "select_custom_duration_option_available": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[@class='p-inputnumber-button-group']"
+  },
+  "upward_custom_duration_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-button p-component p-button-icon-only p-inputnumber-button p-inputnumber-button-up']"
+  },
+  "start_date_today_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Today']"
+  },
+  "start_date_mandatory_validation_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Duration must be at least 1 day']//parent::div"
+  },
+  "due_date_31st_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='December 31st']"
+  },
+  "due_date_1_year_start_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='1 year from start']"
+  },
+  "message_popup_first_name_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[normalize-space()='First name']"
+  },
+  "message_popup_last_name_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[normalize-space()='Last name']"
+  },
+  "sent_successfully_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Message sent']"
+  },
+  "msg_validation_of_successfully_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[(text()='Message sent successfully')]"
+  },
+  "management_info_calendar_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Choose Date']"
+  },
+  "management_info_calendar_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//tbody/tr[4]/td[3]/span[1]"
+  },
+  "active_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//a[@class='p-menuitem-link'])[2]"
+  },
+  "on_hold_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//a[@class='p-menuitem-link'])[3]"
+  },
+  "terminated_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//a[@class='p-menuitem-link'])[4]"
+  },
+  "set_status_on_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Set status to']"
+  },
+  "employee_history_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Employee History']"
+  },
+  "employee_history_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[normalize-space()='Employee History']"
+  },
+  "reset_password": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//a[@role='menuitem'])[2]"
+  },
+  "open_ticket_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Open ticket']"
+  },
+  "open_ticket_agency_form": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()=\"Agency name\"]"
+  },
+  "agency_form_submit_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@name='Submit']"
+  },
+  "agency_form_alert_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//span[contains(text(),'Please complete this required field.')])[1]"
+  },
+  "copy_api_id_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Copy API ID']"
+  },
+  "copied_msg_validation": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "sms_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Send SMS']"
+  },
+  "email_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Send Email']"
+  },
+  "sms_send_msg_validation": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "change_password_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[normalize-space()='Send SMS to Change Password']"
+  },
+  "change_password_popup_cancel_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='reset-password-cancel']"
+  },
+  "reset_password_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul[@class='p-submenu-list']"
+  },
+  "status_updated_successfully": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "select_program_first_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//li[text()=\"Select a program first\"]"
+  },
+  "display_create_new_session_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//span[text()='Create new session'])//parent::button"
+  },
+  "create_new_session_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Create new session'])//parent::button"
+  },
+  "create_new_session_details": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='w-full flex flex-col mt-4']"
+  },
+  "newly_added_program_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//div[@class='card flex flex-col'])[1]"
+  },
+  "session_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@id='session-name']"
+  },
+  "session_Supervisor": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@id='session-supervisor']"
+  },
+  "session_scheduled_from_calendar": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//table[@class=\"p-datepicker-calendar\"]//td//span[normalize-space()='16']"
+  },
+  "session_scheduled_calendar_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@class='p-inputtext p-component']"
+  },
+  "session_scheduled_calendar_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-datepicker p-component p-ripple-disabled']"
+  },
+  "add_field_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[normalize-space()='Add field']"
+  },
+  "new_field_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@id='session-extra-field-key-']"
+  },
+  "new_field_value": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@id='session-extra-field-value-']"
+  },
+  "session_new_field_delete_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//i[@class='icon-delete'])[2]//parent::button"
+  },
+  "send_button_sms_employee_profile": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@type='submit']"
+  },
+  "email_sent_validation_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "not_singed_up_sent_email_validation_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='There was a server error']"
+  },
+  "kebab_icon_button_available_on_program_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[@class='p-button-icon icon-more-v icon-lg']//parent::button)[1]"
+  },
+  "kebab_popup_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//ul[@role='menu'])[1]"
+  },
+  "edit_start_date_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Edit Start Date']//parent::a"
+  },
+  "edit_start_date_popup_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[text()='Edit Start Date']"
+  },
+  "edit_start_date_dropdown_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-dropdown-trigger']"
+  },
+  "edit_start_date_dropdown_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul[@role='listbox']"
+  },
+  "today_option_of_edit_start_date_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul[@role='listbox']//li[1]"
+  },
+  "update_button_edit_start_date_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Update']//parent::button"
+  },
+  "edit_start_date_successfully_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Provider course modified successfully']"
+  },
+  "edited_start_date_show_on_program": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "((//h6[text()='Start date'])//following::h5[1])[1]"
+  },
+  "remove_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//ul//li)[1]"
+  },
+  "remove_employee_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[text()='Remove Employees']"
+  },
+  "remove_permanently_check_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-checkbox-box']"
+  },
+  "remove_button_on_remove_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Remove']"
+  },
+  "remove_successfully_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Provider deleted from program successfully']"
+  },
+  "session_dropdown_options_employee_profile": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//li[@class='p-dropdown-item' and @role='option'])[1]"
+  },
+  "edit_due_date_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul//li[@aria-label='Edit Due Date']"
+  },
+  "edit_due_date_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[text()='Edit Due Date']"
+  },
+  "edit_due_date_drop_down": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='p-dropdown-trigger']"
+  },
+  "custom_date_edit_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//li[text()='Custom date']"
+  },
+  "due_date_due_date_choose_date": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "due-date-due-date"
+  },
+  "due_date_confirm_edit_due_date": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "due-date-confirm"
+  },
+  "provider_course_modified_alert": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//*[text()='Provider course modified successfully']"
+  },
+  "start_date_confirm_edit_due_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//span[@class='icon-calendar-edit icon-lg p-button-icon']//parent::button)[3]"
+  },
+  "edit_due_start_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[text()='Edit Start Date']"
+  },
+  "custom_edit_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//li[text()='Custom']"
+  },
+  "choose_text_box_start_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[@class='pi pi-calendar p-button-icon']//parent::button"
+  },
+  "start_date_confirm_edit_date": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "start-date-confirm"
+  },
+  "submit_button_on_open_ticket_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@name='Submit']"
+  },
+  "more_option_due_date_employee": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//span[@class='p-button-icon icon-more-v icon-lg']//parent::button)[2]"
+  },
+  "edit_start_date_option_program": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Edit Start Date']//a"
+  },
+  "edit_due_date_option_program": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Edit Due Date']//a"
+  },
+  "100_percentage_text_program_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//span[text()=\"100%\"]//parent::button)[1]"
+  },
+  "edit_start_date_option_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//button[@type='button'])[9]"
+  },
+  "corona_care_program_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[text()='Corona Care Program']"
+  },
+  "corona_care_program_kebab_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='employee-program-options-469']"
+  },
+  "download_certificate_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Download Certificate']//parent::a"
+  },
+  "send_certificate_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Send Certificate']//parent::a"
+  },
+  "send_certificate_successfully_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Email sent successfully']"
+  },
+  "test_employee_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name'])[5]"
+  },
+  "management_info_employee_number": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@id='employee-employee-number']"
+  },
+  "management_info_employee_number_required_num_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Employee number must be numeric']//parent::div"
+  },
+  "validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "terminated": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Terminated']//parent::a"
+  },
+  "terminated_validation": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Add program to provider action is disabled when provider is terminated!']"
+  },
+  "cross_button_of_Drop_Down": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-multiselect-close p-link']"
+  },
+  "cs_add_to_agency_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "csm-employee-add-to-agency"
+  },
+  "cs_search_agency_from_employee_profile": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[contains(@id, 'employee-profile-agencies')]"
+  },
+  "cs_panel_employee_profile_searched_agency": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//button[contains(@class, 'p-menuitem-link')])[1]"
+  },
+  "cs_panel_add_employee_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[@class='truncate']"
+  },
+  "employee_phone_field_on_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "add-employee-phone"
+  },
+  "continue_button_on_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "add-employee-continue"
+  },
+  "employee_firstname_field_on_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "add-employee-first-name"
+  },
+  "employee_lastname_field_on_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//input[@id='add-employee-last-name'])[1]"
+  },
+  "employment_date_field": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[contains(@id,'add-employee-hiring-date')]/descendant::button"
+  },
+  "employment_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//td[@class='p-datepicker-today']"
+  },
+  "create_employee_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "add-employee-done"
+  },
+  "edit_nevvon_info": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "nevvon-info-edit"
+  },
+  "nevvon_info_firstname_field": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "textbox",
+    "platform": "web",
+    "web_locator": "nevvon-info-first-name"
+  },
+  "nevvon_info_lastname_field": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "textbox",
+    "platform": "web",
+    "web_locator": "nevvon-info-last-name"
+  },
+  "nevvon_info_language_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "nevvon-info-language"
+  },
+  "nevvon_info_language": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "nevvon-info-language_0"
+  },
+  "nevvon_info_update_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "nevvon-info-submit"
+  },
+  "employee_data_modified_success": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Provider modified successfully']"
+  },
+  "employee_fname": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//label[text()='First Name']/parent::div/following-sibling::div/child::span)[1]"
+  },
+  "employee_lname": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//label[text()='Last Name']/parent::div/following-sibling::div/child::span)[1]"
+  },
+  "employee_preferred_language": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//label[text()='Preferred language']/parent::div/following-sibling::div/child::span)[1]"
+  },
+  "nevvon_info_revert_language": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "nevvon-info-language_3"
+  },
+  "employee_phone_number": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//label[text()='Phone']/parent::div/following-sibling::div/child::span)[1]"
+  },
+  "employee_login_email": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//label[text()='Email']/parent::div/following-sibling::div/child::span)[1]"
+  },
+  "edit_login_info": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "login-info-edit"
+  },
+  "login_info_phone_field": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "login-info-phone"
+  },
+  "login_info_email_field": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "login-info-email"
+  },
+  "login_info_update_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "login-info-submit"
+  },
+  "login_confirmation_box": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "confirm-confirmation"
+  },
+  "login_confirmation_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "confirm-send"
+  },
+  "login_data_modified_success": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='User assigned to provider successfully']"
+  },
+  "list_of_agency_tabs": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//a[contains(@class,'p-menuitem-link')]"
+  },
+  "employee_sign_up_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Employee Sign-Up']/ancestor::li"
+  },
+  "employee_login_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Employee Login']/ancestor::li"
+  },
+  "set_status_to_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Set status to']"
+  },
+  "employee_history_option_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Employee History']"
+  },
+  "open_ticket_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Open ticket']"
+  },
+  "send_sms_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Send SMS']"
+  },
+  "reset_password_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Reset password']"
+  },
+  "generate_verification_code_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Generate Verification Code']/.."
+  },
+  "employee_name_on_dialog_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[contains(@class, 'dialog-content')]/child::h5"
+  },
+  "generate_code_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "verificaiton-code-generate"
+  },
+  "generated_code": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//label[text()='Code']/../following-sibling::div/child::h2"
+  },
+  "done_button_on_dialog": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "verification-code-done"
+  },
+  "dashboard_navigation_icon_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//i[contains(@class,'icon-external')]/.."
+  },
+  "employee_current_status": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//i[contains(@class, 'icon-indicator')]/following-sibling::span"
+  },
+  "status_options": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//ul[contains(@class,'p-submenu-list')]/child::li"
+  }
+}

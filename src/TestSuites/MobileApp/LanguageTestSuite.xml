@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Language Android App Test Suite" parallel="tests" thread-count="5">
+
+    <test name = "To verify when user click on Language option the language pop is displayed">
+        <classes>
+            <class name = "MobileTests.language.language_test" >
+                <methods>
+                    <include name="To_verify_when_user_click_on_Language_option_the_language_pop_is_displayed"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify when user change the language, Language updated successfully alert is displayed">
+        <classes>
+            <class name = "MobileTests.language.language_test" >
+                <methods>
+                    <include name="To_verify_when_user_change_the_language_Language_updated_successfully_alert_is_displayed"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To_verify_when_user_tap_on_Language_option">
+        <classes>
+            <class name = "MobileTests.language.language_test" >
+                <methods>
+                    <include name="To_verify_when_user_tap_on_Language_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To_verify_when_user_change_the_language">
+        <classes>
+            <class name = "MobileTests.language.language_test" >
+                <methods>
+                    <include name="To_verify_when_user_change_the_language"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To_verify_when_user_tap_on_OK_button">
+        <classes>
+            <class name = "MobileTests.language.language_test" >
+                <methods>
+                    <include name="To_verify_when_user_tap_on_OK_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

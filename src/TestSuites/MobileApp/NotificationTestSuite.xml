@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Notification Page Android App Test Suite" parallel="tests" thread-count="5">
+
+    <test name = "To verify when tap on Notification tab, it opens Notification page">
+        <classes>
+            <class name = "MobileTests.notification.Notification_Flow" >
+                <methods>
+                    <include name="To_verify_when_tap_on_Notification_tab_it_opens_Notification_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify when sends message from agency panel">
+        <classes>
+            <class name = "MobileTests.notification.Notification_Flow" >
+                <methods>
+                    <include name="To_verify_when_sends_message_from_agency_panel"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

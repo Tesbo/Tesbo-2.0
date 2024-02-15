@@ -1,0 +1,697 @@
+{
+
+  "export_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Export']//parent::button"
+  },
+  "action_button_employee_action": {
+  "objectGenerate": "generate",
+  "locator_type": "xpath",
+  "element_type": "button",
+  "platform": "web",
+  "web_locator": "//span[text()='Actions']//parent::button"
+},
+  "first_employee_checkout_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-checkbox-box'])[2]"
+  },
+  "message_option_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Message']//parent::a"
+  },
+  "message_header_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//h4[text()='Send Message to Employees']"
+  },
+  "firstName_label_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[text()='First name']"
+  },
+  "lastname_label_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[text()='Last name']"
+  },
+  "cancel_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "message-cancel"
+  },
+  "send_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "message-submit"
+  },
+  "cross_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-dialog-header-icon p-dialog-header-close p-link']"
+  },
+  "message_required_alert_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Message is required']"
+  },
+  "search_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Search']"
+  },
+
+  "reset_button_custom_column_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()=\"Reset\"]//parent::button)[2]"
+  },
+
+  "textArea_message_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//textarea[@class='p-inputtextarea p-inputtext p-component w-full']"
+  },
+  "customize_columns_option_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Customize columns']//parent::a"
+  },
+  "customize_columns_header_option_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//h4[text()='Customize Columns']"
+  },
+  "changes_saved_alert_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Changes saved successfully.']"
+  },
+  "customize_save_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Save']//parent::button"
+  },
+  "customize_cancel_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Cancel']//parent::button"
+  },
+  "customize_reset_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[text()=' Reset ']"
+  },
+  "customize_cross_option_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-dialog-header-icon p-dialog-header-close p-link']"
+  },
+  "employees_check_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//input[@type='checkbox'][1]/parent::div/parent::div/parent::div)[2]"
+  },
+  "employees_action_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//ul[@role='menubar']"
+  },
+  "employees_action_dropdown_set_status_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Set status to']"
+  },
+  "set_status_option_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//ul[@class='p-submenu-list']"
+  },
+  "active_option_in_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()=\"Active\"]//parent::a"
+  },
+  "active_popup_activate_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()=\"Activate\"]//parent::button"
+  },
+  "active_popup_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[normalize-space()='Set Employee Status to Active']"
+  },
+  "employee_no_show_in_active_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//p[contains(text(),'employees will be activated:')]"
+  },
+  "employee_no_show_in_on_hold_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//label[@class='label']//parent::div"
+  },
+  "employee_no_show_in_terminate_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//label[@class='label']//parent::div"
+  },
+  "employee_name_show_in_active_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": ""
+  },
+  "cancel_button_in_active_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='set-status-cancel']"
+  },
+  "close_button_in_active_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+  "on_hold_option_in_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()=\"On hold\"]//parent::a"
+  },
+  "place_on_hold_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='set-status-submit']"
+  },
+  "on_hold_popup_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[normalize-space()='Set Employee Status to On-Hold']"
+  },
+  "status_on_hold_popup_copy_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-button p-component p-button-icon-only p-button-text p-button-rounded !-mr-2']"
+  },
+  "on_hold_popup_close_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+  "employee_header_on_employee_page": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h2[normalize-space()='Employees']"
+  },
+  "on_hold_popup_cancel_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='set-status-cancel']"
+  },
+  "on_hold_employee_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "terminate_employee_option_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()=\"Terminated\"]//parent::a"
+  },
+  "terminate_popup_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[normalize-space()='Set Employee Status to Terminated']"
+  },
+  "terminate_button_employee_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='set-status-submit']"
+  },
+  "terminate_employee_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "activate_employee_successful_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@role='alert']"
+  },
+  "terminate_popup_cancel_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='set-status-cancel']"
+  },
+  "close_icon_terminate_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+  "copy_icon_terminate_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-button p-component p-button-icon-only p-button-text p-button-rounded !-mr-2']"
+  },
+  "close_button_customize_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+  "add_program_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Add to program']//parent::a"
+  },
+  "select_program_from_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "((//div[@class='p-checkbox p-component'])//parent::li)[1]"
+  },
+  "select_program_second_from_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "((//div[@class='p-checkbox p-component'])//parent::li)[2]"
+  },
+  "add_employee_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//p[@class='mt-4']"
+  },
+  "employees_check_box_name_one": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name']//a[1]//parent::div)[1]"
+  },
+  "employees_check_box_name_two": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name']//a[1]//parent::div)[2]"
+  },
+  "employees_check_box_name_three": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name']//a[1]//parent::div)[3]"
+  },
+  "due_date_1_year_from_start_option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='1 year from start']"
+  },
+  "date_mandatory_validation_msg_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Duration must be at least 1 day']//parent::div"
+  },
+  "select_session_program_from_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='In class']//div[@class='p-checkbox-box']"
+  },
+  "exporting_data_validation_msg_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()='Exporting data, this may take a while...']"
+  },
+  "meat_ball_menu_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//tr[1]//child::button)[2]"
+  },
+  "reset_password_menu_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": ""
+  },
+  "in_build_completed_filter_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Completed']//parent::div"
+  },
+  "in_build_not_signed_up_filter_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Not Signed Up']//parent::div"
+  },
+  "default_employee_active_status_filter_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@aria-label='Employee Status']//child::span"
+  },
+  "select_all_emp_check_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//th//div[@class='p-checkbox-box']"
+  },
+
+  "employee_number": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//td[@data-label='Employee #']/descendant::span"
+  },
+
+  "employee_phone_list": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//td[@data-label='Phone']/descendant::div"
+  },
+
+  "employee_status": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//td[@data-label='Employee Status']"
+  },
+
+  "filter_pane": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "toggle-filters-pane"
+  },
+
+  "employee_status_filter": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//h5[text()='Employee Status']/ancestor::button"
+  },
+
+  "clear_filter_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[text()=' Clear ']"
+  },
+
+  "terminated_filter_checkbox": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Terminated']/preceding-sibling::div"
+  },
+
+  "active_filter_checkbox": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Active']/preceding-sibling::div"
+  },
+
+  "search_box_employee_page": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "textbox",
+    "platform": "web",
+    "web_locator": "search"
+  },
+
+  "apply_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Apply']"
+  },
+
+  "employee_checkbox": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[contains(@class, 'p-checkbox-box')]/ancestor::td"
+  },
+
+  "employee_actions": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Actions']/ancestor::button"
+  },
+
+  "employee_set_status": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Set status to']"
+  },
+
+  "employee_status_active_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Active']"
+  },
+
+  "final_set_status_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "set-status-submit"
+  },
+
+  "in_class_program_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "button-select-in-class"
+  },
+
+  "programs_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[contains(@class,'add-to-programs')]"
+  },
+
+  "sessions_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[contains(@class,'p-dropdown p-component')]"
+  },
+
+  "list_of_programs": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[contains(@class,'p-multiselect-item')]"
+  },
+
+  "selected_program_field": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[contains(@class,'p-multiselect-token-label')]"
+  },
+
+  "list_of_sessions": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[contains(@class,'p-dropdown-item')]"
+  },
+
+  "submit_button_on_add_program_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "add-to-program-submit"
+  },
+
+  "first_employee_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//td[@data-label='Name']/descendant::a"
+  },
+
+  "first_employee_empNumber": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//td[@data-label='Employee #']/descendant::span"
+  },
+
+  "first_employee_phoneNumber": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//td[@data-label='Phone']/descendant::div"
+  },
+
+  "completed_session_not_found_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//li[contains(@class,'p-dropdown-empty-message')]"
+  },
+
+  "search_session_textbox": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Find Session']"
+  }
+}

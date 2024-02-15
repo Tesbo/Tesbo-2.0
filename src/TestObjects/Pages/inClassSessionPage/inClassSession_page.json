@@ -1,0 +1,384 @@
+{
+
+  "in_class_session_option_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//h2[normalize-space()='Healthy life']"
+  },
+  "add_employee_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Add Employee']//parent::button"
+  },
+  "in_class_session_tab": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='In-Class Sessions']//parent::div//parent::a"
+  },
+  "in_class_schedule_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//h4)[1]"
+  },
+  "new_session_button_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "create-new-session"
+  },
+  "new_session_popup_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[text()='New Session']"
+  },
+  "session_name_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//label[text()='Title']"
+  },
+
+  "session_name_inClassSession_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "textbox",
+    "platform": "web",
+    "web_locator": "//input[@id='session-name']"
+  },
+  "session_supervisor_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "session-supervisor"
+  },
+  "calendar_choose_textbox_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//tr[3]/td[6]"
+  },
+  "calendar_choose_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Choose']"
+  },
+  "created_session_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//h4)[2]"
+  },
+
+  "calendar_date_choose_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//td[@class='p-datepicker-today']//following::span"
+  },
+  "add_field_link_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()=\"Add field\"]//parent::button"
+  },
+  "create_session_button_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "draft-session-submit"
+  },
+  "cancel_new_session_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "draft-session-cancel"
+  },
+  "new_field_name_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "session-extra-field-key-"
+  },
+  "new_field_value_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "session-extra-field-value-"
+  },
+  "delete_button_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//i[@class='icon-delete']//parent::button"
+  },
+  "cross_button_inClassSession_x": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+  "search_text_box_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Search']"
+  },
+  "search_name_in_viewList_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "(//h4[text()='Nothing'])[1]"
+  },
+  "details_schedule_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//label[text()='Details']"
+  },
+  "employees_schedule_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//label[text()='Schedule']"
+  },
+  "edit_button_session_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Edit']//parent::button"
+  },
+  "update_button_session_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "session-submit"
+  },
+  "cancel_button_session_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "session-top-cancel"
+  },
+  "kebab_icon_option_session_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[@class=\"p-button-icon icon-more-v icon-lg\"]//parent::button)[3]"
+  },
+  "active_session_kebab_icon_option_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[@class=\"p-button-icon icon-more-v icon-lg\"]//parent::button)[1]"
+  },
+  "start_button_session_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[text()='Start']//parent::a//parent::div)[1]"
+  },
+  "cross_button_session_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//button[@class='p-dialog-header-icon p-dialog-header-close p-link'] "
+  },
+  "in_class_session_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//span[text()='In-class Sessions']//parent::a"
+  },
+  "add_employee_inClassSession": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "session-add-employees"
+  },
+  "session_name_required_validation_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Session name is required']//parent::div"
+  },
+  "supervisor_name_required_validation_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Supervisor is required']//parent::div"
+  },
+  "data_required_validation_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Date is required']//parent::div"
+  },
+  "add_employee_button_in_popup_present": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Add employees']//parent::button"
+  }
+  ,
+  "list_to_grid_converter": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "view-switcher"
+  },
+  "forward_icon_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//a[@class='o-pag__link o-pag__next o-pag__next']"
+  },
+  "move_to_left_forward": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='scroll-content']"
+  },
+  "backward_icon_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//a[@class='o-pag__link o-pag__previous o-pag__previous']"
+  },
+  "move_to_right_backward": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='scroll-content']"
+  },
+  "riva_patel_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[contains(text(), 'patel riva')]//parent::div"
+  },
+  "zeel_patel_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Zeel Patel']//parent::div"
+  },
+  "employee_count_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div//span[text()='1']"
+  },
+  "view_full_screen_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-button p-component']"
+  },
+  "active_in_class_session_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h3[text()='Active']"
+  },
+  "play_active_in_class_session_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//button[@class='p-button p-component p-button-icon-only p-button-plain p-button-text p-button-rounded'])[1]"
+  },
+  "resume_option_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Resume']"
+  },
+  "completed_option_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='Complete']"
+  },
+  "completed_session_popup_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Complete Session']//parent::div"
+  },
+  "confirm_button_completed_session_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Confirm']"
+  },
+  "completed_session_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h4[text()='Completed']//parent::div"
+  },
+  "cancel_button_completed_session_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Cancel']"
+  }
+}

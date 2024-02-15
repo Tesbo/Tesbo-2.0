@@ -1,0 +1,10 @@
+{
+
+  "homepage_title": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h1[@class='title']"
+  }
+}

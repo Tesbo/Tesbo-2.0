@@ -1,0 +1,14 @@
+{
+  "endPoint": "/v1/employees/${employee_id}/visits/${visit_id}",
+  "methodType" : "DELETE",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": ""
+  },
+  "body": {
+  },
+
+  "pathParameter":{"employee_id": "","visit_id": ""},
+  "queryParameters": {},
+  "schema": {}
+}

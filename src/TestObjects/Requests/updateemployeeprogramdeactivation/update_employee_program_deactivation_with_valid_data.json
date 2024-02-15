@@ -1,0 +1,13 @@
+{
+  "endPoint": "/v1/programs/7FFCBF92A61611EC8FD90A89C66BA7E6/employees/C8B80129A61111EC8FD90A89C66BA7E6",
+  "methodType" : "PATCH",
+  "header": {
+    "Content-Type": "application/json",
+  },
+  "body": {
+    "start_date": "2021-04-27",
+    "due_date": "2022-04-27",
+    "status": "Active"
+  }
+
+}

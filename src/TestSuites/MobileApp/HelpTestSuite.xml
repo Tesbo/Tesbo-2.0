@@ -1,0 +1,135 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Help Page Android App Test Suite" parallel="tests" thread-count="5">
+
+    <test name = "To verify that clicking on Back to Home button leads to Home page of the help">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_that_clicking_on_Back_to_Home_button_leads_to_Home_page_of_the_help"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify Need Help link is clickable or not">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_Need_Help_link_is_clickable_or_not"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify user is able to see search bar option and links of Help for caregivers, help for Managers, Help for managers on behalf of caregivers, contact us and Hamburger at help page">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_user_is_able_to_see_search_bar_option_and_links_of_Help_for_caregivers_help_for_Managers_Help_for_managers_on_behalf_of_caregivers_contact_us_and_Hamburger_at_help_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify user is able to search terms related to articles.">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_user_is_able_to_search_terms_related_to_articles"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify when user searches irrelevant terms then showing message No result for">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_when_user_searches_irrelevant_terms_then_showing_message_No_result_for"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify after getting search result there are dropdown menu for various help seekers and Back to Home button at upper left side available.">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_after_getting_search_result_there_are_dropdown_menu_for_various_help_seekers_and_Back_to_Home_button_at_upper_left_side_available"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify that Taping on Back to Home button leads to Home page of the help">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_that_Taping_on_Back_to_Home_button_leads_to_Home_page_of_the_help"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify search bar option is also available at search result page">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_search_bar_option_is_also_available_at_search_result_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify when Tap on Help for caregiver, Help for managers and Help for Managers on behalf of caregivers it shows contact us link and Still need help link">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_when_Tap_on_Help_for_caregiver_Help_for_managers_and_Help_for_Managers_on_behalf_of_caregivers_it_shows_contact_us_link_and_Still_need_help_link"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify links available at the Help for caregiver page leads to related articles">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_links_available_at_the_Help_for_caregiver_page_leads_to_related_articles"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify that Taping on still need help page leads to page where links in various language is available">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_that_Taping_on_still_need_help_page_leads_to_page_where_links_in_various_language_is_available"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify that Taping on links available at still need help page leads to the form for filling">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_that_Taping_on_links_available_at_still_need_help_page_leads_to_the_form_for_filling"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify that user is not able to submit form without filling mandatory field">
+        <classes>
+            <class name = "MobileTests.help.help_test" >
+                <methods>
+                    <include name="To_verify_that_Taping_on_submit_button_submits_the_requests"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

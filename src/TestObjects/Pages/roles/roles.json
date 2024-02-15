@@ -1,0 +1,128 @@
+{
+  "roles_tab": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//a[contains(text(),'Roles and Permissions')]"
+  },
+  "user_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//a[contains(text(),'Users')]"
+  },
+  "new_role": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//button[contains(text(),'new')])[2]"
+  },
+  "add_user_pop_up": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//h5[contains(text(),'Add User')]"
+  },
+  "add_user_create": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//button[contains(text(),'Create')])[2]"
+  },
+  "access_group_required": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//span[contains(text(),'Access Group Required')]"
+  },
+  "roles_required": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//span[contains(text(),'Roles Required')]"
+  },
+  "add_user_first_name": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder = 'First name']"
+  },
+  "add_user_email": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder = 'Email']"
+  },
+  "access_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class = 'dropdown-button']"
+  },
+  "select_access": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//p[contains(text(),'All')]"
+  },
+  "role_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//input[@class ='form-control'])[41]"
+  },
+  "select_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//a[contains(text(),'Manager')]"
+  },
+  "add_user_cancel": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "(//button[contains(text(),'Cancel')])[17]"
+  },
+  "add_user_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//div[contains(text(),'Organization Role User created successfully')]"
+  },
+  "click_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//tbody/tr[1]/td[5]/div/span/img"
+  },
+  "edit_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//span[contains(text(),'Edit')])[1]"
+  },
+  "reset_password_action": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div/div/div/table/tbody/tr[1]/td[5]/div/div/div/ul/li[2]/div/small"
+  }
+}

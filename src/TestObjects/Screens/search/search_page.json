@@ -1,0 +1,38 @@
+{
+
+  "search_box_button": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Search\"]",
+    "ios_locator": ""
+  },
+  "search_text_box": {
+    "platform": "android",
+    "element_type": "text_box",
+    "locator_type": "xpath",
+    "android_locator": "/hierarchy/android.widget.FrameLayout//android.view.View/android.widget.EditText",
+    "ios_locator": ""
+  },
+  "search_result": {
+    "platform": "android",
+    "element_type": "text_box",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Modules\"]",
+    "ios_locator": ""
+  },
+  "modules_text": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Modules\"]",
+    "ios_locator": ""
+  },
+  "lessons_text": {
+    "platform": "android",
+    "element_type": "button",
+    "locator_type": "xpath",
+    "android_locator": "//android.view.View[@content-desc=\"Lessons\"]",
+    "ios_locator": ""
+  }
+}

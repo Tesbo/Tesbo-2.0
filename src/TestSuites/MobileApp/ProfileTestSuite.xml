@@ -1,0 +1,237 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Profile Page Android App Test Suite" parallel="tests" thread-count="5">
+
+    <test name="verify user is able to navigate back by clicking on back button">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="verify_user_is_able_to_navigate_back_by_clicking_on_back_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify that user is able to see profile details at profile option">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="verify_that_user_is_able_to_see_profile_details_at_profile_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify user is able to see cancel and save button after editing anything in the profile details">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_user_is_able_to_see_cancel_and_save_button_after_editing_anything_in_the_profile_details"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="To verify that user is able to cancel the changes in profile by clicking on cancel button">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_that_user_is_able_to_cancel_the_changes_in_profile_by_clicking_on_cancel_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when tap on cancel button Profile Screen">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_when_tap_on_cancel_button_profile_screen"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when tap on save button Profile Screen">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_when_tap_on_save_button_profile_screen"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when click on Delete Profile button redirect to Profile Detail screen">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_when_click_on_Delete_Profile_button_redirect_to_Profile_Detail_screen"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify Not Verified tool tip is display below mail text box">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_Not_Verified_tool_tip_is_display_below_mail_text_box"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify Not Verified tool tip is display below phone number text Box">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_Not_Verified_tool_tip_is_display_below_phone_number_text_box"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when you click on email Not verified tool tip it opens a pop up">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_when_you_click_on_email_Not_verified_tool_tip_it_opens_a_pop_up"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when you click on phone number Not verified tool tip it opens a pop up">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_when_you_click_on_phone_number_Not_verified_tool_tip_it_opens_a_pop_up"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify header, enter code text box and verify button is displayed on the Not verified Email  pop up">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_header_enter_code_text_box_and_verify_button_is_displayed_on_the_Not_verified_Email_pop_up"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify header, enter code text box and verify button is displayed on the Not verified Phone Number  pop up">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_header_enter_code_text_box_and_verify_button_is_displayed_on_the_Not_verified_Phone_number_pop_up"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when you click on Cancel button of Not Verified Email Pop Up, it navigate to profile screen">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_when_you_click_on_Cancel_button_of_Not_Verified_Email_Pop_Up_it_navigate_to_profile_screen"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when you click on Cancel button of Not Verified Phone number Pop Up, it navigate to profile screen">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_when_you_click_on_Cancel_button_of_Not_Verified_Phone_Number_Pop_Up_it_navigate_to_profile_screen"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify user get alert message if you click on verify button without entering the verification code for email">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_user_get_alert_message_if_you_click_on_verify_button_without_entering_the_verification_code_for_email"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="To verify user get alert message if you click on verify button without entering the verification code for Phone number">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include
+                            name="To_verify_user_get_alert_message_if_you_click_on_verify_button_without_entering_the_verification_code_for_phone_number"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify that user is able to see profile details at profile option">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_user_is_able_to_change_first_name_and_last_name"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify user is able not to change first name and last name.">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_user_is_able_not_to_save_profile_by_keeping_first_name_as_blank"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="To verify user is able not to change last name and last name.">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_user_is_able_not_to_save_profile_by_keeping_last_name_as_blank"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when Tap on help it opens help page">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_when_Tap_on_help_it_opens_help_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To_verify_Delete_Profile_button">
+        <classes>
+            <class name="MobileTests.profile_tests.profile_test">
+                <methods>
+                    <include name="To_verify_Delete_Profile_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

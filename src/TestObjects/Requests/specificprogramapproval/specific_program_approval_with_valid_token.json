@@ -1,0 +1,17 @@
+{
+  "endPoint": "/v1/programs/${program}/approvals",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+  },
+  "body": {
+
+  },
+
+  "pathParameter":{"program":"" },
+
+  "queryParameters": ""
+
+}
+
+}

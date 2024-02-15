@@ -1,0 +1,578 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Public API Regression" thread-count="5" parallel="methods">
+
+    <test name = "login_with_valid_credentials">
+        <classes>
+            <class name = "APITests.loginTest.LoginTests" >
+                <methods>
+                    <include name="login_with_valid_credentials"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+<test name = "login_with_valid_client_id_in_upper_case">
+<classes>
+    <class name = "APITests.loginTest.LoginTests" >
+        <methods>
+            <include name="login_with_valid_client_id_in_upper_case"></include>
+        </methods>
+    </class>
+</classes>
+</test>
+
+<!--<test name = "login_with_valid_client_secret_in_upper_case">-->
+<!--<classes>-->
+<!--    <class name = "api.test.loginTest.LoginTests" >-->
+<!--        <methods>-->
+<!--            <include name="login_with_valid_client_secret_in_upper_case"></include>-->
+<!--        </methods>-->
+<!--    </class>-->
+<!--</classes>-->
+<!--</test>-->
+
+<test name = "login_with_blank_clientId">
+<classes>
+    <class name = "APITests.loginTest.LoginTests" >
+        <methods>
+            <include name="login_with_blank_clientId"></include>
+        </methods>
+    </class>
+</classes>
+</test>
+
+<test name = "login_with_blank_clientSecret">
+<classes>
+    <class name = "APITests.loginTest.LoginTests" >
+        <methods>
+            <include name="login_with_blank_clientSecret"></include>
+        </methods>
+    </class>
+</classes>
+</test>
+
+<test name = "login_with_wrong_credentials">
+<classes>
+    <class name = "APITests.loginTest.LoginTests" >
+        <methods>
+            <include name="login_with_wrong_credentials"></include>
+        </methods>
+    </class>
+</classes>
+</test>
+
+<test name = "login_with_valid_client_id_invalid_client_secret_credentials">
+<classes>
+    <class name = "APITests.loginTest.LoginTests" >
+        <methods>
+            <include name="login_with_valid_client_id_invalid_client_secret_credentials"></include>
+        </methods>
+    </class>
+</classes>
+</test>
+
+<test name = "login_with_invalid_client_id_valid_client_secret_credentials">
+<classes>
+    <class name = "APITests.loginTest.LoginTests" >
+        <methods>
+            <include name="login_with_invalid_client_id_valid_client_secret_credentials"></include>
+        </methods>
+    </class>
+</classes>
+</test>
+
+    <test name = "verify_get_all_employee_visit_details_with_valid_token">
+        <classes>
+            <class name = "APITests.getallemployeesvisitsdetails.getallemployeevisitsdetailsTest" >
+                <methods>
+                    <include name="verify_get_all_employee_visit_details_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_past_for_valid_values">
+        <classes>
+            <class name = "APITests.getallemployeesvisitsdetails.getallemployeevisitsdetailsTest" >
+                <methods>
+                    <include name="verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_past_for_valid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_past_for_invalid_values">
+        <classes>
+            <class name = "APITests.getallemployeesvisitsdetails.getallemployeevisitsdetailsTest" >
+                <methods>
+                    <include name="verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_past_for_invalid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_valid_values">
+        <classes>
+            <class name = "APITests.getallemployeesvisitsdetails.getallemployeevisitsdetailsTest" >
+                <methods>
+                    <include name="verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_valid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_invalid_values">
+        <classes>
+            <class name = "APITests.getallemployeesvisitsdetails.getallemployeevisitsdetailsTest" >
+                <methods>
+                    <include name="verify_get_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_invalid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_visit_details_with_blank_token">
+        <classes>
+            <class name = "APITests.getallemployeesvisitsdetails.getallemployeevisitsdetailsTest" >
+                <methods>
+                    <include name="verify_get_all_employee_visit_details_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_visit_details_with_invalid_token">
+        <classes>
+            <class name = "APITests.getallemployeesvisitsdetails.getallemployeevisitsdetailsTest" >
+                <methods>
+                    <include name="verify_get_all_employee_visit_details_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_specific_visit_details_with_valid_token">
+        <classes>
+            <class name = "APITests.getthedetailsofspecificvisit.getthedetailsofspecificvisitTest" >
+                <methods>
+                    <include name="verify_get_all_employee_specific_visit_details_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_the_details_of_specific_visit_with_invalid_token">
+        <classes>
+            <class name = "APITests.getthedetailsofspecificvisit.getthedetailsofspecificvisitTest" >
+                <methods>
+                    <include name="verify_get_the_details_of_specific_visit_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_specific_visit_details_with_blank_token">
+        <classes>
+            <class name = "APITests.getthedetailsofspecificvisit.getthedetailsofspecificvisitTest" >
+                <methods>
+                    <include name="verify_get_all_employee__specific_visit_details_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name = "verify_specific_visit_by_providing_invalid_visit_id">
+        <classes>
+            <class name = "APITests.getthedetailsofspecificvisit.getthedetailsofspecificvisitTest" >
+                <methods>
+                    <include name="verify_specific_visit_by_providing_invalid_visit_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_specific_visit_by_providing_invalid_employee_id">
+        <classes>
+            <class name = "APITests.getthedetailsofspecificvisit.getthedetailsofspecificvisitTest" >
+                <methods>
+                    <include name="verify_specific_visit_by_providing_invalid_employee_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_specific_visit_by_providing_invalid_employee_id_and_visit_id">
+        <classes>
+            <class name = "APITests.getthedetailsofspecificvisit.getthedetailsofspecificvisitTest" >
+                <methods>
+                    <include name="verify_specific_visit_by_providing_invalid_employee_id_and_visit_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name = "verify_specific_visit_by_providing_valid_employee_id_in_visit_id_and_visit_id_in_employee_id">
+        <classes>
+            <class name = "APITests.getthedetailsofspecificvisit.getthedetailsofspecificvisitTest" >
+                <methods>
+                    <include name="verify_specific_visit_by_providing_valid_employee_id_in_visit_id_and_visit_id_in_employee_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_of_employee_visit_details_with_valid_token">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_of_employee_visit_details_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_employee_visit_by_passing_query_parameter_as_include_past_for_valid_values">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_employee_visit_by_passing_query_parameter_as_include_past_for_valid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_of_all_employee_visit_details_by_passing_query_parameter_as_include_past_for_invalid_values">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_of_all_employee_visit_details_by_passing_query_parameter_as_include_past_for_invalid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_valid_values">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_valid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_invalid_values">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_all_employee_visit_details_by_passing_query_parameter_as_include_inactive_for_invalid_values"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_employee_visit_with_invalid_token">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_employee_visit_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_employee_visit_details_with_blank_token">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_employee_visit_details_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_list_employee_visit_for_invalid_employee">
+        <classes>
+            <class name = "APITests.listemployeevisit.listemployeevisitTest" >
+                <methods>
+                    <include name="verify_list_employee_visit_for_invalid_employee"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_create_visit_for_employee_with_valid_token">
+        <classes>
+            <class name = "APITests.createvisitforemployee.createvisitforemployeeTest" >
+                <methods>
+                    <include name="verify_create_visit_for_employee_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_create_visit_for_employee_with_invalid_token">
+        <classes>
+            <class name = "APITests.createvisitforemployee.createvisitforemployeeTest" >
+                <methods>
+                    <include name="verify_create_visit_for_employee_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_create_visit_for_employee_with_blank_token">
+        <classes>
+            <class name = "APITests.createvisitforemployee.createvisitforemployeeTest" >
+                <methods>
+                    <include name="verify_create_visit_for_employee_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_create_visit_by_not_providing_start_date_time">
+        <classes>
+            <class name = "APITests.createvisitforemployee.createvisitforemployeeTest" >
+                <methods>
+                    <include name="verify_create_visit_by_not_providing_start_date_time"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_create_visit_by_not_providing_last_date_time">
+        <classes>
+            <class name = "APITests.createvisitforemployee.createvisitforemployeeTest" >
+                <methods>
+                    <include name="verify_create_visit_by_not_providing_last_date_time"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_create_visit_employee_for_invalid_employee">
+        <classes>
+            <class name = "APITests.createvisitforemployee.createvisitforemployeeTest" >
+                <methods>
+                    <include name="verify_create_visit_employee_for_invalid_employee"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_disable_visit_blocking_for_employee_with_valid_token">
+        <classes>
+            <class name = "APITests.disablevisitblocking.disablevisitblockingTests" >
+                <methods>
+                    <include name="verify_disable_visit_blocking_for_employee_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_disable_visit_blocking_employee_with_invalid_token">
+        <classes>
+            <class name = "APITests.disablevisitblocking.disablevisitblockingTests" >
+                <methods>
+                    <include name="verify_disable_visit_blocking_employee_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_disable_visit_blocking_for_employee_with_blank_token">
+        <classes>
+            <class name = "APITests.disablevisitblocking.disablevisitblockingTests" >
+                <methods>
+                    <include name="verify_disable_visit_blocking_for_employee_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_disable_visit_blocking_for_invalid_employee">
+        <classes>
+            <class name = "APITests.disablevisitblocking.disablevisitblockingTests" >
+                <methods>
+                    <include name="verify_disable_visit_blocking_for_invalid_employee"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_update_visit_info_with_valid_token">
+        <classes>
+            <class name = "APITests.updatevisitinformation.updatevisitinformationTest" >
+                <methods>
+                    <include name="verify_update_visit_info_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_update_visit_info_with_invalid_token">
+        <classes>
+            <class name = "APITests.updatevisitinformation.updatevisitinformationTest" >
+                <methods>
+                    <include name="verify_update_visit_info_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_update_visit_info_with_blank_token">
+        <classes>
+            <class name = "APITests.updatevisitinformation.updatevisitinformationTest" >
+                <methods>
+                    <include name="verify_update_visit_info_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_update_visit_by_providing_invalid_employee_id">
+        <classes>
+            <class name = "APITests.updatevisitinformation.updatevisitinformationTest" >
+                <methods>
+                    <include name="verify_update_visit_by_providing_invalid_employee_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_update_visit_by_providing_invalid_visit_id">
+        <classes>
+            <class name = "APITests.updatevisitinformation.updatevisitinformationTest" >
+                <methods>
+                    <include name="verify_update_visit_by_providing_invalid_visit_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_update_visit_by_providing_invalid_employee_id_and_visit_id">
+        <classes>
+            <class name = "APITests.updatevisitinformation.updatevisitinformationTest" >
+                <methods>
+                    <include name="verify_update_visit_by_providing_invalid_employee_id_and_visit_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_delete_visit_with_valid_token">
+        <classes>
+            <class name = "APITests.removereleventvisitfromthesystem.removereleventvisitfromsystemTests" >
+                <methods>
+                    <include name="verify_delete_visit_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_delete_visit_with_blank_token">
+        <classes>
+            <class name = "APITests.removereleventvisitfromthesystem.removereleventvisitfromsystemTests" >
+                <methods>
+                    <include name="verify_delete_visit_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_delete_visit_with_invalid_token">
+        <classes>
+            <class name = "APITests.removereleventvisitfromthesystem.removereleventvisitfromsystemTests" >
+                <methods>
+                    <include name="verify_delete_visit_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_delete_by_providing_invalid_employee_id_and_visit_id">
+        <classes>
+            <class name = "APITests.removereleventvisitfromthesystem.removereleventvisitfromsystemTests" >
+                <methods>
+                    <include name="verify_delete_by_providing_invalid_employee_id_and_visit_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_delete_visit_by_providing_invalid_visit_id">
+        <classes>
+            <class name = "APITests.removereleventvisitfromthesystem.removereleventvisitfromsystemTests" >
+                <methods>
+                    <include name="verify_delete_visit_by_providing_invalid_visit_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_delete_visit_by_providing_invalid_employee_id">
+        <classes>
+            <class name = "APITests.removereleventvisitfromthesystem.removereleventvisitfromsystemTests" >
+                <methods>
+                    <include name="verify_delete_visit_by_providing_invalid_employee_id"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_with_valid_token">
+        <classes>
+            <class name = "APITests.listallemployee.ListAllEmployeeTest" >
+                <methods>
+                    <include name="verify_get_all_employee_with_valid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_with_blank_token">
+        <classes>
+            <class name = "APITests.listallemployee.ListAllEmployeeTest" >
+                <methods>
+                    <include name="verify_get_all_employee_with_blank_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_get_all_employee_with_invalid_token">
+        <classes>
+            <class name = "APITests.listallemployee.ListAllEmployeeTest" >
+                <methods>
+                    <include name="verify_get_all_employee_with_invalid_token"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_by_applying_signed_up_query_parameter_value_as_true_User_is_only_getting_signed_up_employees_list">
+        <classes>
+            <class name = "APITests.listallemployee.ListAllEmployeeTest" >
+                <methods>
+                    <include name="verify_by_applying_signed_up_query_parameter_value_as_true_User_is_only_getting_signed_up_employees_list"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "verify_by_applying_disciplines_query_parameter_User_is_only_getting_result_as_per_searched_filter">
+        <classes>
+            <class name = "APITests.listallemployee.ListAllEmployeeTest" >
+                <methods>
+                    <include name="verify_by_applying_disciplines_query_parameter_User_is_only_getting_result_as_per_searched_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
+

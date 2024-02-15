@@ -1,0 +1,344 @@
+{
+
+  "employees_Option": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//a[normalize-space()='Employees']"
+  },
+  "new_employees_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "employees-new"
+  },
+  "phone_number_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "add-employee-phone"
+  },
+
+  "continue_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Continue']"
+  },
+
+  "first_name_text_box_on_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "(//div[text()=' First name ']//following::input)[1]"
+  },
+
+  "last_name_text_box_on_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "add-employee-last-name"
+  },
+  "employee_hiring_date_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "(//tr[3]/td[3])[2]"
+  },
+  "employee_display_employee_profile": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h2"
+  },
+  "employee_hiring_date": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-datepicker-group']//td[6])[3]"
+  },
+  "calendar_icon_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Choose']"
+  },
+  "new_emp_create_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Create']"
+  },
+
+  "phone_number_require_error_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Phone number is required']"
+  },
+
+  "first_name_require_error_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='First name is required']"
+  },
+
+  "last_name_require_error_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='Last name is required']"
+  },
+
+  "country_drop_Drop": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[@aria-controls='add-employee-country_list']"
+  },
+
+  "find_Country_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Find Country']"
+  },
+  "india_Country_select": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[text()='India +91']//parent::li"
+  },
+  "employee_progress": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='md-stepper-horizontal primary']"
+  },
+  "employee_visible_employee_profile": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h2[contains(text(),' ')]"
+  },
+  "phone_number_error_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='This phone number is already taken by']"
+  },
+  "cancel_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Cancel']"
+  },
+
+  "cancel_icon_on_popup" : {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@aria-label='Close']"
+  },
+
+  "back_button": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "add-employee-back"
+  },
+  "new_employee_header": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//h4[text()='New Employee']"
+  },
+  "closed_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@class='p-dialog-header-icon p-dialog-header-close p-link']"
+  },
+  "employees_check_box_on_page_first": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-checkbox-box'])[2]"
+  },
+  "employees_check_box_on_page_second": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-checkbox-box'])[3]"
+  },
+  "employees_check_box_on_page_third": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='p-checkbox-box'])[4]"
+  },
+  "employees_check_box_name_one": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name']//a[1]//parent::div)[1]"
+  },
+  "employees_check_box_name_two": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name']//a[1]//parent::div)[2]"
+  },
+  "employees_check_box_name_three": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//td[@data-label='Name']//a[1]//parent::div)[3]"
+  },
+  "new_emp_discipline_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-multiselect-label p-placeholder']"
+  },
+  "new_emp_discipline_select": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//ul[@id=\"add-employee-disciplines_list\"]//following::li)[1]"
+  },
+  "new_emp_location_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[@aria-label='Choose']"
+  },
+  "new_emp_location_select": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//li[@aria-label='[object Object]'])[1]"
+  },
+  "discipline_required_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Discipline is required']//parent::div"
+  },
+  "location_required_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()='Location is required']//parent::div"
+  },
+  "selected_location_display": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//span[@aria-label='[object Object]'])[1]//child::div"
+  },
+  "employment_date_required_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[normalize-space()='Employment date is required']//parent::div"
+  },
+  "language_dropdown_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//div[@class='p-dropdown-trigger']"
+  },
+  "select_language_from_the_dropdown": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//li[@aria-label='English']"
+  },
+  "management_info_popup": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//h4[text()='New Employee']"
+  },
+  "remove_discipline_cross_icon": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//span[@class='p-multiselect-token-icon pi pi-times-circle']"
+  },
+  "copy_employee_number": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//input[@id='employee-phone']"
+  },
+  "personal_info_page": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//p"
+  },
+  "send_sms_notification": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//div[@class='w-full flex justify-end pt-4']//child::div)[1]"
+  },
+
+  "phone_number_in_use_error": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[contains(@class,'p-inline-message-error')]"
+  }
+
+}

@@ -1,0 +1,15 @@
+{
+  "endPoint": "/v1/programs",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": ""
+  },
+  "body": {
+
+  },
+  "pathParameter":{},
+  "queryParameters": {},
+  "schema": {}
+
+}

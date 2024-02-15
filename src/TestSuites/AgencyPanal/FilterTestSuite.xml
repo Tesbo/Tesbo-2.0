@@ -1,0 +1,600 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Filter Test Suite" parallel="tests" thread-count="5">
+
+    <test name="To verify when clicks on Filters button">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_Filters_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on discipline, disciplines for the agency show">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_discipline_for_the_agency_show"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on select all, all the checkbox of discipline gets selected">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_select_all_the_checkbox_of_discipline_gets_selected"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on clear the checkbox of discipline gets selected">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_clear_the_checkbox_of_discipline_gets_selected"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when select the checkbox of disciplines, the total count of selected checkboxes appears next to discipline title">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="verify_when_select_the_checkbox_of_disciplines_the_total_count_of_selected_checkboxes_appears_next_to_discipline_title"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on And, all the selected disciplines are applicable">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_And_the_selected_disciplines_are_applicable"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on Or, all the selected disciplines are applicable">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_Or_the_selected_disciplines_are_applicable"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!--    <test name="To verify when clicks on the help icon, it redirects to the relevant page">-->
+    <!--        <classes>-->
+    <!--            <class name="web.tests.filter.filter_Test">-->
+    <!--                <methods>-->
+    <!--                    <include name="verify_when_clicks_on_the_help_icon_it_redirects_to_the_relevant_page"></include>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <test name="To verify when clicks on save at the bottom of the filters pane">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_save_at_the_bottom_of_the_filters_pane"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on cancel button of save filter popup">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_cancel_button_of_save_filter_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on cross button of save filter popup">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_cross_button_of_save_filter_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on save after entering filter name">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_save_after_entering_filter_name"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on save without entering name of the filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_save_without_entering_name_of_the_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on signed up drop down">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_signed_up_drop_down"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on completed button">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_completed_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on no checkbox">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_no_checkbox"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on Reset link">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_Reset_link"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on clear link of filter module location">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_clear_link_of_filter_module_location"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!--    <test name="verify when clicks on help icon of filter module location">-->
+    <!--        <classes>-->
+    <!--            <class name="web.tests.filter.filter_Test">-->
+    <!--                <methods>-->
+    <!--                    <include name="verify_when_clicks_on_help_icon_of_filter_module_location"></include>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <test name="verify when clicks on location dropdown of filter module">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="verify_when_clicks_on_location_dropdown_of_filter_module"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on save after selecting the discipline checkboxes of filter module">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="verify_when_clicks_on_save_after_selecting_the_discipline_checkboxes_of_filter_module"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify in built filter on employees page">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_in_built_filter_on_employees_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on language dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_language_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on employee on hold status dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_employee_on_hold_status_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when select Employee status Terminated">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_Employee_status_Terminated"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when select no applicant option">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_no_applicant_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when select yes applicant option">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_yes_applicant_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when applying program filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_applying_program_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when search program in program filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_search_program_in_program_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when program filter with select all program">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_applying_program_filter_with_select_all_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when applying completion filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_applying_completion_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when select discipline with using And operator">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_discipline_with_using_And_operator"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when select discipline with using or operator">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_discipline_with_using_or_operator"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on save filter from side panel after applying some filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_when_clicks_on_save_filter_from_side_panel_after_applying_some_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on save filter from side panel without applying any filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_when_clicks_on_save_filter_from_side_panel_without_applying_any_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on meatball menu on the saved filter from upper panel">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_when_clicks_on_meatball_menu_on_the_saved_filter_from_upper_panel"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks set as default on the saved filter from upper panel">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_set_as_default_on_the_saved_filter_from_upper_panel"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on unpin on top panel">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_unpin_on_top_panel"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on rename on top panel">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_rename_on_top_panel"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks save filter from upper panel button after applying some filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_when_clicks_save_filter_from_upper_panel_button_after_applying_some_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on cross icon on remove filter popup">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_cross_icon_on_remove_filter_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when select None option in Discipline dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_None_option_in_Discipline_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on cancel button on remove filter popup">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_cancel_button_on_remove_filter_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on confirm button on remove filter popup">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_confirm_button_on_remove_filter_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when click on Employment Date dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_click_on_Employment_Date_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when click on Employment Date after">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_click_on_Employment_Date_after"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when click on Employment Date Range">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_click_on_Employment_Date_Range"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify nothing to show display while selected filters data not available">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_nothing_to_show_display_while_selected_filters_data_not_available"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when applies None on language dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_applies_None_on_language_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when select discipline with using And operator in EF">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_discipline_with_using_And_operator_in_EF"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify User can Applying multiple Disciplines Filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_User_can_Applying_multiple_Disciplines_Filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when Applying filter with selecting In-progress Pending approval program">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_when_Applying_filter_with_selecting_In_progress_Pending_approval_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when Applying filter with selecting In-progress approved program">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_when_Applying_filter_with_selecting_In_progress_approved_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when Applying filter with selecting Approved  Pending approval program">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include
+                            name="To_verify_when_Applying_filter_with_selecting_Approved_Pending_approval_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when 'select all' link with in Progress status dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_select_all_link_with_in_Progress_status_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on clear link in signed up dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_clear_link_in_signed_up_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on 'Select all' link in  signed up dropdown">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_Select_all_link_in_signed_up_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when Applying filter with completed default filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_Applying_filter_with_completed_default_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when applied multiple filter in program filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_applied_multiple_filter_in_program_filter"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when applied multiple filter in employee filter">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_applied_multiple_filter_in_Employee_filte"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when Applying filter with starting date of program">
+        <classes>
+            <class name="WebUITests.filter.filter_Test">
+                <methods>
+                    <include name="To_verify_when_Applying_filter_with_starting_date_of_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
