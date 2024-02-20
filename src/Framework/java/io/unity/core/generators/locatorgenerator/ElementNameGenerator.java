@@ -1,6 +1,6 @@
-package io.unity.core.generators.locatorgenerator;
+package Framework.java.io.unity.core.generators.locatorgenerator;
 
-import io.unity.Utils;
+import io.unity.core.generators.locatorgenerator.ElementFilterHelper;
 import org.jsoup.nodes.Element;
 
 public class ElementNameGenerator {
@@ -12,7 +12,7 @@ public class ElementNameGenerator {
 
         String name = "unknown_element";
 
-        ElementFilterHelper helper = new ElementFilterHelper();
+       ElementFilterHelper  helper = new ElementFilterHelper();
 
 
         if (element.nodeName().equals("input")) {

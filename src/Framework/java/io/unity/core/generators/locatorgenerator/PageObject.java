@@ -1,5 +1,6 @@
-package io.unity.core.generators.locatorgenerator;
+package Framework.java.io.unity.core.generators.locatorgenerator;
 
+import io.unity.core.generators.locatorgenerator.ElementFilterHelper;
 import org.json.simple.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

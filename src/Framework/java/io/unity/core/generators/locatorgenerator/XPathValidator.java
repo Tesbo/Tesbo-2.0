@@ -1,4 +1,4 @@
-package io.unity.core.generators.locatorgenerator;
+package Framework.java.io.unity.core.generators.locatorgenerator;
 
 import org.openqa.selenium.By;
 

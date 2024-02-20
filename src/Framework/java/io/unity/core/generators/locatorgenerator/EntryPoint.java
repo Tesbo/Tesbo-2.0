@@ -1,4 +1,4 @@
-package io.unity.core.generators.locatorgenerator;
+package Framework.java.io.unity.core.generators.locatorgenerator;
 
 import java.util.Scanner;
 
@@ -55,7 +55,7 @@ public class EntryPoint {
 
     public void generate(String platform) {
         System.out.println("generate triggered");
-        PageObject object = new PageObject();
+         PageObject object = new PageObject();
         object.generateLocatorForCurrentPage(platform);
         waitForCommand(platform);
 

@@ -1,9 +1,8 @@
-package io.unity.core.generators.locatorgenerator;
+package Framework.java.io.unity.core.generators.locatorgenerator;
 
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Element;
-
 import java.util.ArrayList;
 
 public class ElementChecker {

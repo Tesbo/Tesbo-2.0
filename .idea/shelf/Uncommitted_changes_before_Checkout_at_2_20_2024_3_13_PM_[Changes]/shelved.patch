@@ -1,0 +1,134 @@
+Index: src/Framework/java/io/unity/core/data/TestData.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.data;\r\n\r\nimport com.github.javafaker.Faker;\r\nimport org.apache.commons.lang3.RandomStringUtils;\r\n\r\nimport java.text.SimpleDateFormat;\r\nimport java.time.LocalDate;\r\nimport java.util.Calendar;\r\nimport java.util.Date;\r\nimport java.util.Locale;\r\n\r\npublic class TestData {\r\n\r\n\r\n    static Faker faker = new Faker(new Locale(\"en-IND\"));\r\n\r\n    public static void main(String[] args) {\r\n        System.out.println(TestData.first_name());\r\n    }\r\n\r\n\r\n    public static int get_todays_date() {\r\n        LocalDate currentdate = LocalDate.now();\r\n        return currentdate.getDayOfMonth();\r\n    }\r\n\r\n    public static String get_current_month() {\r\n        LocalDate currentdate = LocalDate.now();\r\n        return currentdate.getMonth().toString();\r\n    }\r\n\r\n    public static int get_current_month_no() {\r\n        return Calendar.getInstance().get(Calendar.MONTH);\r\n    }\r\n\r\n    public static String getTodayDateinFormat(String format) {\r\n        SimpleDateFormat dtf = new SimpleDateFormat(format);\r\n        Calendar calendar = Calendar.getInstance();\r\n\r\n        Date dateObj = calendar.getTime();\r\n        String formattedDate = dtf.format(dateObj);\r\n        System.out.println(formattedDate);\r\n        return formattedDate;\r\n    }\r\n\r\n    public static int get_current_year() {\r\n        LocalDate currentdate = LocalDate.now();\r\n        return currentdate.getYear();\r\n    }\r\n\r\n\r\n    public static String random_alpha_numeric_string(int length) {\r\n        return RandomStringUtils.randomAlphanumeric(length);\r\n    }\r\n\r\n    public static String random_alphabetic_string(int length) {\r\n        return RandomStringUtils.randomAlphabetic(length);\r\n    }\r\n\r\n    public static String random_numeric_string(int length) {\r\n        return RandomStringUtils.randomNumeric(length);\r\n    }\r\n\r\n\r\n    public static String email() {\r\n        return faker.name().username() + \"@mailinator.com\";\r\n    }\r\n\r\n    public static String first_name() {\r\n        return faker.name().firstName();\r\n    }\r\n\r\n    public static String last_name() {\r\n        return faker.name().lastName();\r\n    }\r\n\r\n    public static String time_stamp() {\r\n        return new SimpleDateFormat(\"yyyy_MM_dd_HH_mm_ss\").format(new Date());\r\n    }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/data/TestData.java b/src/Framework/java/io/unity/core/data/TestData.java
+--- a/src/Framework/java/io/unity/core/data/TestData.java	
++++ b/src/Framework/java/io/unity/core/data/TestData.java	
+@@ -1,4 +1,4 @@
+-package io.unity.core.data;
++package Framework.java.io.unity.core.data;
+ 
+ import com.github.javafaker.Faker;
+ import org.apache.commons.lang3.RandomStringUtils;
+Index: src/Framework/java/io/unity/core/exception/ResponseTimeAssertionException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.exception;\r\n\r\npublic class ResponseTimeAssertionException extends Exception  {\r\n\r\n\r\n        public ResponseTimeAssertionException(String errorMessage) {\r\n            super(errorMessage);\r\n        }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/exception/ResponseTimeAssertionException.java b/src/Framework/java/io/unity/core/exception/ResponseTimeAssertionException.java
+--- a/src/Framework/java/io/unity/core/exception/ResponseTimeAssertionException.java	
++++ b/src/Framework/java/io/unity/core/exception/ResponseTimeAssertionException.java	
+@@ -1,4 +1,4 @@
+-package io.unity.core.exception;
++package Framework.java.io.unity.core.exception;
+ 
+ public class ResponseTimeAssertionException extends Exception  {
+ 
+Index: src/Framework/java/io/unity/core/exception/LocatorValidationException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.exception;\r\n\r\npublic class LocatorValidationException extends Exception  {\r\n\r\n\r\n        public LocatorValidationException(String errorMessage) {\r\n            super(errorMessage);\r\n        }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/exception/LocatorValidationException.java b/src/Framework/java/io/unity/core/exception/LocatorValidationException.java
+--- a/src/Framework/java/io/unity/core/exception/LocatorValidationException.java	
++++ b/src/Framework/java/io/unity/core/exception/LocatorValidationException.java	
+@@ -1,4 +1,4 @@
+-package io.unity.core.exception;
++package Framework.java.io.unity.core.exception;
+ 
+ public class LocatorValidationException extends Exception  {
+ 
+Index: src/Framework/java/io/unity/core/exception/LocatorNotFoundException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.exception;\r\n\r\npublic class LocatorNotFoundException extends Exception  {\r\n\r\n\r\n        public LocatorNotFoundException(String errorMessage) {\r\n            super(errorMessage);\r\n        }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/exception/LocatorNotFoundException.java b/src/Framework/java/io/unity/core/exception/LocatorNotFoundException.java
+--- a/src/Framework/java/io/unity/core/exception/LocatorNotFoundException.java	
++++ b/src/Framework/java/io/unity/core/exception/LocatorNotFoundException.java	
+@@ -1,4 +1,4 @@
+-package io.unity.core.exception;
++package Framework.java.io.unity.core.exception;
+ 
+ public class LocatorNotFoundException extends Exception  {
+ 
+Index: src/Framework/java/io/unity/core/exception/ListSizeNotMatchingException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.exception;\r\n\r\npublic class ListSizeNotMatchingException extends Exception  {\r\n\r\n\r\n        public ListSizeNotMatchingException(String errorMessage) {\r\n            super(errorMessage);\r\n        }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/exception/ListSizeNotMatchingException.java b/src/Framework/java/io/unity/core/exception/ListSizeNotMatchingException.java
+--- a/src/Framework/java/io/unity/core/exception/ListSizeNotMatchingException.java	
++++ b/src/Framework/java/io/unity/core/exception/ListSizeNotMatchingException.java	
+@@ -1,4 +1,4 @@
+-package io.unity.core.exception;
++package Framework.java.io.unity.core.exception;
+ 
+ public class ListSizeNotMatchingException extends Exception  {
+ 
+Index: src/Framework/java/io/unity/core/generators/locatorgenerator/ElementFilterHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.generators.locatorgenerator;\r\n\r\nimport org.jsoup.nodes.Element;\r\n\r\npublic class ElementFilterHelper {\r\n\r\n    /*Checking node is representing a element which is considerable or not\r\n    *currently it's checking for the button, link, text area, input\r\n    *\r\n    */\r\n    public boolean checkForValidElement(Element element) {\r\n        boolean isValidElement = false;\r\n\r\n        if (checkForButton(element) | checkForLink(element) | checkForTextarea(element) | checkForInput(element) | checkForHeader(element)) {\r\n            isValidElement = true;\r\n        }\r\n        return isValidElement;\r\n    }\r\n\r\n    public Boolean checkForButton(Element element) {\r\n        Boolean bool = false;\r\n\r\n        if (element.nodeName().equals(\"button\")) {\r\n            bool = true;\r\n        }\r\n        return bool;\r\n    }\r\n\r\n    public Boolean checkForLink(Element element) {\r\n        Boolean bool = false;\r\n\r\n        if (element.nodeName().equals(\"a\")) {\r\n            bool = true;\r\n        }\r\n        return bool;\r\n    }\r\n\r\n    public Boolean checkForInput(Element element) {\r\n        Boolean bool = false;\r\n\r\n        if (element.nodeName().equals(\"input\")) {\r\n            bool = true;\r\n        }\r\n        return bool;\r\n    }\r\n\r\n    public Boolean checkForSelect(Element element) {\r\n        Boolean bool = false;\r\n\r\n        if (element.nodeName().equals(\"Select\")) {\r\n            bool = true;\r\n        }\r\n        return bool;\r\n    }\r\n\r\n    public Boolean checkForTextarea(Element element) {\r\n        Boolean bool = false;\r\n\r\n        if (element.nodeName().equals(\"textarea\")) {\r\n            bool = true;\r\n        }\r\n        return bool;\r\n    }\r\n\r\n    public Boolean checkForHeader(Element element)\r\n    {\r\n        Boolean bool = false;\r\n\r\n        if (element.nodeName().equals(\"h1\") | element.nodeName().equals(\"h2\") | element.nodeName().equals(\"h3\") | element.nodeName().equals(\"h4\") | element.nodeName().equals(\"h5\") | element.nodeName().equals(\"h6\") |element.nodeName().equals(\"p\") ) {\r\n            bool = true;\r\n        }\r\n        return bool;\r\n    }\r\n\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementFilterHelper.java b/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementFilterHelper.java
+--- a/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementFilterHelper.java	
++++ b/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementFilterHelper.java	
+@@ -1,9 +1,9 @@
+-package io.unity.core.generators.locatorgenerator;
++package Framework.java.io.unity.core.generators.locatorgenerator;
+ 
+ import org.jsoup.nodes.Element;
+ 
+ public class ElementFilterHelper {
+-
++ qwwrrrrr
+     /*Checking node is representing a element which is considerable or not
+     *currently it's checking for the button, link, text area, input
+     *
+Index: src/Framework/java/io/unity/core/generators/locatorgenerator/ElementChecker.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.generators.locatorgenerator;\r\n\r\nimport org.jsoup.nodes.Attribute;\r\nimport org.jsoup.nodes.Attributes;\r\nimport org.jsoup.nodes.Element;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class ElementChecker {\r\n\r\n    public ArrayList getElementList(Element element) {\r\n        XPathGenerator generator = new XPathGenerator();\r\n        XPathValidator validator = new XPathValidator();\r\n        ArrayList list = new ArrayList();\r\n\r\n\r\n        if (element.hasText()) {\r\n\r\n            String xpathWithNode = generator.generateXpathBasedOnText(element);\r\n            if (validator.isxPathIsVisible(xpathWithNode)) {\r\n                list.add(xpathWithNode);\r\n            }\r\n\r\n        } else if (checkForAttributeIsAvailable(element, \"name\")) {\r\n\r\n            String xpathWithNode = generator.generateXpathBasedOnName(element);\r\n            if (validator.isxPathIsVisible(xpathWithNode)) {\r\n                list.add(xpathWithNode);\r\n            }\r\n\r\n        } else if (checkForAttributeIsAvailable(element, \"id\")) {\r\n\r\n            String xpathWithNode = generator.generateXpathBasedOnId(element);\r\n            if (validator.isxPathIsVisible(xpathWithNode)) {\r\n                list.add(xpathWithNode);\r\n            }\r\n\r\n        } else if (checkForAttributeIsAvailable(element, \"aria-label\")) {\r\n\r\n            if (validator.isxPathIsVisible(generator.generateXpathBasedOnAriaLabel(element))) {\r\n                list.add(generator.generateXpathBasedOnAriaLabel(element));\r\n            }\r\n\r\n        } else if (checkForAttributeIsAvailable(element, \"placeholder\")) {\r\n            if (validator.isxPathIsVisible(generator.generateXpathBasedOnPlaceholder(element))) {\r\n                list.add(generator.generateXpathBasedOnPlaceholder(element));\r\n            }\r\n\r\n        } else if (checkForAttributeIsAvailable(element, \"class\")) {\r\n\r\n            if (validator.isxPathIsVisible(generator.generateXpathBasedOnClass(element))) {\r\n                list.add(generator.generateXpathBasedOnClass(element));\r\n            }\r\n        }\r\n\r\n\r\n        return list;\r\n    }\r\n\r\n\r\n    public boolean checkForAttributeIsAvailable(Element element, String attributeName) {\r\n        // System.out.println(\"Attributes   \" + element.attributes());\r\n\r\n        Attributes attributes = element.attributes();\r\n\r\n        boolean bool = false;\r\n        for (Attribute a : attributes.asList()) {\r\n            if (a.getKey().equals(attributeName)) {\r\n                bool = true;\r\n                break;\r\n            }\r\n        }\r\n\r\n        return bool;\r\n    }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementChecker.java b/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementChecker.java
+--- a/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementChecker.java	
++++ b/src/Framework/java/io/unity/core/generators/locatorgenerator/ElementChecker.java	
+@@ -1,4 +1,6 @@
+-package io.unity.core.generators.locatorgenerator;
++package Framework.java.io.unity.core.generators.locatorgenerator;
++import io.unity.core.generators.locatorgenerator.XPathGenerator;
++import io.unity.core.generators.locatorgenerator.XPathValidator;
+ 
+ import org.jsoup.nodes.Attribute;
+ import org.jsoup.nodes.Attributes;
+@@ -10,7 +12,7 @@
+ 
+     public ArrayList getElementList(Element element) {
+         XPathGenerator generator = new XPathGenerator();
+-        XPathValidator validator = new XPathValidator();
++         XPathValidator validator = new XPathValidator();
+         ArrayList list = new ArrayList();
+ 
+ 
+Index: src/Framework/java/io/unity/core/generators/locatorgenerator/Browser.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.core.generators.locatorgenerator;\r\n\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\n\r\npublic class Browser {\r\n\r\n\r\n    public static WebDriver driver;\r\n\r\n    public void openBrowser()\r\n    {\r\n        WebDriverManager.chromedriver().setup();\r\n        driver = new ChromeDriver();\r\n        driver.get(EntryPoint.website);\r\n\r\n    }\r\n\r\n    public void generatePageObject()\r\n    {\r\n\r\n    }\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/Framework/java/io/unity/core/generators/locatorgenerator/Browser.java b/src/Framework/java/io/unity/core/generators/locatorgenerator/Browser.java
+--- a/src/Framework/java/io/unity/core/generators/locatorgenerator/Browser.java	
++++ b/src/Framework/java/io/unity/core/generators/locatorgenerator/Browser.java	
+@@ -1,8 +1,9 @@
+-package io.unity.core.generators.locatorgenerator;
++package Framework.java.io.unity.core.generators.locatorgenerator;
+ 
+ import io.github.bonigarcia.wdm.WebDriverManager;
+ import org.openqa.selenium.WebDriver;
+ import org.openqa.selenium.chrome.ChromeDriver;
++import io.unity.core.generators.locatorgenerator.EntryPoint;
+ 
+ public class Browser {
+ 

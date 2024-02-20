@@ -1,5 +1,5 @@
 {
-  "run": "nevvon_test_admin",
+  "run": "cs_test_browserStack",
 
   "config": {
     "cs_test_browserStack": {
@@ -17,18 +17,14 @@
       },
       "gridURL": "https://viralpatel_LWX2R3:ZCe4uALptzU8skpXYsky@hub-cloud.browserstack.com/wd/hub",
       "viewPort": "",
-      "testNGsuite": [
-        "dev.xml"
-      ],
       "apiTestConfig": {
         "enable": false,
         "env": ""
-      },
-      "tesboReportKey" : "TrA0B7n5RDuUUHz7A5MdNyFAFxnvQo8t"
+      }
     },
     "nevvon_test_admin": {
       "platform": "web",
-      "browser": "chrome",
+      "browser": "chrome-headless",
       "capabilities": {},
       "env": "https://test.nevvon.com/",
       "isGrid": false,
@@ -39,10 +35,8 @@
         "env": ""
       },
       "testNGsuite": [
-        "dev.xml"
-      ],
-      "tesboReportKey" : "LzZ4EkXbcjUYggnZ81bRxBLXNe4tPzAC"
-
+        "nevvon_regression.xml"
+      ]
     },
     "nevvon_prod_admin": {
       "platform": "web",
