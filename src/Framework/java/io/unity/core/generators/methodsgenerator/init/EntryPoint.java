@@ -1,4 +1,4 @@
-package io.unity.core.generators.methodsgenerator.init;
+package Framework.java.io.unity.core.generators.methodsgenerator.init;
 
 
 import io.unity.core.generators.methodsgenerator.classutilities.ClassMethodsValidator;
