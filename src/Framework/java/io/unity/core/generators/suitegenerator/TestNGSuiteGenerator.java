@@ -1,6 +1,7 @@
-package io.unity.core.generators.suitegenerator;
+package Framework.java.io.unity.core.generators.suitegenerator;
 
-import io.unity.core.data.TestData;
+
+import Framework.java.io.unity.core.data.TestData;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 

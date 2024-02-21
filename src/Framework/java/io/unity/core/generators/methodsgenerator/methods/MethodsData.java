@@ -1,4 +1,4 @@
-package io.unity.core.generators.methodsgenerator.methods;
+package Framework.java.io.unity.core.generators.methodsgenerator.methods;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,11 +1,10 @@
-package APITests.createemployee;
+package TestCases.APITests.createemployee;
 
-import api.requests.common.GetEmployyVisitId;
-import api.requests.common.GetTokenUtility;
-import io.unity.core.data.TestData;
-import io.unity.core.init.base;
-import io.unity.performaction.autoapi.RequestBuilder;
-import io.unity.performaction.autoapi.ResponseValidator;
+
+import Framework.java.io.unity.core.data.TestData;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.performaction.autoapi.RequestBuilder;
+import Framework.java.io.unity.performaction.autoapi.ResponseValidator;
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
@@ -29,7 +28,7 @@ public class CreateEmployeeTest extends base {
         JSONObject queryParameters = new JSONObject();
         JSONObject body = new JSONObject();
         body.put("firstname",TestData.random_alphabetic_string(4));
-        body.put("lastname",TestData.random_alphabetic_string(4));
+        body.put("lastname", TestData.random_alphabetic_string(4));
         body.put("country_code","1");
         body.put("phone", TestData.random_numeric_string(10));
         body.put("employee_number", TestData.random_numeric_string(4));

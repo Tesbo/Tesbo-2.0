@@ -1,6 +1,5 @@
-package io.unity.performaction.autoweb;
+package Framework.java.io.unity.performaction.autoweb;
 
-import io.unity.performaction.autoweb.Element;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

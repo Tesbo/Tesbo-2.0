@@ -1,10 +1,10 @@
 package Framework.java.io.unity.core.generators.methodsgenerator.init;
 
 
-import io.unity.core.generators.methodsgenerator.classutilities.ClassMethodsValidator;
-import io.unity.core.generators.methodsgenerator.classutilities.ClassSkeleton;
-import io.unity.core.generators.methodsgenerator.classutilities.GenerateMethods;
-import io.unity.core.generators.methodsgenerator.classutilities.JavaFileReader;
+import Framework.java.io.unity.core.generators.methodsgenerator.classutilities.ClassMethodsValidator;
+import Framework.java.io.unity.core.generators.methodsgenerator.classutilities.ClassSkeleton;
+import Framework.java.io.unity.core.generators.methodsgenerator.classutilities.GenerateMethods;
+import Framework.java.io.unity.core.generators.methodsgenerator.classutilities.JavaFileReader;
 import net.minidev.json.parser.JSONParser;
 import org.jboss.forge.roaster.Roaster;
 import org.jboss.forge.roaster.model.source.JavaClassSource;

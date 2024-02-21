@@ -1,6 +1,6 @@
-package io.unity.core.generators.methodsgenerator.classutilities;
+package Framework.java.io.unity.core.generators.methodsgenerator.classutilities;
 
-
+import io.unity.core.generators.methodsgenerator.classutilities.ClassVariableBuilder;
 import org.apache.commons.io.FileExistsException;
 import org.apache.commons.io.FileUtils;
 import org.jboss.forge.roaster.model.source.JavaClassSource;

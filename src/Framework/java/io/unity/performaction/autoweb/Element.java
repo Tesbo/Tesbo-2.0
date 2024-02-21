@@ -1,4 +1,4 @@
-package io.unity.performaction.autoweb;
+package Framework.java.io.unity.performaction.autoweb;
 
 
 import com.google.common.net.MediaType;
@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
-
 import static org.openqa.selenium.remote.http.Contents.utf8String;
 
 
@@ -77,7 +76,7 @@ public class Element {
     public WebElement find(String locator_value) {
 
         WebElement element = null;
-        locator_reader reader = new locator_reader();
+         locator_reader reader = new locator_reader();
 
         Map<String, String> locator_details = reader.get_locator_value(locator_value);
         element = get_element_from_value(locator_details.get("locator_type"), locator_details.get("locator_value"));

@@ -1,15 +1,15 @@
-package io.unity.performaction.autoweb;
+package Framework.java.io.unity.performaction.autoweb;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+
 
 public class Browser {
     WebDriver driver;

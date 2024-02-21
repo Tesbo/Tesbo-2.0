@@ -1,8 +1,7 @@
-package io.unity.core.generators.methodsgenerator.methods;
-
+package Framework.java.io.unity.core.generators.methodsgenerator.methods;
 
 import org.jboss.forge.roaster.model.source.JavaClassSource;
-
+import io.unity.core.generators.methodsgenerator.methods.MethodsData;
 public class LinkMethods
 {
     JavaClassSource java_class;

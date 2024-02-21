@@ -1,6 +1,6 @@
-package io.unity.performaction.autoweb;
+package Framework.java.io.unity.performaction.autoweb;
 
-import io.unity.performaction.autoweb.Element;
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

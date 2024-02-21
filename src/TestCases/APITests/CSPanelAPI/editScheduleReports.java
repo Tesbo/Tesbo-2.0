@@ -1,14 +1,13 @@
-package APITests.CSPanelAPI;
+package TestCases.APITests.CSPanelAPI;
 
-import api.requests.common.GetTokenUtility;
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.performaction.autoapi.RequestBuilder;
-import io.unity.performaction.autoapi.ResponseValidator;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.performaction.autoapi.RequestBuilder;
+import Framework.java.io.unity.performaction.autoapi.ResponseValidator;
 import org.json.simple.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
+import  APITests.CSPanelAPI.scheduleReports;
 import java.util.Random;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -30,7 +29,7 @@ public class editScheduleReports extends base {
         RequestBuilder builder = new RequestBuilder();
         GetTokenUtility getToken = new GetTokenUtility();
 
-        scheduleReports reports =  new scheduleReports();
+      scheduleReports  reports =  new scheduleReports();
         String  reportsID = reports.scheduleReports_to_get_report_id(email,password,organizationId,organizationName,organization_provider_ids,course_id);
 
         JSONObject header = new JSONObject();

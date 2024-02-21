@@ -1,4 +1,4 @@
-package io.unity.core.generators.methodsgenerator.classutilities;
+package Framework.java.io.unity.core.generators.methodsgenerator.classutilities;
 
 import org.jboss.forge.roaster.model.source.JavaClassSource;
 

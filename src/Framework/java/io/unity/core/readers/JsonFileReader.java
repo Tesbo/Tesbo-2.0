@@ -1,7 +1,8 @@
-package io.unity.core.readers;
+package Framework.java.io.unity.core.readers;
 
 
-import io.unity.core.runner.TestRunner;
+
+import Framework.java.io.unity.core.runner.TestRunner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

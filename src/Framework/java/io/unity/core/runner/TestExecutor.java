@@ -1,9 +1,9 @@
-package io.unity.core.runner;
+package Framework.java.io.unity.core.runner;
 
+import Framework.java.io.unity.core.readers.CommandlineOption;
+import Framework.java.io.unity.core.readers.JsonFileReader;
 import com.beust.jcommander.JCommander;
-import io.tesbo.report.ReportGenerator;
-import io.unity.core.readers.CommandlineOption;
-import io.unity.core.readers.JsonFileReader;
+
 import org.json.JSONArray;
 import org.testng.TestNG;
 
@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestExecutor {
+
     public static String currentConfig = "";
 
     public String addCommandLine(String[] args) {
@@ -85,8 +86,7 @@ public class TestExecutor {
     }
 
     public static void main(String[] args) {
-        io.unity.core.runner.TestRunner runner = new io.unity.core.runner.TestRunner();
-
+       TestRunner runner = new TestRunner();
         runner.start(args);
     }
 }

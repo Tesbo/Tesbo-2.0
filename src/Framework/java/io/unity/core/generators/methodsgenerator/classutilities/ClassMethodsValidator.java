@@ -1,4 +1,4 @@
-package io.unity.core.generators.methodsgenerator.classutilities;
+package Framework.java.io.unity.core.generators.methodsgenerator.classutilities;
 
 
 import io.unity.core.generators.methodsgenerator.methods.LocatorType;

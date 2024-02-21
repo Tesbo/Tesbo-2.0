@@ -1,8 +1,10 @@
-package io.unity.performaction.autoapi;
+package Framework.java.io.unity.performaction.autoapi;
 
-import io.unity.core.data.TestData;
-import io.unity.core.readers.GetApiConfig;
-import io.unity.performaction.autoweb.TestngLogs;
+
+import Framework.java.io.unity.core.data.TestData;
+import Framework.java.io.unity.core.readers.GetApiConfig;
+
+import Framework.java.io.unity.performaction.autoweb.TestngLogs;
 import kong.unirest.HttpRequest;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;

@@ -1,4 +1,4 @@
-package io.unity.core.generators.methodsgenerator.methods;
+package Framework.java.io.unity.core.generators.methodsgenerator.methods;
 
 public class LocatorType {
     public static final String button = "io.unity.framework.generators.methodsgenerator.methods.ButtonMethods";

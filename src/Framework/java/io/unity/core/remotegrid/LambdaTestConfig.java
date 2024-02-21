@@ -1,6 +1,7 @@
-package io.unity.core.remotegrid;
+package Framework.java.io.unity.core.remotegrid;
 
-import io.unity.core.readers.JsonFileReader;
+
+import Framework.java.io.unity.core.readers.JsonFileReader;
 import io.unity.core.runner.TestRunner;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
