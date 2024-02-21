@@ -1,16 +1,15 @@
-package MobileTests.whole_flow;//package mobile.tests.whole_flow;
+//package TestCases.MobileTests.whole_flow;
 //
-//import io.unity.framework.data.TestData;
-//import io.unity.framework.init.Session;
-//import io.unity.framework.init.base;
-//import io.unity.performaction.autoweb.Element;
-//import io.unity.performaction.autoweb.Verify;
-//import io.unity.performaction.autoweb.Wait;
-//import mobile.object_repository.login.login_screen;
+//
+//import Screens.login.login_screen;
+//import Framework.java.io.unity.core.data.TestData;
+//import Framework.java.io.unity.core.init.Session;
+//import Framework.java.io.unity.performaction.autoweb.Element;
+//import Framework.java.io.unity.performaction.autoweb.Verify;
+//import Framework.java.io.unity.performaction.autoweb.Wait;
 //import org.openqa.selenium.WebDriver;
 //import org.testng.annotations.Test;
-//import web.object_repository.new_panel.login.login_page;
-//
+//import Framework.java.io.unity.core.init.base;
 //
 //public class mobileSession extends base
 //{
@@ -29,8 +28,8 @@ package MobileTests.whole_flow;//package mobile.tests.whole_flow;
 //   }
 //    @Test
 //    public void mobTest()
-//    {
-//        login_screen login_screen = new login_screen(driver);
+//    { //TODO below code
+//        login_screen = new login_screen(driver);
 //        login_screen.verify_okey_button_popup_is_present_on_page();
 //        login_screen.click_on_okey_button_popup();
 //

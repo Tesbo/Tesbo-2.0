@@ -1,34 +1,35 @@
-package WebUITests.adminHomeTests;
+package TestCases.WebUITests.adminHomeTests;
 
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
-import io.unity.performaction.autoweb.Wait;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.core.readers.JsonFileReader;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.java.io.unity.performaction.autoweb.Wait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utility.Logger;
-import web.object_repository.adminHome.admin_home;
-import web.object_repository.filterPage.filter;
-import web.object_repository.login.login_page;
-import web.object_repository.newEmployeesPage.new_employees;
-import web.object_repository.program.program_page;
+import Pages.login.login_page;
 
 public class admin_home_test extends base
 {
     login_page login = null;
+    //TODO web
     web.object_repository.employeeProfilePage.employeeProfile employeeProfile = null;
    web.object_repository.newEmployeesPage.new_employees new_employees = null;
+   //TODO filter
    filter filter = null;
+   //TODO program page
     program_page programPage = null;
     Wait wait = null;
+    //TODO admin_home
     admin_home adminHome = null;
-
+    //TODO program_page
     program_page program_page = null;
 
     @DataProvider(name = "login_credentials")
     public Object[][] data_provider() {
-        json_file_reader config = new json_file_reader();
+        //TODO changed
+        JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
         if (config.getEnvFromCurrentConfig().contains("test") || config.getEnvFromCurrentConfig().contains("ngdev")) {

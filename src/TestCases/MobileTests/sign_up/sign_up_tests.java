@@ -1,10 +1,11 @@
-package MobileTests.sign_up;
+package TestCases.MobileTests.sign_up;
 
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.core.readers.JsonFileReader;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import io.appium.java_client.android.AndroidDriver;
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
+
 import Screens.change_environment.change_environment;
 import Screens.login.login_screen;
 import Screens.sign_up.sign_up_page;
@@ -18,7 +19,8 @@ public class sign_up_tests extends base {
 
     @DataProvider(name = "mobile_user_login")
     public Object[][] data_provider() {
-        json_file_reader config = new json_file_reader();
+        //TODO Changed from json_file_reader
+        JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
 

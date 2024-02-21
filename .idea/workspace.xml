@@ -7,20 +7,30 @@
     <list default="true" id="7a1ff3e2-c682-444e-b6e6-be7eb205217b" name="Changes" comment="Updated the file and folder names">
       <changelist_data name="Viral Patel" email="viral103patel@gmail.com" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/getallemployeesvisitsdetails/getallemployeevisitsdetailsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/getallemployeesvisitsdetails/getallemployeevisitsdetailsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/getemployeedata/GetEmployeeDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/getemployeedata/GetEmployeeDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/getprogram/GetProgramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/getprogram/GetProgramTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/getthedetailsofspecificvisit/getthedetailsofspecificvisitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/getthedetailsofspecificvisit/getthedetailsofspecificvisitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/listallemployee/ListAllEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/listallemployee/ListAllEmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/listallprograms/ListAllProgramsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/listallprograms/ListAllProgramsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/listemployeeassignedtoprogram/ListAllEmployeeAssignedToProgramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/listemployeeassignedtoprogram/ListAllEmployeeAssignedToProgramTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/listemployeeprograms/ListEmployeeProgramsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/listemployeeprograms/ListEmployeeProgramsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/listemployeevisit/listemployeevisitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/listemployeevisit/listemployeevisitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/loginTest/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/loginTest/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/programdetailsemployee/ProgramDetailsEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/programdetailsemployee/ProgramDetailsEmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/removereleventvisitfromthesystem/removereleventvisitfromsystemTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/removereleventvisitfromthesystem/removereleventvisitfromsystemTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/specificprogramapproval/SpecificProgramApprovalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/specificprogramapproval/SpecificProgramApprovalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/specificprogramcompletion/SpecificProgramCompletionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/specificprogramcompletion/SpecificProgramCompletionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/updateemployeeprogramdeactivation/UpdateEmployeeProgramDeactivationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/updateemployeeprogramdeactivation/UpdateEmployeeProgramDeactivationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/APITests/updatevisitinformation/updatevisitinformationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/APITests/updatevisitinformation/updatevisitinformationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/Logout_Flow/Logout_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/Logout_Flow/Logout_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/Search/search_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/Search/search_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/bookmark/bookmark_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/bookmark/bookmark_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/contactUs/contactUs_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/contactUs/contactUs_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/forgot_password/forgot_password_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/forgot_password/forgot_password_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/help/help_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/help/help_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/home/home_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/home/home_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/language/language_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/language/language_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/login/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/login/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/notification/Notification_Flow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/notification/Notification_Flow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/profile_tests/profile_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/profile_tests/profile_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/sign_up/sign_up_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/sign_up/sign_up_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/whole_flow/mobileSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/whole_flow/mobileSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/WebUITests/adminHomeTests/admin_home_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/WebUITests/adminHomeTests/admin_home_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/WebUITests/adminProfileTests/adminProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/WebUITests/adminProfileTests/adminProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/WebUITests/commonDataProviders/commonDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/WebUITests/commonDataProviders/commonDataProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/WebUITests/csAgencySettingsTests/csAgencySettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/WebUITests/csAgencySettingsTests/csAgencySettingsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/WebUITests/csHomeTests/csHomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/WebUITests/csHomeTests/csHomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestObjects/Pages/csAgencySettingsPage/csAgencySettings_page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestObjects/Pages/csAgencySettingsPage/csAgencySettings_page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestObjects/Pages/login/login_page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestObjects/Pages/login/login_page.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +61,7 @@
     "git-widget-placeholder": "TestManV5",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager">

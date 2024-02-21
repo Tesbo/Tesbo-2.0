@@ -1,10 +1,11 @@
-package Pages.login;
+package TestObjects.Pages.login;
 
-import io.unity.core.generators.methodsgenerator.methods.MethodsData;
-import io.unity.performaction.autoweb.Element;
-import io.unity.performaction.autoweb.Verify;
-import io.unity.performaction.autoweb.Wait;
+import Framework.java.io.unity.core.generators.methodsgenerator.methods.MethodsData;
+import Framework.java.io.unity.performaction.autoweb.Element;
+import Framework.java.io.unity.performaction.autoweb.Verify;
+import Framework.java.io.unity.performaction.autoweb.Wait;
 import org.openqa.selenium.WebDriver;
+
 
 public class login_page {
     WebDriver driver = null;

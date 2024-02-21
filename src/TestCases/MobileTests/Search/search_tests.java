@@ -1,9 +1,9 @@
-package MobileTests.Search;
+package TestCases.MobileTests.Search;
 
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.core.readers.JsonFileReader;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import Screens.home_screen.home_screen;
 import Screens.login.login_screen;
 import Screens.search.search_page;
@@ -16,7 +16,8 @@ import java.time.Duration;
 public class search_tests extends base {
     @DataProvider(name = "mobile_user_login")
     public Object[][] data_provider() {
-        json_file_reader config = new json_file_reader();
+        //TODO Changed from json_file_reader
+        JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
 

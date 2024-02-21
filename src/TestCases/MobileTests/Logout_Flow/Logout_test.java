@@ -1,7 +1,7 @@
-package MobileTests.Logout_Flow;
+package TestCases.MobileTests.Logout_Flow;
 
-import io.unity.core.init.base;
-import io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import Screens.home_screen.home_screen;
 import Screens.login.login_screen;
 import Screens.profile_page.profile_page;

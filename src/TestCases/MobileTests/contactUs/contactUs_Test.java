@@ -1,8 +1,10 @@
-package MobileTests.contactUs;
+package TestCases.MobileTests.contactUs;
 
+
+
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import io.appium.java_client.android.AndroidDriver;
-import io.unity.core.init.base;
-import io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.java.io.unity.core.init.base;
 import Screens.contactUs_Screen.contactus_page;
 import Screens.help_Screen.help_page;
 import Screens.home_screen.home_screen;

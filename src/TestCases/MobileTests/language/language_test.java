@@ -1,7 +1,8 @@
-package MobileTests.language;
+package TestCases.MobileTests.language;
 
-import io.unity.core.init.base;
-import io.unity.core.remotegrid.LambdaTestConfig;
+
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import Screens.home_screen.home_screen;
 import Screens.language_Screen.language_page;
 import Screens.login.login_screen;

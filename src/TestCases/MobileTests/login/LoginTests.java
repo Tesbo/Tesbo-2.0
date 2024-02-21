@@ -1,9 +1,9 @@
-package MobileTests.login;
+package TestCases.MobileTests.login;
 
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import io.appium.java_client.android.AndroidDriver;
-import io.unity.core.init.base;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
+
 import Screens.home_screen.home_screen;
 import Screens.login.login_screen;
 import org.assertj.core.api.Assertions;

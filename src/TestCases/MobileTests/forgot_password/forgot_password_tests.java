@@ -1,8 +1,9 @@
-package MobileTests.forgot_password;
+package TestCases.MobileTests.forgot_password;
 
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import io.appium.java_client.android.AndroidDriver;
-import io.unity.core.init.base;
-import io.unity.core.remotegrid.LambdaTestConfig;
+
 import Screens.login.login_screen;
 import org.testng.annotations.Test;
 import utility.Logger;

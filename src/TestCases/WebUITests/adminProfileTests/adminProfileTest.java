@@ -1,23 +1,23 @@
-package WebUITests.adminProfileTests;
+package TestCases.WebUITests.adminProfileTests;
 
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.core.readers.JsonFileReader;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utility.Logger;
-import web.object_repository.adminProfilePage.admin_profile;
-import web.object_repository.csdashboard.dashboard_page;
-import web.object_repository.login.login_page;
+import Pages.login.login_page;
+
 
 public class adminProfileTest extends base {
 
-    login_page login = null;
+     login_page login = null;
     admin_profile admin_profile = null;
     @DataProvider(name = "login_credentials")
     public Object[][] data_provider() {
-        json_file_reader config = new json_file_reader();
+        //TODO changed name
+        JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
         if (config.getEnvFromCurrentConfig().contains("test") || config.getEnvFromCurrentConfig().contains("ngdev") ) {

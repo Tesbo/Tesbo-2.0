@@ -1,22 +1,16 @@
-package WebUITests.csAgencySettingsTests;
+package TestCases.WebUITests.csAgencySettingsTests;
 
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
+
+import Framework.java.io.unity.core.init.base;
+import TestObjects.Pages.login.login_page;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import web.object_repository.csAgencySettingsPage.csAgencySettings_page;
-import web.object_repository.csHomePage.csHome_page;
-import web.object_repository.csdashboard.dashboard_page;
-import web.object_repository.employeeActionPage.employee_action;
-import web.object_repository.login.login_page;
-import web.object_repository.program.program_page;
-import WebUITests.commonDataProviders.commonDataProvider;
 
 public class csAgencySettingsTest extends base {
 
     login_page login = null;
     csHome_page csHome = null;
-    csAgencySettings_page csAgencySettings = null;
+    Pages.csAgencySettingsPage.csAgencySettings_page csAgencySettings = null;
     program_page programPage = null;
     employee_action employeeAction = null;
     dashboard_page dashBoard = null;

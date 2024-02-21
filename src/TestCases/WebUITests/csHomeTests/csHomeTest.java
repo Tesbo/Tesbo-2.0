@@ -1,17 +1,16 @@
-package WebUITests.csHomeTests;
+package TestCases.WebUITests.csHomeTests;
 
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import TestCases.WebUITests.commonDataProviders.commonDataProvider;
+import TestObjects.Pages.csAgencySettingsPage.csAgencySettings_page;
+import TestObjects.Pages.login.login_page;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import web.object_repository.csAgencySettingsPage.csAgencySettings_page;
-import web.object_repository.csHomePage.csHome_page;
-import web.object_repository.csdashboard.dashboard_page;
-import web.object_repository.login.login_page;
-import WebUITests.commonDataProviders.commonDataProvider;
 
 public class csHomeTest extends base {
     login_page login = null;
+    //TODO changed from csHome_page to csHomeTest
     csHome_page csHome = null;
     csAgencySettings_page csAgencySettings = null;
     dashboard_page dashboard = null;

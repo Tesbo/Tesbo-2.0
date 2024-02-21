@@ -1,9 +1,9 @@
-package MobileTests.bookmark;
+package TestCases.MobileTests.bookmark;
 
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.JsonFileReader;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import Screens.bookmarks.bookmarks;
 import Screens.home_screen.home_screen;
 import Screens.login.login_screen;
@@ -17,7 +17,8 @@ public class bookmark_Test extends base {
 
     @DataProvider(name = "mobile_user_login")
     public Object[][] data_provider() {
-        json_file_reader config = new json_file_reader();
+        //TODO old code json_file_reader config = new json_file_reader();
+        JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
 

@@ -1,10 +1,11 @@
-package MobileTests.profile_tests;
+package TestCases.MobileTests.profile_tests;
 
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.core.readers.JsonFileReader;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import io.appium.java_client.android.AndroidDriver;
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
+
 import Screens.home_screen.home_screen;
 import Screens.login.login_screen;
 import Screens.profile_page.profile_page;
@@ -17,7 +18,8 @@ import java.time.Duration;
 public class profile_test extends base {
     @DataProvider(name = "mobile_user_login")
     public Object[][] data_provider() {
-        json_file_reader config = new json_file_reader();
+        //TODO Changed from json_file_reader
+        JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
         data = reader.getExcelDataForDataProvider("mobile_user_cred.xlsx", 0);

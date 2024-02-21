@@ -1,7 +1,8 @@
-package MobileTests.notification;
+package TestCases.MobileTests.notification;
 
-import io.unity.core.init.base;
-import io.unity.core.remotegrid.LambdaTestConfig;
+
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import Screens.Notification_Page.notification_Page;
 import Screens.home_screen.home_screen;
 import Screens.login.login_screen;

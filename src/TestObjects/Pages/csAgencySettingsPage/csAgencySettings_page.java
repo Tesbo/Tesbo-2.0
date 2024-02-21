@@ -1,16 +1,13 @@
-package Pages.csAgencySettingsPage;
+package TestObjects.Pages.csAgencySettingsPage;
 
-import io.unity.performaction.autoweb.Element;
-import io.unity.performaction.autoweb.Verify;
-import io.unity.performaction.autoweb.Wait;
+import Framework.java.io.unity.performaction.autoweb.Element;
+import Framework.java.io.unity.performaction.autoweb.Verify;
+import Framework.java.io.unity.performaction.autoweb.Wait;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import web.object_repository.employeeActionPage.employee_action;
-import web.object_repository.program.program_page;
-
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;

@@ -1,6 +1,7 @@
-package WebUITests.commonDataProviders;
+package TestCases.WebUITests.commonDataProviders;
 
-import io.unity.core.readers.DataReader;
+
+import Framework.java.io.unity.core.readers.DataReader;
 import org.testng.annotations.DataProvider;
 
 public class commonDataProvider {

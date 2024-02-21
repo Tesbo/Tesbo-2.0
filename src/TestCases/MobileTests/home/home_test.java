@@ -1,7 +1,7 @@
-package MobileTests.home;
+package TestCases.MobileTests.home;
 
-import io.unity.core.init.base;
-import io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
 import Screens.Notification_Page.notification_Page;
 import Screens.bookmarks.bookmarks;
 import Screens.contactUs_Screen.contactus_page;
