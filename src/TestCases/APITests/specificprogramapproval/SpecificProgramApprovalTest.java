@@ -1,8 +1,5 @@
-package APITests.specificprogramapproval;
+package TestCases.APITests.specificprogramapproval;
 
-import io.unity.core.init.base;
-import io.unity.performaction.autoapi.RequestBuilder;
-import io.unity.performaction.autoapi.ResponseValidator;
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 

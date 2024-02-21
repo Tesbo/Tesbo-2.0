@@ -1,10 +1,8 @@
-package APITests.removereleventvisitfromthesystem;
+package TestCases.APITests.removereleventvisitfromthesystem;
 
-import api.requests.common.GetEmployyVisitId;
-import api.requests.common.GetTokenUtility;
-import io.unity.core.init.base;
-import io.unity.performaction.autoapi.RequestBuilder;
-import io.unity.performaction.autoapi.ResponseValidator;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.performaction.autoapi.RequestBuilder;
+import Framework.java.io.unity.performaction.autoapi.ResponseValidator;
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 

@@ -1,11 +1,9 @@
-package APITests.listemployeevisit;
+package TestCases.APITests.listemployeevisit;
 
-import api.requests.common.GetEmployyVisitId;
-import api.requests.common.GetTokenUtility;
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.performaction.autoapi.RequestBuilder;
-import io.unity.performaction.autoapi.ResponseValidator;
+import Framework.java.io.unity.core.init.base;
+import Framework.java.io.unity.core.readers.DataReader;
+import Framework.java.io.unity.performaction.autoapi.RequestBuilder;
+import Framework.java.io.unity.performaction.autoapi.ResponseValidator;
 import org.json.simple.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
