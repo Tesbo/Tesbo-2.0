@@ -33,7 +33,7 @@ public class locator_reader {
     public org.json.JSONObject getTestConfig() {
         String data = "";
         try {
-            data = new String(Files.readAllBytes(Paths.get("src/config/TestConfig.json").toAbsolutePath()));
+            data = new String(Files.readAllBytes(Paths.get("src/config/TestConfigOLD.json").toAbsolutePath()));
         } catch (Exception e) {
             System.out.println("config file not found");
         }

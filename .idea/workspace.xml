@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7a1ff3e2-c682-444e-b6e6-be7eb205217b" name="Changes" comment="Updated the file and folder names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/login/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/login/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/TestConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/TestConfigOLD.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/webConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/webConfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/core/init/base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/init/base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/core/readers/CommandlineOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/readers/CommandlineOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/core/runner/TestExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/WebUITests/login/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/WebUITests/login/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +48,14 @@
     "Application.Runner.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.LoginTests.Verify_login_with_valid_credentials.executor": "Run",
     "git-widget-placeholder": "v5FolderStructure",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.LoginTests.Verify_login_with_valid_credentials">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner.Runner" />
       <module name="framework-core" />
@@ -60,8 +69,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTests.Verify_login_with_valid_credentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="framework-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.WebUITests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases.WebUITests.login" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.WebUITests.login.LoginTests" />
+      <option name="METHOD_NAME" value="Verify_login_with_valid_credentials" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Runner" />
+      <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
         <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
@@ -83,11 +115,60 @@
       <option name="project" value="LOCAL" />
       <updated>1708581712700</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated the file and folder names">
+      <option name="closed" value="true" />
+      <created>1708581894373</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708581894373</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated the file and folder names" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated the file and folder names" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/init/base.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/init/base.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/init/base.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/init/base.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
