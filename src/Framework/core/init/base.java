@@ -63,7 +63,7 @@ public static String build_Name;
     public WebDriver init() {
 
         try {
-            if (TestRunner.currentConfig.equals("")) {
+        if (TestRunner.currentConfig.equals("")) {
                 TestRunner.currentConfig = config.getRunConfig();
             }
 

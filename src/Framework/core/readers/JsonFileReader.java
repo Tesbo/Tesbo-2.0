@@ -2,7 +2,6 @@ package Framework.core.readers;
 
 
 
-import Framework.core.runner.TestRunner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -13,12 +12,12 @@ import java.nio.file.Paths;
 public class JsonFileReader {
 
 
-    public JSONObject getTestConfig() {
+    public JSONObject getTestConfig(String fileName) {
 
 
         String data = "";
         try {
-            data = new String(Files.readAllBytes(Paths.get("src/config/TestConfig.json").toAbsolutePath()));
+            data = new String(Files.readAllBytes(Paths.get("src/config/"+fileName).toAbsolutePath()));
         } catch (Exception e) {
             System.out.println("config file not found");
         }
@@ -27,17 +26,9 @@ public class JsonFileReader {
         return testConfig;
     }
 
-
-
-
-    public String getRunConfig() {
-        JSONObject object = getTestConfig();
-        return object.getString("run");
-    }
-
-    public JSONObject getConfigObject(String configName) {
-        JSONObject object = getTestConfig();
-        return (JSONObject) ((JSONObject) object.get("config")).get(configName);
+    public JSONObject getConfigObject(String configFile) {
+        JSONObject object = getTestConfig(configFile);
+        return (JSONObject) ((JSONObject) object.get("config")).get(configFile);
 
     }
 
@@ -135,25 +126,25 @@ public class JsonFileReader {
     }
 
 
-    public String get_grid_url(String configName) {
-        JSONObject object = getTestConfig();
-        return getConfigObject(configName).getString("gridURL");
+    public String get_grid_url(String configFile) {
+        JSONObject object = getTestConfig(configFile);
+        return getConfigObject(configFile).getString("gridURL");
     }
 
-    public String get_grid_platForm(String configName) {
-        JSONObject object = getTestConfig();
-        return getConfigObject(configName).getString("gridPlatform");
+    public String get_grid_platForm(String configFile) {
+        JSONObject object = getTestConfig(configFile);
+        return getConfigObject(configFile).getString("gridPlatform");
     }
 
 
-    public String get_appium_url(String configName) {
-        JSONObject object = getTestConfig();
-        return getConfigObject(configName).getString("appiumURL");
+    public String get_appium_url(String configFile) {
+        JSONObject object = getTestConfig(configFile);
+        return getConfigObject(configFile).getString("appiumURL");
     }
 
-    public String get_appium_platform(String configName) {
-        JSONObject object = getTestConfig();
-        return getConfigObject(configName).getString("appiumPlatform");
+    public String get_appium_platform(String configFile) {
+        JSONObject object = getTestConfig(configFile);
+        return getConfigObject(configFile).getString("appiumPlatform");
     }
 
 
@@ -175,21 +166,23 @@ public class JsonFileReader {
     }
 
 
-    public JSONArray getSuites(String configName) throws org.json.JSONException {
-        JSONObject object = getTestConfig();
-        return (JSONArray) getConfigObject(configName).get("testNGsuite");
+    public JSONArray getSuites(String configFile) throws org.json.JSONException {
+        JSONObject object = getTestConfig(configFile);
+        return (JSONArray) getConfigObject(configFile).get("testNGsuite");
     }
 
 
+/*
 
     public String getEnvFromCurrentConfig() {
-        JSONObject object = getTestConfig();
+        JSONObject object = getTestConfig(configFile);
         JsonFileReader config = new JsonFileReader();
         if (TestRunner.currentConfig.equals("")) {
             TestRunner.currentConfig = config.getRunConfig();
         }
         return getConfigObject(TestRunner.currentConfig).getString("env");
     }
+*/
 
 
 

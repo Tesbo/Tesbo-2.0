@@ -20,16 +20,16 @@ public class LoginTests extends base {
         JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
-        if (config.getEnvFromCurrentConfig().contains("test") || config.getEnvFromCurrentConfig().contains("ngdev")) {
+       // if (config.getEnvFromCurrentConfig().contains("test") || config.getEnvFromCurrentConfig().contains("ngdev")) {
             data = reader.getExcelDataForDataProvider("nevvon_test_env.xlsx", 0);
-        } else if (config.getEnvFromCurrentConfig().contains("admin")) {
+        //} else if (config.getEnvFromCurrentConfig().contains("admin")) {
             data = reader.getExcelDataForDataProvider("nevvon_prod_env.xlsx", 0);
-        }
+        //}
         return data;
     }
 
-    @Test(dataProvider = "login_credentials")
-    public void Verify_login_with_valid_credentials(String userName, String password, String agency_name) {
+@Test
+    public void Verify_login_with_valid_credentials() {
 
         LambdaTestConfig config = new LambdaTestConfig(driver);
         config.addTestName("Verify login with valid credentials");
@@ -42,7 +42,7 @@ public class LoginTests extends base {
         login.verify_password_button_is_present_on_page();
         login.verify_login_button_is_present_on_page();
 
-        login.performLogin(userName, password);
+        login.performLogin("mahes", "ramesh");
 
 
     }

@@ -1,6 +1,0 @@
-{
-  "configDir": "config",
-  "defaultConfig": "config.json",
-  "webAppTestDir" : "",
-  "webAppObjectDir" : ""
-}

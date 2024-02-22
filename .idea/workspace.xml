@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7a1ff3e2-c682-444e-b6e6-be7eb205217b" name="Changes" comment="Updated the file and folder names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/MobileTests/login/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/MobileTests/login/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/TestConfigOLD.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/apiConfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/frameworkConfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/mobileConfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Harshal2120&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="aa6057d2-8302-46bd-840c-6264f95e9596" />
+        <option name="url" value="https://github.com/Tesbo/Tesbo-2.0.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -40,13 +59,15 @@
     "Application.Runner.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.LoginTests.Verify_login_with_valid_credentials.executor": "Run",
+    "TestNG.LoginTests.executor": "Run",
     "git-widget-placeholder": "v5FolderStructure",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.LoginTests">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner.Runner" />
       <module name="framework-core" />
@@ -60,8 +81,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="framework-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.WebUITests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases.WebUITests.login" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.WebUITests.login.LoginTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.Verify_login_with_valid_credentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="framework-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.WebUITests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases.WebUITests.login" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.WebUITests.login.LoginTests" />
+      <option name="METHOD_NAME" value="Verify_login_with_valid_credentials" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Runner" />
+      <item itemvalue="TestNG.LoginTests" />
+      <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTests" />
+        <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
         <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
@@ -83,7 +146,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708581712700</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated the file and folder names">
+      <option name="closed" value="true" />
+      <created>1708581894373</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708581894373</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated the file and folder names">
+      <option name="closed" value="true" />
+      <created>1708584991130</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708584991130</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
