@@ -4,8 +4,6 @@ import Framework.core.init.base;
 import Framework.core.remotegrid.LambdaTestConfig;
 import TestObjects.Screens.login.login_screen;
 import io.appium.java_client.android.AndroidDriver;
-
-
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import utility.Logger;
