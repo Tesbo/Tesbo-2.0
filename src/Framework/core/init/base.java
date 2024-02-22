@@ -2,6 +2,7 @@ package Framework.core.init;
 
 import Framework.core.data.TestData;
 import Framework.core.readers.JsonFileReader;
+import Framework.performaction.autoweb.locator_reader;
 import Framework.core.remotegrid.LambdaTestConfig;
 import Framework.core.runner.TestRunner;
 import Framework.performaction.autoweb.Browser;
@@ -31,6 +32,7 @@ import org.tinylog.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.FileNameMap;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -64,7 +66,7 @@ public static String build_Name;
 
         try {
         if (TestRunner.currentConfig.equals("")) {
-                TestRunner.currentConfig = config.getRunConfig();
+             TestRunner.currentConfig = config.getRunConfig("FileName");
             }
 
             platform = config.getPlatform(TestRunner.currentConfig);

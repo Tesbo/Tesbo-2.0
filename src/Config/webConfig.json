@@ -4,8 +4,8 @@
   "capabilities": {
     "browserName": "Chrome"
   },
-  "env": "https://test.nevvon.com/",
-  "isGrid": true,
+  "env": "https://www.facebook.com/",
+  "isGrid": false,
   "gridPlatform": "browserstack",
   "browserStackOption": {
     "os": "Windows",
@@ -16,5 +16,8 @@
   "apiTestConfig": {
     "enable": false,
     "env": ""
-  }
+  },
+  "testNGsuite": [
+    "nevvon_android_all.xml"
+  ]
 }

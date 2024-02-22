@@ -1,7 +1,4 @@
 package Framework.core.readers;
-
-
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -12,12 +9,12 @@ import java.nio.file.Paths;
 public class JsonFileReader {
 
 
-    public JSONObject getTestConfig(String fileName) {
+    public JSONObject getTestConfig(String FileName) {
 
 
         String data = "";
         try {
-            data = new String(Files.readAllBytes(Paths.get("src/config/"+fileName).toAbsolutePath()));
+            data = new String(Files.readAllBytes(Paths.get("src/Config/"+ FileName).toAbsolutePath()));
         } catch (Exception e) {
             System.out.println("config file not found");
         }
@@ -26,22 +23,26 @@ public class JsonFileReader {
         return testConfig;
     }
 
-    public JSONObject getConfigObject(String configFile) {
-        JSONObject object = getTestConfig(configFile);
-        return (JSONObject) ((JSONObject) object.get("config")).get(configFile);
-
+    public String getRunConfig(String FileName) {
+        JSONObject object = getTestConfig(FileName);
+        return object.getString(FileName);
     }
 
-    public String getReportKey(String configName)
+    public JSONObject getConfigObject(String FileName) {
+        JSONObject object = getTestConfig(FileName);
+        return (JSONObject) ((JSONObject) object.get(FileName)).get(FileName);
+    }
+
+    public String getReportKey(String FileName)
     {
-        return (String) getConfigObject(configName).get("tesboReportKey");
+        return (String) getConfigObject(FileName).get("tesboReportKey");
     }
 
 
 
-    public String getPlatform(String configName) {
+    public String getPlatform(String FileName) {
 
-        return getConfigObject(configName).getString("platform");
+        return getConfigObject(FileName).getString("platform");
 
     }
 
@@ -53,112 +54,112 @@ public class JsonFileReader {
 
 
 
-    public JSONObject getAPIConfig(String configName) {
+    public JSONObject getAPIConfig(String FileName) {
 
-        return (JSONObject) getConfigObject(configName).get("apiTestConfig");
+        return (JSONObject) getConfigObject(FileName).get("apiTestConfig");
     }
 
 
 
-    public boolean isAPITestConfigEnable(String configName) {
+    public boolean isAPITestConfigEnable(String FileName) {
 
-        return (boolean) getAPIConfig(configName).get("enable");
+        return (boolean) getAPIConfig(FileName).get("enable");
     }
 
-    public String getAPIEnv(String configName) {
+    public String getAPIEnv(String FileName) {
 
-        return (String) getAPIConfig(configName).get("env");
+        return (String) getAPIConfig(FileName).get("env");
     }
 
-    public String getAPIEnvDirect(String configName) {
+    public String getAPIEnvDirect(String FileName) {
 
-        return (String) getConfigObject(configName).get("env");
-    }
-
-
-    public JSONObject getTimeAssertion(String configName) {
-        return (JSONObject) getConfigObject(configName).get("timeAssertion");
+        return (String) getConfigObject(FileName).get("env");
     }
 
 
-    public Boolean isTimeAssertionEnable(String configName) {
-        return (Boolean) getTimeAssertion(configName).get("enable");
-    }
-
-    public int getTimeToCompare(String configName) {
-        return (int) getTimeAssertion(configName).get("timeToCompareInMs");
-    }
-
-    public String getEnv(String configName) {
-        return getConfigObject(configName).getString("env");
+    public JSONObject getTimeAssertion(String FileName) {
+        return (JSONObject) getConfigObject(FileName).get("timeAssertion");
     }
 
 
-    public boolean isGrid(String configName) {
-        return (boolean) getConfigObject(configName).get("isGrid");
+    public Boolean isTimeAssertionEnable(String FileName) {
+        return (Boolean) getTimeAssertion(FileName).get("enable");
     }
 
-    public String getBrowser(String configName) {
-        return getConfigObject(configName).getString("browser");
+    public int getTimeToCompare(String FileName) {
+        return (int) getTimeAssertion(FileName).get("timeToCompareInMs");
     }
 
-
-    public JSONObject get_capabilities(String configName) {
-
-        return getConfigObject(configName).getJSONObject("capabilities");
-    }
-
-
-    public JSONObject get_browserStackOption(String configName) {
-
-        return getConfigObject(configName).getJSONObject("browserStackOption");
+    public String getEnv(String FileName) {
+        return getConfigObject(FileName).getString("env");
     }
 
 
-    public JSONObject get_sauceLabOption(String configName) {
-
-        return getConfigObject(configName).getJSONObject("sauceLabOption");
+    public boolean isGrid(String FileName) {
+        return (boolean) getConfigObject(FileName).get("isGrid");
     }
 
-    public JSONObject get_lambdaTestOption(String configName) {
-
-        return getConfigObject(configName).getJSONObject("lambdaTestOption");
-    }
-
-
-    public String get_grid_url(String configFile) {
-        JSONObject object = getTestConfig(configFile);
-        return getConfigObject(configFile).getString("gridURL");
-    }
-
-    public String get_grid_platForm(String configFile) {
-        JSONObject object = getTestConfig(configFile);
-        return getConfigObject(configFile).getString("gridPlatform");
+    public String getBrowser(String FileName) {
+        return getConfigObject(FileName).getString("browser");
     }
 
 
-    public String get_appium_url(String configFile) {
-        JSONObject object = getTestConfig(configFile);
-        return getConfigObject(configFile).getString("appiumURL");
-    }
+    public JSONObject get_capabilities(String FileName) {
 
-    public String get_appium_platform(String configFile) {
-        JSONObject object = getTestConfig(configFile);
-        return getConfigObject(configFile).getString("appiumPlatform");
+        return getConfigObject(FileName).getJSONObject("capabilities");
     }
 
 
-    public String get_app_name(String configName) {
+    public JSONObject get_browserStackOption(String FileName) {
 
-        return getConfigObject(configName).getString("app");
+        return getConfigObject(FileName).getJSONObject("browserStackOption");
     }
 
 
-    public String get_final_app_path(String configName) {
+    public JSONObject get_sauceLabOption(String FileName) {
+
+        return getConfigObject(FileName).getJSONObject("sauceLabOption");
+    }
+
+    public JSONObject get_lambdaTestOption(String FileName) {
+
+        return getConfigObject(FileName).getJSONObject("lambdaTestOption");
+    }
+
+
+    public String get_grid_url(String FileName) {
+        JSONObject object = getTestConfig(FileName);
+        return getConfigObject(FileName).getString("gridURL");
+    }
+
+    public String get_grid_platForm(String FileName) {
+        JSONObject object = getTestConfig(FileName);
+        return getConfigObject(FileName).getString("gridPlatform");
+    }
+
+
+    public String get_appium_url(String FileName) {
+        JSONObject object = getTestConfig(FileName);
+        return getConfigObject(FileName).getString("appiumURL");
+    }
+
+    public String get_appium_platform(String FileName) {
+        JSONObject object = getTestConfig(FileName);
+        return getConfigObject(FileName).getString("appiumPlatform");
+    }
+
+
+    public String get_app_name(String FileName) {
+
+        return getConfigObject(FileName).getString("app");
+    }
+
+
+    public String get_final_app_path(String FileName) {
 
         String app_path = "";
 
-        File file = new File("src/test/java/mobile/app/" + get_app_name(configName));
+        File file = new File("src/test/java/mobile/app/" + get_app_name(FileName));
         app_path = file.getAbsolutePath();
 
 
@@ -166,9 +167,9 @@ public class JsonFileReader {
     }
 
 
-    public JSONArray getSuites(String configFile) throws org.json.JSONException {
-        JSONObject object = getTestConfig(configFile);
-        return (JSONArray) getConfigObject(configFile).get("testNGsuite");
+    public JSONArray getSuites(String FileName) throws org.json.JSONException {
+        JSONObject object = getTestConfig(FileName);
+        return (JSONArray) getConfigObject(FileName).get("testNGsuite");
     }
 
 

@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a1ff3e2-c682-444e-b6e6-be7eb205217b" name="Changes" comment="Updated the file and folder names">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/TestConfigOLD.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/apiConfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/frameworkConfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/mobileConfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" afterDir="false" />
-    </list>
+    <list default="true" id="7a1ff3e2-c682-444e-b6e6-be7eb205217b" name="Changes" comment="Merge remote-tracking branch 'origin/v5FolderStructure' into v5FolderStructure&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/Config/TestConfigOLD.json&#10;#&#9;src/Framework/core/init/base.java&#10;#&#9;src/Framework/core/readers/JsonFileReader.java&#10;#&#9;src/Framework/performaction/autoweb/locator_reader.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +18,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="TestManV5" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,21 +48,28 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Runner.executor": "Run",
+    "Application.Runner.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.LoginTests.Verify_login_with_valid_credentials.executor": "Run",
     "TestNG.LoginTests.executor": "Run",
+    "TestNG.LoginTests.verify_facebook_opening.executor": "Run",
     "git-widget-placeholder": "v5FolderStructure",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTests">
-    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Harshal\IdeaProjects\Tesbo-2.0\src\Suit" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Runner">
+    <configuration name="Runner" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner.Runner" />
       <module name="framework-core" />
+      <option name="PROGRAM_PARAMETERS" value="-c webConfig.json" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Runner.*" />
@@ -116,16 +115,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTests.verify_facebook_opening" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="framework-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.WebUITests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases.WebUITests.login" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.WebUITests.login.LoginTests" />
+      <option name="METHOD_NAME" value="verify_facebook_opening" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Runner" />
+      <item itemvalue="TestNG.LoginTests.verify_facebook_opening" />
       <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTests.verify_facebook_opening" />
+        <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
+        <item itemvalue="TestNG.LoginTests" />
         <item itemvalue="TestNG.LoginTests" />
         <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
-        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -162,11 +182,429 @@
       <option name="project" value="LOCAL" />
       <updated>1708584991130</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/v5FolderStructure' into v5FolderStructure&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/Config/TestConfigOLD.json&#10;#&#9;src/Framework/core/init/base.java&#10;#&#9;src/Framework/core/readers/JsonFileReader.java&#10;#&#9;src/Framework/performaction/autoweb/locator_reader.java">
+      <option name="closed" value="true" />
+      <created>1708693366938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708693366938</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/v5FolderStructure' into v5FolderStructure&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/Config/TestConfigOLD.json&#10;#&#9;src/Framework/core/init/base.java&#10;#&#9;src/Framework/core/readers/JsonFileReader.java&#10;#&#9;src/Framework/performaction/autoweb/locator_reader.java">
+      <option name="closed" value="true" />
+      <created>1708693408123</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708693408123</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated the file and folder names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the file and folder names" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/v5FolderStructure' into v5FolderStructure&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/Config/TestConfigOLD.json&#10;#&#9;src/Framework/core/init/base.java&#10;#&#9;src/Framework/core/readers/JsonFileReader.java&#10;#&#9;src/Framework/performaction/autoweb/locator_reader.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/v5FolderStructure' into v5FolderStructure&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/Config/TestConfigOLD.json&#10;#&#9;src/Framework/core/init/base.java&#10;#&#9;src/Framework/core/readers/JsonFileReader.java&#10;#&#9;src/Framework/performaction/autoweb/locator_reader.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>25</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getRunConfig">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>30</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getConfigObject">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>35</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getReportKey">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>42</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getPlatform">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>48</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getCurrentReportDirectory">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>56</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getAPIConfig">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>63</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="isAPITestConfigEnable">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>68</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getAPIEnv">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>73</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getAPIEnvDirect">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>79</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getTimeAssertion">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>84</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="isTimeAssertionEnable">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>88</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getTimeToCompare">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>92</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getEnv">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>97</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="isGrid">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>101</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getBrowser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>106</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_capabilities">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>112</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_browserStackOption">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>118</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_sauceLabOption">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>123</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_lambdaTestOption">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>129</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_grid_url">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>134</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_grid_platForm">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>140</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_appium_url">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>145</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_appium_platform">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>151</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="get_app_name">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>169</line>
+          <properties class="Framework.core.readers.JsonFileReader" method="getSuites">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>120</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>153</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="this" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

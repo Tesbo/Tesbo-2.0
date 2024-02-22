@@ -30,11 +30,11 @@ public class locator_reader {
         }
     }
 
-    public org.json.JSONObject getTestConfig() {
+    public org.json.JSONObject getTestConfig(String FileName) {
         String data = "";
 
         try {
-            data = new String(Files.readAllBytes(Paths.get("src/config/configFile").toAbsolutePath()));
+            data = new String(Files.readAllBytes(Paths.get("src/config/" + FileName).toAbsolutePath()));
         } catch (Exception e) {
             System.out.println("config file not found");
         }
@@ -43,7 +43,7 @@ public class locator_reader {
     }
 
 
-  /*  public String getRunConfig() {
+   /* public String getRunConfig() {
         org.json.JSONObject object = getTestConfig();
         return object.getString("run");
     }
