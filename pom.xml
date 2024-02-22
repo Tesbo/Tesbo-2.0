@@ -23,11 +23,6 @@
     </distributionManagement>
 
     <repositories>
-        <repository>
-            <id>my-repo1</id>
-            <name>your custom repo</name>
-            <url>https://download.testmanframework.com/artifactory/Tesbo</url>
-        </repository>
 
         <repository>
             <id>jitpack.io</id>

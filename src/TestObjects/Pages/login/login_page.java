@@ -1,9 +1,9 @@
 package TestObjects.Pages.login;
 
-import Framework.java.io.unity.core.generators.methodsgenerator.methods.MethodsData;
-import Framework.java.io.unity.performaction.autoweb.Element;
-import Framework.java.io.unity.performaction.autoweb.Verify;
-import Framework.java.io.unity.performaction.autoweb.Wait;
+import Framework.core.generators.methodsgenerator.methods.MethodsData;
+import Framework.performaction.autoweb.Element;
+import Framework.performaction.autoweb.Verify;
+import Framework.performaction.autoweb.Wait;
 import org.openqa.selenium.WebDriver;
 
 

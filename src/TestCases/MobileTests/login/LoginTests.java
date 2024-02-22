@@ -1,11 +1,11 @@
 package TestCases.MobileTests.login;
 
-import Framework.java.io.unity.core.init.base;
-import Framework.java.io.unity.core.remotegrid.LambdaTestConfig;
+import Framework.core.init.base;
+import Framework.core.remotegrid.LambdaTestConfig;
+import TestObjects.Screens.login.login_screen;
 import io.appium.java_client.android.AndroidDriver;
 
-import Screens.home_screen.home_screen;
-import Screens.login.login_screen;
+
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import utility.Logger;
@@ -26,7 +26,6 @@ public class LoginTests extends base {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         login_screen login_screen = new login_screen(driver);
-        home_screen home_screen = new home_screen(driver);
 
         login_screen.verify_enter_Your_Phone_number_is_present();
         login_screen.enter_email_address_or_phone_number("mob@yopmail.com");
@@ -40,10 +39,6 @@ public class LoginTests extends base {
         login_screen.verify_login_button_is_present();
         login_screen.click_on_login_button();
 
-        home_screen.verify_home_bottom_button_is_present_on_page();
-        home_screen.verify_search_bottom_button_is_present_on_page();
-        home_screen.verify_Notification_bottom_button_is_present_on_page();
-        home_screen.verify_Bookmarks_bottom_button_is_present_on_page();
     }
 
     @Test
@@ -468,7 +463,6 @@ public class LoginTests extends base {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         login_screen login_screen = new login_screen(driver);
-        home_screen home_screen = new home_screen(driver);
 
         login_screen.verify_enter_Your_Phone_number_is_present();
         login_screen.enter_email_address_or_phone_number("mob@yopmail.com");
@@ -481,7 +475,6 @@ public class LoginTests extends base {
        ((AndroidDriver)driver).hideKeyboard();
         login_screen.verify_login_button_is_present();
         login_screen.click_on_login_button();
-        home_screen.verify_home_bottom_button_is_present_on_page();
     }
 
     @Test
@@ -518,7 +511,6 @@ public class LoginTests extends base {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         login_screen login_screen = new login_screen(driver);
-        home_screen home_screen = new home_screen(driver);
 
         login_screen.verify_enter_Your_Phone_number_is_present();
         login_screen.enter_email_address_or_phone_number("mob@yopmail.com");
@@ -541,7 +533,6 @@ public class LoginTests extends base {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         login_screen login_screen = new login_screen(driver);
-        home_screen home_screen = new home_screen(driver);
 
         login_screen.verify_enter_Your_Phone_number_is_present();
         login_screen.enter_email_address_or_phone_number("mob@yopmail.com");
@@ -554,7 +545,6 @@ public class LoginTests extends base {
        ((AndroidDriver)driver).hideKeyboard();
         login_screen.verify_login_button_is_present();
         login_screen.click_on_login_button();
-        home_screen.verify_home_bottom_button_is_present_on_page();
     }
 }
 

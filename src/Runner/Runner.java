@@ -1,7 +1,7 @@
 package Runner;
 
 
-import Framework.java.io.unity.core.runner.TestRunner;
+import Framework.core.runner.TestRunner;
 
 public class Runner {
 

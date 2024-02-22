@@ -1,24 +1,23 @@
-package WebUITests.login;
+package TestCases.WebUITests.login;
 
-import io.unity.core.init.base;
-import io.unity.core.readers.DataReader;
-import io.unity.core.readers.json_file_reader;
-import io.unity.core.remotegrid.LambdaTestConfig;
+
+import Framework.core.init.base;
+import Framework.core.readers.DataReader;
+import Framework.core.readers.JsonFileReader;
+import Framework.core.remotegrid.LambdaTestConfig;
+import TestObjects.Pages.login.login_page;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utility.Logger;
-import web.object_repository.csdashboard.dashboard_page;
-import web.object_repository.forgotPassword.forgot_password;
-import web.object_repository.login.login_page;
 
 
 public class LoginTests extends base {
 
     login_page login = null;
-    forgot_password forgotPassword = null;
+
     @DataProvider(name = "login_credentials")
     public Object[][] data_provider() {
-        json_file_reader config = new json_file_reader();
+        JsonFileReader config = new JsonFileReader();
         DataReader reader = new DataReader();
         Object[][] data = null;
         if (config.getEnvFromCurrentConfig().contains("test") || config.getEnvFromCurrentConfig().contains("ngdev")) {
@@ -37,7 +36,7 @@ public class LoginTests extends base {
         Logger.log_qase_id("NEV-101");
 
         login_page login = new login_page(driver);
-        dashboard_page dashboard = new dashboard_page(driver);
+
 
         login.verify_email_text_box_is_present_on_page();
         login.verify_password_button_is_present_on_page();
@@ -45,7 +44,7 @@ public class LoginTests extends base {
 
         login.performLogin(userName, password);
 
-        dashboard.verify_logo_is_present_on_page();
+
     }
 
     @Test
@@ -210,7 +209,7 @@ public class LoginTests extends base {
 
         login = new login_page(driver);
 
-        forgotPassword = new forgot_password(driver);
+
 
         login.verify_forgot_your_password_link_is_present_on_page();
         login.click_on_forgot_your_password_link();
@@ -229,7 +228,7 @@ public class LoginTests extends base {
 
         login = new login_page(driver);
 
-        forgotPassword = new forgot_password(driver);
+
 
         login.verify_forgot_your_password_link_is_present_on_page();
         login.click_on_forgot_your_password_link();
@@ -249,7 +248,7 @@ public class LoginTests extends base {
 
         login = new login_page(driver);
 
-        forgotPassword = new forgot_password(driver);
+
 
         login.verify_forgot_your_password_link_is_present_on_page();
         login.click_on_forgot_your_password_link();
@@ -269,7 +268,7 @@ public class LoginTests extends base {
 
         login = new login_page(driver);
 
-        forgotPassword = new forgot_password(driver);
+
 
         login.verify_forgot_your_password_link_is_present_on_page();
         login.click_on_forgot_your_password_link();

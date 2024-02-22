@@ -1,10 +1,11 @@
-package Screens.login;
+package TestObjects.Screens.login;
 
+import Framework.core.generators.methodsgenerator.methods.MethodsData;
+import Framework.performaction.autoweb.Element;
+import Framework.performaction.autoweb.Verify;
+import Framework.performaction.autoweb.Wait;
 import io.appium.java_client.android.AndroidDriver;
-import io.unity.core.generators.methodsgenerator.methods.MethodsData;
-import io.unity.performaction.autoweb.Element;
-import io.unity.performaction.autoweb.Verify;
-import io.unity.performaction.autoweb.Wait;
+
 import org.openqa.selenium.WebDriver;
 
 public class login_screen {
