@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Recognition Web Regression" thread-count="5" parallel="methods">
+
+
+    <test name="Verify user is able to login with Valid credentials">
+        <classes>
+            <class name="WebUITests.login.LoginTests">
+                <methods>
+                    <include name="Verify_login_with_valid_credentials"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify login with blank user">
+        <classes>
+            <class name="WebUITests.login.LoginTests">
+                <methods>
+                    <include name="verify_login_with_blank_user"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+  <!--  <test name="verify login with blank password ">
+        <classes>
+            <class name="web.tests.login.LoginTests">
+                <methods>
+                    <include name="verify_login_with_blank_password"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify login with user and password both empty">
+        <classes>
+            <class name="web.tests.login.LoginTests">
+                <methods>
+                    <include name="verify_login_with_user_and_password_both_empty"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify login with valid user and invalid password">
+        <classes>
+            <class name="web.tests.login.LoginTests">
+                <methods>
+                    <include name="verify_login_with_valid_user_and_invalid_password"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify login invalid user and valid password">
+        <classes>
+            <class name="web.tests.login.LoginTests">
+                <methods>
+                    <include name="verify_login_invalid_user_and_valid_password"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify login with wrong email format and password">
+        <classes>
+            <class name="web.tests.login.LoginTests">
+                <methods>
+                    <include name="verify_login_with_wrong_email_format_and_password"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+
+
+</suite>

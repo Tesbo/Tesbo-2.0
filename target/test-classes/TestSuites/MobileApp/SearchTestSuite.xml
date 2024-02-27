@@ -1,0 +1,65 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Search Page Android App Test Suite" parallel="tests" thread-count="5">
+
+    <test name = "verify user can search any specific lesson using search option">
+        <classes>
+            <class name = "MobileTests.Search.search_tests" >
+                <methods>
+                    <include name="verify_user_can_search_any_specific_lesson_using_search_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify if user search anything outside module or lesson, it does not show any search result">
+        <classes>
+            <class name = "MobileTests.Search.search_tests" >
+                <methods>
+                    <include name="verify_if_user_search_anything_outside_module_or_lesson_it_does_not_show_any_search_result"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify when user searches irrelevant terms then showing message No result for (searched term)">
+        <classes>
+            <class name = "MobileTests.Search.search_tests" >
+                <methods>
+                    <include name="To_verify_when_user_searches_irrelevant_terms_then_showing_message_No_result_for_searched_term"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "to verify user is able to search any specific module using search option">
+        <classes>
+            <class name = "MobileTests.Search.search_tests" >
+                <methods>
+                    <include name="to_verify_user_is_able_to_search_any_specific_module_using_search_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify when tap on search bar, tabs of Homepage, Notification and Bookmark does not disappear">
+        <classes>
+            <class name = "MobileTests.Search.search_tests" >
+                <methods>
+                    <include name="To_verify_when_tap_on_search_bar_tabs_of_Homepage_Notification_and_Bookmark_does_not_disappear"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "To verify when click on search tab, it opens search page">
+        <classes>
+            <class name = "MobileTests.Search.search_tests" >
+                <methods>
+                    <include name="To_verify_when_click_on_search_tab_it_opens_search_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

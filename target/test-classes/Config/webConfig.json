@@ -6,7 +6,7 @@
   },
   "env": "https://www.facebook.com/",
   "isGrid": false,
-  "gridPlatform": "local",
+  "gridPlatform": "browserstack",
   "browserStackOption": {
     "os": "Windows",
     "osVersion": "11"
@@ -18,6 +18,6 @@
     "env": ""
   },
   "testNGsuite": [
-    "suite.xml"
+    "nevvon_android_all.xml"
   ]
 }

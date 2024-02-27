@@ -1,0 +1,89 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Survey Web Smoke"  parallel="tests" thread-count="5">
+
+    <test name="To verify login with survey tool">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                <methods>
+                    <include name="To_verify_login_with_survey_tool"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify login with blank password text field">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                <methods>
+                    <include name="To_verify_login_with_blank_password_text_field"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify login with blank username and password text field">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                <methods>
+                    <include name="To_verify_login_with_blank_username_and_password_text_field"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify login with blank username text field">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                <methods>
+                    <include name="To_verify_login_with_blank_username_text_field"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify login with invalid username and password">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                <methods>
+                    <include name="To_verify_login_with_invalid_username_and_password"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify user can forgot password">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                <methods>
+                    <include name="To_verify_user_can_forgot_password"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify user can sent reset password with blank email">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                <methods>
+                    <include name="To_verify_user_can_sent_reset_password_with_blank_email"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when user can logout on survey tool">
+        <classes>
+            <class name="WebUITests.SurveyLogin.surveylogin">
+                
+                <methods>
+                    <include name="To_verify_when_user_can_logout_on_survey_tool"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--    <test name="To verify when user can make inactive on survey tool">-->
+<!--        <classes>-->
+<!--            <class name="web.tests.SurveyLogin.surveylogin">-->
+<!--                <methods>-->
+<!--                    <include name="To_verify_when_user_can_make_inactive_on_survey_tool"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>

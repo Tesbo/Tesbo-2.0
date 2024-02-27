@@ -1,0 +1,223 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Employee Profile Page Suite" parallel="tests" thread-count="5">
+
+
+    <test name="verify when clicks on update leaving mandatory fields blank">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_update_leaving_mandatory_fields_blank"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on add program popup Copy icon">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_add_program_popup_Copy_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="verify when clicks on Active">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Active"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on hold option">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_hold_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks terminated option">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_terminated_option"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when enters less digits than the required as per country code in phone number field">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include
+                            name="verify_when_enters_less_digits_than_the_required_as_per_country_code_in_phone_number_field"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="when click on Training Accessible during shift popup close icon">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="when_click_on_Training_Accessible_during_shift_popup_close_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on In class program button">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_In_class_program_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify the content on Add employees program popup">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_the_content_on_Add_employees_program_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="verify when search for any session">
+        <classes>
+            <class name="WebUITests.inClassSessionTests.inClassSessionTest">
+                <methods>
+                    <include name="verify_when_search_for_any_session"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="verify when selects already added program from programs dropdown">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_selects_already_added_program_from_programs_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="verify when click on session dropdown without selecting program">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_click_on_session_dropdown_without_selecting_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="verify when edits email address in personal info">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_edits_email_address_in_personal_info"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify the newly added program appears in the program list">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_the_newly_added_program_appears_in_the_program_list"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on edit the due date of incomplete program">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_edit_the_due_date_of_incomplete_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when adds program to the inactive employee">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_adds_program_to_the_inactive_employee"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on edit the start date of incomplete program">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_edit_the_start_date_of_incomplete_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To  verify when clicks on Open ticket employee profile">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Open_ticket_employee_profile"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when entering text in form page of open ticket">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_entering_text_in_form_page_of_open_ticket_employee_profile"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="To verify when edits Edit due date program page">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_edits_Edit_due_date_program_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when edits Edit start date program page">
+        <classes>
+            <class name="WebUITests.employeeProfile.EmployeeProfileTest">
+                <methods>
+                    <include name="verify_when_edits_Edit_start_date_program_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

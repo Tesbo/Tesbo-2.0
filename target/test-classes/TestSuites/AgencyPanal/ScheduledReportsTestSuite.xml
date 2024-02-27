@@ -1,0 +1,427 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Scheduled Reports Test Suite" parallel="tests" thread-count="5">
+
+    <test name="To verify when clicks on scheduled reports">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_scheduled_reports"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name=" verify the content on the scheduled reports page">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_the_content_on_the_scheduled_reports_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when search for the program in search box">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_search_for_the_program_in_search_box"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when selects scheduled report from new report">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_selects_scheduled_report_from_new_report"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on cross button on new scheduled report popup">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_cross_button_on_new_scheduled_report_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on cancel button on new scheduled report popup">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_cancel_button_on_new_scheduled_report_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on continue without selecting program">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_continue_without_selecting_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on kebab icon">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_kebab_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on edit from kebab icon">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_edit_from_kebab_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify the content on the new scheduled report popup">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_the_content_on_the_new_scheduled_report_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!--    <test name="To verify when clicks on help icon of programs/completion/aggregate on scheduled report popup">-->
+    <!--        <classes>-->
+    <!--            <class name="web.tests.scheduledReportsTest.ScheduledReportsTest">-->
+    <!--                <methods>-->
+    <!--                    <include name="verify_when_clicks_on_help_icon_of_programs_completion_aggregate_on_scheduled_report_popup"></include>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <test name="To verify when clicks on All  programs of scheduled report popup">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_All_programs_of_scheduled_report_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on the dropdown of programs">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_the_dropdown_of_programs"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on aggregate dropdown">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_aggregate_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify the content of the Schedule step">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_the_content_of_the_Schedule_step"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when enters name of the report on scheduled report popup">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_enters_name_of_the_report_on_scheduled_report_popup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on Day(s) dropdown">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Day_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on schedule without entering number of days">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_schedule_without_entering_number_of_days"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on back button">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_back_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="To verify when selects days">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_selects_days"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when enters more than 100 in Every">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_enters_more_than_100_in_Every"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on Week(s)">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_Week"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on schedule without selecting day of week">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_schedule_without_selecting_day_of_week"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on schedule without selecting number of weeks">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_schedule_without_selecting_number_of_weeks"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when selects months from the dropdown">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_selects_months_from_the_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on lessons/modules/programs">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_lessons_modules_programs"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on continue after filling necessary details">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_continue_after_filling_necessary_details"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify when clicks on activate deactivate from kebab icon">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_activate_deactivate_from_kebab_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify start text box is present on page">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_start_text_box_is_present_on_page"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when select day of week">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_select_day_of_week"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when selects 1st/15th date of the month">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_selects_1st_15th_date_of_the_month"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks schedule without selecting number of months">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_schedule_without_selecting_day_of_months"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on delete from kebab icon">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_delete_from_kebab_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on confirm button">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_confirm_button"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on cancel button in scheduled">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_cancel_button_in_scheduled"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when selects more than one program">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_selects_more_than_one_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="verify when clicks schedule without selecting date">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_schedule_without_selecting_date"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="verify when clicks on the cross button of recipient mail">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_the_cross_button_of_recipient_mail"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on schedule after entering necessary details">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_clicks_on_schedule_after_entering_necessary_details"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when click on the angle up icon of Every Schedule Reports">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_click_on_the_angle_up_icon_of_Every"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when click on the angle down icon of Every Schedule Reports">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="verify_when_click_on_the_angle_down_icon_of_Every"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when clicks on Run now in schedule report">
+        <classes>
+            <class name="WebUITests.scheduledReportsTest.ScheduledReportsTest">
+                <methods>
+                    <include name="To_verify_when_clicks_on_Run_now_in_schedule_report"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,157 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Employee Action Test Suite" parallel="tests" thread-count="5">
+
+
+    <test name="To verify Completion rate of Program card">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_Completion_rate_of_Program_card"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify when select 1 month for extend due date">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_select_1_month_for_extend_due_date"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="To verify active programs list on the homepage">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_active_programs_list_on_the_homepage"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on due soon calendar icon">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name=" To_verify_when_clicks_on_due_soon_calendar_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when selects extend due date by dropdown">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_selects_extend_due_date_by_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when select 1 month for extend due date ">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_select_1_month_for_extend_due_date"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on custom from the dropdown">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_custom_from_the_dropdown"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on include employees with expired programs checkbox">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_include_employees_with_expired_programs_checkbox"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when selects date from the calendar">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_selects_date_from_the_calendar"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on cancel or cross button after entering data">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_cancel_or_cross_button_after_entering_data"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when clicks on update without selecting custom date">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_clicks_on_update_without_selecting_custom_date"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="To verify when click on send message icon">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="To_verify_when_click_on_send_message_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when clicks on download certificates arrow icon">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="verify_when_clicks_on_download_certificates_arrow_icon"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="verify when click on employee icon available in dashboard of program">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="verify_when_click_on_employee_icon_available_in_dashboard_of_program"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify when click on available program name on dashboard">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="verify_when_click_on_available_program_name_on_dashboard"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify when select Notify employee check box">
+        <classes>
+            <class name="WebUITests.adminHomeTests.admin_home_test">
+                <methods>
+                    <include name="verify_when_select_Notify_employee_check_box"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
