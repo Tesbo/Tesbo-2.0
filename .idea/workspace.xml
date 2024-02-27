@@ -5,127 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a1ff3e2-c682-444e-b6e6-be7eb205217b" name="Changes" comment="Merge remote-tracking branch 'origin/v5FolderStructure' into v5FolderStructure&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/Config/TestConfigOLD.json&#10;#&#9;src/Framework/core/init/base.java&#10;#&#9;src/Framework/core/readers/JsonFileReader.java&#10;#&#9;src/Framework/performaction/autoweb/locator_reader.java">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/Utils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/data/TestData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/exception/ResponseTimeAssertionException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/exception/list_size_not_matching_exception.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/exception/locator_not_found_exception.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/exception/locator_validation_exception.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/Browser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/ElementChecker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/ElementFilterHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/ElementNameGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/EntryPoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/GeneratePageObjectFile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/PageObject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/xPathGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/locatorgenerator/xPathValidator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/classutilities/ClassMethodsValidator$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/classutilities/ClassMethodsValidator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/classutilities/ClassSkeleton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/classutilities/ClassVariableBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/classutilities/GenerateMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/classutilities/JavaFileReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/init/EntryPoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/ButtonMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/LinkMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/LocatorType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/MethodsData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/PasswordMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/RadioMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/TextAreaMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/TextBoxMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/methodsgenerator/methods/TextMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/generators/suitegenerator/TestNGSuiteGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/init/Session.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/init/base.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/readers/CommandlineOption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/readers/DataReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/readers/GetApiConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/readers/json_file_reader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/readers/locator_reader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/remotegrid/LambdaTestConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/runner/TestRunner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/framework/server/Starter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoapi/RequestBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoapi/ResponseValidator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoapi/UnityJSONParser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/automob/Device.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/Alert.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/Browser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/Element.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/Verify.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/Wait$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/Wait.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/Window.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/locator_reader$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/locator_reader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/performaction/autoweb/testng_logs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/io/unity/temp/Edition029_W3C_Actions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/tinylog.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/web/object_repository/login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/web/test/LoginTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/webConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/webConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/core/init/base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/init/base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/core/readers/CommandlineOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/readers/CommandlineOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/core/readers/LocatorReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/readers/LocatorReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/core/server/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/core/server/Starter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/performaction/autoweb/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/performaction/autoweb/Element.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/performaction/autoweb/locator_reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Suit/suit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/suites/Test_Demo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/TestConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/TestConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Config/webConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Config/webConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/core/init/base.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/core/init/base.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/core/readers/CommandlineOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/core/readers/CommandlineOption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestObjects/Pages/login/login_page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestObjects/Pages/login/login_page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestObjects/Pages/login/login_page.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestObjects/Pages/login/login_page.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/core/readers/JsonFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/core/readers/JsonFileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/core/runner/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/core/runner/TestRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/core/readers/LocatorReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/core/readers/LocatorReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/performaction/autoweb/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/performaction/autoweb/Element.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/performaction/autoweb/locator_reader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/performaction/autoweb/locator_reader$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Framework/performaction/autoweb/locator_reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Framework/performaction/autoweb/locator_reader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Suit/suit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestObjects/Pages/login/login_page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestObjects/Pages/login/login_page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/AdminHomePageSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/AdminProfilePageSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/EmployeeActionTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/EmployeeProfileSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/FilterTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/ForgotPasswordTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/LoginTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/NewEmployeesTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/New_Portal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/ProgramTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/ReportsSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/ScheduledReportsTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/AgencyPanal/SettingTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/CS_Admin_Panel_API.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/CS_panel_suite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/BookmarkTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/ContactUsTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/ForgotPasswordTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/HelpTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/HomeTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/LanguageTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/LoginPageTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/LogoutTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/NotificationTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/ProfileTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/SearchTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MobileApp/SignUpTestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/New_Portal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/New_Portal_temp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/Survey_Smoke_Suite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/Web_Smoke_Suite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/nevvon_android_Smoke.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/nevvon_android_all.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/nevvon_android_test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/nevvon_public_api.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/public_api_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/recognition.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestObjects/Pages/login/login_page.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestObjects/Pages/login/login_page.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
@@ -176,12 +69,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Runner.executor": "Run",
+    "Application.TestRunner.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.LoginTests.Verify_login_with_valid_credentials.executor": "Run",
     "TestNG.LoginTests.executor": "Run",
-    "TestNG.LoginTests.verify_facebook_opening.executor": "Run",
-    "git-widget-placeholder": "Merging v5FolderStructure",
+    "TestNG.LoginTests.verify_facebook_opening.executor": "Debug",
+    "git-widget-placeholder": "v5FolderStructure",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel"
@@ -192,7 +86,7 @@
       <recent name="C:\Users\Harshal\IdeaProjects\Tesbo-2.0\src\Suit" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Runner">
+  <component name="RunManager" selected="TestNG.LoginTests.verify_facebook_opening">
     <configuration name="Runner" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner.Runner" />
       <module name="framework-core" />
@@ -200,6 +94,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Framework.core.runner.TestRunner" />
+      <module name="framework-core" />
+      <option name="PROGRAM_PARAMETERS" value="-c webConfig.json" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Framework.core.runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -262,6 +170,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Runner" />
+      <item itemvalue="Application.TestRunner" />
       <item itemvalue="TestNG.LoginTests.verify_facebook_opening" />
       <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
@@ -269,10 +178,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.LoginTests.verify_facebook_opening" />
+        <item itemvalue="Application.TestRunner" />
         <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
         <item itemvalue="TestNG.LoginTests" />
         <item itemvalue="TestNG.LoginTests" />
-        <item itemvalue="TestNG.LoginTests.Verify_login_with_valid_credentials" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708693408123</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/v5FolderStructure' into v5FolderStructure&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/Config/TestConfigOLD.json&#10;#&#9;src/Framework/core/init/base.java&#10;#&#9;src/Framework/core/readers/JsonFileReader.java&#10;#&#9;src/Framework/performaction/autoweb/locator_reader.java">
+      <option name="closed" value="true" />
+      <created>1709016793187</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709016793188</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,156 +265,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="121" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/runner/TestRunner.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/CommandlineOption.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>172</line>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>171</line>
-          <option name="timeStamp" value="128" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>26</line>
-          <properties class="Framework.core.readers.JsonFileReader" method="getRunConfig">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>31</line>
-          <properties class="Framework.core.readers.JsonFileReader" method="getConfigObject">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Framework/core/readers/JsonFileReader.java</url>
-          <line>170</line>
-          <properties class="Framework.core.readers.JsonFileReader" method="getSuites">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="129" />
+          <url>file://$PROJECT_DIR$/src/TestCases/WebUITests/login/LoginTests.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="133" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,4 +1,2 @@
-2024-01-30 18:49:58 [main] io.unity.framework.init.base.init()
-INFO: Base config to run : cs_test_browserStack
-2024-01-30 18:50:03 [main] io.unity.performaction.autoweb.testng_logs.test_step()
-INFO: Step : verify password_password is displayed
+2024-02-27 15:01:22 [main] Framework.performaction.autoweb.TestngLogs.test_step()
+INFO: Step : Enter text jacob at locator password_password

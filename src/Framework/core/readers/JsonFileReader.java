@@ -1,8 +1,6 @@
 package Framework.core.readers;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,9 +17,8 @@ public class JsonFileReader {
         } catch (Exception e) {
             System.out.println("config file not found");
         }
-        JSONObject testConfig = new JSONObject(data);
 
-        return testConfig;
+        return new JSONObject(data);
     }
 
     public String getRunConfig(String FileName) {
@@ -29,10 +26,11 @@ public class JsonFileReader {
         return object.getString(FileName);
     }
 
+/*
     public JSONObject getConfigObject(String FileName) {
         JSONObject object = getTestConfig(FileName);
         return (JSONObject) ((JSONObject) object.get(FileName));
-    }
+    }*/
 
     public String getReportKey(String FileName)
     {
@@ -79,7 +77,7 @@ public class JsonFileReader {
 
 
     public JSONObject getTimeAssertion(String FileName) {
-        return (JSONObject) getConfigObject(FileName).get("timeAssertion");
+        return (JSONObject) getTestConfig(FileName).get("timeAssertion");
     }
 
 
@@ -152,7 +150,7 @@ public class JsonFileReader {
 
     public String get_app_name(String FileName) {
 
-        return getConfigObject(FileName).getString("app");
+        return getTestConfig(FileName).getString("app");
     }
 
 

@@ -1,12 +1,10 @@
-package io.unity.performaction.autoweb;
-
+package Framework.performaction.autoweb;
 
 
 import Framework.core.readers.JsonFileReader;
 import Framework.core.runner.TestRunner;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -30,32 +28,9 @@ public class locator_reader {
         }
     }
 
-    public org.json.JSONObject getTestConfig() {
-        String data = "";
-        try {
-            data = new String(Files.readAllBytes(Paths.get("src/config/TestConfig.json").toAbsolutePath()));
-        } catch (Exception e) {
-            System.out.println("config file not found");
-        }
-        org.json.JSONObject testConfig = new org.json.JSONObject(data);
-        return testConfig;
-    }
-
-
-    public String getRunConfig() {
-        org.json.JSONObject object = getTestConfig();
-        return object.getString("run");
-    }
-
-    public org.json.JSONObject getConfigObject(String configName) {
-        org.json.JSONObject object = getTestConfig();
-        return (org.json.JSONObject) ((org.json.JSONObject) object.get("config")).get(configName);
-    }
-
-
     public Map<String,String> get_locator_value(String locator_name) {
         locator_reader reader = new locator_reader();
-        json_file_reader config_reader = new json_file_reader();
+        JsonFileReader config_reader = new JsonFileReader();
 
         JSONObject object = null;
         Map locator_details = new HashMap();

@@ -21,7 +21,7 @@ public class login_page {
     }
 
 
-public void verify_facebook_opening(){
+        public void verify_facebook_opening(){
         element.enter_text("password_password", "jacob");
             }
 }

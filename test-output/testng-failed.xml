@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Test Demo]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="verify_facebook_opening(failed)">
+    <classes>
+      <class name="TestCases.WebUITests.login.LoginTests">
+        <methods>
+          <include name="init"/>
+          <include name="verify_facebook_opening"/>
+          <include name="tear_down"/>
+          <include name="beforeSuiteWorks"/>
+        </methods>
+      </class> <!-- TestCases.WebUITests.login.LoginTests -->
+    </classes>
+  </test> <!-- verify_facebook_opening(failed) -->
+</suite> <!-- Failed suite [Test Demo] -->
