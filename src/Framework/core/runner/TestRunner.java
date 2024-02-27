@@ -5,8 +5,6 @@ import Framework.core.readers.JsonFileReader;
 import com.beust.jcommander.JCommander;
 import org.json.JSONArray;
 import org.testng.TestNG;
-
-
 import java.io.File;
 import java.nio.file.FileSystems;
 import java.util.ArrayList;
@@ -64,8 +62,6 @@ public class TestRunner {
             }
 
         }
-
-
         catch(Exception e){
                 e.printStackTrace();
             }
@@ -76,9 +72,6 @@ public class TestRunner {
                 e.printStackTrace();
 
             }
-
-
-
         }
 
     public static void main(String[] args) {

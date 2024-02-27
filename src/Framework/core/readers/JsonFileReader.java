@@ -1,4 +1,5 @@
 package Framework.core.readers;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.File;
@@ -17,9 +18,8 @@ public class JsonFileReader {
         } catch (Exception e) {
             System.out.println("config file not found");
         }
-        JSONObject testConfig = new JSONObject(data);
 
-        return testConfig;
+        return new JSONObject(data);
     }
 
     public String getRunConfig(String FileName) {
@@ -27,8 +27,7 @@ public class JsonFileReader {
         return object.getString(FileName);
     }
 
-/*
-    public JSONObject getConfigObject(String FileName) {
+ /*   public JSONObject getConfigObject(String FileName) {
         JSONObject object = getTestConfig(FileName);
         return (JSONObject) ((JSONObject) object.get(FileName));
     }*/
