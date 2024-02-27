@@ -1,0 +1,14 @@
+{
+  "endPoint": "/v1/employees/visits",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": ""
+  },
+  "body": {
+  },
+
+  "pathParameter":{},
+  "queryParameters": {},
+  "schema": {}
+}

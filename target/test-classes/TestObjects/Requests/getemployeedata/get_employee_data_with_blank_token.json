@@ -1,0 +1,12 @@
+{
+  "endPoint": "/v1/employees/C8B80129A61111EC8FD90A89C66BA7E6",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": ""
+  },
+  "body": {
+
+  }
+
+}

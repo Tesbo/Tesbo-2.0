@@ -1,0 +1,11 @@
+{
+  "endPoint": "/v1/programs/approvals",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+  },
+  "body": {
+
+  }
+
+}

@@ -1,0 +1,15 @@
+{
+  "endPoint": "/v1/programs/${program}/completions",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+  },
+  "body": {
+
+  },
+
+  "pathParameter":{"program":""},
+
+  "queryParameters": ""
+
+}

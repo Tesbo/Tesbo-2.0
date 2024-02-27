@@ -1,0 +1,126 @@
+{
+  "Suite": {
+    "started-at ": "2022-10-11T02:00:08 EDT",
+    "name": "Nevvon Admin",
+    "finished-at": "2022-10-11T04:06:20 EDT",
+    "duration-ms": "7572114",
+    "tests": [
+      {
+        "testID": "345983904rty89t54908340",
+        "final-test-status" : "PASS",
+        "platformName" : "Windows",
+        "platformVersion" : "11",
+        "browser" : "Chrome",
+        "browserVersion" : "105.2",
+        "deviceName" :  "",
+        "started-at": "2022-10-11T02:00:34 EDT",
+        "finished-at": "2022-10-11T02:00:52 EDT",
+        "duration-ms": "17901",
+        "name": "Verify user get message when enter blank user name and password",
+        "failureMessage" : "",
+        "full-stacktrace": " ",
+        "screenshot" : "",
+        "methods": [
+          {
+            "is-config": "true",
+            "name": "init",
+            "status": "PASS",
+            "steps": [],
+            "started-at": "2022-10-11T02:00:34 EDT",
+            "duration-ms": "13231",
+            "finished-at": "2022-10-11T02:00:47 EDT"
+          },
+          {
+            "is-config": "true",
+            "name": "init",
+            "status": "PASS",
+            "steps": [
+              {
+                "step": "",
+                "status": "PASS"
+              },
+              {
+                "step": "",
+                "status": "PASS"
+              },
+              {
+                "step": "",
+                "status": "FAIL"
+              }
+            ],
+            "started-at": "2022-10-11T02:00:34 EDT",
+            "duration-ms": "13231",
+            "finished-at": "2022-10-11T02:00:47 EDT"
+          },
+          {
+            "is-config": "true",
+            "name": "init",
+            "status": "PASS",
+            "steps": [],
+            "started-at": "2022-10-11T02:00:34 EDT",
+            "duration-ms": "13231",
+            "finished-at": "2022-10-11T02:00:47 EDT"
+          }
+        ]
+      },
+      {
+        "testID": "34253452342342342342",
+        "final-test-status" : "PASS",
+        "platformName" : "Android",
+        "platformVersion" : "12",
+        "browser" : "",
+        "browserVersion" : "",
+        "deviceName" :  "Samsung Galaxy",
+        "started-at": "2022-10-11T02:00:34 EDT",
+        "finished-at": "2022-10-11T02:00:52 EDT",
+        "duration-ms": "17901",
+        "name": "Verify user get message when enter blank user name and password",
+        "failureMessage" : "",
+        "full-stacktrace": " ",
+        "screenshot" : "",
+        "methods": [
+          {
+            "is-config": "true",
+            "name": "init",
+            "status": "PASS",
+            "steps": [],
+            "started-at": "2022-10-11T02:00:34 EDT",
+            "duration-ms": "13231",
+            "finished-at": "2022-10-11T02:00:47 EDT"
+          },
+          {
+            "is-config": "true",
+            "name": "init",
+            "status": "PASS",
+            "steps": [
+              {
+                "step": "",
+                "status": "PASS"
+              },
+              {
+                "step": "",
+                "status": "PASS"
+              },
+              {
+                "step": "",
+                "status": "FAIL"
+              }
+            ],
+            "started-at": "2022-10-11T02:00:34 EDT",
+            "duration-ms": "13231",
+            "finished-at": "2022-10-11T02:00:47 EDT"
+          },
+          {
+            "is-config": "true",
+            "name": "init",
+            "status": "PASS",
+            "steps": [],
+            "started-at": "2022-10-11T02:00:34 EDT",
+            "duration-ms": "13231",
+            "finished-at": "2022-10-11T02:00:47 EDT"
+          }
+        ]
+      }
+    ]
+  }
+}

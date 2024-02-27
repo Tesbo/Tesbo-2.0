@@ -1,0 +1,315 @@
+Index: src/main/java/io/unity/performaction/autoweb/Element.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.performaction.autoweb;\r\n\r\n\r\nimport com.google.common.net.MediaType;\r\nimport io.appium.java_client.AppiumBy;\r\nimport io.unity.framework.exception.locator_validation_exception;\r\nimport org.apache.commons.io.FileUtils;\r\nimport org.openqa.selenium.*;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.devtools.DevTools;\r\nimport org.openqa.selenium.devtools.NetworkInterceptor;\r\nimport org.openqa.selenium.devtools.v85.log.Log;\r\nimport org.openqa.selenium.interactions.Actions;\r\nimport org.openqa.selenium.interactions.WheelInput;\r\nimport org.openqa.selenium.remote.http.HttpResponse;\r\nimport org.openqa.selenium.remote.http.Route;\r\nimport org.openqa.selenium.support.ui.Select;\r\n\r\nimport java.io.File;\r\nimport java.io.IOException;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Map;\r\nimport java.util.function.Consumer;\r\n\r\nimport static org.openqa.selenium.remote.http.Contents.utf8String;\r\n\r\n\r\npublic class Element {\r\n\r\n    WebDriver driver;\r\n    testng_logs logs = new testng_logs();\r\n\r\n\r\n    public Element(WebDriver dri) {\r\n        this.driver = dri;\r\n    }\r\n\r\n\r\n    private WebElement get_element_from_value(String locator_type, String locator_value) {\r\n        WebElement element = null;\r\n        switch (locator_type) {\r\n            case \"xpath\":\r\n                element = driver.findElement(By.xpath(locator_value));\r\n                break;\r\n            case \"id\":\r\n                element = driver.findElement(By.id(locator_value));\r\n                break;\r\n            case \"css_selector\":\r\n                element = driver.findElement(By.cssSelector(locator_value));\r\n                break;\r\n            case \"class_name\":\r\n                element = driver.findElement(By.className(locator_value));\r\n                break;\r\n            case \"name\":\r\n                element = driver.findElement(By.name(locator_value));\r\n                break;\r\n            case \"link_text\":\r\n                element = driver.findElement(By.linkText(locator_value));\r\n                break;\r\n            case \"partial_link_text\":\r\n                element = driver.findElement(By.partialLinkText(locator_value));\r\n                break;\r\n            case \"tag\":\r\n                element = driver.findElement(By.tagName(locator_value));\r\n                break;\r\n            case \"accessibility-id\":\r\n                element = driver.findElement(new AppiumBy.ByAccessibilityId(locator_value));\r\n                break;\r\n            default:\r\n                logs.test_step(\"Incorrect Locator Type\");\r\n        }\r\n        return element;\r\n    }\r\n\r\n\r\n    public WebElement find(String locator_value) {\r\n\r\n        WebElement element = null;\r\n        locator_reader reader = new locator_reader();\r\n\r\n        Map<String, String> locator_details = reader.get_locator_value(locator_value);\r\n        element = get_element_from_value(locator_details.get(\"locator_type\"), locator_details.get(\"locator_value\"));\r\n\r\n        return element;\r\n    }\r\n\r\n    public WebElement find_element_by_xpath(String locator_value) {\r\n        WebElement element = null;\r\n        element = driver.findElement(By.xpath(locator_value));\r\n        return element;\r\n    }\r\n\r\n    public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws locator_validation_exception {\r\n        WebElement element = null;\r\n        locator_reader reader = new locator_reader();\r\n\r\n\r\n        Map<String, String> locator_details = reader.get_locator_value(locator_value);\r\n\r\n\r\n        String final_xpath = \"\";\r\n        if (locator_details.get(\"locator_type\").equalsIgnoreCase(\"dyn-xpath\")) {\r\n            String current_xpath = locator_details.get(\"locator_value\");\r\n            final_xpath = current_xpath;\r\n            if (current_xpath.contains(\"${\")) {\r\n\r\n                for (Map.Entry<String, String> entry : dynamic_value.entrySet()) {\r\n\r\n                    System.out.println(\"Key = \" + entry.getKey() +\r\n                            \", Value = \" + entry.getValue());\r\n\r\n                    final_xpath = final_xpath.replace(\"${\" + entry.getKey() + \"}\", entry.getValue());\r\n                }\r\n\r\n            } else {\r\n                throw new locator_validation_exception(\"No Dynamic Value Found in locator\");\r\n            }\r\n\r\n\r\n        } else {\r\n            throw new locator_validation_exception(\"locator type is not a dyn-xpath, This method only use for the Dynamic Xpath \");\r\n        }\r\n\r\n        return driver.findElement(By.xpath(final_xpath));\r\n    }\r\n\r\n    public List<WebElement> find_multiple_elements(String locator_value) {\r\n\r\n        List<WebElement> elements = null;\r\n\r\n        locator_reader reader = new locator_reader();\r\n\r\n        Map<String, String> locator_details = reader.get_locator_value(locator_value);\r\n\r\n\r\n\r\n\r\n        switch (locator_details.get(\"locator_type\")) {\r\n            case \"xpath\":\r\n                elements = driver.findElements(By.xpath(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"id\":\r\n                elements = driver.findElements(By.id(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"css_selector\":\r\n                elements = driver.findElements(By.cssSelector(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"class_name\":\r\n                elements = driver.findElements(By.className(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"name\":\r\n                elements = driver.findElements(By.name(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"link_text\":\r\n                elements = driver.findElements(By.linkText(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"partial_link_text\":\r\n                elements = driver.findElements(By.partialLinkText(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"tag\":\r\n                elements = driver.findElements(By.tagName(locator_details.get(\"locator_value\")));\r\n                break;\r\n            default:\r\n                logs.test_step(\"Incorrect Locator Type\");\r\n        }\r\n\r\n        return elements;\r\n    }\r\n\r\n\r\n    public List<WebElement> find_multiple_element_from_element(String main_element, String element_to_find) {\r\n        WebElement main = find(main_element);\r\n\r\n        List<WebElement> elements = null;\r\n\r\n        locator_reader reader = new locator_reader();\r\n\r\n        Map<String, String> locator_details = reader.get_locator_value(element_to_find);\r\n\r\n\r\n        switch (locator_details.get(\"locator_type\")) {\r\n            case \"xpath\":\r\n                elements = main.findElements(By.xpath(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"id\":\r\n                elements = main.findElements(By.id(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"css_selector\":\r\n                elements = main.findElements(By.cssSelector(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"class_name\":\r\n                elements = main.findElements(By.className(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"name\":\r\n                elements = main.findElements(By.name(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"link_text\":\r\n                elements = main.findElements(By.linkText(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"partial_link_text\":\r\n                elements = main.findElements(By.partialLinkText(locator_details.get(\"locator_value\")));\r\n                break;\r\n            case \"tag\":\r\n                elements = main.findElements(By.tagName(locator_details.get(\"locator_value\")));\r\n                break;\r\n            default:\r\n                logs.test_step(\"Incorrect Locator Type\");\r\n        }\r\n\r\n\r\n        return elements;\r\n    }\r\n\r\n\r\n    public WebElement find_element_from_element(String main_element, String element_to_find) {\r\n        WebElement main = find(main_element);\r\n\r\n        WebElement element = null;\r\n        String[] locator_to_find = element_to_find.split(\":\");\r\n\r\n        switch (locator_to_find[0]) {\r\n            case \"xpath\":\r\n                element = main.findElement(By.xpath(locator_to_find[1]));\r\n                break;\r\n            case \"id\":\r\n                element = main.findElement(By.id(locator_to_find[1]));\r\n                break;\r\n            case \"css_selector\":\r\n                element = main.findElement(By.cssSelector(locator_to_find[1]));\r\n                break;\r\n            case \"class_name\":\r\n                element = main.findElement(By.className(locator_to_find[1]));\r\n                break;\r\n            case \"name\":\r\n                element = main.findElement(By.name(locator_to_find[1]));\r\n                break;\r\n            case \"link_text\":\r\n                element = main.findElement(By.linkText(locator_to_find[1]));\r\n                break;\r\n            case \"partial_link_text\":\r\n                element = main.findElement(By.partialLinkText(locator_to_find[1]));\r\n                break;\r\n            case \"tag\":\r\n                element = main.findElement(By.tagName(locator_to_find[1]));\r\n                break;\r\n            default:\r\n                logs.test_step(\"Incorrect Locator Type\");\r\n        }\r\n\r\n        return element;\r\n    }\r\n\r\n    public WebElement get_active_element() {\r\n\r\n        return driver.switchTo().activeElement();\r\n    }\r\n\r\n    public String get_element_tag(String locator_value) {\r\n        return find(locator_value).getTagName();\r\n    }\r\n\r\n    public String get_css_value(String locator_value, String css) {\r\n\r\n        return find(locator_value).getCssValue(css);\r\n    }\r\n\r\n    public String get_element_text(String locator_value) {\r\n        return find(locator_value).getText();\r\n    }\r\n\r\n    public void enter_text(String locator_value, String text_to_enter) {\r\n        logs.test_step(\"Enter text \" + text_to_enter + \" at locator \" + locator_value);\r\n        find(locator_value).sendKeys(text_to_enter);\r\n    }\r\n\r\n    public void clear_text_field(String locator_value) {\r\n        logs.test_step(\"clear value from \" + locator_value + \" text fields\");\r\n        find(locator_value).clear();\r\n    }\r\n\r\n    public void clear_and_enter_in_text_field(String locator_value, String text_to_enter) {\r\n        logs.test_step(\"clear value from \" + locator_value + \" text fields and enter text \" + text_to_enter);\r\n        find(locator_value).clear();\r\n        find(locator_value).sendKeys(text_to_enter);\r\n    }\r\n\r\n    public void click(String locator_value) {\r\n        logs.test_step(\"Click on \" + locator_value);\r\n        find(locator_value).click();\r\n    }\r\n\r\n    /**\r\n     * @param element_name\r\n     * @param element_text_for_click\r\n     * @apiNote Click on the First element from the list\r\n     */\r\n    public void click_on_element_with_text_from_list(String element_name, String element_text_for_click) {\r\n        logs.test_step(\"Click on \" + element_text_for_click + \" from list \");\r\n        List<WebElement> elements_list = find_multiple_elements(element_name);\r\n        Boolean bool = false;\r\n\r\n        for (WebElement element : elements_list) {\r\n            if (element.getText().contains(element_text_for_click)) {\r\n                click(element_name);\r\n                break;\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n    public void click_using_js(WebElement element) throws Exception {\r\n        try {\r\n            logs.test_step(\"Click on \" + element);\r\n            if (element.isEnabled() && element.isDisplayed()) {\r\n                logs.test_step(\"Clicking on element with using java script click\");\r\n\r\n                ((JavascriptExecutor) driver).executeScript(\"arguments[0].click();\", element);\r\n            } else {\r\n                logs.test_step(\"Unable to click on element\");\r\n            }\r\n        } catch (StaleElementReferenceException e) {\r\n            logs.test_step(\"Element is not attached to the page document \" + e.getStackTrace());\r\n        } catch (NoSuchElementException e) {\r\n            logs.test_step(\"Element was not found in DOM \" + e.getStackTrace());\r\n        } catch (Exception e) {\r\n            logs.test_step(\"Unable to click on element \" + e.getStackTrace());\r\n        }\r\n    }\r\n\r\n    public String get_attribute_value(String locator_value, String attribute_name) {\r\n        return find(locator_value).getAttribute(attribute_name);\r\n    }\r\n\r\n\r\n    public void take_element_screen_shot(WebElement element, String image_name) {\r\n\r\n        File scrFile = element.getScreenshotAs(OutputType.FILE);\r\n        try {\r\n            File screenshot_file = new File(\"./\" + image_name + \".png\");\r\n            FileUtils.copyFile(scrFile, screenshot_file);\r\n            logs.test_step(\"Screenshot saved at  <img href=\" + screenshot_file.getAbsolutePath() + \">\");\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    public void network_interception_Method(WebDriver driver) {\r\n         /* 1. If you want to capture network events coming into the browser\r\n            2. and you want to manipulate them you are able to do it with the following examples.*/\r\n\r\n        try (NetworkInterceptor interceptor = new NetworkInterceptor(\r\n                driver,\r\n                Route.matching(req -> true)\r\n                        .to(() -> req -> new HttpResponse()\r\n                                .setStatus(200)\r\n                                .addHeader(\"Content-Type\", MediaType.HTML_UTF_8.toString())\r\n                                .setStatus(200)\r\n                                .setContent(utf8String(\"Creamy, delicious cheese!\"))));) {\r\n            logs.test_step(\"INFO : Network Interceptor is executed..\");\r\n        } catch (Exception e) {\r\n            logs.test_step(\"INFO : \" + e.getStackTrace());\r\n        }\r\n\r\n    }\r\n\r\n    public void jsException_method(ChromeDriver driver, String locator_value) {\r\n        //Usage Of This method :\r\n        //Listen to the JS Exceptions and register callbacks to process the exception details.\r\n\r\n        DevTools devTools = driver.getDevTools();\r\n        devTools.createSession();\r\n\r\n        ((ChromeDriver) driver).getDevTools().createSession();\r\n\r\n        List<JavascriptException> jsExceptionsList = new ArrayList<>();\r\n        Consumer<JavascriptException> addEntry = jsExceptionsList::add;\r\n        devTools.getDomains().events().addJavascriptExceptionListener(addEntry);\r\n\r\n        WebElement link2click = find(locator_value);\r\n        ((JavascriptExecutor) driver).executeScript(\"arguments[0].setAttribute(arguments[1], arguments[2]);\",\r\n                link2click, \"onclick\", \"throw new Error('Hello, world!')\");\r\n        link2click.click();\r\n\r\n        for (JavascriptException jsException : jsExceptionsList) {\r\n            logs.test_step(\"JS exception message: \" + jsException.getMessage());\r\n            logs.test_step(\"JS exception system information: \" + jsException.getSystemInformation());\r\n            logs.test_step(\"JS exception Get cause : \" + jsException.getCause());\r\n            logs.test_step(\"JS exception get Build Information: \" + jsException.getBuildInformation());\r\n            logs.test_step(\"JS exception Get full stack trace : \" + jsException.fillInStackTrace());\r\n            logs.test_step(\"JS exception get raw Message : \" + jsException.getRawMessage());\r\n\r\n            jsException.printStackTrace();\r\n        }\r\n    }\r\n\r\n    public void console_Log_method(ChromeDriver driver) {\r\n        DevTools devTools = driver.getDevTools();\r\n        devTools.createSession();\r\n        devTools.getCdpSession();\r\n        devTools.send(Log.enable());\r\n        devTools.addListener(Log.entryAdded(),\r\n                logEntry -> {\r\n                    logs.test_step(\"INFO : log      : \" + logEntry.getText());\r\n                    logs.test_step(\"INFO : level    : \" + logEntry.getLevel());\r\n                    logs.test_step(\"INFO : Time     : \" + logEntry.getTimestamp());\r\n                    logs.test_step(\"INFO : URL      : \" + logEntry.getUrl());\r\n                    logs.test_step(\"INFO : WorkerID : \" + logEntry.getWorkerId());\r\n\r\n                });\r\n\r\n    }\r\n\r\n    public void select_single_option_from_dropdown(String locator_value, String Value) {\r\n        Select drp = new Select(find(locator_value));\r\n        List<WebElement> options = drp.getOptions();\r\n        for (WebElement option : options) {\r\n            if (option.getText().equals(Value)) {\r\n                option.click();\r\n                break;\r\n            }\r\n            logs.test_step(\"INFO : \" + Value + \" is selected.\");\r\n        }\r\n    }\r\n\r\n    public void select_all_options_options_from_dropDown(String locator_value) {\r\n        Select drp = new Select(find(locator_value));\r\n        boolean multiple_Selected_dropDown = drp.isMultiple();\r\n        List<WebElement> options = drp.getOptions();\r\n        if (multiple_Selected_dropDown == true) {\r\n            for (WebElement option : options) {\r\n                option.click();\r\n            }\r\n            logs.test_step(\"INFO : All options are Selected..\");\r\n        } else {\r\n            logs.test_step(\"INFO : This Dropdown is not a multiSelected DropDown.\");\r\n        }\r\n    }\r\n\r\n    public void select_options_from_dropdown_by_value(String locator_value, String value) {\r\n        Select drp = new Select(find(locator_value));\r\n        drp.selectByValue(value);\r\n        logs.test_step(\"INFO : Select \" + value + \" From Dropdown\");\r\n\r\n    }\r\n\r\n    public void select_options_from_dropdown_by_index(String locator_value, int index) {\r\n        Select drp = new Select(find(locator_value));\r\n        drp.selectByIndex(index);\r\n        logs.test_step(\"INFO : Select \" + index + \" Index From Dropdown\");\r\n\r\n    }\r\n\r\n    public void select_options_from_dropdown_by_visibleText(String locator_value, String visibleText) {\r\n        Select drp = new Select(find(locator_value));\r\n        drp.selectByVisibleText(visibleText);\r\n        logs.test_step(\"INFO : Select \" + visibleText + \" From Dropdown\");\r\n\r\n    }\r\n\r\n    public void deSelect_allOptions_from_dropDown(String locator_value) {\r\n        Select drp = new Select(find(locator_value));\r\n        boolean multiple_Selected_dropDown = drp.isMultiple();\r\n        if (multiple_Selected_dropDown == true) {\r\n            drp.deselectAll();\r\n            logs.test_step(\"INFO : All options are DeSelected..\");\r\n        } else {\r\n            logs.test_step(\"INFO : This Dropdown is not a multiSelected DropDown.\");\r\n        }\r\n\r\n    }\r\n\r\n    public void deSelect_options_from_dropDown_using_index(String locator_value, int index) {\r\n        Select drp = new Select(find(locator_value));\r\n        drp.deselectByIndex(index);\r\n        logs.test_step(\"INFO : De-Select \" + index + \" From Dropdown\");\r\n    }\r\n\r\n    public void deSelect_options_from_dropDown_using_value(String locator_value, String value) {\r\n        Select drp = new Select(find(locator_value));\r\n        drp.deselectByValue(value);\r\n        logs.test_step(\"INFO : De-Select \" + value + \" From Dropdown\");\r\n    }\r\n\r\n    public void deSelect_options_from_dropDown_using_visible_text(String locator_value, String text) {\r\n        Select drp = new Select(find(locator_value));\r\n        drp.deselectByVisibleText(text);\r\n        logs.test_step(\"INFO : De-Select \" + text + \" From Dropdown\");\r\n    }\r\n\r\n    public void get_all_selected_options_from_dropDown(String locator_value) {\r\n        Select drp = new Select(find(locator_value));\r\n        List<WebElement> AllOptions = drp.getAllSelectedOptions();\r\n        for (WebElement option : AllOptions) {\r\n            logs.test_step(\"INFO : Selected Options are : \" + option.getText());\r\n        }\r\n    }\r\n\r\n    public void perform_scroll_to_element(String locator_value) {\r\n\r\n        new Actions(driver)\r\n                .scrollToElement(find(locator_value))\r\n                .perform();\r\n    }\r\n\r\n    public void perform_horizontal_scroll_to_element(String locator_value, int scroll_amount) {\r\n\r\n        int deltaY = find(locator_value).getRect().y;\r\n        new Actions(driver)\r\n                .scrollByAmount(scroll_amount, deltaY)\r\n                .perform();\r\n    }\r\n\r\n    public void perform_scroll_by_amount(int x, int y) {\r\n\r\n        new Actions(driver)\r\n                .scrollByAmount(x, y)\r\n                .perform();\r\n    }\r\n\r\n    public void perform_scroll_from_element_by_amount(String locator_value, int x, int y) {\r\n\r\n        WheelInput.ScrollOrigin scrollOrigin = WheelInput.ScrollOrigin.fromElement(find(locator_value));\r\n        new Actions(driver)\r\n                .scrollFromOrigin(scrollOrigin, x, y)\r\n                .perform();\r\n    }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/io/unity/performaction/autoweb/Element.java b/src/main/java/io/unity/performaction/autoweb/Element.java
+--- a/src/main/java/io/unity/performaction/autoweb/Element.java	
++++ b/src/main/java/io/unity/performaction/autoweb/Element.java	
+@@ -3,6 +3,7 @@
+ 
+ import com.google.common.net.MediaType;
+ import io.appium.java_client.AppiumBy;
++
+ import io.unity.framework.exception.locator_validation_exception;
+ import org.apache.commons.io.FileUtils;
+ import org.openqa.selenium.*;
+@@ -73,7 +74,6 @@
+         return element;
+     }
+ 
+-
+     public WebElement find(String locator_value) {
+ 
+         WebElement element = null;
+@@ -85,57 +85,48 @@
+         return element;
+     }
+ 
++
++
+     public WebElement find_element_by_xpath(String locator_value) {
+         WebElement element = null;
+         element = driver.findElement(By.xpath(locator_value));
+         return element;
+     }
+ 
++
+     public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws locator_validation_exception {
+         WebElement element = null;
+         locator_reader reader = new locator_reader();
+ 
+-
+         Map<String, String> locator_details = reader.get_locator_value(locator_value);
+ 
+-
+         String final_xpath = "";
+         if (locator_details.get("locator_type").equalsIgnoreCase("dyn-xpath")) {
+             String current_xpath = locator_details.get("locator_value");
+             final_xpath = current_xpath;
+             if (current_xpath.contains("${")) {
+-
+                 for (Map.Entry<String, String> entry : dynamic_value.entrySet()) {
+-
+-                    System.out.println("Key = " + entry.getKey() +
+-                            ", Value = " + entry.getValue());
+-
++                    System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+                     final_xpath = final_xpath.replace("${" + entry.getKey() + "}", entry.getValue());
+                 }
+-
+             } else {
+                 throw new locator_validation_exception("No Dynamic Value Found in locator");
+             }
+-
+-
+         } else {
+             throw new locator_validation_exception("locator type is not a dyn-xpath, This method only use for the Dynamic Xpath ");
+         }
+-
+         return driver.findElement(By.xpath(final_xpath));
+     }
+ 
+-    public List<WebElement> find_multiple_elements(String locator_value) {
+-
++
++    public List<WebElement> find_multiple_elements(String locator_value)  {
+         List<WebElement> elements = null;
+ 
+         locator_reader reader = new locator_reader();
+ 
++
+         Map<String, String> locator_details = reader.get_locator_value(locator_value);
+ 
+-
+-
+-
+         switch (locator_details.get("locator_type")) {
+             case "xpath":
+                 elements = driver.findElements(By.xpath(locator_details.get("locator_value")));
+@@ -164,21 +155,20 @@
+             default:
+                 logs.test_step("Incorrect Locator Type");
+         }
+-
+         return elements;
+     }
+ 
+ 
+-    public List<WebElement> find_multiple_element_from_element(String main_element, String element_to_find) {
++    public List<WebElement> find_multiple_element_from_element(String main_element, String element_to_find){
+         WebElement main = find(main_element);
+ 
+         List<WebElement> elements = null;
+ 
+         locator_reader reader = new locator_reader();
+ 
++
+         Map<String, String> locator_details = reader.get_locator_value(element_to_find);
+ 
+-
+         switch (locator_details.get("locator_type")) {
+             case "xpath":
+                 elements = main.findElements(By.xpath(locator_details.get("locator_value")));
+@@ -193,7 +183,7 @@
+                 elements = main.findElements(By.className(locator_details.get("locator_value")));
+                 break;
+             case "name":
+-                elements = main.findElements(By.name(locator_details.get("locator_value")));
++                elements = main.findElements(By.name(locator_details.get("locor_value")));
+                 break;
+             case "link_text":
+                 elements = main.findElements(By.linkText(locator_details.get("locator_value")));
+@@ -207,13 +197,11 @@
+             default:
+                 logs.test_step("Incorrect Locator Type");
+         }
+-
+-
+         return elements;
+     }
+ 
+ 
+-    public WebElement find_element_from_element(String main_element, String element_to_find) {
++    public WebElement find_element_from_element(String main_element, String element_to_find)  {
+         WebElement main = find(main_element);
+ 
+         WebElement element = null;
+@@ -256,36 +244,36 @@
+         return driver.switchTo().activeElement();
+     }
+ 
+-    public String get_element_tag(String locator_value) {
++    public String get_element_tag(String locator_value)  {
+         return find(locator_value).getTagName();
+     }
+ 
+-    public String get_css_value(String locator_value, String css) {
++    public String get_css_value(String locator_value, String css)  {
+ 
+         return find(locator_value).getCssValue(css);
+     }
+ 
+-    public String get_element_text(String locator_value) {
++    public String get_element_text(String locator_value)  {
+         return find(locator_value).getText();
+     }
+ 
+-    public void enter_text(String locator_value, String text_to_enter) {
++    public void enter_text(String locator_value, String text_to_enter)  {
+         logs.test_step("Enter text " + text_to_enter + " at locator " + locator_value);
+         find(locator_value).sendKeys(text_to_enter);
+     }
+ 
+-    public void clear_text_field(String locator_value) {
++    public void clear_text_field(String locator_value)  {
+         logs.test_step("clear value from " + locator_value + " text fields");
+         find(locator_value).clear();
+     }
+ 
+-    public void clear_and_enter_in_text_field(String locator_value, String text_to_enter) {
++    public void clear_and_enter_in_text_field(String locator_value, String text_to_enter)  {
+         logs.test_step("clear value from " + locator_value + " text fields and enter text " + text_to_enter);
+         find(locator_value).clear();
+         find(locator_value).sendKeys(text_to_enter);
+     }
+ 
+-    public void click(String locator_value) {
++    public void click(String locator_value)  {
+         logs.test_step("Click on " + locator_value);
+         find(locator_value).click();
+     }
+@@ -295,7 +283,7 @@
+      * @param element_text_for_click
+      * @apiNote Click on the First element from the list
+      */
+-    public void click_on_element_with_text_from_list(String element_name, String element_text_for_click) {
++    public void click_on_element_with_text_from_list(String element_name, String element_text_for_click)  {
+         logs.test_step("Click on " + element_text_for_click + " from list ");
+         List<WebElement> elements_list = find_multiple_elements(element_name);
+         Boolean bool = false;
+@@ -364,7 +352,7 @@
+ 
+     }
+ 
+-    public void jsException_method(ChromeDriver driver, String locator_value) {
++    public void jsException_method(ChromeDriver driver, String locator_value)  {
+         //Usage Of This method :
+         //Listen to the JS Exceptions and register callbacks to process the exception details.
+ 
+@@ -411,7 +399,7 @@
+ 
+     }
+ 
+-    public void select_single_option_from_dropdown(String locator_value, String Value) {
++    public void select_single_option_from_dropdown(String locator_value, String Value)  {
+         Select drp = new Select(find(locator_value));
+         List<WebElement> options = drp.getOptions();
+         for (WebElement option : options) {
+@@ -423,7 +411,7 @@
+         }
+     }
+ 
+-    public void select_all_options_options_from_dropDown(String locator_value) {
++    public void select_all_options_options_from_dropDown(String locator_value)  {
+         Select drp = new Select(find(locator_value));
+         boolean multiple_Selected_dropDown = drp.isMultiple();
+         List<WebElement> options = drp.getOptions();
+@@ -437,28 +425,28 @@
+         }
+     }
+ 
+-    public void select_options_from_dropdown_by_value(String locator_value, String value) {
++    public void select_options_from_dropdown_by_value(String locator_value, String value)  {
+         Select drp = new Select(find(locator_value));
+         drp.selectByValue(value);
+         logs.test_step("INFO : Select " + value + " From Dropdown");
+ 
+     }
+ 
+-    public void select_options_from_dropdown_by_index(String locator_value, int index) {
++    public void select_options_from_dropdown_by_index(String locator_value, int index)  {
+         Select drp = new Select(find(locator_value));
+         drp.selectByIndex(index);
+         logs.test_step("INFO : Select " + index + " Index From Dropdown");
+ 
+     }
+ 
+-    public void select_options_from_dropdown_by_visibleText(String locator_value, String visibleText) {
++    public void select_options_from_dropdown_by_visibleText(String locator_value, String visibleText)  {
+         Select drp = new Select(find(locator_value));
+         drp.selectByVisibleText(visibleText);
+         logs.test_step("INFO : Select " + visibleText + " From Dropdown");
+ 
+     }
+ 
+-    public void deSelect_allOptions_from_dropDown(String locator_value) {
++    public void deSelect_allOptions_from_dropDown(String locator_value)  {
+         Select drp = new Select(find(locator_value));
+         boolean multiple_Selected_dropDown = drp.isMultiple();
+         if (multiple_Selected_dropDown == true) {
+@@ -470,13 +458,13 @@
+ 
+     }
+ 
+-    public void deSelect_options_from_dropDown_using_index(String locator_value, int index) {
++    public void deSelect_options_from_dropDown_using_index(String locator_value, int index)  {
+         Select drp = new Select(find(locator_value));
+         drp.deselectByIndex(index);
+         logs.test_step("INFO : De-Select " + index + " From Dropdown");
+     }
+ 
+-    public void deSelect_options_from_dropDown_using_value(String locator_value, String value) {
++    public void deSelect_options_from_dropDown_using_value(String locator_value, String value)  {
+         Select drp = new Select(find(locator_value));
+         drp.deselectByValue(value);
+         logs.test_step("INFO : De-Select " + value + " From Dropdown");
+@@ -496,14 +484,14 @@
+         }
+     }
+ 
+-    public void perform_scroll_to_element(String locator_value) {
++    public void perform_scroll_to_element(String locator_value)  {
+ 
+         new Actions(driver)
+                 .scrollToElement(find(locator_value))
+                 .perform();
+     }
+ 
+-    public void perform_horizontal_scroll_to_element(String locator_value, int scroll_amount) {
++    public void perform_horizontal_scroll_to_element(String locator_value, int scroll_amount)  {
+ 
+         int deltaY = find(locator_value).getRect().y;
+         new Actions(driver)
+@@ -518,7 +506,7 @@
+                 .perform();
+     }
+ 
+-    public void perform_scroll_from_element_by_amount(String locator_value, int x, int y) {
++    public void perform_scroll_from_element_by_amount(String locator_value, int x, int y)  {
+ 
+         WheelInput.ScrollOrigin scrollOrigin = WheelInput.ScrollOrigin.fromElement(find(locator_value));
+         new Actions(driver)
+Index: src/main/java/io/unity/performaction/autoweb/locator_reader.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package io.unity.performaction.autoweb;\r\n\r\n\r\nimport io.unity.framework.readers.json_file_reader;\r\nimport io.unity.framework.runner.TestRunner;\r\nimport org.json.simple.JSONObject;\r\nimport org.json.simple.parser.JSONParser;\r\n\r\nimport java.io.File;\r\nimport java.io.FilenameFilter;\r\nimport java.io.IOException;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.Path;\r\nimport java.nio.file.Paths;\r\nimport java.util.HashMap;\r\nimport java.util.List;\r\nimport java.util.Map;\r\nimport java.util.stream.Collectors;\r\nimport java.util.stream.Stream;\r\n\r\npublic class locator_reader {\r\n\r\n    public static void main(String[] args) {\r\n        locator_reader reader = new locator_reader();\r\n        try {\r\n            //       System.out.println(reader.get_locator_value(\"email_text_box\"));\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    public org.json.JSONObject getTestConfig() {\r\n        String data = \"\";\r\n        try {\r\n            data = new String(Files.readAllBytes(Paths.get(\"src/config/TestConfig.json\").toAbsolutePath()));\r\n        } catch (Exception e) {\r\n            System.out.println(\"config file not found\");\r\n        }\r\n        org.json.JSONObject testConfig = new org.json.JSONObject(data);\r\n        return testConfig;\r\n    }\r\n\r\n\r\n    public String getRunConfig() {\r\n        org.json.JSONObject object = getTestConfig();\r\n        return object.getString(\"run\");\r\n    }\r\n\r\n    public org.json.JSONObject getConfigObject(String configName) {\r\n        org.json.JSONObject object = getTestConfig();\r\n        return (org.json.JSONObject) ((org.json.JSONObject) object.get(\"config\")).get(configName);\r\n    }\r\n\r\n\r\n    public Map<String,String> get_locator_value(String locator_name) {\r\n        locator_reader reader = new locator_reader();\r\n        json_file_reader config_reader = new json_file_reader();\r\n\r\n        JSONObject object = null;\r\n        Map locator_details = new HashMap();\r\n        String platform = config_reader.getPlatform(TestRunner.currentConfig);\r\n        try {\r\n            object = reader.get_locator_object(locator_name, platform);\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n        locator_details.put(\"locator_type\", object.get(\"locator_type\").toString());\r\n        if (platform.equalsIgnoreCase(\"web\")) {\r\n            locator_details.put(\"locator_value\", object.get(\"web_locator\").toString());\r\n        } else if (platform.equalsIgnoreCase(\"android\")) {\r\n            locator_details.put(\"locator_value\", object.get(\"android_locator\").toString());\r\n        } else if (platform.equalsIgnoreCase(\"ios\")) {\r\n            locator_details.put(\"locator_value\", object.get(\"iOS_locator\").toString());\r\n        }\r\n\r\n\r\n        return locator_details;\r\n    }\r\n\r\n\r\n    public List<String> look_for_locator_json_file(String folder_path) {\r\n        File dir = new File(folder_path);\r\n\r\n        FilenameFilter filter = new FilenameFilter() {\r\n            @Override\r\n            public boolean accept(File f, String name) {\r\n                return name.endsWith(\".json\");\r\n            }\r\n        };\r\n\r\n        List<String> result = null;\r\n        try (Stream<Path> walk = Files.walk(Paths.get(folder_path))) {\r\n            // We want to find only regular files\r\n            result = walk.filter(Files::isRegularFile).filter(p -> p.getFileName().toString().endsWith(\".json\"))\r\n                    .map(x -> x.toString()).collect(Collectors.toList());\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        }\r\n        return result;\r\n    }\r\n\r\n\r\n    public JSONObject get_locator_object(String locator_object_name, String platform) throws Exception {\r\n        File file = null;\r\n        if (platform.equals(\"web\")) {\r\n            file = new File(\"src/test/java/web/object_repository/\");\r\n\r\n        } else if (platform.equalsIgnoreCase(\"android\") || platform.equalsIgnoreCase(\"iOS\")) {\r\n            file = new File(\"src/test/java/mobile/object_repository/\");\r\n        }\r\n\r\n        JSONObject object = null;\r\n        try {\r\n\r\n            List<String> files = look_for_locator_json_file(file.getAbsolutePath());\r\n\r\n\r\n            for (int i = 0; i < files.size(); i++) {\r\n\r\n                object = read_locator_file_and_get_object(files.get(i).toString(), locator_object_name);\r\n                if (object != null) {\r\n                    break;\r\n                }\r\n\r\n\r\n            }\r\n        } catch (Exception e) {\r\n            // Error while reading the directory\r\n            e.printStackTrace();\r\n        }\r\n        if (object == null) {\r\n            throw new Exception(\"Locator Value \" + locator_object_name + \" is not found in JSON File\");\r\n        }\r\n        return object;\r\n    }\r\n\r\n\r\n    public JSONObject read_locator_file_and_get_object(String file_path, String locator_object_name) {\r\n        locator_reader reader = new locator_reader();\r\n        JSONObject object = null;\r\n        JSONParser parser = new JSONParser();\r\n        JSONObject json = null;\r\n        try {\r\n\r\n            json = (JSONObject) parser.parse(new String(Files.readAllBytes(Paths.get(file_path).toAbsolutePath())));\r\n\r\n\r\n            object = (JSONObject) json.get(locator_object_name);\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n\r\n        return object;\r\n    }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/io/unity/performaction/autoweb/locator_reader.java b/src/main/java/io/unity/performaction/autoweb/locator_reader.java
+--- a/src/main/java/io/unity/performaction/autoweb/locator_reader.java	
++++ b/src/main/java/io/unity/performaction/autoweb/locator_reader.java	
+@@ -1,6 +1,5 @@
+ package io.unity.performaction.autoweb;
+ 
+-
+ import io.unity.framework.readers.json_file_reader;
+ import io.unity.framework.runner.TestRunner;
+ import org.json.simple.JSONObject;
+@@ -80,6 +79,7 @@
+     }
+ 
+ 
++
+     public List<String> look_for_locator_json_file(String folder_path) {
+         File dir = new File(folder_path);
+ 

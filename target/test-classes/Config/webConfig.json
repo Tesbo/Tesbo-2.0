@@ -1,0 +1,23 @@
+{
+  "platform": "web",
+  "browser": "chrome",
+  "capabilities": {
+    "browserName": "Chrome"
+  },
+  "env": "https://www.facebook.com/",
+  "isGrid": false,
+  "gridPlatform": "local",
+  "browserStackOption": {
+    "os": "Windows",
+    "osVersion": "11"
+  },
+  "gridURL": "https://viralpatel_LWX2R3:ZCe4uALptzU8skpXYsky@hub-cloud.browserstack.com/wd/hub",
+  "viewPort": "",
+  "apiTestConfig": {
+    "enable": false,
+    "env": ""
+  },
+  "testNGsuite": [
+    "suite.xml"
+  ]
+}

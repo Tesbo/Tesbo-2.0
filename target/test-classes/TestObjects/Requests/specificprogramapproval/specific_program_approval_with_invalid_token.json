@@ -1,0 +1,12 @@
+{
+  "endPoint": "/v1/programs/7FFCBF92A61611EC8FD90A89C66BA7E6/approvals",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": "bjhgejhwejhgjewhjgw"
+  },
+  "body": {
+
+  }
+
+}

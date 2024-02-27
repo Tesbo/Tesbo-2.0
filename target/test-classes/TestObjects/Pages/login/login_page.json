@@ -1,0 +1,172 @@
+{
+  "password_password": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Password']"
+  },
+
+  "legal_terms_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//a[contains(text(),'Legal Terms')]"
+  },
+  "login_button_web": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "login"
+  },
+  "e_mail_text_box": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Email']"
+  },
+  "remember_checkbox": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//input[@name='remember']"
+  },
+  "privacy_policy_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//a[contains(text(),'Privacy Policy')]"
+  },
+  "forgot_your_password_link": {
+    "objectGenerate": "generate",
+    "locator_type": "id",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "forgot-password"
+  },
+  "wrong_email_pwd_validation_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[text()=\"Wrong email/password. Please try again\"]"
+  },
+  "warning_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[text()=\"Email is not a valid email address\"]//parent::div"
+  },
+
+  "forgot_password_page": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h3[@class='text-center pt-4']"
+  },
+  "enter_forgot_pwd_email": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text_box",
+    "platform": "web",
+    "web_locator": "//input[@placeholder='Email']"
+  },
+  "click_on_send_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "//button[@id='send']"
+  },
+  "click_on_back_login_link": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "link",
+    "platform": "web",
+    "web_locator": "//a[@id='back-to-login']"
+  },
+  "verify_login_page": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//img[@class='w-3/5']"
+  },
+  "enter_forgot_email_invalid": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//div[@class='p-message-text p-message-text']"
+  },
+  "forgot_validation_msg_email_sent": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//h3[text()='Sent!']"
+  },
+  "forgot_email_required_validation_msg": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[@class='p-error text-xs']"
+  },
+  "blank_email_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[contains(text(),'Email is required')]"
+  },
+  "blank_password_message": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//span[contains(text(),'Password is required')]"
+  },
+  "masked_icon_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//*[local-name() = 'svg'])[3]"
+  },
+  "unmasked_icon_button": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "button",
+    "platform": "web",
+    "web_locator": "(//*[local-name() = 'svg'])[3]"
+  },
+  "password_visible_text": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//input[@type=\"text\"]"
+  },
+  "password_hidden_format": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "//input[@type=\"password\"]"
+  },
+  "wrong_password_correct_email_validation": {
+    "objectGenerate": "generate",
+    "locator_type": "xpath",
+    "element_type": "text",
+    "platform": "web",
+    "web_locator": "(//div[text()=\"Incorrect username or password. Please try again.\"])"
+  }
+}

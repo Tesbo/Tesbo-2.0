@@ -1,0 +1,16 @@
+{
+  "endPoint": "/v1/employees/${employee_id}/visits/${visit_id}",
+  "methodType" : "PATCH",
+  "header": {
+    "Content-Type": "application/json",
+    "Authorization": ""
+  },
+  "body": {
+    "start_datetime": "2023-01-16T10:50:45-05:00",
+    "end_datetime": "2023-01-20T10:50:45-05:00"
+  },
+
+  "pathParameter":{"employee_id": "","visit_id": ""},
+  "queryParameters": {},
+  "schema": {}
+}

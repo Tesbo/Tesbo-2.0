@@ -1,0 +1,21 @@
+{
+  "endPoint": "/v1/employees",
+  "methodType" : "POST",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "first_name": " ",
+    "last_name": "Patel",
+    "country_code": "1",
+    "email": "viral@nevvon.com",
+    "phone": "4001119999",
+    "onboard_date": "2022-04-01",
+    "employee_number": "2729",
+    "disciplines": "PCA,HHA",
+    "location": "CA",
+    "language": "English",
+    "status": "Active"
+  }
+
+}

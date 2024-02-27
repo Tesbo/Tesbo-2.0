@@ -1,0 +1,16 @@
+{
+  "endPoint": "/v1/programs/${program}/employees/${employee}",
+  "methodType" : "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+
+  },
+
+  "pathParameter":{"program":"" ,"employee": ""},
+
+  "queryParameters": ""
+}
+
+}
