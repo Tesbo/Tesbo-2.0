@@ -10,13 +10,13 @@ public class CommandlineOption {
             description = "Configuration to run",
             required = true
     )
-    private String configFile;
+    private String FileName;
 
     public String getConfigName() {
-        return configFile;
+        return FileName;
     }
 
-    public void setConfigFile(String configFile) {
-        this.configFile = configFile;
+    public void setConfigFile(String FileName) {
+        this.FileName = FileName;
     }
 }

@@ -2,6 +2,7 @@ package Framework.core.readers;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -30,19 +31,19 @@ public class JsonFileReader {
 
     public JSONObject getConfigObject(String FileName) {
         JSONObject object = getTestConfig(FileName);
-        return (JSONObject) ((JSONObject) object.get(FileName)).get(FileName);
+        return (JSONObject) ((JSONObject) object.get(FileName));
     }
 
     public String getReportKey(String FileName)
     {
-        return (String) getConfigObject(FileName).get("tesboReportKey");
+        return (String) getTestConfig(FileName).get("tesboReportKey");
     }
 
 
 
     public String getPlatform(String FileName) {
-
-        return getConfigObject(FileName).getString("platform");
+        JSONObject object = getTestConfig(FileName);
+        return object.getString("platform");
 
     }
 
@@ -56,7 +57,7 @@ public class JsonFileReader {
 
     public JSONObject getAPIConfig(String FileName) {
 
-        return (JSONObject) getConfigObject(FileName).get("apiTestConfig");
+        return (JSONObject) getTestConfig(FileName).get("apiTestConfig");
     }
 
 
@@ -68,12 +69,12 @@ public class JsonFileReader {
 
     public String getAPIEnv(String FileName) {
 
-        return (String) getAPIConfig(FileName).get("env");
+        return (String) getTestConfig(FileName).get("env");
     }
 
     public String getAPIEnvDirect(String FileName) {
 
-        return (String) getConfigObject(FileName).get("env");
+        return (String) getTestConfig(FileName).get("env");
     }
 
 
@@ -91,61 +92,61 @@ public class JsonFileReader {
     }
 
     public String getEnv(String FileName) {
-        return getConfigObject(FileName).getString("env");
+        return getTestConfig(FileName).getString("env");
     }
 
 
     public boolean isGrid(String FileName) {
-        return (boolean) getConfigObject(FileName).get("isGrid");
+        return (boolean) getTestConfig(FileName).get("isGrid");
     }
 
     public String getBrowser(String FileName) {
-        return getConfigObject(FileName).getString("browser");
+        return getTestConfig(FileName).getString("browser");
     }
 
 
     public JSONObject get_capabilities(String FileName) {
 
-        return getConfigObject(FileName).getJSONObject("capabilities");
+        return getTestConfig(FileName).getJSONObject("capabilities");
     }
 
 
     public JSONObject get_browserStackOption(String FileName) {
 
-        return getConfigObject(FileName).getJSONObject("browserStackOption");
+        return getTestConfig(FileName).getJSONObject("browserStackOption");
     }
 
 
     public JSONObject get_sauceLabOption(String FileName) {
 
-        return getConfigObject(FileName).getJSONObject("sauceLabOption");
+        return getTestConfig(FileName).getJSONObject("sauceLabOption");
     }
 
     public JSONObject get_lambdaTestOption(String FileName) {
-
-        return getConfigObject(FileName).getJSONObject("lambdaTestOption");
+        JSONObject object= getTestConfig(FileName);
+        return getTestConfig(FileName).getJSONObject("lambdaTestOption");
     }
 
 
     public String get_grid_url(String FileName) {
         JSONObject object = getTestConfig(FileName);
-        return getConfigObject(FileName).getString("gridURL");
+        return object.getString("gridURL");
     }
 
     public String get_grid_platForm(String FileName) {
         JSONObject object = getTestConfig(FileName);
-        return getConfigObject(FileName).getString("gridPlatform");
+        return object.getString("gridPlatform");
     }
 
 
     public String get_appium_url(String FileName) {
         JSONObject object = getTestConfig(FileName);
-        return getConfigObject(FileName).getString("appiumURL");
+        return object.getString("appiumURL");
     }
 
     public String get_appium_platform(String FileName) {
         JSONObject object = getTestConfig(FileName);
-        return getConfigObject(FileName).getString("appiumPlatform");
+        return object.getString("appiumPlatform");
     }
 
 
@@ -169,7 +170,7 @@ public class JsonFileReader {
 
     public JSONArray getSuites(String FileName) throws org.json.JSONException {
         JSONObject object = getTestConfig(FileName);
-        return (JSONArray) getConfigObject(FileName).get("testNGsuite");
+        return (JSONArray) object.get("testNGsuite");
     }
 
 

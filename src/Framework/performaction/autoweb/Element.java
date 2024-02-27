@@ -1,4 +1,4 @@
-package Framework.performaction.autoweb;
+package io.unity.performaction.autoweb;
 
 
 import Framework.core.exception.LocatorValidationException;
@@ -73,17 +73,20 @@ public class Element {
         return element;
     }
 
-
-    public WebElement find(String locator_value) {
-
+    public WebElement find(String locator_value)  {
         WebElement element = null;
-         locator_reader reader = new locator_reader();
+        locator_reader reader = new locator_reader();
 
-        Map<String, String> locator_details = reader.get_locator_value(locator_value);
-        element = get_element_from_value(locator_details.get("locator_type"), locator_details.get("locator_value"));
-
-        return element;
+        try {
+            Map<String, String> locator_details = reader.get_locator_value(locator_value);
+            element = get_element_from_value(locator_details.get("locator_type"), locator_details.get("locator_value"));
+            return element;
+        } catch (Exception e){
+            throw new RuntimeException("Please check the locator format, it should be locator type : locator value");
+        }
     }
+
+
 
     public WebElement find_element_by_xpath(String locator_value) {
         WebElement element = null;
@@ -91,7 +94,7 @@ public class Element {
         return element;
     }
 
-    public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws LocatorValidationException {
+    public WebElement find_element_using_dynamic_xpath(String locator_value, Map<String, String> dynamic_value) throws locator_validation_exception {
         WebElement element = null;
         locator_reader reader = new locator_reader();
 
@@ -114,12 +117,12 @@ public class Element {
                 }
 
             } else {
-                throw new LocatorValidationException("No Dynamic Value Found in locator");
+                throw new locator_validation_exception("No Dynamic Value Found in locator");
             }
 
 
         } else {
-            throw new LocatorValidationException("locator type is not a dyn-xpath, This method only use for the Dynamic Xpath ");
+            throw new locator_validation_exception("locator type is not a dyn-xpath, This method only use for the Dynamic Xpath ");
         }
 
         return driver.findElement(By.xpath(final_xpath));

@@ -2,7 +2,7 @@
   "platform": "web",
   "browser": "chrome",
   "capabilities": {
-    "browserName": "Chrome"
+    "browserName": "chrome"
   },
   "env": "https://www.facebook.com/",
   "isGrid": false,
@@ -18,6 +18,6 @@
     "env": ""
   },
   "testNGsuite": [
-    "suit.xml"
+    "Test_Demo.xml"
   ]
 }

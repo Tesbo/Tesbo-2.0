@@ -1,4 +1,4 @@
-package Framework.performaction.autoweb;
+package io.unity.performaction.autoweb;
 
 
 
@@ -30,11 +30,10 @@ public class locator_reader {
         }
     }
 
-    public org.json.JSONObject getTestConfig(String FileName) {
+    public org.json.JSONObject getTestConfig() {
         String data = "";
-
         try {
-            data = new String(Files.readAllBytes(Paths.get("src/config/" + FileName).toAbsolutePath()));
+            data = new String(Files.readAllBytes(Paths.get("src/config/TestConfig.json").toAbsolutePath()));
         } catch (Exception e) {
             System.out.println("config file not found");
         }
@@ -43,7 +42,7 @@ public class locator_reader {
     }
 
 
-   /* public String getRunConfig() {
+    public String getRunConfig() {
         org.json.JSONObject object = getTestConfig();
         return object.getString("run");
     }
@@ -51,12 +50,12 @@ public class locator_reader {
     public org.json.JSONObject getConfigObject(String configName) {
         org.json.JSONObject object = getTestConfig();
         return (org.json.JSONObject) ((org.json.JSONObject) object.get("config")).get(configName);
-    }*/
+    }
 
 
     public Map<String,String> get_locator_value(String locator_name) {
         locator_reader reader = new locator_reader();
-        JsonFileReader config_reader = new JsonFileReader();
+        json_file_reader config_reader = new json_file_reader();
 
         JSONObject object = null;
         Map locator_details = new HashMap();
@@ -68,18 +67,27 @@ public class locator_reader {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        locator_details.put("locator_type", object.get("locator_type").toString());
+
         if (platform.equalsIgnoreCase("web")) {
-            locator_details.put("locator_value", object.get("web_locator").toString());
+            assert object != null;
+            locator_details.put("locator_value", object.get("web_locator").toString().split(":")[1]);
+            locator_details.put("locator_type", object.get("web_locator").toString().split(":")[0]);
+
         } else if (platform.equalsIgnoreCase("android")) {
-            locator_details.put("locator_value", object.get("android_locator").toString());
+            assert object != null;
+            locator_details.put("locator_value", object.get("android_locator").toString().split(":")[1]);
+            locator_details.put("locator_type", object.get("android_locator").toString().split(":")[0]);
+
         } else if (platform.equalsIgnoreCase("ios")) {
-            locator_details.put("locator_value", object.get("iOS_locator").toString());
+            assert object != null;
+            locator_details.put("locator_value", object.get("iOS_locator").toString().split(":")[1]);
+            locator_details.put("locator_type", object.get("iOS_locator").toString().split(":")[0]);
         }
 
-
+        System.out.println(locator_details);
         return locator_details;
     }
+
 
 
     public List<String> look_for_locator_json_file(String folder_path) {
@@ -107,10 +115,10 @@ public class locator_reader {
     public JSONObject get_locator_object(String locator_object_name, String platform) throws Exception {
         File file = null;
         if (platform.equals("web")) {
-            file = new File("src/test/java/web/object_repository/");
+            file = new File("src/TestObjects/Pages");
 
         } else if (platform.equalsIgnoreCase("android") || platform.equalsIgnoreCase("iOS")) {
-            file = new File("src/test/java/mobile/object_repository/");
+            file = new File("src/TestObjects/Screens");
         }
 
         JSONObject object = null;

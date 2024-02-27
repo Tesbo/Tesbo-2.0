@@ -27,7 +27,6 @@ public class TestRunner {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        assert option != null;
         return option.getConfigName();
     }
 
@@ -49,7 +48,7 @@ public class TestRunner {
 
                 System.out.println("config to run : " + currentConfig);
                 JSONArray suiteList = null;
-                String directory_path =  pathSeparator + "src" + pathSeparator + "Suit" + pathSeparator;
+                String directory_path =  "."+ pathSeparator + "src" + pathSeparator + "suites" + pathSeparator;
 
                 suiteList = config.getSuites(currentConfig);
 
