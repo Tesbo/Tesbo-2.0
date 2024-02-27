@@ -1,2 +1,2 @@
-2024-02-27 15:01:22 [main] Framework.performaction.autoweb.TestngLogs.test_step()
+2024-02-27 15:11:14 [main] Framework.performaction.autoweb.TestngLogs.test_step()
 INFO: Step : Enter text jacob at locator password_password

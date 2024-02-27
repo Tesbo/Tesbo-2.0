@@ -17,8 +17,9 @@ public class JsonFileReader {
         } catch (Exception e) {
             System.out.println("config file not found");
         }
+        JSONObject testConfig = new JSONObject(data);
 
-        return new JSONObject(data);
+        return testConfig;
     }
 
     public String getRunConfig(String FileName) {

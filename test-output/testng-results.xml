@@ -5,27 +5,27 @@
       <![CDATA[Enter text jacob at locator password_password]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-02-27T14:59:17 IST" name="Test Demo" finished-at="2024-02-27T14:59:20 IST" duration-ms="3260">
+  <suite started-at="2024-02-27T15:09:34 IST" name="Test Demo" finished-at="2024-02-27T15:09:38 IST" duration-ms="3809">
     <groups>
     </groups>
-    <test started-at="2024-02-27T14:59:17 IST" name="verify_facebook_opening" finished-at="2024-02-27T14:59:20 IST" duration-ms="3260">
+    <test started-at="2024-02-27T15:09:34 IST" name="verify_facebook_opening" finished-at="2024-02-27T15:09:38 IST" duration-ms="3809">
       <class name="TestCases.WebUITests.login.LoginTests">
-        <test-method is-config="true" signature="beforeSuiteWorks()[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T14:59:17 IST" name="beforeSuiteWorks" finished-at="2024-02-27T14:59:17 IST" duration-ms="76" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteWorks()[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T15:09:34 IST" name="beforeSuiteWorks" finished-at="2024-02-27T15:09:34 IST" duration-ms="96" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteWorks -->
-        <test-method is-config="true" signature="init()[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T14:59:17 IST" name="init" finished-at="2024-02-27T14:59:20 IST" duration-ms="3030" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T15:09:34 IST" name="init" finished-at="2024-02-27T15:09:37 IST" duration-ms="3565" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="verify_facebook_opening()[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T14:59:20 IST" name="verify_facebook_opening" finished-at="2024-02-27T14:59:20 IST" duration-ms="71" status="PASS">
+        <test-method signature="verify_facebook_opening()[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T15:09:37 IST" name="verify_facebook_opening" finished-at="2024-02-27T15:09:38 IST" duration-ms="81" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Enter text jacob at locator password_password]]>
             </line>
           </reporter-output>
         </test-method> <!-- verify_facebook_opening -->
-        <test-method is-config="true" signature="tear_down(org.testng.ITestResult)[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T14:59:20 IST" name="tear_down" finished-at="2024-02-27T14:59:20 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tear_down(org.testng.ITestResult)[pri:0, instance:TestCases.WebUITests.login.LoginTests@1d9b7cce]" started-at="2024-02-27T15:09:38 IST" name="tear_down" finished-at="2024-02-27T15:09:38 IST" duration-ms="122" status="PASS">
           <params>
             <param index="0">
               <value>

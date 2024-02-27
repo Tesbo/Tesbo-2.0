@@ -1,17 +1,8 @@
 package TestCases.WebUITests.login;
 
-
-
 import Framework.core.init.base;
-import Framework.core.readers.DataReader;
-import Framework.core.readers.JsonFileReader;
-import Framework.core.remotegrid.LambdaTestConfig;
-
 import TestObjects.Pages.login.login_page;
-import org.testng.annotations.DataProvider;
-
 import org.testng.annotations.Test;
-import utility.Logger;
 
 
 public class LoginTests extends base {
