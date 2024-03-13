@@ -1,2 +1,4 @@
-2024-02-28 10:08:26 [main] Framework.performaction.autoweb.TestngLogs.test_step()
+2024-03-07 16:44:30 [TestNG-tests-1] Framework.core.init.base.init()
+INFO: Base config to run : webConfig.json
+2024-03-07 16:44:36 [TestNG-tests-1] Framework.performaction.autoweb.TestngLogs.test_step()
 INFO: Step : Enter text jacob at locator password_password
